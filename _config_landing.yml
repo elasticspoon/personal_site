@@ -12,3 +12,13 @@ defaults:
       layout: "landing"
       head-extra: favicon_headers.html
       no_header: true
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+  - _site/
