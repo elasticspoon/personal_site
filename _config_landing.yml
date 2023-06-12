@@ -22,3 +22,5 @@ exclude:
   - screenshot.png
   - docs/
   - _site/
+include:
+ - netlify.toml

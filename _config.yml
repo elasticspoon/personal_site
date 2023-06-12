@@ -261,6 +261,11 @@ kramdown:
   input: GFM
 
 # Default YAML values (more information on Jekyll's site)
+collections:
+  posts:
+    output: true
+    permalink: "/posts/:title"
+
 defaults:
   -
     scope:
@@ -295,6 +300,7 @@ exclude:
   - screenshot.png
   - docs/
   - _landing_page/
+  - netlify.toml
 
 plugins:
   - jekyll-paginate
