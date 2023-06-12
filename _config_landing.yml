@@ -1,0 +1,13 @@
+# Default YAML values (more information on Jekyll's site)
+excerpt_length: 25
+post_search: false
+feed_show_excerpt: true
+feed_show_tags: false
+defaults:
+  -
+    scope:
+      path: "index.html" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "landing"
+      head-extra: favicon_headers.html
+      no_header: true

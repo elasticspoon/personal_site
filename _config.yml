@@ -277,6 +277,12 @@ defaults:
     values:
       layout: "page"
       head-extra: favicon_headers.html
+  -
+    scope:
+      path: "index.html" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "home"
+      head-extra: favicon_headers.html
 
 # Exclude these files from production site
 exclude:
