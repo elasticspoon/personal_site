@@ -76,6 +76,10 @@ hr.small {
   margin: -3.125rem 0 0;
 }
 
+.landing-page__title {
+  margin-top: 100px;
+}
+
 .hideme {
   display: none;
 }
@@ -450,6 +454,12 @@ footer .footer-custom-content {
   padding: 1.25rem 0;
   border-bottom: 1px solid #eee;
   overflow: hidden;
+}
+
+.post-preview article {
+    display: flex;
+  align-items: center;
+
 }
 
 @media (min-width: 768px) {

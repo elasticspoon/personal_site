@@ -1,4 +1,5 @@
 # Default YAML values (more information on Jekyll's site)
+destination: "./_landing_page"
 excerpt_length: 25
 post_search: false
 feed_show_excerpt: true
