@@ -1,9 +1,0 @@
-[[redirects]]
-from = "/posts/*"
-to = "https://blog.yuribocharov.dev/posts/:splat"
-force = true
-
-[[redirects]]
-from = "/posts"
-to = "https://blog.yuribocharov.dev"
-force = true

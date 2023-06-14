@@ -1,0 +1,2 @@
+/posts   https://blog.yuribocharov.dev               302!
+/posts/* https://blog.yuribocharov.dev/posts/:splat  302!

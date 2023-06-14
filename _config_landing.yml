@@ -28,4 +28,4 @@ exclude:
   - docs/
   - _site/
 include:
- - netlify.toml
+  - _redirects
