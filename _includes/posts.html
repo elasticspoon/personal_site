@@ -19,8 +19,8 @@
       {% endcapture %}
       {% assign thumbnail=thumbnail | strip %}
 
-      {% if site.blog_subdomain != nil and jekyll.environment == "production" %}
-      {% assign post_url = site.blog_subdomain | append: '.' | append: site.url | append: post.url%}
+      {% if site.blog_domain != nil and jekyll.environment == "production" %}
+      {% assign post_url = site.blog_domain | append: post.url %}
       {% else %}
       {% assign post_url = post.url | absolute_url %}
       {% endif %}
