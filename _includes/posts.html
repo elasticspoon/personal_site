@@ -18,19 +18,25 @@
       {% endif %}
       {% endcapture %}
       {% assign thumbnail=thumbnail | strip %}
+
+      {% if site.blog_subdomain != nil and jekyll.environment == "production" %}
+      {% assign post_url = site.blog_subdomain | append: '.' | append: site.url | append: post.url%}
+      {% else %}
+      {% assign post_url = post.url | absolute_url %}
+      {% endif %}
       <div class="post-preview__content">
 
         {% if site.feed_show_excerpt == false %}
         {% if thumbnail != "" %}
         <div class="post-image post-image-normal">
-          <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+          <a href="{{ post_url }}" aria-label="Thumbnail">
             <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
           </a>
         </div>
         {% endif %}
         {% endif %}
 
-        <a href="{{ post.url | absolute_url }}">
+        <a href="{{ post_url }}">
 
           <h2 class="post-title">{{ post.title | strip_html }}</h2>
 
@@ -53,7 +59,7 @@
           {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
           {% assign excerpt_word_count = post.excerpt | number_of_words %}
           {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
+          <a href="{{ post_url }}" class="post-read-more">[Read&nbsp;More]</a>
           {% endif %}
         </div>
 
@@ -75,7 +81,7 @@
       <div class="post-preview__image">
         {% if thumbnail != "" %}
         <div class="post-image post-image-small">
-          <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+          <a href="{{ post_url }}" aria-label="Thumbnail">
             <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
           </a>
         </div>
@@ -84,7 +90,7 @@
         {% unless site.feed_show_excerpt == false %}
         {% if thumbnail != "" %}
         <div class="post-image post-image-short">
-          <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+          <a href="{{ post_url }}" aria-label="Thumbnail">
             <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
           </a>
         </div>

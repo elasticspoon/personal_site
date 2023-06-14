@@ -4,6 +4,11 @@ excerpt_length: 25
 post_search: false
 feed_show_excerpt: true
 feed_show_tags: false
+
+# subdomain to blog. ex: "blog"
+# will make link on landing page point to blog.example.com vs example.com
+blog_subdomain: "blog"
+
 defaults:
   -
     scope:
