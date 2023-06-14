@@ -4,6 +4,7 @@ excerpt_length: 25
 post_search: false
 feed_show_excerpt: true
 feed_show_tags: false
+paginate: 3
 
 blog_domain: "https://blog.yuribocharov.dev"
 

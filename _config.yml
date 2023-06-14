@@ -254,17 +254,17 @@ date_format: "%B %-d, %Y"
 timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /posts/:year-:month-:day-:title/
 paginate: 5
 
 kramdown:
   input: GFM
 
 # Default YAML values (more information on Jekyll's site)
-collections:
-  posts:
-    output: true
-    permalink: "/posts/:title"
+# collections:
+#   posts:
+#     output: true
+#     permalink: "/posts/:title"
 
 defaults:
   -
