@@ -2,6 +2,7 @@
   position: absolute;
   display: flex;
   column-gap: 8px;
+  transition: all .5s ease-in-out;
   border: solid 1px black;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -9,12 +10,16 @@
           user-select: none;
 }
 
+.top-nav-short #change-skin {
+  top: 0.85rem;
+}
+
 @media (min-width: 1200px) {
   .navbar .navbar-collapse {
-    margin-right: 2.3rem;
+    margin-right: 4.8rem;
   }
   #change-skin {
-    top: auto;
+    top: 2rem;
     right: 1rem;
   }
 }
