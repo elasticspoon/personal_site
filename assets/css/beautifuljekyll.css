@@ -396,7 +396,7 @@ footer {
 }
 
 footer p.text-muted {
-  color: {{ site.footer-text-col | default: "#777777" }} !important;
+  color: {{ site.footer-text-col | default: "#4d4d4d" }} !important;
 }
 
 footer a {
@@ -495,8 +495,8 @@ footer .footer-custom-content {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #808080;
-  font-size: 1.125rem;
+  color: #595959;
+  font-size: 1rem;
   font-style: italic;
   margin: 0 0 0.625rem;
   font-family: 'Lora', 'Times New Roman', serif;
