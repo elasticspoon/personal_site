@@ -1,5 +1,6 @@
 #change-skin {
   position: absolute;
+  background-color: white;
   display: flex;
   column-gap: 8px;
   transition: all .5s ease-in-out;
@@ -12,6 +13,22 @@
 
 .top-nav-short #change-skin {
   top: 0.85rem;
+}
+
+#change-skin:hover {  
+  background-color: black;
+}
+
+#change-skin:hover .ball {  
+  transform: translateX(30px);
+}
+
+.page-dark-mode #change-skin:hover .ball {  
+  transform: translateX(0px);
+}
+
+.page-dark-mode #change-skin:hover {  
+  background-color: white;
 }
 
 @media (min-width: 1200px) {
@@ -281,9 +298,10 @@
   left: 1px;
   position: absolute;
   border-radius: 50%;
+  border: solid 1px rgb(117, 117, 117);
   transition: transform 0.2s linear;
 }
 
-.checkbox[aria-checked="false"] .ball {
+.checkbox[aria-checked="true"] .ball {
   transform: translateX(30px);
 }
