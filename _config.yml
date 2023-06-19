@@ -317,6 +317,17 @@ webp:
   img_dir: ["/assets/"]
   append_ext: true
   regenerate: true
+uncss:
+  stylesheets:
+    - assets/css/beautifuljekyll.css 
+    - assets/css/staticman.css 
+    - assets/css/bootstrap-social.css 
+    - assets/css/beautifuljekyll-minimal.css 
+    - assets/css/pygment_highlights.css 
+    - assets/css/skin-switch.css 
+  files:
+    - "**/*.html"
+
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
