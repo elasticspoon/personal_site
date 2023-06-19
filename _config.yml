@@ -304,11 +304,19 @@ exclude:
   - screenshot.png
   - docs/
   - _landing_page/
+  - assets/img/
 
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-webp
 
+webp:
+  enabled: true
+  nested: true
+  img_dir: ["/assets/"]
+  append_ext: true
+  regenerate: true
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 

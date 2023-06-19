@@ -18,6 +18,7 @@
       {% endif %}
       {% endcapture %}
       {% assign thumbnail=thumbnail | strip %}
+      {% assign pic_url = thumbnail | absolute_url %}
 
       {% if site.blog_domain != nil and jekyll.environment == "production" %}
       {% assign post_url = site.blog_domain | append: post.url %}
@@ -25,12 +26,11 @@
       {% assign post_url = post.url | absolute_url %}
       {% endif %}
       <div class="post-preview__content">
-
         {% if site.feed_show_excerpt == false %}
         {% if thumbnail != "" %}
         <div class="post-image post-image-normal">
           <a href="{{ post_url }}" aria-label="Thumbnail">
-            <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+            {% include picture src=pic_url alt="Post thumbnail" %}
           </a>
         </div>
         {% endif %}
@@ -82,7 +82,7 @@
         {% if thumbnail != "" %}
         <div class="post-image post-image-small">
           <a href="{{ post_url }}" aria-label="Thumbnail">
-            <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+            {% include picture.html src=thumbnail alt="Post thumbnail" %}
           </a>
         </div>
         {% endif %}
@@ -91,7 +91,7 @@
         {% if thumbnail != "" %}
         <div class="post-image post-image-short">
           <a href="{{ post_url }}" aria-label="Thumbnail">
-            <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+            {% include picture.html src=thumbnail alt="Post thumbnail" %}
           </a>
         </div>
         {% endif %}
