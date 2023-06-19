@@ -258,8 +258,8 @@ date_format: "%B %-d, %Y"
 timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
-permalink: /posts/:year-:month-:day-:title/
-paginate: 5
+# permalink: /posts/:year-:month-:day-:title/
+# paginate: 5
 
 kramdown:
   input: GFM
@@ -307,17 +307,20 @@ exclude:
   - assets/img/
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-webp
   # - jekyll-minifier
 
+# Settings for img to webp conversion
 webp:
   enabled: true
   nested: true
   img_dir: ["/assets/"]
   append_ext: true
   regenerate: true
+
+# Settings for css to be pruned by uncss
 uncss:
   stylesheets:
     - assets/css/beautifuljekyll.css 
@@ -329,6 +332,13 @@ uncss:
     - assets/css/pygment_highlights.css 
   files:
     - "**/*.html"
+
+# Settings for pagination-v2
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 5
+  permalink: /posts/:year-:month-:day-:title/
 # jekyll-minifier:
 #   uglifier_args:
 #     harmony: true
