@@ -322,6 +322,8 @@ uncss:
     - assets/css/beautifuljekyll.css 
     - assets/css/staticman.css 
     - assets/css/bootstrap-social.css 
+    - assets/css/bootstrap.min.css 
+    - assets/css/all.min.css 
     - assets/css/beautifuljekyll-minimal.css 
     - assets/css/pygment_highlights.css 
     - assets/css/skin-switch.css 
