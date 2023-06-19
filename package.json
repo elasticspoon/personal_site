@@ -1,0 +1,22 @@
+{
+  "name": "personal_site",
+  "version": "1.0.0",
+  "description": "jekyll blog site",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elasticspoon/personal_site.git"
+  },
+  "author": "Yuri Bocharov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elasticspoon/personal_site/issues"
+  },
+  "homepage": "https://github.com/elasticspoon/personal_site#readme",
+  "dependencies": {
+    "uncss": "^0.17.3"
+  }
+}
