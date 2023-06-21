@@ -14,6 +14,7 @@ title: My Website
 
 # Your name to show in the footer
 author: Yuri Bocharov
+url: "https://blog.yuribocharov.dev"
 
 # Remove Ads For BeautifulJekyll
 remove-ads: true
@@ -323,11 +324,11 @@ webp:
 uncss:
   stylesheets:
     - assets/css/all.min.css
-    - assets/css/beautifuljekyll.css
+    # - assets/css/beautifuljekyll.css
     - assets/css/bootstrap-social.css
     - assets/css/bootstrap.min.css
     - assets/css/fonts.css
-    - assets/css/pygment_highlights.css
+    # - assets/css/pygment_highlights.css
     - assets/css/staticman.css
     # skin-switch not here because JavaScript makes classes not load.
     - assets/css/beautifuljekyll-minimal.css

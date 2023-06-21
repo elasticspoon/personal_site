@@ -4,13 +4,21 @@ excerpt_length: 25
 post_search: false
 feed_show_excerpt: true
 feed_show_tags: false
-paginate: 3
+url: "https://yuribocharov.dev"
+
+pagination:
+  enabled: true
+  collection: "posts"
+  per_page: 3
+  permalink: "/page/:num/"
+  sort_field: "date"
+  sort_reverse: true
+  title: ":title"
 
 blog_domain: "https://blog.yuribocharov.dev"
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "index.html" # any file that's not a post will be a "page" layout by default
     values:
       layout: "landing"
