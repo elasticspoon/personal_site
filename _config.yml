@@ -314,8 +314,8 @@ plugins:
 # issue: if i regen files form posts they land in _posts
 webp:
   enabled: true
-  nested: true
-  img_dir: ["/assets"]
+  nested: false
+  img_dir: ["/assets/img", "/assets"]
   append_ext: true
   regenerate: true
 
