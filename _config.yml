@@ -17,7 +17,7 @@ author: Yuri Bocharov
 
 # Remove Ads For BeautifulJekyll
 remove-ads: true
-
+nav-short: true
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
@@ -33,10 +33,10 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+# avatar: "/assets/img/avatar-icon.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+# round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
@@ -152,8 +152,8 @@ site-css:
   - "/assets/css/skin-switch.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-# site-js:
-#   - "/assets/js/skin-switch.js"
+site-js:
+  - "/assets/js/skin-switch.js"
 
 # Extra stuff to be added to the navbar
 navbar-extra:
@@ -276,17 +276,17 @@ defaults:
       layout: "post"
       comments: false # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-      head-extra: favicon_headers.html
+      # head-extra: favicon_headers.html
   - scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
-      head-extra: favicon_headers.html
+      # head-extra: favicon_headers.html
   - scope:
       path: "index.html" # any file that's not a post will be a "page" layout by default
     values:
       layout: "home"
-      head-extra: favicon_headers.html
+      # head-extra: favicon_headers.html
 
 # Exclude these files from production site
 exclude:
@@ -309,10 +309,12 @@ plugins:
   # - jekyll-minifier
 
 # Settings for img to webp conversion
+# TODO: Chaneg this out to a better plugin.
+# issue: if i regen files form posts they land in _posts
 webp:
   enabled: true
   nested: true
-  img_dir: ["/assets/"]
+  img_dir: ["/assets"]
   append_ext: true
   regenerate: true
 
