@@ -15,7 +15,6 @@ title: My Website
 # Your name to show in the footer
 author: Yuri Bocharov
 
-
 # Remove Ads For BeautifulJekyll
 remove-ads: true
 
@@ -43,7 +42,6 @@ round-avatar: true
 # then specify the following parameter
 #title-img: /path/to/image
 
-
 #####################################
 # --- Footer social media links --- #
 #####################################
@@ -52,30 +50,30 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "ybocharov95@gmail.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-#  facebook: deanattali
+  rss: true # remove this line if you don't want to show an RSS link at the bottom
+  #  facebook: deanattali
   github: elasticspoon
-#  twitter: daattali
-#  patreon: DeanAttali
-#  youtube: c/daattali
-#  medium: yourname
-#  reddit: yourname
-#  linkedin: daattali
-#  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
-#  telegram: yourname
-#  calendly: yourname
+  #  twitter: daattali
+  #  patreon: DeanAttali
+  #  youtube: c/daattali
+  #  medium: yourname
+  #  reddit: yourname
+  #  linkedin: daattali
+  #  xing: yourname
+  #  stackoverflow: "3943160/daattali"
+  #  snapchat: deanat78
+  #  instagram: deanat78
+  #  spotify: yourname
+  #  telephone: +14159998888
+  #  steam: deanat78
+  #  twitch: yourname
+  #  yelp: yourname
+  #  telegram: yourname
+  #  calendly: yourname
   mastodon: ruby.social/@ybocharov
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
-#  discord: "invite_code" or "users/userid" or "invite/invite_code" 
+#  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
 
@@ -151,15 +149,15 @@ footer-hover-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:
- - "/assets/css/skin-switch.css"
+  - "/assets/css/skin-switch.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-site-js:
- - "/assets/js/skin-switch.js"
+# site-js:
+#   - "/assets/js/skin-switch.js"
 
 # Extra stuff to be added to the navbar
 navbar-extra:
- - "/skin-switch.html"
+  - "/skin-switch.html"
 
 #################################
 # --- Web Analytics Section --- #
@@ -211,23 +209,23 @@ navbar-extra:
 #  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
 
 # To use Staticman comments, uncomment the following section. You may leave the reCaptcha
-# section commented if you aren't using reCaptcha for spam protection. 
-# Using Staticman requires advanced knowledge, please consult 
-# https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further 
-# instructions. For any support with staticman please direct questions to staticman and 
+# section commented if you aren't using reCaptcha for spam protection.
+# Using Staticman requires advanced knowledge, please consult
+# https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further
+# instructions. For any support with staticman please direct questions to staticman and
 # not to BeautifulJekyll.
 #staticman:
 #  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
 #  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
 #  endpoint   : # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
-#  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well) 
+#  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well)
 #    siteKey  : # You need to apply for a site key on Google
 #    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
 
 # To use giscus comments:
-# (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository, 
+# (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository,
 # (2) Install the giscus app in your repository (details at https://giscus.app),
-# (3) Fill in *all* the parameters below 
+# (3) Fill in *all* the parameters below
 # See more details about giscus and each of the following parameters at https://giscus.app
 #giscus:
 #  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
@@ -271,23 +269,20 @@ kramdown:
 #     permalink: "/posts/:title"
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      comments: false  # add comments to all blog posts
+      comments: false # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
       head-extra: favicon_headers.html
-  -
-    scope:
+  - scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
       head-extra: favicon_headers.html
-  -
-    scope:
+  - scope:
       path: "index.html" # any file that's not a post will be a "page" layout by default
     values:
       layout: "home"
@@ -324,13 +319,15 @@ webp:
 # Settings for css to be pruned by uncss
 uncss:
   stylesheets:
-    - assets/css/beautifuljekyll.css 
-    - assets/css/staticman.css 
-    - assets/css/bootstrap-social.css 
-    - assets/css/bootstrap.min.css 
-    - assets/css/all.min.css 
-    - assets/css/beautifuljekyll-minimal.css 
-    - assets/css/pygment_highlights.css 
+    - assets/css/all.min.css
+    - assets/css/beautifuljekyll.css
+    - assets/css/bootstrap-social.css
+    - assets/css/bootstrap.min.css
+    - assets/css/fonts.css
+    - assets/css/pygment_highlights.css
+    - assets/css/staticman.css
+    # skin-switch not here because JavaScript makes classes not load.
+    - assets/css/beautifuljekyll-minimal.css
   files:
     - "**/*.html"
 
@@ -338,10 +335,10 @@ permalink: /posts/:year/:month/:day/:title.html
 # Settings for pagination-v2
 pagination:
   enabled: true
-  collection: 'posts'
+  collection: "posts"
   per_page: 5
-  permalink: '/page/:num/'
-  sort_field: 'date'
+  permalink: "/page/:num/"
+  sort_field: "date"
   sort_reverse: true
   title: ":title"
 # jekyll-minifier:
@@ -350,4 +347,3 @@ pagination:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-

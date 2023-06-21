@@ -1,12 +1,10 @@
 ---
 common-css:
+  - "/assets/css/fonts.css"
   - "/assets/css/all.min.css"
   - "/assets/css/bootstrap.min.css"
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/beautifuljekyll.css"
-common-ext-css:
-  - "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&display=swap"
-  - "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap"
 common-ext-js:
   - href: "https://code.jquery.com/jquery-3.5.1.slim.min.js"
     sri: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
@@ -15,24 +13,18 @@ common-ext-js:
 common-js:
   - "/assets/js/bootstrap.min.js"
   - "/assets/js/beautifuljekyll.js"
+page-extra:
+  - "/assets/js/skin-switch.js"
 ---
+
 <!-- TODO: add static fonts, jquery, popper   -->
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
-<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
-{% include head.html %}
+  <!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+  {% include head.html %}
 
-<body>
-
-  {% include gtm_body.html %}
-
-  {% include nav.html %}
-
-  {{ content }}
-
-  {% include footer.html %}
-
-  {% include footer-scripts.html %}
-
-</body>
+  <body>
+    {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
+    footer.html %} {% include footer-scripts.html %}
+  </body>
 </html>
