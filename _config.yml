@@ -310,6 +310,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-webp
+  - jekyll-postfiles
   # - jekyll-minifier
 
 # Settings for img to webp conversion
@@ -333,12 +334,16 @@ uncss:
   files:
     - "**/*.html"
 
+permalink: /posts/:year/:month/:day/:title.html
 # Settings for pagination-v2
 pagination:
   enabled: true
   collection: 'posts'
   per_page: 5
-  permalink: /posts/:year-:month-:day-:title/
+  permalink: '/page/:num/'
+  sort_field: 'date'
+  sort_reverse: true
+  title: ":title"
 # jekyll-minifier:
 #   uglifier_args:
 #     harmony: true
