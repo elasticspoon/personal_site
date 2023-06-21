@@ -10,6 +10,10 @@ html {
   font-size: 100%
 }
 
+:-moz-focusring {
+  outline: auto;
+}
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 1.125rem;
@@ -48,6 +52,7 @@ h1, h2, h3, h4 {
 }
 a {
   color: {{ site.link-col | default: "#008AFF" }};
+  display: inline-block;
 }
 a:hover,
 a:focus {
