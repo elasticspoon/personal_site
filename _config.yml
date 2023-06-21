@@ -306,6 +306,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-webp
   - jekyll-postfiles
+  - jekyll-brotli
   # - jekyll-minifier
 
 # Settings for img to webp conversion
