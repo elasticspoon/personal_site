@@ -1,17 +1,14 @@
-const button = document.getElementById('change-skin');
+const button = document.getElementById("change-skin");
 
 button.addEventListener("click", () => {
-  document.body.classList.toggle('page-dark-mode');
+  document.body.classList.toggle("page-dark-mode");
 
-  let currentTheme = document.body.classList.contains('page-dark-mode');
+  let currentTheme = document.body.classList.contains("page-dark-mode");
 
-  localStorage.setItem('bj-dark-mode', currentTheme);
-  button.setAttribute('aria-checked', currentTheme);
+  localStorage.setItem("bj-dark-mode", currentTheme);
+  button.setAttribute("aria-checked", currentTheme);
   BeautifulJekyllJS.initNavbar();
-
-})
-if (localStorage.getItem('bj-dark-mode') === 'true') {
-  button.setAttribute('aria-checked', true);
-  document.body.classList.add('page-dark-mode');
-
+});
+if (localStorage.getItem("bj-dark-mode") === "true") {
+  button.setAttribute("aria-checked", true);
 }

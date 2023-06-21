@@ -1,8 +1,8 @@
 ---
 common-css:
-  - "/assets/css/fonts.css"
-  - "/assets/css/all.min.css"
   - "/assets/css/bootstrap.min.css"
+  - "/assets/css/all.min.css"
+  - "/assets/css/fonts.css"
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/beautifuljekyll.css"
 common-js:
@@ -10,8 +10,6 @@ common-js:
   - "/assets/js/popper.min.js"
   - "/assets/js/bootstrap.min.js"
   - "/assets/js/beautifuljekyll.js"
-page-extra:
-  - "/assets/js/skin-switch.js"
 ---
 
 <!-- TODO: add static fonts, jquery, popper   -->
@@ -21,7 +19,14 @@ page-extra:
   {% include head.html %}
 
   <body>
-    {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
-    footer.html %} {% include footer-scripts.html %}
+    <script src="{{ '/assets/js/skin-load.js' | relative_url }}"></script>
+
+    {% include gtm_body.html %}
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+    {% include footer-scripts.html %}
   </body>
 </html>
