@@ -1,8 +1,8 @@
 ---
 common-css:
-  - "/assets/css/fonts.css"
-  - "/assets/css/all.min.css"
   - "/assets/css/bootstrap.min.css"
+  - "/assets/css/all.min.css"
+  - "/assets/css/fonts.css"
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/beautifuljekyll.css"
 common-ext-js:
@@ -22,7 +22,7 @@ common-js:
   {% include head.html %}
 
   <body>
-      <script src="{{ '/assets/js/skin-load.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/skin-load.js' | relative_url }}"></script>
 
     {% include gtm_body.html %}
     {% include nav.html %}
