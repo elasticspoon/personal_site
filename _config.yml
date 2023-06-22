@@ -305,7 +305,8 @@ exclude:
 plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
-  - jekyll-webp
+  # - jekyll-webp
+  - jekyll_picture_tag
   - jekyll-postfiles
   - jekyll-minifier
   - jekyll-brotli
@@ -314,12 +315,12 @@ plugins:
 # Settings for img to webp conversion
 # TODO: Chaneg this out to a better plugin.
 # issue: if i regen files form posts they land in _posts
-webp:
-  enabled: true
-  nested: false
-  img_dir: ["/assets/img", "/assets"]
-  append_ext: true
-  regenerate: true
+# webp:
+#   enabled: true
+#   nested: false
+#   img_dir: ["/assets/img", "/assets"]
+#   append_ext: true
+#   regenerate: true
 
 # Settings for css to be pruned by uncss
 uncss:
@@ -349,5 +350,6 @@ pagination:
 jekyll-minifier:
   uglifier_args:
     harmony: true
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
+picture:
+  suppress_warnings: false
+  ignore_missing_images: true
