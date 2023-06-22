@@ -308,6 +308,7 @@ plugins:
   - jekyll-webp
   - jekyll-postfiles
   - jekyll-brotli
+  - jekyll-gzip
   # - jekyll-minifier
 
 # Settings for img to webp conversion
