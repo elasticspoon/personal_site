@@ -15,19 +15,12 @@ head-js:
   - "/assets/js/skin-load.js"
 ---
 
-<!-- TODO: add static fonts, jquery, popper   -->
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
   {% include head.html %}
 
   <body>
-
-    {% include gtm_body.html %}
-    {% include nav.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
-    {% include footer-scripts.html %}
+    {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
+    footer.html %} {% include footer-scripts.html %}
   </body>
 </html>
