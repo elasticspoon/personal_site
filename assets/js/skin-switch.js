@@ -9,6 +9,10 @@ button.addEventListener("click", () => {
   button.setAttribute("aria-checked", currentTheme);
   BeautifulJekyllJS.initNavbar();
 });
-if (localStorage.getItem("bj-dark-mode") === "true") {
-  button.setAttribute("aria-checked", true);
+if (
+  localStorage.getItem("bj-dark-mode") === "true" ||
+  (!("bj-dark-mode" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.body.classList.add("page-dark-mode");
 }
