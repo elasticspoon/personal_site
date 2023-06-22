@@ -109,6 +109,7 @@ img::-moz-selection {
 }
 
 img {
+  width: auto;
   max-width: 100%;
 }
 
