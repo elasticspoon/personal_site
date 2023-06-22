@@ -307,9 +307,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-webp
   - jekyll-postfiles
+  - jekyll-minifier
   - jekyll-brotli
   - jekyll-gzip
-  # - jekyll-minifier
 
 # Settings for img to webp conversion
 # TODO: Chaneg this out to a better plugin.
@@ -346,9 +346,8 @@ pagination:
   sort_field: "date"
   sort_reverse: true
   title: ":title"
-# jekyll-minifier:
-#   uglifier_args:
-#     harmony: true
-
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
