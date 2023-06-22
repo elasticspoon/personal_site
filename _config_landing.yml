@@ -34,5 +34,6 @@ exclude:
   - screenshot.png
   - docs/
   - _site/
+  - assets/img/
 include:
   - _redirects
