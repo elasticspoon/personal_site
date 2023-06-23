@@ -22,17 +22,17 @@ Typically I will write most of my notes in my daily note and then refactor the c
 
 #### File Location Settings
 
-{% picture jpt-webp "{{ 'location-settings' | itag_fix }}" %}
+{% include picture_tag.html src='location-settings.jpg' alt='Settings for Refactor plugin file location' %}
 
 These are settings I use for the location to create the refactored note. The main idea is that I make the directory of the file mirror the directory I would use in my SSG. A file I refactor out today will land in `Blog/current_year/current_month/current_day/YYYY-MM-DD-topmost-header.md`. Which is exactly what I want for my blog because it also allows me to collocate all pictures associated with that post in the same directory.
 
-![[blog-directory.jpg]]
+{% include picture_tag.html src='blog-directory.jpg' alt='Contents of my Blog directory' %}
 
 #### Template Settings
 
 The second piece of the puzzle is adding in the needed frontmatter to the post. The refactoring plug-in has a simple setting to allow a template. I use a generic blog post template with frontmatter for my SSG that I remove as needed.
 
-![[note-template.jpg]]
+{% include picture_tag.html src='note-template.jpg' alt='Template for my note.' %}
 
 #### Fixing Headers
 

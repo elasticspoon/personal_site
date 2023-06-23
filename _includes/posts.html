@@ -30,7 +30,7 @@
         {% if thumbnail != "" %}
         <div class="post-image post-image-normal">
           <a href="{{ post_url }}" aria-label="Thumbnail">
-            {% include picture src=pic_url alt="Post thumbnail" %}
+            {% include picture_tag.html src=thumbnail alt="Post Thumbnail" %}
           </a>
         </div>
         {% endif %}
@@ -82,7 +82,7 @@
         {% if thumbnail != "" %}
         <div class="post-image post-image-small">
           <a href="{{ post_url }}" aria-label="Thumbnail">
-            {% include picture.html src=thumbnail alt="Post thumbnail" %}
+            {% include picture_tag.html src=thumbnail alt="Post Thumbnail" preset="thumbnail" %}
           </a>
         </div>
         {% endif %}
@@ -91,7 +91,7 @@
         {% if thumbnail != "" %}
         <div class="post-image post-image-short">
           <a href="{{ post_url }}" aria-label="Thumbnail">
-            {% include picture.html src=thumbnail alt="Post thumbnail" %}
+            {% include picture_tag.html src=thumbnail alt="Post Thumbnail" preset="thumbnail" %}
           </a>
         </div>
         {% endif %}
