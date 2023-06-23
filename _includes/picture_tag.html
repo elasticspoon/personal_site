@@ -1,0 +1,6 @@
+{% assign path = page.path | remove_first: page.name | append: include.src %} 
+{% 
+picture {{ include.preset }} "{{ path }}" 
+--alt {{include.alt}} 
+--img {{include.class | prepend: 'class="' | append: '"'}}
+%}
