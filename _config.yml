@@ -351,5 +351,5 @@ jekyll-minifier:
   uglifier_args:
     harmony: true
 picture:
-  suppress_warnings: false
+  suppress_warnings: true
   ignore_missing_images: true

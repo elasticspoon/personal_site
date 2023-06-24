@@ -1,9 +1,12 @@
+media_queries:
+  mobile: "max-width: 500px"
+  tablet: "max-width: 767px"
+  desktop: "max-width: 1199px"
+  wide: "min-width: 1200px"
 presets:
   default:
     markup: auto
     formats: [avif, webp, original]
-    widths: [400, 600, 800, 1000]
-    fallback_width: 800
     fallback_format: original
     noscript: false
     link_source: false
@@ -22,6 +25,34 @@ presets:
     dimension_attributes: true
     attributes:
       img: 'loading="lazy"'
+    # Differing attributes below
+    widths: [400, 600, 800, 1000]
+    sizes:
+      mobile: 400px
+      tablet: 600px
+      wide: 710px
+    fallback_width: 800
   thumbnail:
+    markup: auto
+    formats: [avif, webp, original]
+    fallback_format: original
+    noscript: false
+    link_source: false
+    quality: 75
+    format_quality:
+      webp: 50
+      avif: 30
+      jp2: 30
+    strip_metadata: true
+    image_options:
+      avif:
+        compression: av1
+        speed: 8
+    data_sizes: true
+    keep: attention
+    dimension_attributes: true
+    attributes:
+      img: 'loading="lazy"'
+    # Differing attributes below
     widths: [200]
     fallback_width: 200

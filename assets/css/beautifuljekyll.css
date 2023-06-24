@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
 }
 a {
   color: {{ site.link-col | default: "#008AFF" }};
-  display: inline-block;
+  /* display: inline-block; */
 }
 a:hover,
 a:focus {
@@ -108,8 +108,12 @@ img::-moz-selection {
   background: transparent;
 }
 
+article h1 {
+  display: none;
+}
+
 img {
-  width: auto;
+  height: auto;
   max-width: 100%;
 }
 
@@ -456,6 +460,10 @@ footer .footer-custom-content {
     margin: 0;
 }
 
+.post-preview__content {
+  width: 100%;
+}
+
 .post-preview {
   padding: 1.25rem 0;
   border-bottom: 1px solid #eee;
@@ -463,9 +471,15 @@ footer .footer-custom-content {
 }
 
 .post-preview article {
-    display: flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
 
+.post-preview__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
