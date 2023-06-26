@@ -7,9 +7,9 @@
   --link-col: #008aff; /* done */
   --hover-col: #0085a1; /* done */
 
-  --footer-col: var(--navbar-col);
-  --footer-text-col: #4d4d4d;
-  --footer-link-col: var(--text-col);
+  --footer-col: var(--navbar-col); /* done */
+  --footer-text-col: #4d4d4d; /* done */
+  --footer-link-col: var(--text-col); /* done */
   --footer-hover-col: var(--hover-col); /* done */
 }
 
