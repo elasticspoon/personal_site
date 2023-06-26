@@ -15,4 +15,17 @@
 }
 
 [data-theme="dark"] {
+  --navbar-col: #eaeaea;
+  --navbar-text-col: var(--text-col);
+  --navbar-border-col: #dddddd;
+
+  --page-col: #18191a;
+  --text-col: #e4e6eb;
+  --link-col: #008aff;
+  --hover-col: #0085a1;
+
+  --footer-col: var(--navbar-col);
+  --footer-text-col: #4d4d4d;
+  --footer-link-col: var(--text-col);
+  --footer-hover-col: var(--hover-col);
 }

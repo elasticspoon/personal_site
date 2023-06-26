@@ -17,7 +17,7 @@ html {
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 1.125rem;
-  color: {{ site.text-col | default: "#404040" }};
+  color: var(--text-col);
   position: relative;
   background-color: var(--page-col);
   {% if site.page-img %}
@@ -220,7 +220,7 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
   font-weight: 800;
-  color: {{ site.navbar-text-col | default: "#404040" }};
+  color: var(--navbar-text-col);
 }
 
 .navbar-toggler {
@@ -294,7 +294,7 @@ img {
   background-color: var(--navbar-col);
   text-decoration: none !important;
   font-weight: normal;
-  color: {{ site.navbar-text-col | default: "#404040" }};
+  color: var(--navbar-text-col);
   {% unless site.navbar-var-length %}
   white-space: normal;
   {% endunless %}
@@ -410,10 +410,10 @@ img {
 
 footer {
   padding: 1.875rem 0;
-  border-top: 1px var(--navbar-col) solid;
+  border-top: 1px var(--footer-col) solid;
   margin-top: 3.125rem;
   font-size: 0.875rem;
-  background-color: var(--navbar-col);
+  background-color: var(--footer-col);
   {% if site.footer-img %}
     background-image: url({{ site.footer-img | relative_url }});
     background-attachment: fixed;
@@ -425,12 +425,12 @@ footer p.text-muted {
 }
 
 footer a {
-  color: {{ site.footer-link-col | default: "#404040" }};
+  color: var(--footer-link-col);
 }
 
 footer a:hover,
 footer a:focus {
-  color: var(--hover-col);
+  color: var(--footer-hover-col);
 }
 
 footer .list-inline {
@@ -510,7 +510,7 @@ footer .footer-custom-content {
 .post-preview a {
   text-decoration: none;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: {{ site.text-col | default: "#404040" }};
+  color: var(--text-col);
 }
 
 .post-preview a:focus,
@@ -617,7 +617,7 @@ footer .footer-custom-content {
 }
 
 .blog-tags span {
-  color: {{ site.text-col | default: "#404040" }};
+  color: var(--text-col);
   opacity: 0.8;
 }
 
@@ -626,7 +626,7 @@ footer .footer-custom-content {
 }
 
 .blog-tags a {
-  color: {{ site.text-col | default: "#404040" }};
+  color: var(--text-col);
   text-decoration: none;
   padding: 0 0.3125rem;
   opacity: 0.8;
@@ -636,8 +636,8 @@ footer .footer-custom-content {
 
 .blog-tags a:hover {
   opacity: 1;
-  color: {{ site.text-col | default: "#404040" }};
-  border-color: {{ site.text-col | default: "#404040" }};
+  color: var(--text-col);
+  border-color: var(--text-col);
 }
 
 .post-preview .blog-tags {
@@ -859,7 +859,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   padding: 0.625rem 0.3125rem;
   background-color: #FFF;
   border-radius: 0;
-  color: {{ site.text-col | default: "#404040" }};
+  color: var(--text-col);
 }
 @media (min-width: 768px) {
   .pagination .page-item .page-link {
