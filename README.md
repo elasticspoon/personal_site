@@ -165,7 +165,6 @@ Parameter   | Description
 ----------- | -----------
 readtime    | If you want a post to show how many minutes it will take to read it, use `readtime: true`.
 show-avatar | If you have an avatar configured in the `_config.yml` but you want to turn it off on a specific page, use `show-avatar: false`.
-social-share | By default, every blog post has buttons to share the page on social media. If you want to turn this feature off, use `social-share: false`.
 nav-short   | By default, the navigation bar gets shorter after scrolling down the page. If you want the navigation bar to always be short on a certain page, use `nav-short: true`
 gh-repo   | If you want to show GitHub buttons at the top of a post, this sets the GitHub repo name (eg. `daattali/beautiful-jekyll`). You must also use the `gh-badge` parameter to specify what buttons to show.
 gh-badge  | Select which GitHub buttons to display. Available options are: [star, watch, fork, follow]. You must also use the `gh-repo` parameter to specify the GitHub repo.
