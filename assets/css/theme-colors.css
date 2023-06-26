@@ -1,15 +1,16 @@
 :root {
   --navbar-col: #eaeaea;
-  --navbar-text-col: #404040;
+  --navbar-text-col: var(--text-col);
   --navbar-border-col: #dddddd;
-  --page-col: #ffffff;
-  --text-col: #404040;
+
+  --text-col: #404040; /* done */
   --link-col: #008aff;
   --hover-col: #0085a1;
-  --footer-col: #eaeaea;
+
+  --footer-col: var(--navbar-col);
   --footer-text-col: #4d4d4d;
-  --footer-link-col: #404040;
-  --footer-hover-col: #0085a1;
+  --footer-link-col: var(--text-col);
+  --footer-hover-col: var(--hover-col);
 }
 
 [data-theme="dark"] {
