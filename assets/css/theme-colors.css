@@ -15,17 +15,17 @@
 }
 
 [data-theme="dark"] {
-  --navbar-col: #eaeaea;
+  --navbar-col: #242526;
   --navbar-text-col: var(--text-col);
-  --navbar-border-col: #dddddd;
+  --navbar-border-col: #393a3b;
 
   --page-col: #18191a;
   --text-col: #e4e6eb;
-  --link-col: #008aff;
-  --hover-col: #0085a1;
+  --link-col: #139ee0;
+  --hover-col: #28a9e6;
 
   --footer-col: var(--navbar-col);
-  --footer-text-col: #4d4d4d;
-  --footer-link-col: var(--text-col);
+  --footer-text-col: #aaaaaa;
+  --footer-link-col: #dfdfdf;
   --footer-hover-col: var(--hover-col);
 }
