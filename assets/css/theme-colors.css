@@ -4,13 +4,13 @@
   --navbar-border-col: #dddddd;
 
   --text-col: #404040; /* done */
-  --link-col: #008aff;
-  --hover-col: #0085a1;
+  --link-col: #008aff; /* done */
+  --hover-col: #0085a1; /* done */
 
   --footer-col: var(--navbar-col);
   --footer-text-col: #4d4d4d;
   --footer-link-col: var(--text-col);
-  --footer-hover-col: var(--hover-col);
+  --footer-hover-col: var(--hover-col); /* done */
 }
 
 [data-theme="dark"] {
