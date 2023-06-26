@@ -1,7 +1,7 @@
 :root {
-  --navbar-col: #eaeaea;
-  --navbar-text-col: var(--text-col);
-  --navbar-border-col: #dddddd;
+  --navbar-col: #eaeaea; /* done */
+  --navbar-text-col: var(--text-col); /* done */
+  --navbar-border-col: #dddddd; /* done */
 
   --text-col: #404040; /* done */
   --link-col: #008aff; /* done */
