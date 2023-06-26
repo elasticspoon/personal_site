@@ -1,0 +1,16 @@
+:root {
+  --navbar-col: #eaeaea;
+  --navbar-text-col: #404040;
+  --navbar-border-col: #dddddd;
+  --page-col: #ffffff;
+  --text-col: #404040;
+  --link-col: #008aff;
+  --hover-col: #0085a1;
+  --footer-col: #eaeaea;
+  --footer-text-col: #4d4d4d;
+  --footer-link-col: #404040;
+  --footer-hover-col: #0085a1;
+}
+
+[data-theme="dark"] {
+}
