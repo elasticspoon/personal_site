@@ -87,15 +87,7 @@
   {% endif %}
 
   {%- capture img -%}
-  {%- if page.share-img -%}
-  {{ page.share-img }}
-  {%- elsif page.cover-img -%}
-  {%- if page.cover-img.first -%}
-  {{ page.cover-img[0].first.first }}
-  {%- else -%}
-  {{ page.cover-img }}
-  {%- endif -%}
-  {%- elsif page.thumbnail-img -%}
+  {%- if page.thumbnail-img -%}
   {{ page.thumbnail-img }}
   {%- elsif site.avatar -%}
   {{ site.avatar }}

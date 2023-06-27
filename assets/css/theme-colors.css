@@ -16,6 +16,7 @@
 
   --blockqoute-col: #808080;
   --post-preview-border-col: #eee;
+  --post-meta-col: #595959;
 }
 
 [data-theme="dark"] {
@@ -35,4 +36,5 @@
 
   --blockqoute-col: #999;
   --post-preview-border-col: #444;
+  --post-meta-col: var(--blockqoute-col);
 }

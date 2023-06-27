@@ -4,18 +4,9 @@
   {% for post in posts %}
   <li class="post-preview">
     <article>
-      {%- capture thumbnail -%}
       {% if post.thumbnail-img %}
-      {{ post.thumbnail-img }}
-      {% elsif post.cover-img %}
-      {% if post.cover-img.first %}
-      {{ post.cover-img[0].first.first }}
-      {% else %}
-      {{ post.cover-img }}
+      {% assign thumbnail = post.thumbnail-img %}
       {% endif %}
-      {% else %}
-      {% endif %}
-      {% endcapture %}
 
       {% assign thumbnail=thumbnail | strip %}
       {% assign pic_url = thumbnail | absolute_url %}
