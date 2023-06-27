@@ -1,3 +1,4 @@
+/* TODO: make this sheet load earlier */
 :root {
   --navbar-col: #eaeaea; /* done */
   --navbar-text-col: var(--text-col); /* done */
@@ -12,6 +13,9 @@
   --footer-text-col: #4d4d4d; /* done */
   --footer-link-col: var(--text-col); /* done */
   --footer-hover-col: var(--hover-col); /* done */
+
+  --blockqoute-col: #808080;
+  --post-preview-border-col: #eee;
 }
 
 [data-theme="dark"] {
@@ -28,4 +32,7 @@
   --footer-text-col: #aaaaaa;
   --footer-link-col: #dfdfdf;
   --footer-hover-col: var(--hover-col);
+
+  --blockqoute-col: #999;
+  --post-preview-border-col: #444;
 }

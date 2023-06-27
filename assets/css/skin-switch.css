@@ -1,113 +1,20 @@
-.page-dark-mode {
-  color: #e4e6eb;
-  background-color: #18191a;
-}
-.page-dark-mode a {
-  color: #139ee0;
-}
-.page-dark-mode a:hover,
-.page-dark-mode a:focus {
-  color: #28a9e6;
-}
-.page-dark-mode blockquote {
-  color: #999;
-}
-.page-dark-mode ::-moz-selection {
-  color: #18191a;
-  text-shadow: none;
-  background-color: #28a9e6;
-}
-.page-dark-mode ::selection {
-  color: #18191a;
-  text-shadow: none;
-  background-color: #28a9e6;
-}
 .page-dark-mode img::selection {
-  color: #28a9e6;
+  /* color: #28a9e6; */
+  color: var(--hover-col);
   background: transparent;
 }
 .page-dark-mode img::-moz-selection {
-  color: #28a9e6;
+  /* color: #28a9e6; */
+  color: var(--hover-col);
   background: transparent;
-}
-.page-dark-mode .navbar-custom {
-  background-color: #242526;
-  border-bottom-color: #393a3b;
-}
-.page-dark-mode .navbar-custom .navbar-brand,
-.page-dark-mode .navbar-custom .navbar-nav .nav-link {
-  color: #e4e6eb;
-}
-.page-dark-mode
-  .navbar-custom
-  .nav-item.dropdown
-  .dropdown-menu
-  .dropdown-item {
-  background-color: #242526;
-  color: #e4e6eb;
-}
-@media (min-width: 1200px) {
-  .page-dark-mode
-    .navbar-custom
-    .nav-item.dropdown
-    .dropdown-menu
-    .dropdown-item {
-    border-color: #393a3b;
-  }
-}
-@media (max-width: 1199px) {
-  .page-dark-mode .navbar-custom .navbar-collapse {
-    border-top-color: #393a3b;
-  }
-}
-.page-dark-mode .navbar-custom .navbar-brand:hover,
-.page-dark-mode .navbar-custom .navbar-brand:focus,
-.page-dark-mode .navbar-custom .navbar-nav .nav-link:hover,
-.page-dark-mode .navbar-custom .navbar-nav .nav-link:focus,
-.page-dark-mode .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover,
-.page-dark-mode .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:focus {
-  color: #28a9e6;
-}
-.page-dark-mode footer {
-  border-top-color: #242526;
-  background-color: #242526;
-}
-.page-dark-mode footer p.text-muted {
-  color: #aaaaaa !important;
-}
-.page-dark-mode footer a {
-  color: #dfdfdf;
 }
 .page-dark-mode footer a .fa-inverse {
   color: #272727;
 }
-.page-dark-mode .post-preview {
-  border-bottom-color: #444;
-}
-.page-dark-mode .post-preview a {
-  color: #e4e6eb;
-}
 .page-dark-mode a.btn {
   color: #fff;
 }
-.page-dark-mode .post-preview a:focus,
-.page-dark-mode .post-preview a:hover {
-  color: #28a9e6;
-}
-.page-dark-mode .post-preview .post-meta,
-.page-dark-mode .post-heading .post-meta {
-  color: #999;
-}
-.page-dark-mode .blog-tags span {
-  color: #e4e6eb;
-}
-.page-dark-mode .blog-tags a {
-  color: #e4e6eb;
-}
-.page-dark-mode .blog-tags a:hover {
-  color: #e4e6eb;
-  border-color: #e4e6eb;
-}
+
 .page-dark-mode #full-tags-list .tag-entry .entry-date {
   color: #999;
 }

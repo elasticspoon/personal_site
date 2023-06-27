@@ -19,7 +19,7 @@ head-js:
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
   {% include head.html %}
 
-  <body>
+  <body data-theme="dark" class="page-dark-mode">
     {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
     footer.html %} {% include footer-scripts.html %}
   </body>

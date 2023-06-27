@@ -59,7 +59,7 @@ a:focus {
   color: var(--hover-col);
 }
 blockquote {
-  color: #808080;
+  color: var(--blockquote-col);
   font-style: italic;
 }
 blockquote p:first-child {
@@ -90,21 +90,21 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: #fff;
+  color: var(--page-col);
   text-shadow: none;
   background-color: var(--hover-col);
 }
 ::selection {
-  color: #fff;
+  color: var(--page-col);
   text-shadow: none;
   background-color: var(--hover-col);
 }
 img::selection {
-  color: #fff;
+  color: var(--page-col);
   background: transparent;
 }
 img::-moz-selection {
-  color: #fff;
+  color: var(--page-col);
   background: transparent;
 }
 
@@ -481,7 +481,7 @@ footer .footer-custom-content {
 
 .post-preview {
   padding: 1.25rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--post-preview-border-col);
   overflow: hidden;
 }
 
