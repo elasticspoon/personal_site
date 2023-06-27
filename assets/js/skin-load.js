@@ -16,9 +16,9 @@ function getCookie(name) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (getCookie("bj-dark-mode") === "true") {
+  if (getCookie("bj-dark-mode") === "dark") {
     let button = document.getElementById("change-skin");
-    document.body.classList.add("page-dark-mode");
+    document.body.setAttribute("data-theme", "dark");
     button.setAttribute("aria-checked", true);
   }
 });

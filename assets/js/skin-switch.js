@@ -11,13 +11,12 @@ function setCookie(name, value, days) {
 }
 
 const button = document.getElementById("change-skin");
-
 button.addEventListener("click", () => {
-  document.body.classList.toggle("page-dark-mode");
+  let currentTheme = document.body.getAttribute("data-theme");
+  let targetTheme = currentTheme === "dark" ? "light" : "dark";
 
-  let currentTheme = document.body.classList.contains("page-dark-mode");
-
-  setCookie("bj-dark-mode", currentTheme, 999);
-  button.setAttribute("aria-checked", currentTheme);
+  setCookie("bj-dark-mode", targetTheme, 999);
+  document.body.setAttribute("data-theme", targetTheme);
+  button.setAttribute("aria-checked", currentTheme === "dark");
   BeautifulJekyllJS.initNavbar();
 });
