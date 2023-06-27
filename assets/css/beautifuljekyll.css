@@ -123,6 +123,15 @@ article h1 {
   background-image: var(--header-background-3);
 }
 
+.secret {
+  position: absolute;
+  font-size: 8px;
+}
+
+.secret:hover {
+  font-size: 20px;
+}
+
 article p:first-child {
   margin-top: 0;
 }

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: My Approach to Writing Blog Posts in Obsidian
-subtitle: Some Sample Subtitle
 readtime: true
 tags: [sample, tag]
 ---
