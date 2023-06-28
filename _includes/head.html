@@ -3,24 +3,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   {% capture title %}
-  {%- if page.share-title -%}
-  {{ page.share-title | strip_html | xml_escape }}
-  {%- elsif page.title -%}
-  {{ page.title | strip_html | xml_escape }}
-  {%- else -%}
-  {{ site.title | strip_html | xml_escape }}
-  {%- endif -%}
+    {%- if page.share-title -%}
+      {{ page.share-title | strip_html | xml_escape }}
+    {%- elsif page.title -%}
+      {{ page.title | strip_html | xml_escape  }}
+    {%- else -%}
+      {{ site.title | strip_html | xml_escape }}
+    {%- endif -%}
   {% endcapture %}
 
   {% capture description %}
-  {%- if page.share-description -%}
-  {{ page.share-description | strip_html | xml_escape }}
-  {%- elsif page.subtitle -%}
-  {{ page.subtitle | strip_html | xml_escape }}
-  {%- else -%}
-  {%- assign excerpt_length = site.excerpt_length | default: 50 -%}
-  {{ page.content | strip_html | xml_escape | truncatewords: excerpt_length | strip }}
-  {%- endif -%}
+    {%- if page.share-description -%}
+      {{ page.share-description | strip_html | xml_escape }}
+    {%- elsif page.subtitle -%}
+      {{ page.subtitle | strip_html | xml_escape }}
+    {%- else -%}
+      {%- assign excerpt_length = site.excerpt_length | default: 50 -%}
+      {{ page.content | strip_html | xml_escape | truncatewords: excerpt_length | strip }}
+    {%- endif -%}
   {% endcapture %}
 
   <title>{{ title }}</title>
@@ -134,7 +134,8 @@
   {% if page.comments and site.staticman.repository and site.staticman.branch %}
   <link rel="stylesheet" href="{{ " /assets/css/staticman.css" | relative_url }}">
   {% endif %}
-
+<link rel="stylesheet" type="" href="https://fonts.googleapis.com/css?family=Ubuntu|Roboto|Poppins|Montserrat|Oswald|Inter">
+<!-- <link rel="stylesheet" type="" href="https://fonts.googleapis.com/css?family=Roboto Mono|Noto Sans|PT Sans> -->
   {% if page.head-extra %}
   {% for file in page.head-extra %}
   {% include {{ file }} %}

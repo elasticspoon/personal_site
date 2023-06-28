@@ -61,6 +61,7 @@ a:focus {
 }
 a.btn {
   color: var(--text-col);
+  background-color: var(--page-col);
 }
 blockquote {
   color: var(--blockquote-col);
@@ -548,6 +549,7 @@ footer .footer-custom-content {
 .post-preview .post-title {
   font-size: 1.875rem;
   margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 .post-preview .post-subtitle {
   margin: 0;
@@ -562,6 +564,7 @@ footer .footer-custom-content {
   margin: 0 0 0.625rem;
   font-family: 'Lora', 'Times New Roman', serif;
 }
+
 .post-heading .post-meta {
   display: inline-block;
 }
@@ -574,6 +577,50 @@ footer .footer-custom-content {
 .post-heading .post-meta .middot {
   margin: 0 0.625rem;
 }
+
+
+.post-meta .middot {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.post-preview__image {
+  display: flex;
+  align-items: center;
+}
+
+.post-preview__content-mobile {
+    display: none;
+  }
+
+.post-preview__content-desktop {
+  display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .post-meta--has-thumbnail {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-meta--has-thumbnail .middot {
+    display:none;
+  }
+
+  .post-preview__content-mobile {
+    display: block;
+  }
+
+  .post-preview__content-desktop {
+    display: none;
+  }
+
+  .post-preview__image {
+    display: block;
+  }
+
+}
+
 .post-preview .post-entry {
   width: 100%;
 }
@@ -612,8 +659,8 @@ footer .footer-custom-content {
   display: none;
 }
 .post-preview .post-image-small img {
-  max-width: 6.25rem;
-  max-height: 6.25rem;
+  max-width: 7.25rem;
+  max-height: 7.25rem;
 }
 @media (max-width: 500px) {
   .post-preview .post-image {
