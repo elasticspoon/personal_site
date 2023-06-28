@@ -1,8 +1,9 @@
 ---
 layout: base
+no_header: 'food'
 ---
 
-{% unless page.no_header %}
+{% unless page.no_header or site.no_header %}
 {% include header.html type="page" %}
 {% endunless %}
 

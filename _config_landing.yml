@@ -5,6 +5,7 @@ post_search: false
 feed_show_excerpt: true
 feed_show_tags: false
 url: "https://yuribocharov.dev"
+no_header: true
 
 pagination:
   enabled: true
@@ -14,6 +15,7 @@ pagination:
   sort_field: "date"
   sort_reverse: true
   title: ":title"
+  no_header: true
 
 blog_domain: "https://blog.yuribocharov.dev"
 
@@ -22,7 +24,6 @@ defaults:
       path: "index.html" # any file that's not a post will be a "page" layout by default
     values:
       layout: "landing"
-      head-extra: favicon_headers.html
       no_header: true
 exclude:
   - CHANGELOG.md
