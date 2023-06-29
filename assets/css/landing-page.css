@@ -1,11 +1,42 @@
+:root {
+  --gradient-header-fallback: rgb(15,32,39);
+  --gradient-header: linear-gradient(90deg, rgba(15,32,39,1) 0%, rgba(44,83,100,1) 15%, rgba(36,59,85,1) 30%, rgba(9,62,117,1) 45%, rgba(66,21,138,1) 60%, rgba(63,28,102,1) 75%, rgba(65,41,90,1) 90%, rgba(47,7,67,1) 100%);
+}
+
+[data-theme="dark"] {
+  --gradient-header: linear-gradient(128deg, rgba(173,251,218,1) 0%, rgba(53,195,255,1) 20%, rgba(253,163,153,1) 20%, rgba(188,216,128,1) 40%, rgba(118,216,128,1) 40%, rgba(235,243,139,1) 60%, rgba(173,251,218,1) 60%, rgba(213,126,255,1) 80%, rgba(255,116,116,1) 80%, rgba(111,166,255,1) 100%);  
+  --gradient-header-fallback: rgb(173,251,218);
+}
+
 h1 {
-  background-color: #fc5c7d;
-  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  background-color: var(--gradient-header-fallback);
+  background-image: var(--gradient-header);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  inline-size: fit-content;
+  margin-inline: auto;
+}
+
+.landing-page__about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+}
+
+
+.landing-page__headshot {
+  border-radius: 9999px;
+  width: 300px;
+}
+
+.landing-page__about-intro {
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .landing-page__title {
@@ -25,4 +56,9 @@ h1 {
   overflow-y: scroll;
   border: 1px solid var(--text-col);
   padding: 1rem 3rem;
+}
+
+.landing-page__skills {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
