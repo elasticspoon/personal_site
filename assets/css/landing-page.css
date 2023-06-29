@@ -1,3 +1,13 @@
+h1 {
+  background-color: #fc5c7d;
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
 .landing-page__title {
   padding: 1rem;
   text-align: center;
@@ -5,7 +15,9 @@
 }
 
 .landing-page__blog-heading {
-  margin-block-end: 2rem;
+  font-size: 1.rem;
+  font-family: "Open Sans";
+  font-weight; 600;
 }
 
 .landing-page__blog-preview {
