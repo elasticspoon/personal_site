@@ -16,7 +16,16 @@ function getCookie(name) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (getCookie("bj-dark-mode") === "dark") {
+  // (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  var currentTheme = getCookie("bj-dark-mode");
+  var hasDarkSystemTheme = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  if (
+    currentTheme === "dark" ||
+    (currentTheme === null && hasDarkSystemTheme)
+  ) {
     let button = document.getElementById("change-skin");
     document.body.setAttribute("data-theme", "dark");
     button.setAttribute("aria-checked", true);
