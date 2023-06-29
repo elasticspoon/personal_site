@@ -38,3 +38,6 @@ exclude:
   - assets/img/
 include:
   - _redirects
+site-css:
+  - "/assets/css/skin-switch.css"
+  - "/assets/css/theme-colors.css"
