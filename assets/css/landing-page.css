@@ -1,0 +1,16 @@
+.landing-page__title {
+  padding: 1rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.landing-page__blog-heading {
+  margin-block-end: 2rem;
+}
+
+.landing-page__blog-preview {
+  height: 400px;
+  overflow-y: scroll;
+  border: 1px solid var(--text-col);
+  padding: 1rem 3rem;
+}

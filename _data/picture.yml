@@ -8,6 +8,10 @@ presets:
     markup: auto
     formats: [webp, original]
     fallback_format: original
+    image_options:
+      avif:
+        compression: av1
+        speed: 8
     noscript: false
     link_source: false
     quality: 75
@@ -35,6 +39,10 @@ presets:
   thumbnail:
     markup: auto
     formats: [webp, original]
+    image_options:
+      avif:
+        compression: av1
+        speed: 8
     fallback_format: original
     noscript: false
     link_source: false
