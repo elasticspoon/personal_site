@@ -18,7 +18,11 @@ pagination:
   no_header: true
 
 blog_domain: "https://blog.yuribocharov.dev"
-
+navbar-links:
+  Blog: "https://blog.yuribocharov.dev"
+  About:
+    - About Yuri: ""
+    - Download Resume: "https://yuribocharov.dev"
 defaults:
   - scope:
       path: "index.html" # any file that's not a post will be a "page" layout by default
@@ -41,4 +45,3 @@ include:
 site-css:
   - "/assets/css/skin-switch.css"
   - "/assets/css/theme-colors.css"
-  - "/assets/css/landing-page.css"

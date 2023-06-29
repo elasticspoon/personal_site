@@ -64,3 +64,29 @@ presets:
     # Differing attributes below
     widths: [200]
     fallback_width: 200
+  headshot:
+    markup: auto
+    formats: [webp, original]
+    fallback_format: original
+    noscript: false
+    link_source: false
+    quality: 75
+    format_quality:
+      webp: 50
+      jp2: 30
+    strip_metadata: true
+    # image options only here cause plugin breaks otherwise
+    image_options:
+      avif:
+        compression: av1
+        speed: 8
+    data_sizes: true
+    keep: attention
+    dimension_attributes: true
+    attributes:
+      img: 'loading="lazy"'
+    # Differing attributes below
+    widths: [200, 400]
+    fallback_width: 400
+    sizes:
+      mobile: 400px

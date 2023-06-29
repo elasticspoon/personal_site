@@ -24,9 +24,9 @@ nav-short: true
 ###############################################
 
 navbar-links:
-  Resources:
-    - Resume: "https://yuribocharov.dev"
-  Author's home: "https://yuribocharov.dev"
+  Contact: "mailto:mail@yuribocharov.dev"
+  About:
+    - About Yuri: ""
 
 ################
 # --- Logo --- #
