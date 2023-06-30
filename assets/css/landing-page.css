@@ -17,15 +17,10 @@ h1 {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   inline-size: fit-content;
-  margin-inline: auto;
 }
 
 .landing-page__about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  text-align: center;
+  padding-block-end: 4rem;
 }
 
 
@@ -40,19 +35,24 @@ h1 {
 }
 
 .landing-page__title {
-  padding: 1rem;
-  text-align: center;
-  font-size: 5rem;
+  font-size: clamp(2rem,calc(1rem + 1.9dvw),2.8rem);
+  padding-block: 1rem;
+  margin-block-end: 0px;
+}
+
+.landing-page__subtitle {
+  font-size: clamp(1.3rem,calc(.5em + 1.4dvw),1.7rem);
+  font-weight: 600;
+  margin-block-start: 0px;
 }
 
 .landing-page__blog-heading {
-  font-size: 1.rem;
+  font-size: 1rem;
   font-family: "Open Sans";
   font-weight; 600;
 }
 
 .landing-page__blog-preview {
-  height: 400px;
   height: 40rem;
   overflow-y: scroll;
   border: 1px solid var(--text-col);
@@ -63,3 +63,22 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+.page-main p:first-child {
+  margin-block-start: -1rem;
+}
+
+.link-button {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-col);
+  background-color: var(--page-col);
+  inline-size: fit-content;
+}
+.link-button:hover {
+  color: var(--page-col);
+  border: 1px solid var(--hover-col);
+  background-color: var(--hover-col);
+}
+
