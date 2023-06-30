@@ -1,6 +1,6 @@
 :root {
-  --gradient-header-fallback: rgb(15,32,39);
-  --gradient-header: linear-gradient(90deg, rgba(15,32,39,1) 0%, rgba(44,83,100,1) 15%, rgba(36,59,85,1) 30%, rgba(9,62,117,1) 45%, rgba(66,21,138,1) 60%, rgba(63,28,102,1) 75%, rgba(65,41,90,1) 90%, rgba(47,7,67,1) 100%);
+  --gradient-header-fallback: var(--text-col);
+  --gradient-header: var(--text-col);
 }
 
 [data-theme="dark"] {
