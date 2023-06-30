@@ -1,13 +1,12 @@
 ---
 layout: base
-no_header: 'food'
 ---
 
 {% unless page.no_header or site.no_header %}
 {% include header.html type="page" %}
 {% endunless %}
 
-<div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}" role="main">
+<div class="page-main {% if page.full-width %}container-fluid{% else %}container-md{% endif %}" role="main">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
       {% if page.before-content %}
