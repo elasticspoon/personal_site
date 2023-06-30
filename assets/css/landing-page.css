@@ -53,6 +53,7 @@ h1 {
 
 .landing-page__blog-preview {
   height: 400px;
+  height: 40rem;
   overflow-y: scroll;
   border: 1px solid var(--text-col);
   padding: 1rem 3rem;
