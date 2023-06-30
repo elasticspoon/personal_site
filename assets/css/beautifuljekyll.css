@@ -240,6 +240,10 @@ img {
   padding-bottom: 0.9375rem;
 }
 
+.dropdown-item {
+  min-width: 10rem;
+}
+
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
   font-weight: 800;
