@@ -1,0 +1,33 @@
+---
+layout: page
+title: 'Movie Vault'
+---
+
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+{%- capture site_tags -%}
+    {%- for tag in site.tags -%}
+        {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+{%- endcapture -%}
+{%- assign tags_list = site_tags | split:',' | sort -%}
+
+{%- for tag in tags_list -%}
+    <a href="#{{- tag -}}" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;{{- tag -}}&nbsp;({{site.tags[tag].size}})</a>
+{%- endfor -%}
+
+<article id="full-tags-list" class="movies-list__container">
+  <div class="movies-list__year-container">
+    <div class="movies-list__year-header">
+    </div>
+    <div class="movies-list__year-movies">
+      {%- for movie in site.data.movies -%}
+        <div class="movies-list__movie">
+          {{ movie.title }}
+          {{ movie.rating }}
+          {{ movie.director }}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</article>
