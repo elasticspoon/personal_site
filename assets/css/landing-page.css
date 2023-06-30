@@ -1,6 +1,7 @@
 :root {
   --gradient-header-fallback: var(--text-col);
   --gradient-header: var(--text-col);
+  --header-col: aquamarine;
 }
 
 [data-theme="dark"] {
@@ -18,6 +19,7 @@
     rgba(111, 166, 255, 1) 100%
   );
   --gradient-header-fallback: rgb(173, 251, 218);
+  --header-col: black;
 }
 
 h1 {
@@ -29,6 +31,10 @@ h1 {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   inline-size: fit-content;
+}
+
+.landing-page__header {
+  background-color: var(--header-col);
 }
 
 .landing-page__about {
