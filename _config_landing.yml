@@ -5,7 +5,6 @@ post_search: false
 feed_show_excerpt: true
 feed_show_tags: false
 url: "https://yuribocharov.dev"
-no_header: true
 
 pagination:
   enabled: true
@@ -25,10 +24,16 @@ navbar-links:
     - Download Resume: "https://yuribocharov.dev"
 defaults:
   - scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+      no_header: true
+      # head-extra: favicon_headers.html
+  - scope:
       path: "index.html" # any file that's not a post will be a "page" layout by default
     values:
       layout: "landing"
-      no_header: true
+
 exclude:
   - CHANGELOG.md
   - CNAME
