@@ -6,16 +6,6 @@ feed_show_excerpt: true
 feed_show_tags: false
 url: "https://yuribocharov.dev"
 
-pagination:
-  enabled: true
-  collection: "posts"
-  per_page: 3
-  permalink: "/page/:num/"
-  sort_field: "date"
-  sort_reverse: true
-  title: ":title"
-  no_header: true
-
 blog_domain: "https://blog.yuribocharov.dev"
 navbar-links:
   Blog: "https://blog.yuribocharov.dev"
