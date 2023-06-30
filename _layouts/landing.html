@@ -1,20 +1,35 @@
 ---
-layout: page
+layout: base
 common-ext-css:
   - "/assets/css/landing-page.css"
 ---
 
-<section class="landing-page__about">
-  <h1 class="landing-page__title">Hi, my name is Yuri.</h1>
-  <h2 class="landing-page__subtitle">
-    I am a Full-Stack developer based in Silver Spring, MD. Currently I am
-    seeking employment.
-  </h2>
-</section>
+<div class="header-section">
+  <section
+    class="landing-page__about container-md col-xl-8 offset-xl-2 col-lg-10 offset-lg-1"
+  >
+    <h1 class="landing-page__title">Hi, my name is Yuri.</h1>
+    <h2 class="landing-page__subtitle">
+      I am a Full-Stack developer based in Silver Spring, MD. Currently I am
+      seeking employment.
+    </h2>
+  </section>
+</div>
+<div class="page-main container-md" role="main">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <section class="landing-page__section">
+        <h2 class="landing-page__section-heading">
+          Check out some of the topics I have written about recently on my blog.
+        </h2>
+        <div class="landing-page__blog-preview">{% include posts.html %}</div>
+      </section>
 
-<section class="landing-page__blog">
-  <h2 class="landing-page__blog-heading">
-    Check out some of the topics I have written about recently on my blog.
-  </h2>
-  <div class="landing-page__blog-preview">{% include posts.html %}</div>
-</section>
+      <section class="landing-page__section">
+        <h2 class="landing-page__section-heading">
+          Check out some of the projects that I have worked on recently.
+        </h2>
+      </section>
+    </div>
+  </div>
+</div>
