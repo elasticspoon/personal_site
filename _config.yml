@@ -317,10 +317,11 @@ uncss:
     - assets/css/bootstrap-social.css
     - assets/css/bootstrap.min.css
     - assets/css/fonts.css
-    # - assets/css/pygment_highlights.css
+    - assets/css/pygment_highlights.css
     - assets/css/staticman.css
-    # skin-switch not here because JavaScript makes classes not load.
     - assets/css/beautifuljekyll-minimal.css
+    - assets/css/beautifuljekyll.css
+    - assets/css/skin-switch.css
   files:
     - "**/*.html"
 
