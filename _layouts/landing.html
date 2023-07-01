@@ -22,15 +22,29 @@ common-ext-css:
     <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
       <section class="landing-page__section">
         <h2 class="landing-page__section-heading">
+          Check out some of the projects that I have worked on recently.
+        </h2>
+        <div class="landing-page__projects">
+          {% for project in site.data.projects %}
+          <div class="landing-page__project">
+            <h3 class="landing-page__project-title">{{ project.title }}</h3>
+            <div class="landing-page__project-thumbnail">
+              {% assign preview_thumbnail = project.thumbnail | relative_url %}
+              {% picture {{ preview_thumbnail }} 
+              --alt "Screen shot of the private events landing page"
+              %}
+            </div>
+            <span class="landing-page__project-info">{{ project.info }}</span>
+            <span class="landing-page__project-desc">{{ project.desc }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      <section class="landing-page__section">
+        <h2 class="landing-page__section-heading">
           Check out some of the topics I have written about recently on my blog.
         </h2>
         <div class="landing-page__blog-preview">{% include posts.html %}</div>
-      </section>
-
-      <section class="landing-page__section">
-        <h2 class="landing-page__section-heading">
-          Check out some of the projects that I have worked on recently.
-        </h2>
       </section>
     </div>
   </div>
