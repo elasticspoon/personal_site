@@ -1,7 +1,18 @@
+---
+# Must have fornt-matter for jekyll to process file for postcss
+---
+
 :root {
   --gradient-header-fallback: var(--text-col);
   --gradient-header: var(--text-col);
-  --header-col: aquamarine;
+  --header-col: linear-gradient(in oklab, blue, green);
+}
+
+.landing-page__header-container {
+  & .landing-page__title {
+    font-size: 30px;
+    font-weight: 600;
+  }
 }
 
 [data-theme="dark"] {
