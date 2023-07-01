@@ -24,7 +24,11 @@ defaults:
       path: "index.html" # any file that's not a post will be a "page" layout by default
     values:
       layout: "landing"
-      no_header: true
+  - scope:
+      path: "assets/css/*.css"
+    values:
+      layout: null
+
 exclude:
   - CHANGELOG.md
   - CNAME

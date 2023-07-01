@@ -1,4 +1,7 @@
-/* TODO: make this sheet load earlier */
+---
+# Must have fornt-matter for jekyll to process file for postcss
+---
+
 :root {
   --navbar-col: #eaeaea; /* done */
   --navbar-text-col: var(--text-col); /* done */
