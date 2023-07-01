@@ -3,15 +3,18 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem "jekyll-paginate-v2"
-gem "jekyll-sitemap"
-gem "jekyll-webp"
-gem "jekyll-brotli"
-gem "jekyll-gzip"
-gem "jekyll-postfiles"
+gem "kramdown"
 gem "kramdown-parser-gfm"
 gem "sass"
-gem "kramdown"
 gem "webrick"
-gem "jekyll-minifier"
-gem "jekyll_picture_tag"
+
+group :jekyll_plugins do
+  gem "jekyll-paginate-v2"
+  gem "jekyll-sitemap"
+  gem "jekyll_picture_tag"
+end
+group :jekyll_plugins, :production do
+  gem "jekyll-brotli"
+  gem "jekyll-gzip"
+  gem "jekyll-minifier"
+end

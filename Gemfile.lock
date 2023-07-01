@@ -48,15 +48,12 @@ GEM
       uglifier (~> 4.1)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
-    jekyll-postfiles (3.1.0)
-      jekyll (>= 3.8.6, < 5)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll-webp (1.0.0)
     jekyll_picture_tag (2.0.4)
       addressable (~> 2.6)
       jekyll (~> 4.0)
@@ -115,9 +112,7 @@ DEPENDENCIES
   jekyll-gzip
   jekyll-minifier
   jekyll-paginate-v2
-  jekyll-postfiles
   jekyll-sitemap
-  jekyll-webp
   jekyll_picture_tag
   kramdown
   kramdown-parser-gfm
