@@ -3,19 +3,13 @@
 ---
 
 :root {
-  --gradient-header-fallback: var(--text-col);
-  --gradient-header: var(--text-col);
-  --header-col: linear-gradient(in oklab, blue, green);
-}
-
-.landing-page__header-container {
-  & .landing-page__title {
-    font-size: 30px;
-  }
+  --header: oklch(8.67% 0.027 147.18);
+  --header-fallback: black;
+  --header-col: oklch(82.3% 0.188 176.8);
 }
 
 [data-theme="dark"] {
-  --gradient-header: linear-gradient(
+  --header: linear-gradient(
     128deg,
     rgba(173, 251, 218, 1) 0%,
     rgba(53, 195, 255, 1) 20%,
@@ -28,13 +22,13 @@
     rgba(255, 116, 116, 1) 80%,
     rgba(111, 166, 255, 1) 100%
   );
-  --gradient-header-fallback: rgb(173, 251, 218);
+  --header-fallback: rgb(173, 251, 218);
   --header-col: black;
 }
 
 h1 {
-  background-color: var(--gradient-header-fallback);
-  background-image: var(--gradient-header);
+  background-color: var(--header-fallback);
+  background-image: var(--header);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,22 +61,67 @@ body .landing-page__about {
   font-size: clamp(2rem, calc(1rem + 1.9dvw), 2.8rem);
   padding-block: 1rem;
   margin-block-end: 0px;
+  margin-block-start: clamp(
+    calc(4rem + 51px),
+    calc(40dvh - 51px - 200px),
+    40dvh
+  );
 }
 
 .landing-page__subtitle {
   font-size: clamp(1.3rem, calc(0.5em + 1.4dvw), 1.7rem);
+  color: var(--header-fallback);
   font-weight: 600;
   margin-block-start: 0px;
 }
 
 .landing-page__section {
-  margin-block: 20dvh;
+  margin-block: 5dvh;
 }
 
 .landing-page__section-heading {
   font-size: 1.4rem;
   font-family: "Open Sans";
   font-weight: 600;
+}
+
+.landing-page__projects {
+}
+
+.landing-page__project {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  padding: 0.5rem;
+  border: 1px solid var(--text-col);
+
+  /* &:hover { */
+  /*   border-color: var(--hover-col); */
+  /*   background-color: var(--hover-col); */
+  /*   color: var(--page-col); */
+  /* } */
+}
+
+.landing-page__project-title {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-block: 0;
+}
+
+.landing-page__project-info {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.landing-page__project-thumbnail {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.landing-page__project-desc {
+  grid-column-start: 1;
+  grid-column-end: 9;
 }
 
 .landing-page__blog-preview {
