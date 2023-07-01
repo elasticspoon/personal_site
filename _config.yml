@@ -334,6 +334,7 @@ uncss:
     - assets/css/beautifuljekyll-minimal.css
     - assets/css/beautifuljekyll.css
     - assets/css/skin-switch.css
+    - assets/css/landing-page.css
   files:
     - "**/*.html"
 
