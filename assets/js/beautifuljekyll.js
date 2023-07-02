@@ -1,5 +1,3 @@
-// Dean Attali / Beautiful Jekyll 2023
-
 let BeautifulJekyllJS = {
   init: function () {
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
