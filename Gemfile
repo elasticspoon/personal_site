@@ -13,6 +13,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll_picture_tag"
   gem "jekyll-postcss-v2"
+  gem "jekyll-inline-svg"
 end
 group :jekyll_plugins, :production do
   gem "jekyll-brotli"
