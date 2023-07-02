@@ -28,13 +28,24 @@ common-ext-css:
           {% for project in site.data.projects %}
           <div class="landing-page__project">
             <h3 class="landing-page__project-title">{{ project.title }}</h3>
+            {% assign repo = project.repo | prepend: "https://github.com/" %}
+            <p class="landing-page__project-meta">Status: Complete</p>
+            <p class="landing-page__project-meta">Status: Complete</p>
+            <p class="landing-page__project-meta">Status: Complete</p>
+            <a class="landing-page__project-meta" href="{{ repo }}">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fab fa-github fa-stack-1x"></i>
+              </span>
+              <span>
+                {{ project.repo }}
+              </span>
+            </a>
             <div class="landing-page__project-thumbnail">
               {% assign preview_thumbnail = project.thumbnail | relative_url %}
-              {% picture {{ preview_thumbnail }} 
-              --alt "Screen shot of the private events landing page"
-              %}
+              {% picture {{ preview_thumbnail }} --alt "Screen shot of the
+              private events landing page" %}
             </div>
-            <span class="landing-page__project-info">{{ project.info }}</span>
+            <!-- <span class="landing-page__project-info">{{ project.info }}</span> -->
             <span class="landing-page__project-desc">{{ project.desc }}</span>
           </div>
           {% endfor %}
