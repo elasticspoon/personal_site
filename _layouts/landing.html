@@ -55,10 +55,11 @@ common-ext-js:
                 data-placement="bottom"
                 data-trigger="focus"
                 data-container=".landing-page__project-skills"
+                aria-label="{{ skill.desc }}"
               >
                 {% assign skill_svg = skill.name | prepend: 'assets/svg/' | append: '.svg'%}
                 {% svg "{{ skill_svg }}" title="{{skill.name}}" width=40 height=40
-                alt="{{skill.desc}}" title="{{skill.desc}}"
+                alt="{{skill.desc}}" title="{{skill.desc}} role="img"
                 %}
                 <span class="skill_desc hideme" aria-hidden="true"
                   >{{ skill.desc }}</span
@@ -77,7 +78,7 @@ common-ext-js:
         <h2 class="landing-page__section-heading">
           Check out some of the topics I have written about recently on my blog.
         </h2>
-        <div class="landing-page__blog-preview">{% include posts.html %}</div>
+        <div class="landing-page__blog-preview" tabindex="-1">{% include posts.html %}</div>
       </section>
     </div>
   </div>
