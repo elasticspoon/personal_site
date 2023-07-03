@@ -58,8 +58,7 @@ common-ext-js:
                 aria-label="{{ skill.desc }}"
               >
                 {% assign skill_svg = skill.name | prepend: 'assets/svg/' | append: '.svg'%}
-                {% svg "{{ skill_svg }}" title="{{skill.name}}" width=40 height=40
-                alt="{{skill.desc}}" title="{{skill.desc}} role="img"
+                {% svg "{{ skill_svg }}" width=40 height=40
                 %}
                 <span class="skill_desc hideme" aria-hidden="true"
                   >{{ skill.desc }}</span
