@@ -29,6 +29,11 @@ common-ext-js:
         <div class="landing-page__projects">
           {% for project in site.data.projects %}
           <div class="landing-page__project">
+            <div class="landing-page__project-thumbnail">
+              {% assign preview_thumbnail = project.thumbnail | relative_url %}
+              {% picture {{ preview_thumbnail }} --alt "Screen shot of the
+              private events landing page" %}
+            </div>
             <h3 class="landing-page__project-title">{{ project.title }}</h3>
             {% assign repo = project.repo | prepend: "https://github.com/" %}
             <a class="landing-page__project-meta" href="{{ repo }}">
@@ -38,12 +43,8 @@ common-ext-js:
               <span> {{ project.repo }} </span>
             </a>
 
-            <div class="landing-page__project-thumbnail">
-              {% assign preview_thumbnail = project.thumbnail | relative_url %}
-              {% picture {{ preview_thumbnail }} --alt "Screen shot of the
-              private events landing page" %}
-            </div>
-            <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
+            
+            <span class="landing-page__project-desc">{{ project.desc }}</span>
             <div class="landing-page__project-skills">
               {% for skill in project.skills %}
               <button
@@ -65,8 +66,9 @@ common-ext-js:
               </button>
               {% endfor %}
             </div>
-            <!-- <span class="landing-page__project-info">{{ project.info }}</span> -->
-            <span class="landing-page__project-desc">{{ project.desc }}</span>
+            <a class="link-button landing-page__project-button" href="{{ project.site_link }}">
+              Visit the website
+            </a>
           </div>
           {% endfor %}
         </div>
