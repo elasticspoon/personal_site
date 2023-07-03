@@ -95,11 +95,11 @@ body .landing-page__about {
 
 .landing-page__project-title {
   grid-column-start: 1;
-  grid-column-end: 6;
-  margin-block: 0px;
-  /* margin-block-start: 1rem; */
-  /* margin-block-end: 1rem; */
-  font-size: 2rem;
+  grid-column-end: 8;
+  /* margin-block: 0px; */
+  margin-block-start: 1rem;
+  margin-block-end: 0rem;
+  font-size: 3rem;
 }
 
 .landing-page__project-info {
@@ -113,6 +113,7 @@ body .landing-page__about {
   margin-block: 0;
   font-family: "Open Sans";
   color: var(--text-col);
+  display: block;
 
   & i {
     position: unset;
@@ -128,12 +129,13 @@ body .landing-page__about {
 }
 
 .landing-page__project-skills {
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 5;
-  grid-row-end: 6;
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 4;
   display: flex;
   column-gap: 0.125rem;
+  margin-inline-start: auto;
+  margin-block-start: auto;
 
   & .popover-body {
     font-size: 1rem;
@@ -153,11 +155,11 @@ body .landing-page__about {
 }
 
 .landing-page__project-thumbnail {
-  grid-column-start: 6;
+  grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 1;
-  grid-row-end: 6;
-  border: solid 1px var(--text-col);
+  grid-row-end: 4;
+  border: 1px solid var(--text-col);
 }
 
 .landing-page__project-desc {
@@ -166,15 +168,24 @@ body .landing-page__about {
   grid-column-end: 13;
 }
 
+.landing-page__project-button {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  margin-block-start: 1rem;
+}
+
 @media screen and (max-width: 700px) {
   .landing-page__project {
     display: block;
   }
-  .landing-page__project-title {
-    margin-block: 0px;
+
+  .landing-page__project-skills {
+    flex-direction: row-reverse;
   }
 
-  .landing-page__project-desc {
+  .landing-page__project-button {
+    display: block;
+    margin-inline-start: auto;
   }
 }
 
@@ -189,17 +200,20 @@ body .landing-page__about {
   margin-block-start: -1rem;
 }
 
-/* .link-button { */
-/*   font-family: 'Open Sans'; */
-/*   font-weight: 800; */
-/*   font-size: 1.5rem; */
-/*   color: var(--text-col); */
-/*   background-color: var(--page-col); */
-/*   inline-size: fit-content; */
-/* } */
-/**/
-/* .link-button:hover { */
-/*   color: var(--page-col); */
-/*   border: 1px solid var(--hover-col); */
-/*   background-color: var(--hover-col); */
-/* } */
+.link-button {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-col);
+  background-color: var(--page-col);
+  inline-size: fit-content;
+  border: 1px solid var(--text-col);
+  padding: 1rem;
+}
+
+.link-button:hover {
+  color: var(--page-col);
+  border: 1px solid var(--hover-col);
+  background-color: var(--hover-col);
+  text-decoration: none;
+}
