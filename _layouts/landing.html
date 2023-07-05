@@ -66,9 +66,22 @@ common-ext-js:
               </button>
               {% endfor %}
             </div>
-            <a class="link-button landing-page__project-button" href="{{ project.site_link }}">
+            <div class="landing-page__project-links">
+            {% if project.site_link != nil %}
+            <a
+              class="link-button landing-page__project-button"
+              href="{{ project.site_link }}"
+            >
               Visit the website
             </a>
+            {% endif %}
+            <a
+              class="link-button landing-page__project-button"
+              href="{{ repo }}"
+            >
+              Read the Source Code
+            </a>
+            </div>
           </div>
           {% endfor %}
         </div>
