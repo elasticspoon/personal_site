@@ -23,9 +23,9 @@ common-ext-js:
   <div class="row">
     <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
       <section class="landing-page__section">
-        <h2 class="landing-page__section-heading">
-          Projects
-        </h2>
+        <div class="landing-page__section-heading">
+          <h2>Projects</h2>
+        </div>
         <div class="landing-page__projects">
           {% for project in site.data.projects %}
           <div class="landing-page__project">
@@ -43,7 +43,6 @@ common-ext-js:
               <span> {{ project.repo }} </span>
             </a>
 
-            
             <span class="landing-page__project-desc">{{ project.desc }}</span>
             <div class="landing-page__project-skills">
               {% for skill in project.skills %}
@@ -57,9 +56,8 @@ common-ext-js:
                 data-container=".landing-page__project-skills"
                 aria-label="{{ skill.desc }}"
               >
-                {% assign skill_svg = skill.name | prepend: 'assets/svg/' | append: '.svg'%}
-                {% svg "{{ skill_svg }}" width=40 height=40
-                %}
+                {% assign skill_svg = skill.name | prepend: 'assets/svg/' |
+                append: '.svg'%} {% svg "{{ skill_svg }}" width=40 height=40 %}
                 <span class="skill_desc hideme" aria-hidden="true"
                   >{{ skill.desc }}</span
                 >
@@ -67,29 +65,27 @@ common-ext-js:
               {% endfor %}
             </div>
             <div class="landing-page__project-links">
-            {% if project.site_link != nil %}
-            <a
-              class="link-button landing-page__project-button"
-              href="{{ project.site_link }}"
-            >
-              Visit the website
-            </a>
-            {% endif %}
-            <a
-              class="link-button landing-page__project-button"
-              href="{{ repo }}"
-            >
-              Read the Source Code
-            </a>
+              {% if project.site_link != nil %}
+              <a
+                class="link-button landing-page__project-button"
+                href="{{ project.site_link }}"
+              >
+                Visit the website
+              </a>
+              {% endif %}
+              <a
+                class="link-button landing-page__project-button"
+                href="{{ repo }}"
+              >
+                Read the Source Code
+              </a>
             </div>
           </div>
           {% endfor %}
         </div>
       </section>
       <section class="landing-page__section">
-        <h2 class="landing-page__section-heading">
-          Articles
-        </h2>
+        <div class="landing-page__section-heading"><h2>Articles</h2></div>
         <div class="landing-page__blog-preview" tabindex="-1">
           {% include posts.html %}
         </div>
