@@ -44,6 +44,7 @@ h1 {
     max-width: 1600px;
   }
 }
+
 .landing-page__header-container {
   background-color: var(--header-col);
 }
@@ -83,9 +84,13 @@ body .landing-page__about {
 }
 
 .landing-page__section-heading {
-  font-size: 1.4rem;
+  font-size: 3rem;
   font-family: "Open Sans";
-  font-weight: 600;
+  font-weight: 700;
+  text-align: center;
+  padding-block: 3rem;
+  background-color: var(--text-col);
+  color: var(--page-col);
 }
 
 .landing-page__projects {
@@ -94,9 +99,13 @@ body .landing-page__about {
 .landing-page__project {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  padding-block: 1rem;
+  padding-block-end: 1rem;
   border-block-end: 1px solid var(--text-col);
-  margin-block: 1rem;
+  margin-block-end: 4rem;
+
+  &:last-child {
+    border-block-end: none;
+  }
 }
 
 .landing-page__project-title {
