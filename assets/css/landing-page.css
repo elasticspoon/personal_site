@@ -148,9 +148,8 @@ body .landing-page__about {
   grid-column-end: 13;
   grid-row-start: 4;
   display: flex;
-  column-gap: 0.125rem;
   margin-inline-start: auto;
-  margin-block-start: auto;
+  margin-block-start: 0.4rem;
 
   & .popover-body {
     font-size: 1rem;
@@ -160,12 +159,18 @@ body .landing-page__about {
 
 .landing-page__project-skill {
   position: relative;
-  border: none;
   padding: 0px;
   background: none;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
 
   & svg {
     width: 40px;
+  }
+
+  &:hover {
+    border: 1px solid var(--text-col);
+    background-color: var(--text-col);
   }
 }
 
@@ -183,15 +188,19 @@ body .landing-page__about {
   grid-column-end: 13;
 }
 
-.landing-page__project-button {
+.landing-page__project-links {
   grid-column-start: 1;
   grid-column-end: 13;
+  grid-row-start: 7;
   margin-block-start: 1rem;
+  display: flex;
+  column-gap: 1rem;
 }
 
 @media screen and (max-width: 700px) {
   .landing-page__project {
     display: block;
+    padding-block: 1rem;
   }
 
   .landing-page__project-skills {
@@ -200,7 +209,11 @@ body .landing-page__about {
 
   .landing-page__project-button {
     display: block;
-    margin-inline-start: auto;
+    margin-block-start: 0.5rem;
+  }
+
+  .landing-page__project-links {
+    display: block;
   }
 }
 
