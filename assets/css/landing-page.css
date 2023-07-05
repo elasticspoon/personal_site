@@ -131,7 +131,15 @@ body .landing-page__about {
 }
 
 .landing-page__section {
-  margin-block: 5dvh;
+  margin-block-end: 8rem;
+
+  &:first-child {
+    margin-block-start: 6rem;
+  }
+
+  &:last-child {
+    margin-block-end: none;
+  }
 }
 
 .landing-page__section-heading {
@@ -157,7 +165,7 @@ body .landing-page__about {
 
   animation: rainbow 20s linear infinite;
   padding-block: 2rem;
-  margin-block-end: 1rem;
+  margin-block-end: 3rem;
   background-color: var(--header);
   background-image: var(--header-bg);
 }
@@ -177,10 +185,6 @@ body .landing-page__about {
   padding-block-end: 1rem;
   border-block-end: 1px solid var(--text-col);
   margin-block-end: 4rem;
-
-  &:last-child {
-    border-block-end: none;
-  }
 }
 
 .landing-page__project-title {
@@ -293,7 +297,7 @@ body .landing-page__about {
 }
 
 .landing-page__blog-preview {
-  height: 40rem;
+  height: 60rem;
   overflow-y: scroll;
   border: 1px solid var(--text-col);
   padding: 1rem 3rem;
@@ -319,4 +323,27 @@ body .landing-page__about {
   border: 1px solid var(--hover-col);
   background-color: var(--hover-col);
   text-decoration: none;
+}
+
+.landing-page__see-more {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  & a {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 125px);
+    filter: drop-shadow(rgba(0, 136, 255, 0.5) 0px 0px 1.5rem);
+  }
+
+  img {
+    filter: blur(0.25rem);
+  }
+}
+
+.landing-page__inline-button {
+  margin-block-start: 1rem;
+  display: block;
 }
