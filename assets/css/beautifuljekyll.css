@@ -566,7 +566,7 @@ footer .footer-custom-content {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #595959;
+  color: var(--text-col);
   font-size: 1rem;
 
   margin: 0 0 0.625rem;
