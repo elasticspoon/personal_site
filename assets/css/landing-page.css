@@ -38,6 +38,12 @@ h1 {
   inline-size: fit-content;
 }
 
+@media screen and (min-width: 1200px) {
+  .page-main.container-md,
+  .landing-page__header.container-md {
+    max-width: 1600px;
+  }
+}
 .landing-page__header-container {
   background-color: var(--header-col);
 }
