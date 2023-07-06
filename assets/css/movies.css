@@ -1,0 +1,74 @@
+---
+# Front matter for jekyll processing
+---
+
+.movies-list__container {
+  margin-block-start: 10rem;
+}
+
+.movies-list__year-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.movies-list__year-movies {
+  margin-bottom: calc(1em + 2vw);
+  display: grid;
+  grid-gap: 1.5em;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fill, minmax(11.5em, 1fr));
+}
+
+.movies-list__movie {
+  font-size: 0.875em;
+  grid-template-columns: 80px 1fr;
+  grid-gap: 1em;
+  display: block;
+
+  h3,
+  p {
+    margin: 0px;
+  }
+
+  details,
+  summary {
+    position: relative;
+  }
+}
+.movies-list__movie-cover img {
+  border: solid 1px var(--text-col);
+}
+
+.movies-list__movie-info {
+  margin-block-start: 0.5rem;
+}
+
+.movies-list__movie-title {
+  font-size: 1.125rem;
+}
+
+.movies-list__movie-notes {
+  top: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--page-col);
+  padding: 1.5em 0.5em 0.5em;
+  /* border: 1px solid var(--border); */
+  margin: -1.5em -0.5em;
+}
+
+details[open] > summary {
+  z-index: 2;
+}
+
+@media screen and (max-width: 700px) {
+  .movies-list__year-movies {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movies-list__movie {
+    display: grid;
+  }
+}

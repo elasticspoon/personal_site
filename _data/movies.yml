@@ -1,12 +1,790 @@
 - date: 2023-06-28
   title: All Quiet on the Western Front
-  rating: ?/5
-  review:
-  thumbnail:
-  director:
+  rating: 3
+  review: Interesting character perspective on WWI. The volume of combat action lessened the impact of what should have been a character driven movie. Having read other Remarque books the plot arc felt very predicatable.
+  thumbnail: "/assets/img/covers/all_quiet_on_the_western_front.jpg"
+  director: Edward Berger
+  year: 2022
 - date: 2023-06-18
   title: Peppermint Candy
-  rating: 4/5
-  thumbnail:
-  director:
+  rating: 3
+  thumbnail: "/assets/img/covers/peppermint_candy.jpg"
+  director: Lee Chang-dong
+  year: 1999
   review:
+- date: 2023-06-02
+  title: O Brother, Where Art Thou
+  rating: 4.5
+  thumbnail: "/assets/img/covers/o_brother_where_art_thou.jpg"
+  director: Joel and Ethan Coen
+  review:
+- date: 2023-03-29
+  title: Blow-Up
+  rating: Gave Up
+  director: Michelangelo Antonioni
+  year: 1966
+  review: The movie was slow, the characters were not compelling and frankly the main character made me pretty uncomfortable.
+  thumbnail: "assets/img/covers/blow-up.jpg"
+- date: 2023-03-15
+  title: Harakiri
+  rating: 4
+  director: Masaki Kobayashi
+  year: 1962
+  review:
+  thumbnail: "assets/img/covers/harakiri.jpg"
+- date: 2023-03-01
+  title: Joint Security Area
+  rating: 3
+  director: Park Chan-Wook
+  year: 2000
+  review:
+  thumbnail: "assets/img/covers/joint_security_area.jpg"
+- date: 2023-02-01
+  title: The Fly
+  rating: 4.5
+  director: David Cronenburg
+  year: 1986
+  review:
+  thumbnail: "assets/img/covers/the_fly.jpg"
+- date: 2023-01-18
+  title: The Dark Crystal
+  rating: Gave Up
+  director: "Jim Henson, Frank Oz"
+  year: 1982
+  review: Did not age well.
+  thumbnail: "assets/img/covers/the_dark_crystal.jpg"
+- date: 2022-12-12
+  title: The NeverEnding Story
+  rating:
+  director:
+  year: 1984
+  review:
+  thumbnail: "assets/img/covers/the_neverending_story.jpg"
+- date: 2022-11-30
+  title: The Kings Speech
+  rating:
+  director:
+  year: 2010
+  review:
+  thumbnail: "assets/img/covers/the_kings_speech.jpg"
+- date: 2022-11-24
+  title: Gattaca
+  rating:
+  director:
+  year: 1997
+  review:
+  thumbnail: "assets/img/covers/gattaca.jpg"
+- date: 2022-11-16
+  title: Beetlejuice
+  rating:
+  director:
+  year: 1988
+  review:
+  thumbnail: "assets/img/covers/beetlejuice.jpg"
+- date: 2022-11-09
+  title: The VelociPastor
+  rating:
+  director:
+  year: 2018
+  review:
+  thumbnail: "assets/img/covers/the_velocipastor.jpg"
+- date: 2022-11-02
+  title: Legally Blonde
+  rating:
+  director:
+  year: 2001
+  review:
+  thumbnail: "assets/img/covers/legally_blonde.jpg"
+- date: 2022-10-19
+  title: Zootopia
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/zootopia.jpg"
+- date: 2022-10-12
+  title: Fargo
+  rating:
+  director:
+  year: 1996
+  review:
+  thumbnail: "assets/img/covers/fargo.jpg"
+- date: 2022-10-05
+  title: They Shall Not Grow Old
+  rating:
+  director:
+  year: 2018
+  review:
+  thumbnail: "assets/img/covers/they_shall_not_grow_old.jpg"
+- date: 2022-09-28
+  title: Hocus Pocus
+  rating:
+  director:
+  year: 1993
+  review:
+  thumbnail: "assets/img/covers/hocus_pocus.jpg"
+- date: 2022-09-21
+  title: Class Action Park
+  rating:
+  director:
+  year: 2020
+  review:
+  thumbnail: "assets/img/covers/class_action_park.jpg"
+- date: 2022-09-21
+  title: The Road
+  rating:
+  director:
+  year: 2009
+  review:
+  thumbnail: "assets/img/covers/the_road.jpg"
+- date: 2022-09-07
+  title: Awakenings
+  rating:
+  director:
+  year: 1990
+  review:
+  thumbnail: "assets/img/covers/awakenings.jpg"
+- date: 2022-08-31
+  title: Judas and the Black Messiah
+  rating:
+  director:
+  year: 2021
+  review:
+  thumbnail: "assets/img/covers/judas_and_the_black_messiah.jpg"
+- date: 2022-08-24
+  title: Knives Out
+  rating:
+  director:
+  year: 2019
+  review:
+  thumbnail: "assets/img/covers/knives_out.jpg"
+- date: 2022-08-14
+  title: Labyrinth
+  rating:
+  director:
+  year: 1986
+  review:
+  thumbnail: "assets/img/covers/labyrinth.jpg"
+- date: 2022-08-10
+  title: 1917
+  rating:
+  director:
+  year: 2019
+  review:
+  thumbnail: "assets/img/covers/1917.jpg"
+- date: 2022-07-25
+  title: The Big Lebowski
+  rating:
+  director:
+  year: 1998
+  review:
+  thumbnail: "assets/img/covers/the_big_lebowski.jpg"
+- date: 2022-07-11
+  title: Life is a Miracle
+  rating:
+  director: Emir Kusturica
+  year: 2004
+  review:
+  thumbnail: "assets/img/covers/life_is_a_miracle.jpg"
+- date: 2022-07-04
+  title: Princess Mononoke
+  rating:
+  director:
+  year: 1997
+  review:
+  thumbnail: "assets/img/covers/princess_mononoke.jpg"
+- date: 2022-06-04
+  title: Titane
+  rating:
+  director:
+  year: 2021
+  review:
+  thumbnail: "assets/img/covers/titane.jpg"
+- date: 2022-05-29
+  title: Young Frankenstein
+  rating:
+  director:
+  year: 1974
+  review:
+  thumbnail: "assets/img/covers/young_frankenstein.jpg"
+- date: 2022-05-19
+  title: Everything Everywhere All At Once
+  rating:
+  director:
+  year: 2022
+  review:
+  thumbnail: "assets/img/covers/everything_everywhere_all_at_once.jpg"
+- date: 2022-05-12
+  title: The Conversation
+  rating:
+  director:
+  year: 1974
+  review:
+  thumbnail: "assets/img/covers/the_conversation.jpg"
+- date: 2022-05-05
+  title: A Hero
+  rating:
+  director:
+  year: 2021
+  review:
+  thumbnail: "assets/img/covers/a_hero.jpg"
+- date: 2022-04-29
+  title: Shutter Island
+  rating:
+  director:
+  year: 2004
+  review:
+  thumbnail: "assets/img/covers/shutter_island.jpg"
+- date: 2022-04-22
+  title: Inside Llewyn Davis
+  rating:
+  director:
+  year: 2013
+  review:
+  thumbnail: "assets/img/covers/inside_llewyn_davis.jpg"
+- date: 2022-04-18
+  title: Jumanji
+  rating:
+  director:
+  year: 1995
+  review:
+  thumbnail: "assets/img/covers/jumanji.jpg"
+- date: 2022-04-11
+  title: Memories of Murder
+  rating:
+  director:
+  year: 2003
+  review:
+  thumbnail: "assets/img/covers/memories_of_murder.jpg"
+- date: 2022-04-04
+  title: The Fifth Element
+  rating:
+  director:
+  year: 1997
+  review:
+  thumbnail: "assets/img/covers/the_fifth_element.jpg"
+- date: 2022-04-04
+  title: The Green Mile
+  rating:
+  director:
+  year: 1999
+  review:
+  thumbnail: "assets/img/covers/the_green_mile.jpg"
+- date: 2022-03-25
+  title: Shutter Island
+  rating:
+  director:
+  year: 2010
+  review:
+  thumbnail: "assets/img/covers/shutter_island.jpg"
+- date: 2022-02-17
+  title: Pig
+  rating:
+  director:
+  year: 2021
+  review:
+  thumbnail: "assets/img/covers/pig.jpg"
+- date: 2022-02-10
+  title: Harold And Maude
+  rating:
+  director:
+  year: 1971
+  review:
+  thumbnail: "assets/img/covers/harold_and_maude.jpg"
+- date: 2022-01-27
+  title: Sinister
+  rating:
+  director:
+  year: 2012
+  review:
+  thumbnail: "assets/img/covers/sinister.jpg"
+- date: 2022-01-12
+  title: Snatch
+  rating:
+  director:
+  year: 2000
+  review:
+  thumbnail: "assets/img/covers/snatch.jpg"
+- date: 2022-01-06
+  title: Capernaum
+  rating:
+  director:
+  year: 2018
+  review:
+  thumbnail: "assets/img/covers/capernaum.jpg"
+- date: 2022-12-22
+  title: Chinatown
+  rating:
+  director:
+  year: 1974
+  review:
+  thumbnail: "assets/img/covers/chinatown.jpg"
+- date: 2021-12-16
+  title: The Revenant
+  rating:
+  director:
+  year: 2015
+  review:
+  thumbnail: "assets/img/covers/the_revenant.jpg"
+- date: 2021-11-04
+  title: Se7en
+  rating:
+  director:
+  year: 1995
+  review:
+  thumbnail: "assets/img/covers/se.jpg"
+- date: 2021-11-04
+  title: Dune
+  rating:
+  director:
+  year: 2021
+  review:
+  thumbnail: "assets/img/covers/dune.jpg"
+- date: 2021-10-20
+  title: A Clockwork Orange
+  rating:
+  director:
+  year: 1971
+  review:
+  thumbnail: "assets/img/covers/a_clockwork_orange.jpg"
+- date: 2021-09-29
+  title: The Endless
+  rating:
+  director:
+  year: 2017
+  review:
+  thumbnail: "assets/img/covers/the_endless.jpg"
+- date: 2021-09-22
+  title: The Handmaiden
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/the_handmaiden.jpg"
+- date: 2021-09-15
+  title: Dorogie Tovarishchi
+  rating:
+  director:
+  year: 2020
+  review:
+  thumbnail: "assets/img/covers/dorogie_tovarishchi.jpg"
+- date: 2021-09-09
+  title: Argo
+  rating:
+  director:
+  year: 2012
+  review:
+  thumbnail: "assets/img/covers/argo.jpg"
+- date: 2021-09-02
+  title: The Social Network
+  rating:
+  director:
+  year: 2010
+  review:
+  thumbnail: "assets/img/covers/the_social_network.jpg"
+- date: 2021-08-26
+  title: Nomadland
+  rating:
+  director:
+  year: 2020
+  review:
+  thumbnail: "assets/img/covers/nomadland.jpg"
+- date: 2021-08-19
+  title: Memento
+  rating:
+  director:
+  year: 2000
+  review:
+  thumbnail: "assets/img/covers/memento.jpg"
+- date: 2021-08-13
+  title: Changeling
+  rating:
+  director:
+  year: 2008
+  review:
+  thumbnail: "assets/img/covers/changeling.jpg"
+- date: 2021-08-07
+  title: Pan
+  rating:
+  director:
+  year: 2006
+  review:
+  thumbnail: "assets/img/covers/pan.jpg"
+- date: 2021-07-31
+  title: Elena
+  rating:
+  director:
+  year: 2011
+  review:
+  thumbnail: "assets/img/covers/elena.jpg"
+- date: 2021-07-23
+  title: In Bruges
+  rating:
+  director:
+  year: 2008
+  review:
+  thumbnail: "assets/img/covers/in_bruges.jpg"
+- date: 2021-07-10
+  title: The Conjuring
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/the_conjuring.jpg"
+- date: 2021-06-25
+  title: Mother
+  rating:
+  director:
+  year: 2009
+  review:
+  thumbnail: "assets/img/covers/mother.jpg"
+- date: 2021-06-18
+  title: Stardust
+  rating:
+  director:
+  year: 2007
+  review:
+  thumbnail: "assets/img/covers/stardust.jpg"
+- date: 2021-06-12
+  title: No Country For Old Men
+  rating:
+  director:
+  year: 2007
+  review:
+  thumbnail: "assets/img/covers/no_country_for_old_men.jpg"
+- date: 2021-06-11
+  title: Leon The Professional
+  rating:
+  director:
+  year: 1994
+  review:
+  thumbnail: "assets/img/covers/leon_the_professional.jpg"
+- date: 2021-06-04
+  title: Howls Moving Castle
+  rating:
+  director:
+  year: 2004
+  review:
+  thumbnail: "assets/img/covers/howls_moving_castle.jpg"
+- date: 2021-05-28
+  title: Ivanovo Detstvo
+  rating:
+  director:
+  year: 1962
+  review:
+  thumbnail: "assets/img/covers/ivanovo_detstvo.jpg"
+- date: 2021-05-21
+  title: Lars and the Real Girl
+  rating:
+  director:
+  year: 2007
+  review:
+  thumbnail: "assets/img/covers/lars_and_the_real_girl.jpg"
+- date: 2021-05-14
+  title: M
+  rating:
+  director:
+  year: 1931
+  review:
+  thumbnail: "assets/img/covers/m.jpg"
+- date: 2021-05-07
+  title: Spirited Away
+  rating:
+  director:
+  year: 2001
+  review:
+  thumbnail: "assets/img/covers/spirited_away.jpg"
+- date: 2021-04-30
+  title: Amelie
+  rating:
+  director:
+  year: 2001
+  review:
+  thumbnail: "assets/img/covers/amelie.jpg"
+- date: 2021-04-24
+  title: Good Will Hunting
+  rating:
+  director:
+  year: 1997
+  review:
+  thumbnail: "assets/img/covers/good_will_hunting.jpg"
+- date: 2021-04-16
+  title: The Princess Bride
+  rating:
+  director:
+  year: 1987
+  review:
+  thumbnail: "assets/img/covers/the_princess_bride.jpg"
+- date: 2021-04-09
+  title: Cinema Paradiso
+  rating:
+  director:
+  year: 1988
+  review:
+  thumbnail: "assets/img/covers/cinema_paradiso.jpg"
+- date: 2021-03-27
+  title: The Pianist
+  rating:
+  director:
+  year: 2002
+  review:
+  thumbnail: "assets/img/covers/the_pianist.jpg"
+- date: 2021-03-20
+  title: "Robin Hood: Men In Tights"
+  rating:
+  director:
+  year: 1993
+  review:
+  thumbnail: "assets/img/covers/robin_hood_men_in_tights.jpg"
+- date: 2021-03-05
+  title: Rear Window
+  rating:
+  director:
+  year: 1954
+  review:
+  thumbnail: "assets/img/covers/rear_window.jpg"
+- date: 2021-02-27
+  title: Dead Poets Society
+  rating:
+  director:
+  year: 1989
+  review:
+  thumbnail: "assets/img/covers/dead_poets_society.jpg"
+- date: 2021-02-19
+  title: The Cabin
+  rating:
+  director:
+  year: 2011
+  review:
+  thumbnail: "assets/img/covers/the_cabin.jpg"
+- date: 2021-02-12
+  title: Requiem For A Dream
+  rating:
+  director:
+  year: 2000
+  review:
+  thumbnail: "assets/img/covers/requiem_for_a_dream.jpg"
+- date: 2021-02-05
+  title: Let The Fire Burn
+  rating:
+  director:
+  year: 2013
+  review:
+  thumbnail: "assets/img/covers/let_the_fire_burn.jpg"
+- date: 2021-01-29
+  title: The Usual Suspects
+  rating:
+  director:
+  year: 1995
+  review:
+  thumbnail: "assets/img/covers/the_usual_suspects.jpg"
+- date: 2021-01-22
+  title: Soul
+  rating:
+  director:
+  year: 2020
+  review:
+  thumbnail: "assets/img/covers/soul.jpg"
+- date: 2021-01-15
+  title: "Terminator 2: Judgement Day"
+  rating:
+  director:
+  year: 1991
+  review:
+  thumbnail: "assets/img/covers/terminator_2_judgement_day.jpg"
+- date: 2021-01-09
+  title: Train to Busan
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/train_to_busan.jpg"
+- date: 2021-01-02
+  title: The Terminator
+  rating:
+  director:
+  year: 1984
+  review:
+  thumbnail: "assets/img/covers/the_terminator.jpg"
+- date: 2020-11-06
+  title: Pulp Fiction
+  rating:
+  director:
+  year: 1994
+  review:
+  thumbnail: "assets/img/covers/pulp_fiction.jpg"
+- date: 2020-10-30
+  title: Come and See
+  rating:
+  director:
+  year: 1985
+  review:
+  thumbnail: "assets/img/covers/come_and_see.jpg"
+- date: 2020-10-23
+  title: Her
+  rating:
+  director:
+  year: 2013
+  review:
+  thumbnail: "assets/img/covers/her.jpg"
+- date: 2020-10-10
+  title: Schindler's List
+  rating:
+  director:
+  year: 1993
+  review:
+  thumbnail: "assets/img/covers/schindlers_list.jpg"
+- date: 2020-10-02
+  title: American History X
+  rating:
+  director:
+  year: 1998
+  review:
+  thumbnail: "assets/img/covers/american_history_x.jpg"
+- date: 2020-09-25
+  title: Goodfellas
+  rating:
+  director:
+  year: 1990
+  review:
+  thumbnail: "assets/img/covers/goodfellas.jpg"
+- date: 2020-09-19
+  title: The Silence Of The Lambs
+  rating:
+  director:
+  year: 1991
+  review:
+  thumbnail: "assets/img/covers/the_silence_of_the_lambs.jpg"
+- date: 2020-09-11
+  title: The Shawshank Redemption
+  rating:
+  director:
+  year: 1994
+  review:
+  thumbnail: "assets/img/covers/the_shawshank_redemption.jpg"
+- date: 2020-09-05
+  title: Taxi Driver
+  rating:
+  director:
+  year: 1976
+  review:
+  thumbnail: "assets/img/covers/taxi_driver.jpg"
+- date: 2020-08-29
+  title: Fight Club
+  rating:
+  director:
+  year: 1999
+  review:
+  thumbnail: "assets/img/covers/fight_club.jpg"
+- date: 2020-08-07
+  title: Eternal Sunshine of the Spotless Mind
+  rating:
+  director:
+  year: 2004
+  review:
+  thumbnail: "assets/img/covers/eternal_sunshine.jpg"
+- date: 2020-07-31
+  title: Blade Runner
+  rating:
+  director:
+  year: 2049
+  review:
+  thumbnail: "assets/img/covers/blade_runner.jpg"
+- date: 2020-07-24
+  title: Arrival
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/arrival.jpg"
+- date: 2020-07-17
+  title: Nightcrawler
+  rating:
+  director:
+  year: 2014
+  review:
+  thumbnail: "assets/img/covers/nightcrawler.jpg"
+- date: 2020-07-10
+  title: Kimi No Na Wa
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/kimi_no_na_wa.jpg"
+- date: 2020-07-04
+  title: Your Name
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/your_name.jpg"
+- date: 2020-07-03
+  title: Oldboy
+  rating:
+  director:
+  year: 2003
+  review:
+  thumbnail: "assets/img/covers/oldboy.jpg"
+- date: 2020-06-26
+  title: The Godfather Part II
+  rating:
+  director:
+  year: 1974
+  review:
+  thumbnail: "assets/img/covers/the_godfather_part_ii.jpg"
+- date: 2020-06-19
+  title: Run Lola Run
+  rating:
+  director:
+  year: 1998
+  review:
+  thumbnail: "assets/img/covers/run_lola_run.jpg"
+- date: 2020-06-12
+  title: The Godfather
+  rating:
+  director:
+  year: 1972
+  review:
+  thumbnail: "assets/img/covers/the_godfather.jpg"
+- date: 2020-06-05
+  title: One Flew Over
+  rating:
+  director:
+  year: 1975
+  review:
+  thumbnail: "assets/img/covers/one_flew_over.jpg"
+- date: 2020-05-29
+  title: Hell or High Water
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/hell_or_high_water.jpg"
+- date: 2020-03-21
+  title: Arrival
+  rating:
+  director:
+  year: 2016
+  review:
+  thumbnail: "assets/img/covers/arrival.jpg"
+- date: 2020-03-15
+  title: Jurassic Park
+  rating:
+  director:
+  year: 1993
+  review:
+  thumbnail: "assets/img/covers/jurassic_park.jpg"
+- date: 2020-03-05
+  title: Black Cat White Cat
+  rating:
+  director: Emir Kusturica
+  year: 1998
+  review:
+  thumbnail: "assets/img/covers/black_cat_white_cat.jpg"
+- date: 2020-03-05
+  title: Amarcord
+  rating:
+  director: Federico Fellini
+  year: 1973
+  review:
+  thumbnail: "assets/img/covers/amarcord.jpg"
