@@ -90,3 +90,28 @@ presets:
     fallback_width: 400
     sizes:
       mobile: 400px
+  cover:
+    markup: auto
+    formats: [webp, original]
+    fallback_format: original
+    crop: '2:3'
+    keep: center
+    noscript: false
+    link_source: false
+    quality: 75
+    format_quality:
+      webp: 50
+      jp2: 30
+    strip_metadata: true
+    # image options only here cause plugin breaks otherwise
+    image_options:
+      avif:
+        compression: av1
+        speed: 8
+    data_sizes: true
+    dimension_attributes: false
+    attributes:
+      img: 'loading="lazy"'
+    # Differing attributes below
+    widths: [180]
+    fallback_width: 180
