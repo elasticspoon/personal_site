@@ -5,15 +5,18 @@ css:
   - "/assets/css/movies.css"
 ---
 
-{% assign date_format = site.date_format | default: "%B %-d, %Y" %} {%- capture
-site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless
-forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign
-tags_list = site_tags | split:',' | sort -%} {%- for tag in tags_list -%}
-<a href="#{{- tag -}}" class="btn btn-primary tag-btn"
-  ><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;{{- tag
-  -}}&nbsp;({{site.tags[tag].size}})</a
->
-{%- endfor -%}
+<header class="movies-list__header-container">
+  <h1 class="movies-list__header">Movies</h1>
+  <nav class="movies-list__header-links">
+    <a class="movies-list__header-link" href="{% link about.md %}">About</a>
+    <a
+      class="movies-list__header-link"
+      href="{% link movies.html %}"
+      aria-current="true"
+      >Movies</a
+    >
+  </nav>
+</header>
 
 <article id="full-tags-list" class="movies-list__container">
   {% assign movies_by_year = site.data.movies | group_by_exp: "movie",
@@ -31,9 +34,11 @@ tags_list = site_tags | split:',' | sort -%} {%- for tag in tags_list -%}
           height="270" %}
         </div>
         <div class="movies-list__movie-info">
-          <h3 class="movies-list__movie-title">{{ movie.title }}</h3>
+          <h3 class="movies-list__movie-title">
+            {{ movie.title }} ({{movie.year}})
+          </h3>
+          <p class="movies-list__movie-subtitle">{{ movie.subtitle }}</p>
           <p>{{ movie.director }}</p>
-          <p>{{ movie.year }}</p>
 
           {% if movie.rating %} {% assign rating = movie.rating | parse_rating
           %} {% if movie.review %}
