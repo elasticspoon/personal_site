@@ -1,3 +1,11 @@
+- date: 2023-07-06
+  title: Zodiac
+  subtitle: There is more than one way to lose your life to a killer.
+  rating: 4
+  review: Enjoyable plot-driven movie about the Zodiac killer. Well acted. **Incredibly** well shot, the way the director manages to create tension in the scenes without the need for dialogue is amazing. Jake Gyllenhaal is awesome as always.
+  thumbnail: "/assets/img/covers/zodiac.jpg"
+  director: David Fincher
+  year: 2007
 - date: 2023-06-28
   title: All Quiet on the Western Front
   rating: 3
@@ -14,6 +22,7 @@
   review:
 - date: 2023-06-02
   title: O Brother, Where Art Thou
+  subtitle: They have a plan, but not a clue.
   rating: 4.5
   thumbnail: "/assets/img/covers/o_brother_where_art_thou.jpg"
   director: Joel and Ethan Coen
@@ -27,6 +36,7 @@
   thumbnail: "assets/img/covers/blow-up.jpg"
 - date: 2023-03-15
   title: Harakiri
+  subtitle: There are two sides to every blade...
   rating: 4
   director: Masaki Kobayashi
   year: 1962
@@ -41,6 +51,7 @@
   thumbnail: "assets/img/covers/joint_security_area.jpg"
 - date: 2023-02-01
   title: The Fly
+  subtitle: Something went wrong in the lab today. Very wrong.
   rating: 4.5
   director: David Cronenburg
   year: 1986
@@ -48,6 +59,7 @@
   thumbnail: "assets/img/covers/the_fly.jpg"
 - date: 2023-01-18
   title: The Dark Crystal
+  subtitle: Another World, Another Time... In the Age of Wonder.
   rating: Gave Up
   director: "Jim Henson, Frank Oz"
   year: 1982
@@ -55,45 +67,51 @@
   thumbnail: "assets/img/covers/the_dark_crystal.jpg"
 - date: 2022-12-12
   title: The NeverEnding Story
-  rating:
-  director:
+  subtitle: A boy who needs a friend finds a world that needs a hero in a land beyond imagination!
+  rating: 2
+  director: Wolfgang Petersen
   year: 1984
   review:
   thumbnail: "assets/img/covers/the_neverending_story.jpg"
 - date: 2022-11-30
   title: The Kings Speech
-  rating:
-  director:
+  subtitle: When God couldn't save The King, The Queen turned to someone who could.
+  rating: 4
+  director: Tom Hooper
   year: 2010
   review:
   thumbnail: "assets/img/covers/the_kings_speech.jpg"
 - date: 2022-11-24
   title: Gattaca
-  rating:
-  director:
+  subtitle: There is on gene for human spirit.
+  rating: 4
+  director: Andrew Niccol
   year: 1997
   review:
   thumbnail: "assets/img/covers/gattaca.jpg"
 - date: 2022-11-16
   title: Beetlejuice
-  rating:
-  director:
+  subtitle: In This House... If You've Seen One Ghost... You Haven't Seen Them All.
+  rating: 2.5
+  director: Tim Burton
   year: 1988
   review:
   thumbnail: "assets/img/covers/beetlejuice.jpg"
 - date: 2022-11-09
   title: The VelociPastor
-  rating:
-  director:
+  subtitle: A Man of the Claw
+  rating: .5
+  director: Greg Cohan
   year: 2018
-  review:
+  review: An attempt at a low budget culty 'The Room' esque movie but misses the mark. The attempts at satire are too blatant but it is short enough to finish.
   thumbnail: "assets/img/covers/the_velocipastor.jpg"
 - date: 2022-11-02
   title: Legally Blonde
-  rating:
-  director:
+  subtitle: Boldly going where no blonde has gone.
+  rating: .5
+  director: Robert Luketic
   year: 2001
-  review:
+  review: Neither Interesting nor clever nor funny.
   thumbnail: "assets/img/covers/legally_blonde.jpg"
 - date: 2022-10-19
   title: Zootopia
