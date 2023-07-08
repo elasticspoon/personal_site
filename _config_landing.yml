@@ -10,7 +10,7 @@ blog_domain: "https://blog.yuribocharov.dev"
 navbar-links:
   Blog: "https://blog.yuribocharov.dev"
   About:
-    - About Yuri: ""
+    - About Yuri: "/about"
     - Download Resume: "https://yuribocharov.dev"
 defaults:
   - scope:

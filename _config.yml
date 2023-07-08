@@ -27,7 +27,7 @@ nav-short: true
 navbar-links:
   Contact: "mailto:mail@yuribocharov.dev"
   About:
-    - About Yuri: ""
+    - About Yuri: "https://yuribocharov.dev/about"
 
 ################
 # --- Logo --- #
