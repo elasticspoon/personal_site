@@ -106,12 +106,12 @@ body .landing-page__about {
   padding-inline: 0px;
 }
 
-.landing-page__headshot {
+.about__headshot {
   border-radius: 9999px;
   width: 300px;
 }
 
-.landing-page__about-intro {
+.about__-intro {
   font-size: 1.4rem;
   font-weight: 600;
 }
