@@ -1,0 +1,23 @@
+<header class="about-nav__container">
+  <h1 class="about-nav__heading">{{ include.text }}</h1>
+  <nav class="about-nav__links-container">
+    <a
+      class="about-nav__link" href="{% link about.md %}"
+      {% if include.about %} aria-current="true" {% endif%}
+    >
+      About
+    </a>
+    <a
+      class="about-nav__link" href="{% link movies.html %}"
+      {% if include.movies %} aria-current="true" {% endif%}
+    >
+      Movies
+    </a>
+    <a
+      class="about-nav__link" href=""
+      {% if include.bookshelf %} aria-current="true" {% endif%}
+    >
+      Bookshelf
+    </a>
+  </nav>
+</header>

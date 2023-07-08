@@ -1,10 +1,9 @@
 ---
 layout: page
 title: About Me
-no_header: false
-css:
-  - "/assets/css/landing-page.css"
 ---
+
+{% include about-nav.html about='true' text='About' %}
 
 Hi, I’m Matthias. I’m a consultant user experience designer and web design engineer from Stuttgart, Germany. I run workshops on modern responsive web design, prototyping, and design engineering with teams worldwide and teach Interface Prototyping at the Muthesius Academy of Fine Arts and Design.
 

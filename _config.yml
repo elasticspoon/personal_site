@@ -158,6 +158,7 @@ site-css:
   - "/assets/css/fonts.css"
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/beautifuljekyll.css"
+  - "/assets/css/main-site.css"
 
 # If you have comimon JavaScript files that should be included in every page, list them here
 # site-js:
@@ -325,6 +326,7 @@ exclude:
 uncss:
   stylesheets:
     - assets/css/all.min.css
+    - assets/css/main-site.css
     - assets/css/beautifuljekyll.css
     - assets/css/bootstrap-social.css
     - assets/css/bootstrap.min.css

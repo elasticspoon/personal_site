@@ -2,33 +2,6 @@
 # Front matter for jekyll processing
 ---
 
-.movies-list__header-container {
-  margin-block-start: 6rem;
-  margin-block-end: 3rem;
-}
-
-.movies-list__header {
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-block-end: 0.5rem;
-}
-
-.movies-list__header-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.movies-list__header-link {
-  font-weight: 700;
-  font-size: 1.3rem;
-
-  &[aria-current] {
-    text-decoration: underline;
-    text-underline-offset: 0.25rem;
-    text-decoration-thickness: 0.25rem;
-  }
-}
-
 .movies-list__container {
 }
 

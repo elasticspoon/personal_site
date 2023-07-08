@@ -5,18 +5,7 @@ css:
   - "/assets/css/movies.css"
 ---
 
-<header class="movies-list__header-container">
-  <h1 class="movies-list__header">Movies</h1>
-  <nav class="movies-list__header-links">
-    <a class="movies-list__header-link" href="{% link about.md %}">About</a>
-    <a
-      class="movies-list__header-link"
-      href="{% link movies.html %}"
-      aria-current="true"
-      >Movies</a
-    >
-  </nav>
-</header>
+{% include about-nav.html movies='true' text='Movies' %}
 
 <article id="full-tags-list" class="movies-list__container">
   {% assign movies_by_year = site.data.movies | group_by_exp: "movie",
