@@ -30,11 +30,11 @@ presets:
     attributes:
       img: 'loading="lazy"'
     # Differing attributes below
-    widths: [400, 600, 800, 1000]
+    widths: [400, 800, 1200]
     sizes:
       mobile: 400px
-      tablet: 700px
-      wide: 1000px
+      tablet: 800px
+      wide: 1200px
     fallback_width: 800
   thumbnail:
     markup: auto

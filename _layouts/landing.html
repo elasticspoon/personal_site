@@ -84,7 +84,9 @@ common-ext-js:
           {% endfor %}
           <div class="landing-page__see-more">
             {% picture "assets/img/preview_project.jpg" %}
-            <a class="link-button" href="">See more projects</a>
+            <a class="link-button" href="{% link projects.html %}"
+              >See more projects</a
+            >
           </div>
         </div>
       </section>
@@ -93,7 +95,9 @@ common-ext-js:
         <div class="landing-page__blog-preview" tabindex="-1">
           {% include posts.html %}
         </div>
-        <a class="link-button landing-page__inline-button" href=""
+        <a
+          class="link-button landing-page__inline-button"
+          href="https://blog.yuribocharov.dev"
           >See more articles</a
         >
       </section>
