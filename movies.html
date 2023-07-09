@@ -4,7 +4,8 @@ css:
   - "/assets/css/movies.css"
 ---
 
-{% include about-nav.html movies='true' text='Movies' %}
+{% include about-nav.html movies='true' text='Movies' %} {% include
+rating-details.html %}
 
 <article class="covers-list__container">
   {% assign items_by_year = site.data.movies | group_by_exp: "movie",
