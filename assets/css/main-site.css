@@ -28,3 +28,14 @@
     text-decoration-thickness: 0.25rem;
   }
 }
+
+.ratings {
+  margin-block-start: -2rem;
+  margin-block-end: 2rem;
+
+  & summary {
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: "Open Sans";
+  }
+}
