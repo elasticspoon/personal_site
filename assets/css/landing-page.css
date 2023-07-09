@@ -246,6 +246,8 @@ body .landing-page__about {
   background: none;
   border: 1px solid transparent;
   border-radius: 0.5rem;
+  align-self: end;
+  height: fit-content;
 
   & svg {
     width: 40px;

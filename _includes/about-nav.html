@@ -7,6 +7,13 @@
     >
       About
     </a>
+        <a
+      class="about-nav__link" href="{% link projects.html %}"
+      {% if include.projects %} aria-current="true" {% endif%}
+    >
+      Projects
+    </a>
+
     <a
       class="about-nav__link" href="{% link movies.html %}"
       {% if include.movies %} aria-current="true" {% endif%}
