@@ -11,7 +11,7 @@ navbar-links:
   Blog: "https://blog.yuribocharov.dev"
   About:
     - About Yuri: "/about"
-    - Download Resume: "https://yuribocharov.dev"
+    - Projects: "/projects"
 defaults:
   - scope:
       path: "" # any file that's not a post will be a "page" layout by default

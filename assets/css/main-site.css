@@ -16,6 +16,7 @@
 .about-nav__links-container {
   display: flex;
   gap: 1rem;
+  margin-block-start: 1rem;
 }
 
 .about-nav__link {

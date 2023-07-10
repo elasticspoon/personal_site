@@ -68,10 +68,10 @@
 - date: 2022-12-12
   title: The NeverEnding Story
   subtitle: A boy who needs a friend finds a world that needs a hero in a land beyond imagination!
-  rating: 2
+  rating: 1
   director: Wolfgang Petersen
   year: 1984
-  review:
+  review: A few interesting character designs and practical effects aside the movie has no redeeming features.
   thumbnail: "assets/img/covers/the_neverending_story.jpg"
 - date: 2022-11-30
   title: The Kings Speech
