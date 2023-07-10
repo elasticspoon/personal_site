@@ -28,6 +28,7 @@ navbar-links:
   Contact: "mailto:mail@yuribocharov.dev"
   About:
     - About Yuri: "https://yuribocharov.dev/about"
+    - Download Resume: "/resume"
 
 ################
 # --- Logo --- #
