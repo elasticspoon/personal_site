@@ -10,18 +10,25 @@ module Jekyll
 
       case input
       when Integer
+        return "Gave Up" if input.zero?
         half_star = ""
         rating = input
       when Float
         half_star = half_rating
         rating = input.floor
-      when String
-        return input
       else
         raise StandardError, "Invalid input to parse rating. Passed #{input.class} Must be Integer or Float"
       end
 
       star * rating + half_star
+    end
+
+    def rating_average(items)
+      valid_items = items.reject { |item| item["director"].nil? }
+      rating_total = valid_items.map { |item| item["rating"] || 0 }.sum
+      average_rating = rating_total / valid_items.size
+      average_rating.round(2)
+      # rating_total = items.map(&:rating).sum
     end
   end
 end

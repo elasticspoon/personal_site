@@ -6,11 +6,12 @@ css:
 
 {% include about-nav.html movies='true' text='Movies' %} {% include
 rating-details.html %}
+<p>Current Average Rating: {{ site.data.movies | rating_average }}/5</p>
 
-<article class="covers-list__container">
+<section class="covers-list__container">
   {% assign items_by_year = site.data.movies | group_by_exp: "movie",
   "movie.date | date: '%Y'" %} {% for year in items_by_year %}
-  <div class="covers-list__year-container">
+  <article class="covers-list__year-container">
     <header class="covers-list__year-header">
       <h2>{{ year.name }}</h2>
       {{ year.size }} movies
@@ -43,5 +44,5 @@ rating-details.html %}
       {%- endfor -%}
     </div>
     {%- endfor -%}
-  </div>
-</article>
+  </article>
+</section>
