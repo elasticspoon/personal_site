@@ -1,8 +1,8 @@
 - date: 2023-07-19
   title: In the Name of the Father
   subtitle: Falsely accused. Wrongly imprisoned. He fought for justice to clear his father's name.
-  rating:
-  review:
+  rating: 3.5
+  review: Phenomenal acting from both male leads. Intersting story based on real events. Some of the creative liberties feel unnessecary and cheapen the movie after learning about them.
   thumbnail: "/assets/img/covers/in_the_name_of_the_father.jpg"
   director: Jim Sheridan
   year: 1993
@@ -289,66 +289,63 @@
   thumbnail: "assets/img/covers/inside_llewyn_davis.jpg"
 - date: 2022-04-18
   title: Jumanji
-  rating:
-  director:
+  subtitle: An Adventure For Those Who Seek To Find A Way To Leave Their World Behind.
+  rating: 1.5
+  director: Joe Johnston
   year: 1995
-  review:
+  review: Robin Williams was fun, some of the jokes were decent. Overdone story and generaly just not very good.
   thumbnail: "assets/img/covers/jumanji.jpg"
 - date: 2022-04-11
   title: Memories of Murder
-  rating:
-  director:
+  rating: 4.5
+  director: Bong Joon Ho
   year: 2003
-  review:
+  review: A story of small town police detectives attempting to catch a serial killer. Great acting. Many gorgeous shots and a great combination of a gripping story and small comedic elements.
   thumbnail: "assets/img/covers/memories_of_murder.jpg"
 - date: 2022-04-04
   title: The Fifth Element
-  rating:
-  director:
+  subtitle: There is no future without it.
+  rating: 3.5
+  director: Luc Besson
   year: 1997
-  review:
+  review: Very fun science fiction movie. Some of the costumes feel a bit dated at this point and Bruce Willis is a bit uninspiring.
   thumbnail: "assets/img/covers/the_fifth_element.jpg"
 - date: 2022-04-04
   title: The Green Mile
-  rating:
-  director:
+  rating: 1.5
+  director: Frank Darabont
   year: 1999
-  review:
+  review: Very long preachy movie. Conceptually I did not like any of the characters, they felt generic and overdone.
   thumbnail: "assets/img/covers/the_green_mile.jpg"
-- date: 2022-03-25
-  title: Shutter Island
-  rating:
-  director:
-  year: 2010
-  review:
-  thumbnail: "assets/img/covers/shutter_island.jpg"
 - date: 2022-02-17
   title: Pig
-  rating:
-  director:
+  subtitle: We don't got a lot of things to really care about.
+  rating: 2
+  director: Micheal Sarnoski
   year: 2021
-  review:
+  review: John Wick but with a pig. I disliked all the characters in it and trying to set up some sort of mysterious grizzled past for Cage was just cringe.
   thumbnail: "assets/img/covers/pig.jpg"
 - date: 2022-02-10
   title: Harold And Maude
-  rating:
-  director:
+  rating: 4
+  director: Hal Ashby
   year: 1971
-  review:
+  review: Enjoyable mix of black comedy and romance. A some-what tragic coming of age story. Worth watching.
   thumbnail: "assets/img/covers/harold_and_maude.jpg"
 - date: 2022-01-27
   title: Sinister
-  rating:
-  director:
+  subtitle: Once you see him, nothing can save you.
+  rating: 0
+  director: Scott Derickson
   year: 2012
-  review:
+  review: I never saw him. I got bored of the movie before anything scary happened.
   thumbnail: "assets/img/covers/sinister.jpg"
 - date: 2022-01-12
   title: Snatch
-  rating:
-  director:
+  rating: 4
+  director: Guy Ritchie
   year: 2000
-  review:
+  review: Great comedy. Very fast pacing, a huge cast of enjoyable characters, great dialogue.
   thumbnail: "assets/img/covers/snatch.jpg"
 - date: 2022-01-06
   title: Capernaum
