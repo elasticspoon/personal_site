@@ -2,7 +2,7 @@
   title: In the Name of the Father
   subtitle: Falsely accused. Wrongly imprisoned. He fought for justice to clear his father's name.
   rating: 3.5
-  review: Phenomenal acting from both male leads. Intersting story based on real events. Some of the creative liberties feel unnessecary and cheapen the movie after learning about them.
+  review: Phenomenal acting from both leads. Intersting story based on real events. Some of the creative liberties feel unnessecary and cheapen the movie after learning about them.
   thumbnail: "/assets/img/covers/in_the_name_of_the_father.jpg"
   director: Jim Sheridan
   year: 1993
@@ -330,7 +330,7 @@
   rating: 4
   director: Hal Ashby
   year: 1971
-  review: Enjoyable mix of black comedy and romance. A some-what tragic coming of age story. Worth watching.
+  review:
   thumbnail: "assets/img/covers/harold_and_maude.jpg"
 - date: 2022-01-27
   title: Sinister
@@ -342,66 +342,71 @@
   thumbnail: "assets/img/covers/sinister.jpg"
 - date: 2022-01-12
   title: Snatch
-  rating: 4
+  rating: 3.5
   director: Guy Ritchie
   year: 2000
   review: Great comedy. Very fast pacing, a huge cast of enjoyable characters, great dialogue.
   thumbnail: "assets/img/covers/snatch.jpg"
 - date: 2022-01-06
   title: Capernaum
-  rating:
-  director:
+  rating: 1
+  director: Nadine Labaki
   year: 2018
-  review:
+  review: The film opens with a child suing his parents for 'giving him life'. Despite the tragedy of it, I somehow did not feel much towards any of the characters.
   thumbnail: "assets/img/covers/capernaum.jpg"
 - date: 2022-12-22
   title: Chinatown
-  rating:
-  director:
+  rating: 4
+  director: Roman Polanski
   year: 1974
-  review:
+  review: Great acting by Jack Nicholson. Primarily a plot driven movie based very losely on a well known story (can't say much as it will give away the story).
   thumbnail: "assets/img/covers/chinatown.jpg"
 - date: 2021-12-16
   title: The Revenant
-  rating:
-  director:
+  subtitle: Blood lost. Life found.
+  rating: 1
+  director: Alejandro G. Iñárritu
   year: 2015
-  review:
+  review: Honestly one of the worst I have seen from Leo. Tom Hardy stole the show and even them the movie was lacking. The dream/memory sequences were awful.
   thumbnail: "assets/img/covers/the_revenant.jpg"
 - date: 2021-11-04
   title: Se7en
-  rating:
-  director:
+  subtitle: Seven deadly sins. Seven ways to die.
+  rating: 3.5
+  director: David Ficher
   year: 1995
-  review:
-  thumbnail: "assets/img/covers/se.jpg"
+  review: Fun watch but not much more than that.
+  thumbnail: "assets/img/covers/se7en.jpg"
 - date: 2021-11-04
   title: Dune
-  rating:
-  director:
+  subtitle: It begins.
+  rating: 3.5
+  director: Denis Villeneuve
   year: 2021
-  review:
+  review: Visual and audibly stunning. A true space opera.
   thumbnail: "assets/img/covers/dune.jpg"
 - date: 2021-10-20
   title: A Clockwork Orange
-  rating:
-  director:
+  subtitle: Being the adventures of a young man whose principal interests are rape, ultra-violence and Beethoven.
+  rating: 4
+  director: Stanely Kubrick.
   year: 1971
   review:
   thumbnail: "assets/img/covers/a_clockwork_orange.jpg"
 - date: 2021-09-29
   title: The Endless
-  rating:
-  director:
+  subtitle: Time is a prison.
+  rating: 1
+  director: Justin Benson
   year: 2017
-  review:
+  review: In theory a movie about cosmic horror. Conceptually interesting but hard to do on film. The movie misses the mark.
   thumbnail: "assets/img/covers/the_endless.jpg"
 - date: 2021-09-22
   title: The Handmaiden
-  rating:
-  director:
+  rating: 0
+  director: Park Chan-wook
   year: 2016
-  review:
+  review: From the director of Oldboy. Boring movie. Conceptually a bit similar to Parasite but not I never made it to the payoff if there was one.
   thumbnail: "assets/img/covers/the_handmaiden.jpg"
 - date: 2021-09-15
   title: Dorogie Tovarishchi
