@@ -305,13 +305,13 @@ exclude:
   - _landing_page/
   - assets/img/
 
-plugins:
-  - jekyll-paginate-v2
-  - jekyll-sitemap
-  - jekyll_picture_tag
-  - jekyll-minifier
-  - jekyll-brotli
-  - jekyll-gzip
+# plugins:
+#   - jekyll-paginate-v2
+#   - jekyll-sitemap
+#   - jekyll_picture_tag
+#   - jekyll-minifier
+#   - jekyll-brotli
+#   - jekyll-gzip
 
 # Settings for css to be pruned by uncss
 uncss:
