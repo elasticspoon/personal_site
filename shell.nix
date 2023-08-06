@@ -26,7 +26,7 @@ with import <nixpkgs> { }; let
     };
   };
 in
-stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation {
   name = "personal_site";
   buildInputs = [ env pkgs.nodejs-slim pkgs.bundix ];
 

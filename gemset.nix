@@ -545,7 +545,7 @@
     version = "2.4.2";
   };
   webrick = {
-    groups = ["default" "jekyll_plugins" "production"];
+    groups = ["default"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
