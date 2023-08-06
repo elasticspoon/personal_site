@@ -5,10 +5,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "15s8van7r2ad3dq6i03l3z4hqnvxcq75a3h72kxvf9an53sqma20";
+      sha256 = "05r1fwy487klqkya7vzia8hnklcxy4vr92m9dmni3prfwk6zpw33";
       type = "gem";
     };
-    version = "2.8.4";
+    version = "2.8.5";
   };
   brotli = {
     groups = ["default" "jekyll_plugins" "production"];
@@ -192,10 +192,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1d67f6mqid0mps6n7n4fxbwzmnkjvvdawlqw79dfv2l3vwr0ckjz";
+      sha256 = "1hw91g2zk7zs6lfcp25hqpz0f8a23qcw7bf8d8kbp3lihggd6ygi";
       type = "gem";
     };
-    version = "1.0.1";
+    version = "1.0.2";
   };
   jekyll-sass-converter = {
     dependencies = ["sassc"];
@@ -235,11 +235,9 @@
     groups = ["jekyll_plugins"];
     platforms = [];
     source = {
-      fetchSubmodules = false;
-      rev = "f9911cf2a3f487cd1607720f8249e0ecf3025f92";
-      sha256 = "1j1gr7y46s5lbhbp7yz438w4s6z0g2dn2829kpxd883yy7gdik17";
-      type = "git";
-      url = "https://github.com/elasticspoon/jekyll_picture_tag.git";
+      remotes = ["https://rubygems.org"];
+      sha256 = "1cn1rs39w434hjqvlx0na04kd9ywllf3zxsb6dhp26k6s2c1yrrl";
+      type = "gem";
     };
     version = "2.0.4";
   };
@@ -426,10 +424,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "19pzpx406rr9s3qk527rn9y3b76sjq5pi7y0xzqiy50q3k0hhg7g";
+      sha256 = "0lk124dixshf8mmrjpsy9avnaygni3cwki25g8nm5py4d2f5fwwa";
       type = "gem";
     };
-    version = "2.1.4";
+    version = "2.0.17";
   };
   safe_yaml = {
     groups = ["default" "jekyll_plugins" "production"];
@@ -507,7 +505,7 @@
     version = "1.8.0";
   };
   webrick = {
-    groups = ["default" "jekyll_plugins" "production"];
+    groups = ["default"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
