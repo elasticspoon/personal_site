@@ -2,10 +2,9 @@
 
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2.2"
+gem "jekyll"
 gem "kramdown"
 gem "kramdown-parser-gfm"
-gem "sass"
 gem "webrick"
 
 group :jekyll_plugins do
