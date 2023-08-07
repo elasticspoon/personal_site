@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2.2"
+gem "jekyll"
 gem "kramdown"
 gem "kramdown-parser-gfm"
 gem "webrick"
