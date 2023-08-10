@@ -175,6 +175,17 @@
     };
     version = "2.5.1";
   };
+  jekyll-inline-svg = {
+    dependencies = ["jekyll" "svg_optimizer"];
+    groups = ["jekyll_plugins"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "10gxfdywq9631fsn89dwa6hzm1l91na8rqcnsi6r9v39xjk0944h";
+      type = "gem";
+    };
+    version = "1.1.4";
+  };
   jekyll-minifier = {
     dependencies = ["cssminify2" "htmlcompressor" "jekyll" "json-minify" "uglifier"];
     groups = ["jekyll_plugins" "production"];
@@ -511,6 +522,17 @@
       type = "gem";
     };
     version = "1.64.2";
+  };
+  svg_optimizer = {
+    dependencies = ["nokogiri"];
+    groups = ["default" "jekyll_plugins"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0arvi5h05i78zl6s0b80k3yqv0k8d404ay1kr9s3mmq30bmyb0xx";
+      type = "gem";
+    };
+    version = "0.2.6";
   };
   terminal-table = {
     dependencies = ["unicode-display_width"];

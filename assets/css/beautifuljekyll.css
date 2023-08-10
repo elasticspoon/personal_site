@@ -908,9 +908,13 @@ table tr td :last-child {
 
 code {
   padding: 0.125rem 0.25rem;
-  color: #1ceaff !important;
+  color: #1ceaff;
   background-color: var(--inline-code-background) !important;
   border-radius: 0.25rem;
+}
+
+a code {
+  color: #1ceaff !important;
 }
 
 a code:hover {
