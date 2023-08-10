@@ -106,10 +106,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1dq5lgkxhagqr8zjrwr10zi8rldbg2vhis2m5q86v5q9415ylfgj";
+      sha256 = "1q15pgp9frs8v635ygm1l91wl0d2fd7d0avjfk9jfgzz9bx7m55k";
       type = "gem";
     };
-    version = "3.23.4";
+    version = "3.24.0";
   };
   htmlcompressor = {
     groups = ["default" "jekyll_plugins" "production"];
@@ -229,6 +229,17 @@
     };
     version = "1.4.0";
   };
+  jekyll-toc = {
+    dependencies = ["jekyll" "nokogiri"];
+    groups = ["jekyll_plugins"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1gczpbfkyswy5dwpq0lcssf15l0g0z6zy4zifc5d6pwmiqyxq8mk";
+      type = "gem";
+    };
+    version = "0.18.0";
+  };
   jekyll-watch = {
     dependencies = ["listen"];
     groups = ["default" "jekyll_plugins" "production"];
@@ -341,10 +352,31 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1pky3vzaxlgm9gw5wlqwwi7wsw3jrglrfflrppvvnsrlaiz043z9";
+      sha256 = "17zdim7kzrh5j8c97vjqp4xp78wbyz7smdp4hi5iyzk0s9imdn5a";
       type = "gem";
     };
-    version = "3.2023.0218.1";
+    version = "3.2023.0808";
+  };
+  mini_portile2 = {
+    groups = ["default" "jekyll_plugins"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "02mj8mpd6ck5gpcnsimx5brzggw5h5mmmpq2djdypfq16wcw82qq";
+      type = "gem";
+    };
+    version = "2.8.4";
+  };
+  nokogiri = {
+    dependencies = ["mini_portile2" "racc"];
+    groups = ["default" "jekyll_plugins"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1jw8a20a9k05fpz3q24im19b97idss3179z76yn5scc5b8lk2rl7";
+      type = "gem";
+    };
+    version = "1.15.3";
   };
   objective_elements = {
     groups = ["default" "jekyll_plugins"];
@@ -376,6 +408,16 @@
       type = "gem";
     };
     version = "5.0.3";
+  };
+  racc = {
+    groups = ["default" "jekyll_plugins"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "11v3l46mwnlzlc371wr3x6yylpgafgwdf0q7hc7c1lzx6r414r5g";
+      type = "gem";
+    };
+    version = "1.7.1";
   };
   rainbow = {
     groups = ["default" "jekyll_plugins"];

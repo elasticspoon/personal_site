@@ -11,7 +11,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate-v2"
   gem "jekyll-sitemap"
   gem "jekyll_picture_tag"
-  # gem "jekyll_picture_tag", :github => "elasticspoon/jekyll_picture_tag"
+  gem "jekyll-toc"
   gem "jekyll-postcss-v2"
 end
 group :jekyll_plugins, :production do

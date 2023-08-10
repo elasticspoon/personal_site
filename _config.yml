@@ -306,6 +306,7 @@ exclude:
   - assets/img/
 
 # plugins:
+#   - jekyll-toc
 #   - jekyll-paginate-v2
 #   - jekyll-sitemap
 #   - jekyll_picture_tag
@@ -345,3 +346,9 @@ jekyll-minifier:
 picture:
   suppress_warnings: true
   ignore_missing_images: true
+
+# TOC Settings
+toc:
+  min_level: 2
+  max_level: 3
+  list_id: toc-contents

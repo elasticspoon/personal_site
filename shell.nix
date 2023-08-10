@@ -1,7 +1,5 @@
-let
-  pkgs = import <nixpkgs> { };
-
-  env = pkgs.bundlerEnv {
+with import <nixpkgs> { }; let
+  env = bundlerEnv {
     ruby = pkgs.ruby;
     name = "personal_site-bundler-env";
     gemfile = ./Gemfile;
@@ -28,11 +26,14 @@ let
     };
   };
 in
-pkgs.stdenv.mkDerivation {
+stdenv.mkDerivation {
   name = "personal_site";
-  buildInputs = [ env pkgs.nodejs-slim ];
+  buildInputs = [ env pkgs.nodejs-slim pkgs.bundix ];
 
-  # shellHook = ''
-  #   exec ${env}/bin/jekyll serve --watch
-  # '';
+  shellHook = ''
+    alias prod_landing='JEKYLL_ENV="production" bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload'
+    alias prod_blog='JEKYLL_ENV="production" bundle exec jekyll serve --trace --livereload'
+    alias dev_landing='bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload'
+    alias dev_blog='bundle exec jekyll serve --trace --livereload'
+  '';
 }
