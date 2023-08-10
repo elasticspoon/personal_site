@@ -1,0 +1,39 @@
+with import <nixpkgs> { }; let
+  env = bundlerEnv {
+    ruby = pkgs.ruby;
+    name = "personal_site-bundler-env";
+    gemfile = ./Gemfile;
+    lockfile = ./Gemfile.lock;
+    gemset = ./gemset.nix;
+    gemConfig = {
+      ruby-vips = attrs: {
+        dontBuild = false;
+        postInstall = with pkgs; ''
+          cd "$(cat $out/nix-support/gem-meta/install-path)"
+
+          substituteInPlace lib/vips.rb \
+            --replace "library_name('vips', 42)" '"${lib.getLib vips}/lib/libvips${stdenv.hostPlatform.extensions.sharedLibrary}"' \
+            --replace "library_name('glib-2.0', 0)" '"${glib.out}/lib/libglib-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"' \
+            --replace "library_name('gobject-2.0', 0)" '"${glib.out}/lib/libgobject-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"'
+        '';
+      };
+      sass-embedded = attrs: {
+        DART_SASS = pkgs.fetchurl {
+          url = "https://github.com/sass/dart-sass/releases/download/1.64.2/dart-sass-1.64.2-linux-x64.tar.gz";
+          sha256 = "sha256-+RmtceWz5K2xaJZvuaJs31tocby4H/LwBBV15DRBCzs";
+        };
+      };
+    };
+  };
+in
+stdenv.mkDerivation {
+  name = "personal_site";
+  buildInputs = [ env pkgs.nodejs-slim pkgs.bundix ];
+
+  shellHook = ''
+    alias prod_landing='JEKYLL_ENV="production" bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload'
+    alias prod_blog='JEKYLL_ENV="production" bundle exec jekyll serve --trace --livereload'
+    alias dev_landing='bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload'
+    alias dev_blog='bundle exec jekyll serve --trace --livereload'
+  '';
+}

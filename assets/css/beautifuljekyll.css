@@ -66,7 +66,7 @@ a.btn {
   color: var(--text-col);
   background-color: var(--page-col);
 }
-blockquote {
+blockquote:not(.ignore-blockquote) {
   color: var(--blockquote-col);
   font-style: italic;
 }
@@ -856,6 +856,18 @@ nav.top-nav-short-permanent ~ header > .intro-header {
   background-color: var(--hover-col);
 }
 
+/* TOC */
+#toc {
+  padding-block: 1rem;
+  margin-block: 2rem;
+  & summary {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: "Open Sans";
+  }
+}
+
+
 /* --- Tables --- */
 
 table {
@@ -896,9 +908,13 @@ table tr td :last-child {
 
 code {
   padding: 0.125rem 0.25rem;
-  color: #1ceaff;
-  background-color: #2b2829 !important;
+  color: #1ceaff !important;
+  background-color: var(--inline-code-background) !important;
   border-radius: 0.25rem;
+}
+
+a code:hover {
+  text-decoration: underline white;
 }
 
 .code pre {
@@ -984,7 +1000,7 @@ pre {
 }
 
 .box-note {
-  background-color: #eee;
+  background-color: #dfdfdf;
   border-left-color: #2980b9;
 }
 
@@ -1005,9 +1021,9 @@ pre {
 
 /* --- Misc blog post styles --- */
 
-.blog-post :first-child {
-  margin-top: 20px;
-}
+/* .blog-post :first-child { */
+/*   margin-top: 20px; */
+/* } */
 
 .blog-post img {
   max-width: 100%;
@@ -1032,7 +1048,7 @@ pre {
   border-color: var(--blog-post-break-col);
 }
 
-.blog-post blockquote {
+.blog-post blockquote:not(.ignore-blockquote) {
   padding: 0.625rem 1.25rem;
   margin: 0 0 1.25rem;
   font-size: 1.1rem;
@@ -1041,6 +1057,10 @@ pre {
 
 .blog-post blockquote p:last-child {
   margin-bottom: 0;
+}
+
+.blog-post blockquote p:first-child {
+  margin-top: 0;
 }
 
 .center {

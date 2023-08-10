@@ -314,14 +314,14 @@ exclude:
   - _landing_page/
   - assets/img/
 
-plugins:
-  - jekyll-paginate-v2
-  - jekyll-postcss-v2
-  - jekyll-sitemap
-  - jekyll_picture_tag
-  - jekyll-minifier
-  - jekyll-brotli
-  - jekyll-gzip
+# plugins:
+#   - jekyll-toc
+#   - jekyll-paginate-v2
+#   - jekyll-sitemap
+#   - jekyll_picture_tag
+#   - jekyll-minifier
+#   - jekyll-brotli
+#   - jekyll-gzip
 
 # Settings for css to be pruned by uncss
 uncss:
@@ -356,3 +356,9 @@ jekyll-minifier:
 picture:
   suppress_warnings: true
   ignore_missing_images: true
+
+# TOC Settings
+toc:
+  min_level: 2
+  max_level: 3
+  list_id: toc-contents

@@ -9,8 +9,8 @@
 
   --page-col: #ffffff; /* done */
   --text-col: #404040; /* done */
-  --link-col: #008aff; /* done */
-  --hover-col: #0085a1; /* done */
+  --link-col: #0059a4; /* done */
+  --hover-col: #004351; /* done */
 
   --footer-col: var(--navbar-col); /* done */
   --footer-text-col: #4d4d4d; /* done */
@@ -34,6 +34,7 @@
     rgba(255, 255, 255, 0.000001) 1.5em,
     rgba(255, 255, 255, 0.000001) 3em
   );
+  --inline-code-background: rgba(57, 57, 57);
 
   --table-border-col: #cccccc;
   --table-bg-1-col: #ffffff;
@@ -59,8 +60,8 @@
 
   --page-col: #18191a;
   --text-col: #e4e6eb;
-  --link-col: #139ee0;
-  --hover-col: #28a9e6;
+  --link-col: #17b4ff;
+  --hover-col: #2bb4f4;
 
   --footer-col: var(--navbar-col);
   --footer-text-col: #aaaaaa;
@@ -81,6 +82,7 @@
     rgba(255, 255, 255, 0.02) 1.5em,
     rgba(255, 255, 255, 0.02) 3em
   );
+  --inline-code-background: #000;
 
   --header-background-1: #41295a; /* fallback for old browsers */
   --header-background-2: -webkit-linear-gradient(

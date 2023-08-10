@@ -57,7 +57,15 @@ layout: base
       </div>
       {% endif %}
 
-      <article role="main" class="blog-post">{{ content }}</article>
+      <article role="main" class="blog-post">
+        <section id="toc">
+          <details>
+            <summary>Table of Contents</summary>
+            {% toc %}
+          </details>
+        </section>
+        {{ content }}
+      </article>
 
       {% if page.tags.size > 0 %}
       <div class="blog-tags">
