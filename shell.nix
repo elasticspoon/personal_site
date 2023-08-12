@@ -33,18 +33,21 @@ with import <nixpkgs> { }; let
       then pkgs.darwin.cctools
       else null;
   };
-  nodeModules = import ./node-packages.nix {
-    inherit (pkgs) fetchurl nix-gitignore stdenv lib fetchgit;
-    inherit nodeEnv;
-  };
+  nodeDependencies =
+    (import ./node-packages.nix {
+      inherit (pkgs) fetchurl nix-gitignore stdenv lib fetchgit;
+      inherit nodeEnv;
+    }).nodeDependencies;
 in
 stdenv.mkDerivation {
   name = "personal_site";
-  buildInputs = with pkgs; [ nodejs-slim bundix ] ++ [ env ];
+  buildInputs = with pkgs; [ nodejs bundix ] ++ [ env ];
 
   shellHook = ''
-    ln -s ${nodeModules.nodeDependencies}/lib/node_modules ./node_modules
-    export PATH="${nodeModules.nodeDependencies}/bin:$PATH"
+    if [ ! -L "./node_modules" ]; then
+      ln -s "${nodeDependencies}/lib/node_modules" ./node_modules
+    fi
+    export PATH="${nodeDependencies}/bin:$PATH"
     alias prod_landing='JEKYLL_ENV="production" bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload'
     alias prod_blog='JEKYLL_ENV="production" bundle exec jekyll serve --trace --livereload'
     alias dev_landing='bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload'
