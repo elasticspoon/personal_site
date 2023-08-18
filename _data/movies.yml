@@ -1,3 +1,40 @@
+- date: 2023-08-23
+  title: Bad Luck Banging or Loony Porn
+  rating:
+  review: If this is good potentially add aferim!
+  thumbnail: "/assets/img/covers/bad_luck_banging_or_loony_porn.jpg"
+  year: 2021
+  director: Radu Jude
+- date: 2023-08-15
+  title: The Stanford Prison Experiment
+  subtitle: They were given 2 weeks. It lasted 6 days.
+  rating: 0
+  review: Conceptually the film seemed up my alley. A dark look at human nature. Somehow the movie just failed to hold my attention. I felt for the characters but the emotions of thier situation did not feel conveyed to me. Felt like too much teeling and too little showing.
+  thumbnail: "/assets/img/covers/the_stanford_prison_experiment.jpg"
+  year: 2015
+  director: Kyle Patrick Alvarez
+- date: 2023-08-10
+  title: The Umbrellas of Cherbourg
+  rating: 1
+  review: Incredibly pretty film. I enjoyed the tragic romanance. The singing was very poor. Almost no tonal variation, was the weakest part of a movie that is a musical.
+  thumbnail: "/assets/img/covers/the_umbrellas_of_cherbourg.jpg"
+  director: Jacques Demy
+  year: 1964
+- date: 2023-08-04
+  title: The French Connection
+  subtitle: Doyle is bad news - but a good cop.
+  rating: 3.5
+  review: Very dynamic action packed movie. Very little dialogue that makes it hard to follow at times but feels rewarding to understand.
+  thumbnail: "/assets/img/covers/the_french_connection.jpg"
+  year: 1971
+  director: William Friedkin
+- date: 2023-07-25
+  title: When Father Was Away on Business
+  rating: 2
+  review: First of all this movie is no way a comedy. It is a very matter of fact take on a pretty bleak story in post WWII Yugoslavia. Unfortunately the quality of the movie recording was so poor I could hardly see some scenes. I also lacked but historical context to understand events in the movie. I would give this one another shot with a better quality recording.
+  thumbnail: "/assets/img/covers/when_father_was_away_on_business.jpg"
+  director: Emir Kusturica
+  year: 1985
 - date: 2023-07-19
   title: In the Name of the Father
   subtitle: Falsely accused. Wrongly imprisoned. He fought for justice to clear his father's name.
@@ -367,7 +404,7 @@
   rating: 1
   director: Alejandro G. Iñárritu
   year: 2015
-  review: Honestly one of the worst I have seen from Leo. Tom Hardy stole the show and even them the movie was lacking. The dream/memory sequences were awful.
+  review: Honestly one of the worst I have seen from Leo. Tom Hardy stole the show and even the the movie was lacking. The dream/memory sequences were awful.
   thumbnail: "assets/img/covers/the_revenant.jpg"
 - date: 2021-11-04
   title: Se7en
