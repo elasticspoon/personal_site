@@ -447,31 +447,33 @@
   thumbnail: "assets/img/covers/the_handmaiden.jpg"
 - date: 2021-09-15
   title: Dorogie Tovarishchi
-  rating:
-  director:
+  rating: 4
+  director: Andrey Konchalovskiy
   year: 2020
-  review:
+  review: Fairly dark movie about the Novocherkassak massacare seen from the eyes of a staunch communist party member. Very strong acting and a powerful historical drama.
   thumbnail: "assets/img/covers/dorogie_tovarishchi.jpg"
 - date: 2021-09-09
   title: Argo
-  rating:
-  director:
+  subtitle: The movie was fake. The mission was real.
+  rating: 4.5
+  director: Ben Affleck
   year: 2012
-  review:
+  review: Tremendous thriller. The movie is not particulary action packed but is incredibly tense. Based on a true story of surrounding the US hostage crisis in Iran in 1979.
   thumbnail: "assets/img/covers/argo.jpg"
 - date: 2021-09-02
   title: The Social Network
-  rating:
-  director:
+  subtitle: You don't get to 500 million friends without making a few enemies.
+  rating: 3
+  director: David Fincher
   year: 2010
-  review:
+  review: A very good retelling of the story of Facebook. A plot-driven movie that reachs its goal but not much more in my eyes. Jesse Eisenberg was not nearly as unpleasant as I would have expected Mark Zuckerberg to be.
   thumbnail: "assets/img/covers/the_social_network.jpg"
 - date: 2021-08-26
   title: Nomadland
-  rating:
-  director:
+  rating: 3
+  director: Chloé Zhao
   year: 2020
-  review:
+  review: Francis McDormand was solid as usual, though not my favorite actress. The movies shows a very different perspective on how it is possible to live. And some people live that way by choice.
   thumbnail: "assets/img/covers/nomadland.jpg"
 - date: 2021-08-19
   title: Memento

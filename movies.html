@@ -21,7 +21,7 @@ rating-details.html %}
       <div class="covers-list__item">
         <div class="covers-list__cover">
           {% picture cover "{{ movie.thumbnail }}" --img width="180"
-          height="270" %}
+          height="270" alt="Cover for the movie {{movie.title}}" %}
         </div>
         <div class="covers-list__info">
           <h3 class="covers-list__title">{{ movie.title }} ({{movie.year}})</h3>

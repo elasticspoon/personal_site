@@ -7,11 +7,15 @@ feed_show_tags: false
 url: "https://yuribocharov.dev"
 
 blog_domain: "https://blog.yuribocharov.dev"
+
+#landing page links
 navbar-links:
   Blog: "https://blog.yuribocharov.dev"
+  Resume: "/resume"
   About:
     - About Yuri: "/about"
     - Projects: "/projects"
+    - Movies: "/movies"
 defaults:
   - scope:
       path: "" # any file that's not a post will be a "page" layout by default

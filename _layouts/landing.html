@@ -27,8 +27,8 @@ common-ext-js:
           <h2>Projects</h2>
         </div>
         <div class="landing-page__projects">
-          {% for project in site.data.projects %}
-          <div class="landing-page__project">
+          {% for project in site.data.projects limit: 3 %}
+          <article class="landing-page__project">
             <div class="landing-page__project-thumbnail">
               {% assign preview_thumbnail = project.thumbnail | relative_url %}
               {% picture {{ preview_thumbnail }} --alt "Screen shot of the
@@ -80,14 +80,14 @@ common-ext-js:
                 Read the Source Code
               </a>
             </div>
-          </div>
+          </article>
           {% endfor %}
-          <div class="landing-page__see-more">
+          <article class="landing-page__see-more">
             {% picture "assets/img/preview_project.jpg" %}
             <a class="link-button" href="{% link projects.html %}"
               >See more projects</a
             >
-          </div>
+          </article>
         </div>
       </section>
       <section class="landing-page__section">

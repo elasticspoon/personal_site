@@ -144,7 +144,7 @@ body .landing-page__about {
 
 .landing-page__section-heading {
   & h2 {
-    font-size: 4rem;
+    font-size: 8rem;
     font-family: "Open Sans";
     font-weight: 900;
     text-align: center;
@@ -168,7 +168,7 @@ body .landing-page__about {
   }
 
   animation: rainbow 20s linear infinite;
-  padding-block: 2rem;
+  padding-block: 1rem;
   margin-block-end: 3rem;
   background-color: var(--header);
   background-image: var(--header-bg);
@@ -251,6 +251,11 @@ body .landing-page__about {
 
   & svg {
     width: 40px;
+    color: var(--text-col);
+
+    &:hover {
+      color: var(--page-col);
+    }
   }
 
   &:hover {
@@ -265,6 +270,8 @@ body .landing-page__about {
   grid-row-start: 1;
   grid-row-end: 4;
   border: 1px solid var(--text-col);
+  max-height: 600px;
+  overflow: hidden;
 }
 
 .landing-page__project-desc {

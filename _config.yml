@@ -24,11 +24,13 @@ nav-short: true
 # --- List of links in the navigation bar --- #
 ###############################################
 
+# Blog navbar-links
 navbar-links:
   Contact: "mailto:mail@yuribocharov.dev"
+  Resume: "https://yuribocharov.dev/resume"
   About:
     - About Yuri: "https://yuribocharov.dev/about"
-    - Download Resume: "/resume"
+    - Projects: "https://yuribocharov.dev/projects"
 
 ################
 # --- Logo --- #
