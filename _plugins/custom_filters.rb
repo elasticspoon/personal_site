@@ -30,6 +30,18 @@ module Jekyll
       average_rating.round(2)
       # rating_total = items.map(&:rating).sum
     end
+
+    def rating_chart(items)
+      valid_items = items.reject { |item| item["director"].nil? }
+      histogram = valid_items.group_by { |item| item["rating"] || 0 }
+
+      # sort the histogram by rating then map to string
+      histogram.sort_by { |rating, _items| rating }
+        .map do |rating, items|
+          rating = (rating != rating.floor) ? nil : rating
+          [rating, "*" * items.size]
+        end
+    end
   end
 end
 

@@ -7,7 +7,19 @@ css:
 
 {% include about-nav.html movies='true' text='Movies' %} {% include
 rating-details.html %}
-<p>Current Average Rating: {{ site.data.movies | rating_average }}/5</p>
+<details class="rating-histogram__container">
+  <summary>
+    Current Average Rating: {{ site.data.movies | rating_average }}/5
+  </summary>
+  <span class="rating-histogram__chart-title">Rating Chart</span>
+  <div class="rating-histogram">
+    {% assign ratings = site.data.movies | rating_chart %} {% for rating in
+    ratings %}
+    <span class="rating_rating">{{rating[0]}}</span>
+    <span class="rating_value">{{rating[1]}}</span>
+    {% endfor %}
+  </div>
+</details>
 
 <section class="covers-list__container">
   {% assign items_by_year = site.data.movies | group_by_exp: "movie",
