@@ -27,7 +27,7 @@ nav-short: true
 # Blog navbar-links
 navbar-links:
   Contact: "mailto:mail@yuribocharov.dev"
-  Resume: "https://yuribocharov.dev/resume"
+  Resume: "https://yuribocharov/dev/assets/resume.pdf"
   About:
     - About Yuri: "https://yuribocharov.dev/about"
     - Projects: "https://yuribocharov.dev/projects"
