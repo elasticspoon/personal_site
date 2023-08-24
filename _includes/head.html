@@ -141,8 +141,8 @@
   {% endfor %}
   {% endif %}
 
-  {% if page.head-js %}
-    {% for js in page.head-js %}
+  {% if layout.head-js %}
+    {% for js in layout.head-js %}
       <script src="{{ js | relative_url }}"></script>
     {% endfor %}
   {% endif %}
