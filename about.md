@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About Me
+css:
+  - "/assets/css/about.css"
 ---
 
 {% include about-nav.html about='true' text='About' %}

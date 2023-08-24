@@ -1,5 +1,3 @@
-// Function to set a cookie
-
 const button = document.getElementById("change-skin");
 button.addEventListener("click", () => {
   let currentTheme = document.body.getAttribute("data-theme");

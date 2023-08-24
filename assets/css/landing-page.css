@@ -77,7 +77,8 @@
   --header-col: oklch(16% 0 106.41);
 }
 
-h1 {
+h1,
+.rainbow-header {
   background-color: var(--header-fallback);
   background-image: var(--header);
   background-size: 100%;
@@ -87,6 +88,13 @@ h1 {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   inline-size: fit-content;
+  animation: rainbow 20s linear infinite;
+}
+
+@keyframes rainbow {
+  to {
+    background-position: 100vmin 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -144,59 +152,32 @@ body .landing-page__about {
 
 .landing-page__section-heading {
   & h2 {
-    font-size: 8rem;
+    font-size: 6rem;
+    padding-block-end: 1rem;
     font-family: "Open Sans";
     font-weight: 900;
     text-align: center;
     width: fit-content;
-    background-color: var(--header-font);
-    background-image: var(--header-font);
-    color: var(--page-col);
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    padding-block: 1rem;
-    animation: rainbow 20s linear infinite;
-    margin-inline: auto;
-
-    &::selection {
-      background-color: rgba(255, 255, 255, 0.5);
-    }
   }
-
-  animation: rainbow 20s linear infinite;
-  padding-block: 1rem;
-  margin-block-end: 3rem;
-  background-color: var(--header);
-  background-image: var(--header-bg);
-}
-
-@keyframes rainbow {
-  to {
-    background-position: 100vmin 0;
-  }
-}
-
-.landing-page__projects {
 }
 
 .landing-page__project {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  padding-block-end: 1rem;
+  padding-block-end: 3rem;
   border-block-end: 1px solid var(--text-col);
-  margin-block-end: 4rem;
+  margin-block: 3rem;
+
+  &:last-child {
+    border: none;
+    padding-block-end: 0;
+  }
 }
 
 .landing-page__project-title {
   grid-column-start: 1;
   grid-column-end: 8;
-  /* margin-block: 0px; */
-  margin-block-start: 1rem;
-  margin-block-end: 0rem;
+  margin-block: 0px;
   font-size: 3rem;
 }
 
@@ -229,7 +210,6 @@ body .landing-page__about {
 .landing-page__project-skills {
   grid-column-start: 9;
   grid-column-end: 13;
-  grid-row-start: 4;
   display: flex;
   margin-inline-start: auto;
   margin-block-start: 0.4rem;
@@ -272,6 +252,7 @@ body .landing-page__about {
   border: 1px solid var(--text-col);
   max-height: 600px;
   overflow: hidden;
+  margin-block-end: 1rem;
 }
 
 .landing-page__project-desc {
@@ -295,13 +276,14 @@ body .landing-page__about {
     padding-block: 1rem;
   }
 
-  .landing-page__project-skills {
-    flex-direction: row-reverse;
-  }
-
+  /* .landing-page__project-skills { */
+  /*   flex-direction: row-reverse; */
+  /* } */
+  /**/
   .landing-page__project-button {
     display: block;
     margin-block-start: 0.5rem;
+    margin-inline: auto;
   }
 
   .landing-page__project-links {
