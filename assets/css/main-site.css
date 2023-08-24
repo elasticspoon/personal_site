@@ -32,7 +32,6 @@
 
 .ratings {
   margin-block-start: -2rem;
-  margin-block-end: 2rem;
 
   & summary {
     font-weight: 700;
@@ -41,8 +40,11 @@
   }
 }
 
-.rating-histogram__container[open] {
-  height: 20rem;
+.rating-histogram__container {
+  &[open] {
+    height: 20rem;
+  }
+  margin-block-end: 2rem;
 }
 
 .rating-histogram__chart-title {
@@ -58,7 +60,8 @@
   display: grid;
   width: 200px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  transform: rotate(-90deg) translate(3rem, 25dvw);
+  transform: rotate(-90deg) translate(3rem, 0);
+  margin-inline: auto;
   padding: 1rem;
   color: var(--page-col);
   background-color: var(--text-col);
