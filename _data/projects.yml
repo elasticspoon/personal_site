@@ -11,7 +11,7 @@
   repo: "elasticspoon/private-events"
   thumbnail: "assets/img/private-events-thumbnail.jpg"
   site_link: "http://35.243.197.55/"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat diam ut venenatis tellus in. Faucibus pulvinar elementum integer enim neque volutpat. Felis eget velit aliquet sagittis id consectetur purus. Gravida rutrum quisque non tellus orci ac. Faucibus nisl tincidunt eget nullam. Viverra vitae congue eu consequat ac felis donec. Leo a diam sollicitudin tempor id eu nisl nunc."
+  desc: "Private Events is a Ruby on Rails application focused on user interaction with events allowing event creation, management, sign-ups and invitations. Private Events utilizes HTML, CSS, TailwindCSS, and a combination of AlpineJS and JavaScript for the frontend. Ensured high code quality with RSpec unit tests and systems tests using Capybara. Containerized the production version using Docker and set up hosting using Amazon EC2 and an RDS PostgreSQL database."
   skills:
     - name: "tailwindcss"
       desc: "Styled with TailwindCSS"
@@ -34,7 +34,7 @@
   repo: "elasticspoon/flight-booker"
   thumbnail: "assets/img/flight-booker-thumbnail.png"
   site_link: "https://flight-booker-gogr.onrender.com/"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat diam ut venenatis tellus in. Faucibus pulvinar elementum integer enim neque volutpat. Felis eget velit aliquet sagittis id consectetur purus. Gravida rutrum quisque non tellus orci ac. Faucibus nisl tincidunt eget nullam. Viverra vitae congue eu consequat ac felis donec. Leo a diam sollicitudin tempor id eu nisl nunc."
+  desc: "This project is a simple demo application intended to show off dynamic forms while utilizing minimal client side Javascipt and serving the content from a Rails back end. I utilized multiple new (to me at the time) tools that covered all areas of the tech stack. On the front-end I used PostCSS and the BEM approach to structuring my CSS classes. Closer to the middle of the stack I made use of TurboDrive and TurboFrames to minimize full page reloads between form submissions. I ended up hosting the Rails application itself on Render and configuring it to use a Supabase Postgres database."
   skills:
     - name: "rails"
       desc: "Sever side rendered with Ruby on Rails"
@@ -44,3 +44,9 @@
       desc: "Database hosted on supabase"
     - name: "postcss"
       desc: "Styled with PostCss"
+- title: Rebuilding Rails
+  repo: "elasticspoon/rulers_gem"
+  desc: "An exploration into Ruby on Rails through the development of a rack-based framework inspired by Rails 3. Implemented Rack as middleware for running controller actions as Rack apps and enabling request routing. Configures a SQLite database to support an object-relational model. Enabled file-based autoloading for views and controllers. Employed ERB to render Ruby code within views."
+  skills:
+    - name: "ruby"
+      desc: "Coded in Ruby"
