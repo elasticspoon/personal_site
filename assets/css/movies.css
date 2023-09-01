@@ -62,7 +62,7 @@
   background-color: var(--page-col);
   padding: 1.5em 0.5em 0.5em;
   /* border: 1px solid var(--border); */
-  margin: -1.5em -0.5em;
+  margin: -0.5em -0.5em;
 }
 
 details[open] > summary {

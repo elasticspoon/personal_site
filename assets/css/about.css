@@ -1,0 +1,10 @@
+---
+# Front matter for jekyll processing
+---
+
+.about-page__headshot {
+  width: 40dvw;
+  margin-inline: auto;
+  display: block;
+  border-radius: 9999px;
+}

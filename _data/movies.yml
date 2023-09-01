@@ -1,7 +1,21 @@
+- date: 2023-09-03
+  title: The Exorcist
+  rating:
+  review:
+  thumbnail: "/assets/img/covers/the_exorcist.jpg"
+  year: 1973
+  director: Luis Buñuel
+- date: 2023-08-27
+  title: The Discreet Charm of the Bourgeoisie
+  rating: 3
+  review: A group of rich friends attempt to have a dinner party while ignoring the increasingly bizarre mishaps occuring around them. Bizarre is probably the best way to describe this movie. It was funny and captivating but very hard to follow. The movies confusing structure makes it very hard to understand on first watch but it definitely warrants a rewatch.
+  thumbnail: "/assets/img/covers/the_discreet_charm_of_the_bourgeoisie.jpg"
+  year: 1977
+  director: Luis Buñuel
 - date: 2023-08-23
   title: Bad Luck Banging or Loony Porn
-  rating:
-  review: If this is good potentially add aferim!
+  review: "Warning this movie is very explicit, it literally starts with a home sex video. The consequences of the video leaking are the general plot of the movie. However, the movie is very much more of a biopic about Romania. It is abstract, nerve-wracking at times but very enjoyable. It is a good movie but I find it hard to recommend."
+  rating: 4
   thumbnail: "/assets/img/covers/bad_luck_banging_or_loony_porn.jpg"
   year: 2021
   director: Radu Jude
@@ -560,31 +574,32 @@
   thumbnail: "assets/img/covers/howls_moving_castle.jpg"
 - date: 2021-05-28
   title: Ivanovo Detstvo
-  rating:
-  director:
+  director: Andrei Tarkovsky
+  rating: 3.5
   year: 1962
-  review:
+  review: Great war movie. The child actor was great. The movie provides a very dark take on war and loss.
   thumbnail: "assets/img/covers/ivanovo_detstvo.jpg"
 - date: 2021-05-21
   title: Lars and the Real Girl
-  rating:
-  director:
+  subtitle: The search for true love begins outside the box
+  rating: 4.5
+  director: Craig Gillespie
   year: 2007
-  review:
+  review: I did not realize how good of an actor Ryan Gosling was until I saw this movie. In this movie he plays Lars, a guy with some severe social issues that ends up falling in love with a sex doll. Somehow despite how crazy the premise sounds there is nothing cringy at all. It's a very positive a charming movie.
   thumbnail: "assets/img/covers/lars_and_the_real_girl.jpg"
 - date: 2021-05-14
   title: M
-  rating:
-  director:
+  rating: 0
+  director: Fritz Lang
   year: 1931
-  review:
+  review: When police cannot catch a child murdering criminal, other criminals come together to catch them. Despite the seemingly interesting the movie is unbearably slow and boring.
   thumbnail: "assets/img/covers/m.jpg"
 - date: 2021-05-07
   title: Spirited Away
-  rating:
-  director:
+  rating: 5
+  director: Hayao Miyazaki
   year: 2001
-  review:
+  review: Delightfully charming movie. Keeps you on the edge of your seat just begging to see more of the world and characters that Miyazaki created. I cannot get over just how much I enjoy the designs and the movie itself in gorgeous.
   thumbnail: "assets/img/covers/spirited_away.jpg"
 - date: 2021-04-30
   title: Amelie

@@ -2,46 +2,20 @@
 layout: page
 title: About Me
 css:
+  - "/assets/css/landing-page.css"
   - "/assets/css/about.css"
 ---
 
 {% include about-nav.html about='true' text='About' %}
 
-Hi, I’m Matthias. I’m a consultant user experience designer and web design engineer from Stuttgart, Germany. I run workshops on modern responsive web design, prototyping, and design engineering with teams worldwide and teach Interface Prototyping at the Muthesius Academy of Fine Arts and Design.
+Hi, I'm Yuri, a software developer from Silver Spring, Maryland. I'm a full-stack developer with a passion for problem solving and learning new technologies. I'm currently working freelance and looking for new opportunities.
 
 {% picture "/assets/img/headshot3.png" --alt A potrait photo of Yuri Bocharov --img class="about-page__headshot" %}
 
-With over 15 years of industry experience, I work with companies and agencies to create delightful, accessible, and performant user interfaces and design systems for the Web. I deeply care about design that puts the user first and believe that a prototyping mindset is key to successfully build products and services for the heterogeneous Web platform of today.
+I am a strong believer in the importance of understanding the fundamentals of a technology before using it. Although I have done the majority of my work in Ruby on Rails, I primarily stick to the web fundamentals (HTML, CSS, and JavaScript). I have found that my understanding of these technologies has helped me learn new frameworks and languages more quickly.
 
-I love to build prototypes to validate concepts and explore technologies and by combining design and code, I always approach the creation of user interface solutions with a holistic view. To do so, it is important to stay at the cutting edge of web technologies and to always keep learning. I will share my knowledge with your team to push the boundaries of what’s possible while at the same time I am always open to learn about even better solutions.
+In my admittedly limited experience, I have found that the best way for me to learn is to teach. Be it when I was a teaching assistant at University of Maryland or a tutor for their computer science department, I have found that until you can teach a topic you don't really understand it. I try to continue this practice by writing blog posts about topics I find interesting.
 
-Sounds interesting?
+I hope you find this compelling and if you do I would love to hear from you!
 
 <a class="link-button page-link" href="{{ site.mail }}">Get in touch!</a>
-
-Here is a bit more about what I can do for you and your team:
-
-### User Experience Design
-
-Design is a competitive advantage that leads to superior business performance. I will help you design the right user experience by understanding user needs through user research and usability testing and iteratively bringing user-centered design to life – with state-of the-art UX tools and methodologies including a lot of prototyping to validate ideas and different approaches. I will be the advocate of the people who use your product but it is also my job to make sure that solutions for products and services successfully meet business needs and tell a story.
-Design Engineering and Prototyping
-
-As a design engineer, or: a designer and developer, I help teams to bridge the gap between design and development and translate interaction concepts and visual design into highly usable, responsive, accessible, and performant user interfaces and design systems for the Web. Whether you are bulding a product or a website, I support you in producing outstanding, beautiful work with semantic HTML, modern CSS, and resilient JavaScript – and with a prototyping mindset to explore and validate ideas and technical solutions using the latest Web platform features in the browser as early as possible.
-
-### Workshops and Training
-
-I offer online workshops and on-site training events for companies and design teams worldwide where I share my experience and best practices in the fields of UX and UI design, prototyping, responsive web design, design engineering, processes, and workflows. I will prepare your team for designing with the right mindset for the ever changing multi-device web.
-
-For Adobe Systems, I’ve run more than 30 workshops to date on advanced design and prototyping with Adobe XD.
-
-Learn more about my workshops.
-
-### Public Speaking
-
-I occasionally speak at meetups, conferences, and corporate events and would love to do this more in the future. If you want me to speak at your event, don’t hesitate to say hello.
-
-Here is one of my latest talks: Forging Links – Web Design Engineering and CSS
-
-### Teaching
-
-Since 2012, I teach Interface Prototyping at the Muthesius Academy of Fine Arts and Design in Kiel, Germany. The seminar, which is part of the Interface Design program, teaches the basics of prototyping interactive user experiences for digital interfaces. It’s a great honor to help the next generation of designers get prepared for the challenges of the “Experience Age”.
