@@ -6,7 +6,7 @@ tags: [nix, ruby, jekyll, ruby-vips, sass-embedded, sass]
 toc: true
 ---
 
-# Developing a Jekyll site on NixOS
+# Developing a Jekyll Site on NixOS
 
 {: .box-warning .ignore-blockquote }
 
@@ -14,7 +14,7 @@ toc: true
 >**This post is long**\\
 > I won't fault you if you are trying to solve your own issue and want to skip to the end. (Or if you think I am a terrible writer). [So here is a link.](/posts/2023/08/09/Developing-a-Jekyll-Site-on-NixOS.html#final-code)
 
-## Why am I writing this post?
+## Why Am I Writing This Post?
 
 At some point in time I decided that I wanted to switch from running Linux on a virtual machine to having an installation on my home computer. I shan't go too deep about the value of Nix (that will be another post), suffice to say I decided to try NixOS for as my Linux distribution of choice.
 
@@ -26,7 +26,7 @@ NixOS and the `ruby-vips` would not work due to expectations it has about librar
 
 <!-- prettier-ignore -->
 >**On the Nix Ecosystem**\\
-> The Nix ecosystem is still not fully mature so there are competing options in terms of how you might approach having temporary dependencies. Those options being `nix-shell` and `nix develop `coupled with Nix flakes. Flakes are currently an "experimental" feature and there was more documentation and content written about the shell option. Thus, I chose to follow the `nix-shell` route. I might explore the flake route in the future.
+> The Nix ecosystem is still not fully mature so there are competing options in terms of how you might approach having temporary dependencies. Those options being `nix-shell` and `nix develop` coupled with Nix flakes. Flakes are currently an "experimental" feature and there was more documentation and content written about the shell option. Thus, I chose to follow the `nix-shell` route. I might explore the flake route in the future.
 
 ### What is `nix-shell`?
 
@@ -48,7 +48,7 @@ So how does this help us? It means that with a properly set up shell we will hav
 
 That sounds compelling. How do we get there?
 
-## Starting point
+## Starting Point
 
 My initial starting point for making this website work on Nix already included several base like programs including the Ruby, Bundler, Bundix, NodeJs and Npm. The final package that I ended up creating also works without any of those dependencies but building it without them is a pain.
 
@@ -61,7 +61,7 @@ My initial starting point for making this website work on Nix already included s
 Thus, what do we actually need to get started?
 
 - [Nix](https://nixos.org/) - we are trying to make this work on Nix
-- [Ruby](https://search.nixos.org/packages?channel=23.05&show=ruby&from=0&size=50&sort=relevance&type=packages&query=ruby) - Jekyll is in Ruby
+- [Ruby](https://search.nixos.org/packages?channel=23.05&show=ruby&from=0&size=50&sort=relevance&type=packages&query=ruby) - Jekyll is written in Ruby
 - [Bundix](https://github.com/nix-community/bundix) - a Nix package to simplify getting all the gems we need
 
 ## Getting Started
@@ -104,7 +104,7 @@ First, Bundler fetches and installs the gem locally. The config options tell it:
 
 Finally, the `gemset.nix` file is the nix derivation that describes all the gems used in the project as well as dependencies, etc.
 
-### So how do we run it?
+### So How Do We Run It?
 
 Ok, we are close but not quite there. We are gonna need to run 1 more command `bundix --init`. Which will create the nix shell file that we will be using:
 
@@ -190,7 +190,7 @@ with (import <nixpkgs> { }); let
     gemset = ./gemset.nix;
     gemConfig = {
       sass-embedded = attrs: {
-        DART_SASS = pkgs.fetchurl {
+        SASS_EMBEDDED = pkgs.fetchurl {
           url = "https://github.com/sass/dart-sass/releases/download/1.64.2/dart-sass-1.64.2-linux-x64.tar.gz";
           sha256 = "";
         };
@@ -210,7 +210,7 @@ You also might be wondering why `sha256 = ""`. At the moment we don't know what 
 
 Lets run `nix-shell` again. Aaaaaand we get the same TCP error `SocketError: Failed to open TCP connection to github.com:443 (getaddrinfo: Temporary failure in name resolution)`. What gives?
 
-#### Deeper investigations
+#### Deeper Investigations
 
 Upon looking into this closer I found that I was not the only one having these issues and people seemed to have come up with differing solutions. Including [using the above code](https://github.com/thomasjm/thomasjm.github.io/blob/3ea0b5061284c67b0345907445fdd7517ae8f498/flake.nix#L22), [applying a patch to the sass `Rakefile`](https://github.com/LumiGuide/nixpkgs/blob/3bb352892ece0d33d322135a9517fbfdfd27c7e9/pkgs/servers/web-apps/discourse/default.nix#L198), [applying a substitution](https://github.com/mayflower/nixpkgs/blob/b8346c214eeb087592d978a8538f8b3afbca70a4/pkgs/servers/web-apps/discourse/default.nix#L192), [downgrading Jekyll](https://github.com/joshrule/joshrule.github.com/blob/b497fd31ad4f471339684a015ad336b6044b4b3c/flake.nix#L40), [building their own derivation](https://github.com/lafrenierejm/nixpkgs/blob/54abe781c482f51ff4ff534ebaba77db5bd97442/pkgs/misc/dart-sass-embedded/default.nix#L8) or [using dart-sass directly](https://github.com/NixOS/nixpkgs/blob/b7471a83f427c2799fd47b8692445c31a330388e/pkgs/development/ruby-modules/gem-config/default.nix#L714).
 
@@ -241,7 +241,7 @@ rescue StandardError
 end
 ```
 
-The code in question is above. We can see that what happened is pretty simple. At some point in time there might have been a check for the tarball at `SASS_EMBEDDED` but now the check is made at `DART_SASS`. Thankfully, it seems like our earlier code should work with just that small change. We run `nix-shell` once more and we should get a new error.
+The code in question is above. We can see that what happened is pretty simple. At some point in time there might have been a check for the tarball at `SASS_EMBEDDED` but now the check is made at `DART_SASS`. Thankfully, it seems like our earlier code should work with just that small change (just swap `SASS_EMBEDDED` to `DART_SASS`). We run `nix-shell` once more and we should get a new error.
 
 ```console
 error: hash mismatch in fixed-output derivation '/nix/store/vjpjz4f5dxhw11r1j903grkmpfl9jc7f-dart-sass-1.64.2-linux-x64.tar.gz.drv':
@@ -251,7 +251,7 @@ error: hash mismatch in fixed-output derivation '/nix/store/vjpjz4f5dxhw11r1j903
 
 Finally, we can use this mismatched SHA to complete the working code.
 
-#### It works!
+#### It Works!
 
 Just kidding. We have a new error.
 
@@ -307,7 +307,7 @@ What exactly is happening here? `ruby-ffi` provides a way to interface with libr
 
 We can see from the code that the gem is searching for the `glib`, `gobject` and `vips` libraries in the `/usr/` and `/opt/` directories which will not work with Nix. So what can we do?
 
-### The easy fix
+### The Easy Fix
 
 Nix already has a patched version of `ruby-vips` in its packages as `rubyPackages.ruby-vips`. However, `jekyll_picture_tag` is outdated and requires version 2.0.17 of the gem, which is not available with `nixpkgs`.
 
@@ -366,11 +366,11 @@ with (import <nixpkgs> { }); let
           cd "$(cat $out/nix-support/gem-meta/install-path)"
 
           substituteInPlace lib/vips.rb \
-            --replace "library_name('vips', 42)" '"${lib.getLib vips}/lib/libvips${stdenv.hostPlatform.extensions.sharedLibrary}"' \
-            --replace "library_name('glib-2.0', 0)" '"${glib.out}/lib/libglib-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"' \
-            --replace "library_name('gobject-2.0', 0)" '"${glib.out}/lib/libgobject-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"'
+          --replace "library_name('vips', 42)" '"${lib.getLib vips}/lib/libvips${stdenv.hostPlatform.extensions.sharedLibrary}"' \
+          --replace "library_name('glib-2.0', 0)" '"${glib.out}/lib/libglib-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"' \
+          --replace "library_name('gobject-2.0', 0)" '"${glib.out}/lib/libgobject-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"'
         '';
-      };
+        };
     };
   };
 in
@@ -390,13 +390,23 @@ Now all the calls to the `library_name` function that typically would search for
 > 
 > As you might guess `substituteInPlace` is yet another [function provided by `setup.sh`](https://github.com/NixOS/nixpkgs/blob/master/pkgs/stdenv/generic/setup.sh#L914). It does exactly what you think. Other shell functions and utilities are described[in the Nix docs](https://nixos.org/manual/nixpkgs/stable/#ssec-stdenv-functions).
 
-## Node
+## Node and Node Packages
 
-At this point your site might just run if you already have node installed on your system. However, for the sake of this post I removed it so my site still is not running. So how do we add node?
+At this point we just have Node and Node packages to deal with. If you already have Node and `npm` you can just `npm install` and run the site. For the sake of this post we are going to cover all that as a shell integration. Lets start by just adding Node.
 
-We just add the node package as a build input to our derivation: `buildInputs = [env pkgs.nodejs-slim ];`. `buildInputs` is not a function like before, instead it is an environment variable that Nix will loop over with `findInputs` to find all the needed build dependencies. It does so in an intelligent way to prevent pulling in dependencies multiple times ([you can read more about that process here](https://nixos.org/guides/nix-pills/basic-dependencies-and-hooks.html)).
+### NodeJS
 
-And just like that everything is running.
+We just add the node package as a build input to our derivation: `buildInputs = [env pkgs.nodejs ];`. `buildInputs` is not a function like before, instead it is an environment variable that Nix will loop over with `findInputs` to find all the needed build dependencies. It does so in an intelligent way to prevent pulling in dependencies multiple times ([you can read more about that process here](https://nixos.org/guides/nix-pills/basic-dependencies-and-hooks.html)).
+
+Why dependencies are added in `buildInputs` instead of `dependencies`? I do not know.
+
+The `nodejs` package includes both the V8 node server and `npm` so we can just run `npm install` **within** our shell at this point and the website will run.
+
+{: .box-warning .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**Packaging Node Modules**\\
+> If you are a real glutton for punishment you can package your node modules the same way that you packaged your gems. In my experience it is an even more cumbersome process that with Gems so I won't include that process in this post. But if you want to see how it is done I have made a very short post on how do it here.
 
 ## Final Code
 
@@ -423,9 +433,9 @@ with (import <nixpkgs> { }); let
           cd "$(cat $out/nix-support/gem-meta/install-path)"
 
           substituteInPlace lib/vips.rb \
-            --replace "library_name('vips', 42)" '"${lib.getLib vips}/lib/libvips${stdenv.hostPlatform.extensions.sharedLibrary}"' \
-            --replace "library_name('glib-2.0', 0)" '"${glib.out}/lib/libglib-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"' \
-            --replace "library_name('gobject-2.0', 0)" '"${glib.out}/lib/libgobject-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"'
+          --replace "library_name('vips', 42)" '"${lib.getLib vips}/lib/libvips${stdenv.hostPlatform.extensions.sharedLibrary}"' \
+          --replace "library_name('glib-2.0', 0)" '"${glib.out}/lib/libglib-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"' \
+          --replace "library_name('gobject-2.0', 0)" '"${glib.out}/lib/libgobject-2.0${stdenv.hostPlatform.extensions.sharedLibrary}"'
         '';
       };
     };
@@ -433,7 +443,8 @@ with (import <nixpkgs> { }); let
 in
 stdenv.mkDerivation {
   name = "personal_site";
-  buildInputs = [ env pkgs.nodejs-slim ];
+  # you may want to include pkgs.bundix if you want to mess with the gems more
+  buildInputs = [ env pkgs.nodejs];
 }
 ```
 
@@ -455,20 +466,20 @@ I felt like I learned a **ton** about Nix the OS, the package manager and the Ni
 
 ```nix
 callPackage = path: overrides:
-    let f = import path;
-    in f ((builtins.intersectAttrs (builtins.functionArgs f) allPkgs) // overrides);
+  let f = import path;
+  in f ((builtins.intersectAttrs (builtins.functionArgs f) allPkgs) // overrides);
 ```
 
 This is the sort of code that is written in the Nix pills, a series of blog posts aimed to help you learn the Nix system. Without a pretty solid understanding of the language that code is very hard to follow. Given Nix has no penalties for creating more variables I don't see why it isn't more common to write more self-documenting code.
 
 ```nix
 callPackage = path: configOverrides:
-    let
-      function = import path;
-      usedPkgConfigs = builtins.intersectAttrs (builtins.functionArgs function) allPkgs;
-      result = function (usedPkgConfigs // configOverrides);
-    in
-    result;
+  let
+    function = import path;
+    usedPkgConfigs = builtins.intersectAttrs (builtins.functionArgs function) allPkgs;
+    result = function (usedPkgConfigs // configOverrides);
+  in
+  result;
 ```
 
 This code isn't perfect. The function part is still a bit unclear but at least to me is seems a lot more clear what the function actually ends up acting upon.
