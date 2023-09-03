@@ -603,115 +603,121 @@
   thumbnail: "assets/img/covers/spirited_away.jpg"
 - date: 2021-04-30
   title: Amelie
-  rating:
-  director:
+  subtitle: She'll change your life.
+  rating: 2.5
+  director: Jean-Pierre Jeunet
   year: 2001
-  review:
+  review: A pleasant, charming, romantic comedy about a lonely girl with an overly active imagination attempting to help people in mischievous ways. I find the movie to be forgettable.
   thumbnail: "assets/img/covers/amelie.jpg"
 - date: 2021-04-24
   title: Good Will Hunting
-  rating:
-  director:
+  rating: 1
+  director: Gus Van Sant
   year: 1997
-  review:
+  review: Really excellent acting by Robin Williams in this movie. Matt Damon is much weaker by contrast. Somehow the character of the hidden genius janitor is not particularly compelling. Some of the 90's cliches also aged poorly.
   thumbnail: "assets/img/covers/good_will_hunting.jpg"
 - date: 2021-04-16
   title: The Princess Bride
-  rating:
-  director:
+  rating: 4
+  director: Rob Reiner
   year: 1987
-  review:
+  review: This movie is extraordinarily funny. It aged very well and some jokes seem to have gotten even better and more relevant. It's very light-hearted, never takes itself too seriously and is definitely worth a watch.
   thumbnail: "assets/img/covers/the_princess_bride.jpg"
 - date: 2021-04-09
   title: Cinema Paradiso
-  rating:
-  director:
+  rating: 1.5
+  director: Giuseppe Tornatore
   year: 1988
-  review:
+  review: I don't typically care for movies with child actors. This is one of those movies. I did not really feel the childlike happiness the director was attempting to convey for this movie theater or movies in general.
   thumbnail: "assets/img/covers/cinema_paradiso.jpg"
 - date: 2021-03-27
   title: The Pianist
-  rating:
-  director:
+  rating: 4
+  director: Roman Polanski
   year: 2002
-  review:
+  review: The movie centers around a very compelling story of a Jewish Pianist during WWII. Adrien Brody is superb in this movie. One of the strongest Holocaust protrayals I have seen.
   thumbnail: "assets/img/covers/the_pianist.jpg"
 - date: 2021-03-20
   title: "Robin Hood: Men In Tights"
-  rating:
-  director:
+  subtitle: The Legend Had It Coming.
+  rating: 0
+  director: Mel Brooks
   year: 1993
-  review:
+  review: Very similar to Princess Bride but so much worse.
   thumbnail: "assets/img/covers/robin_hood_men_in_tights.jpg"
 - date: 2021-03-05
   title: Rear Window
-  rating:
-  director:
+  rating: 3.5
+  director: Alfred Hitchcock
   year: 1954
-  review:
+  review: This movie is classic hitchcock. It is tense dramatic, well shot. Yet somehow I always find myself forgetting how it ends. But that's not a problem because I'm always willing to rewatch it.
   thumbnail: "assets/img/covers/rear_window.jpg"
 - date: 2021-02-27
   title: Dead Poets Society
-  rating:
-  director:
+  subtitle: He was their inspiration. He made thier lives extraordinary.
+  rating: 4
+  director: Peter Weir
   year: 1989
-  review:
+  review: An amazing coming of age movie. Phenomenal acting job all around. Robin Williams is terrific in this movie. The movie covers many themes from family, friendship, creativity and it covers them all well.
   thumbnail: "assets/img/covers/dead_poets_society.jpg"
 - date: 2021-02-19
-  title: The Cabin
-  rating:
-  director:
+  title: The Cabin in the Woods
+  subtitle: You think you know the story
+  rating: 2.5
+  director: Drew Goddard
   year: 2011
-  review:
-  thumbnail: "assets/img/covers/the_cabin.jpg"
+  review: Fun little horror comedy with a bit of a twist to it. The premise is enjoyable enough to watch once. Probably not good enough for a second though.
+  thumbnail: "assets/img/covers/the_cabin_in_the_woods.jpg"
 - date: 2021-02-12
   title: Requiem For A Dream
-  rating:
-  director:
+  review: The movie follows the journeys of four different people all getting addicted to heroin each having varying amounts of agency in that situation. The movie is very dark and presents a very depressing reality. That said, some of the stories are better than others.
+  director: Darren Aronofsky
   year: 2000
-  review:
+  rating: 2.5
   thumbnail: "assets/img/covers/requiem_for_a_dream.jpg"
 - date: 2021-02-05
   title: Let The Fire Burn
-  rating:
-  director:
+  rating: 1.5
+  director: Jason Odser
   year: 2013
-  review:
+  review: A documentary about the Philadelphia MOVE movement and subsequent bombing by police. The documentary is definitely informative about an event that is rarely mentioned and little known. It is a bit slow at times.
   thumbnail: "assets/img/covers/let_the_fire_burn.jpg"
 - date: 2021-01-29
   title: The Usual Suspects
-  rating:
-  director:
+  subtitle: Five Criminals. One line up. No coincidence.
+  rating: 2
+  director: Bryan Singer
   year: 1995
-  review:
+  review: A decent movie on the first watch. Probably not worth another after you've seen the "twist". Most of the characters are pretty forgettable, besides maybe Kevin Spacey.
   thumbnail: "assets/img/covers/the_usual_suspects.jpg"
 - date: 2021-01-22
   title: Soul
-  rating:
-  director:
+  rating: 2.5
+  director: Pete Docter and Kemp Powers
   year: 2020
-  review:
+  review: Very cute, pleasant and upbeat movie. I enjoyed how jazzy it was. I think it would have been better off with an unhappy ending.
   thumbnail: "assets/img/covers/soul.jpg"
 - date: 2021-01-15
   title: "Terminator 2: Judgement Day"
-  rating:
-  director:
+  subtitle: It's Nothing Personal
+  rating: 4.5
+  director: James Cameron
   year: 1991
-  review:
+  review: Absolutely classic action movie. I can't think of another movie that has aged as gracefully as this one, besides maybe Jurassic Park. The special effects are immense. The plot is very solid and Linda Hamilton plays a great Sarah Connor.
   thumbnail: "assets/img/covers/terminator_2_judgement_day.jpg"
 - date: 2021-01-09
   title: Train to Busan
-  rating:
-  director:
+  rating: 1.5
+  director: Sang-ho Yeon
   year: 2016
-  review:
+  review: Overall pretty solid, for a zombie movie. Most of all, I enjoyed the inter character dynamics in the movie. Some of the acting was very solid. The zombie parts I was not a big fan of.
   thumbnail: "assets/img/covers/train_to_busan.jpg"
 - date: 2021-01-02
   title: The Terminator
-  rating:
-  director:
+  rating: 3.5
+  director: James Cameron
   year: 1984
-  review:
+  review: A different movie from its more action focus sequel. The Terminator is almost closer to a horror thriller. It is still an excellent movie, James Cameron does a phenomenal job instilling the terror that the Terminator brings. Unfortunately some of the practical effects in this one are lacking.
   thumbnail: "assets/img/covers/the_terminator.jpg"
 - date: 2020-11-06
   title: Pulp Fiction
@@ -791,19 +797,12 @@
   review:
   thumbnail: "assets/img/covers/eternal_sunshine.jpg"
 - date: 2020-07-31
-  title: Blade Runner
+  title: Blade Runner 2049
   rating:
   director:
-  year: 2049
+  year:
   review:
-  thumbnail: "assets/img/covers/blade_runner.jpg"
-- date: 2020-07-24
-  title: Arrival
-  rating:
-  director:
-  year: 2016
-  review:
-  thumbnail: "assets/img/covers/arrival.jpg"
+  thumbnail: "assets/img/covers/blade_runner_2049.jpg"
 - date: 2020-07-17
   title: Nightcrawler
   rating:
