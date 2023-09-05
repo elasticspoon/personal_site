@@ -721,73 +721,76 @@
   thumbnail: "assets/img/covers/the_terminator.jpg"
 - date: 2020-11-06
   title: Pulp Fiction
-  rating:
-  director:
+  rating: 4
+  director: Quentin Tarantino
   year: 1994
-  review:
+  review: Probably my favorite Tarantino movie. It lacks the over-the-top violence that many of his others have. All the plot lines are enjoyable. Dissecting how they intersect with each other makes the movie even better.
   thumbnail: "assets/img/covers/pulp_fiction.jpg"
 - date: 2020-10-30
   title: Come and See
-  rating:
-  director:
+  rating: 4.5
+  director: Elem Klimov
   year: 1985
-  review:
+  review: An absolutely harrowing movie about the Nazi occupation of Belarus. It follows the story of a young boy who joins the partisans and proceeds to witness Nazis exterminating his country folk. The movie is very hard to watch but it is important to see it.
   thumbnail: "assets/img/covers/come_and_see.jpg"
 - date: 2020-10-23
   title: Her
-  rating:
-  director:
+  rating: .5
+  director: Spike Jonze
   year: 2013
-  review:
+  review: The movie centers around a man in a futuristic society that starts falling in love with an artificial intelligence. I personally had a strong distaste for the concept. I thought Lars and the real girl was much better. This is very much my personal opinion because others I know greatly enjoy the movie.
   thumbnail: "assets/img/covers/her.jpg"
 - date: 2020-10-10
   title: Schindler's List
-  rating:
-  director:
+  subtitle: The List is Life
+  rating: 1.5
+  director: Steven Spielberg
   year: 1993
-  review:
+  review: The plot of the movie is good. The rest of it feels uninspired. None of the acting performances stood out to me. There are better Holocaust movies out there.
   thumbnail: "assets/img/covers/schindlers_list.jpg"
 - date: 2020-10-02
   title: American History X
-  rating:
-  director:
+  rating: 3.5
+  director: Tony Kaye
   year: 1998
-  review:
+  review: The movie has a very simple straightforward plot following a neo-Nazi returning from prison and his younger brother who is assigned to succumb to the same ideals. The acting performances from the entire cast really elevate this movie. They do a great job turning this seemingly black and white topic into something much more gray.
   thumbnail: "assets/img/covers/american_history_x.jpg"
 - date: 2020-09-25
   title: Goodfellas
-  rating:
-  director:
+  subtitle: As far back as I can remember, I've always wanted to be a gangster.
+  rating: 1
+  director: Martin Scorsese
   year: 1990
-  review:
+  review: A classic  gangster movie about the Italian mob in America. I found it to be too long and kind of forgettable.
   thumbnail: "assets/img/covers/goodfellas.jpg"
 - date: 2020-09-19
   title: The Silence Of The Lambs
-  rating:
-  director:
+  rating: 5
+  director: Jonathan Demme
   year: 1991
-  review:
+  review: Both Anthony Hopkins and Jodie Foster are absolutely phenomenal in this movie. The way the director builds tension and develops character through camera movement is reason alone to watch the movie. Silence of the lambs is slow and suspenseful but you can never draw your eyes away from it.
   thumbnail: "assets/img/covers/the_silence_of_the_lambs.jpg"
 - date: 2020-09-11
   title: The Shawshank Redemption
-  rating:
-  director:
+  subtitle: Fear can hold you prisoner. Hope can set you free.
+  rating: 3
+  director: Frank Darabont
   year: 1994
-  review:
+  review: A classic of American cinema. This is a movie with very strong fundamentals. And Tim Robbins as Andy Dupree steals the show. He does a phenomenal job conveying the mental and emotional transformation that Andy goes through during his 19 years of prison. I do not care for the amount of voiceover narration in this movie.
   thumbnail: "assets/img/covers/the_shawshank_redemption.jpg"
 - date: 2020-09-05
   title: Taxi Driver
-  rating:
-  director:
+  rating: 1.5
+  director: Martin Scorsese
   year: 1976
-  review:
+  review: There are plenty of movies where the director intends for you not to like the main character. The movie is about their journey or their development or just their surroundings. Objectively the actions of Robert de Niro and his acting should be compelling to watch. But this entire movie fell very flat for me.
   thumbnail: "assets/img/covers/taxi_driver.jpg"
 - date: 2020-08-29
   title: Fight Club
-  rating:
-  director:
+  rating: 1
+  director: David Fincher
   year: 1999
-  review:
+  review: Rewatching this film, I feel like I have outgrown it. The plot might be interesting on a first watch, but none of it felt particularly compelling. My favorite character was probably Marla Singer played by Helena Carter.
   thumbnail: "assets/img/covers/fight_club.jpg"
 - date: 2020-08-07
   title: Eternal Sunshine of the Spotless Mind
