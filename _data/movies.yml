@@ -1,7 +1,7 @@
 - date: 2023-09-03
   title: The Exorcist
-  rating:
-  review:
+  rating: 1
+  review: While some scenes in the movie are certainly gruesome and disturbing, I find it hard to call The Exorcist a scary movie. The movie suffers from providing too much background information and focusing too much on the buildup of various characters. It creates more questions that it answers and the overall ending feels unsatisfying.
   thumbnail: "/assets/img/covers/the_exorcist.jpg"
   year: 1973
   director: Luis Buñuel
@@ -794,45 +794,39 @@
   thumbnail: "assets/img/covers/fight_club.jpg"
 - date: 2020-08-07
   title: Eternal Sunshine of the Spotless Mind
-  rating:
-  director:
+  rating: 1.5
+  director: Michel Godfry
   year: 2004
-  review:
+  review: It was a decent love story. I don't know if the very abstract scenes throughout the movie added much. I was also a disctracted by some of the big name actors in the movie. Jim Carrey in a serious role was odd.
   thumbnail: "assets/img/covers/eternal_sunshine.jpg"
 - date: 2020-07-31
   title: Blade Runner 2049
-  rating:
-  director:
-  year:
-  review:
+  rating: 4
+  director: Denis Villeneuve
+  year: 2017
+  review: Just an awesome cinematic experience. The movie is an amazing take on a cyberpunk dystopian future. The action is good but not excessive. As much as I dislike him, even Harrison Ford managed to not ruin the movie for me.
   thumbnail: "assets/img/covers/blade_runner_2049.jpg"
 - date: 2020-07-17
   title: Nightcrawler
-  rating:
-  director:
+  subtitle: The City Shines Brightest at Night.
+  rating: 4
+  director: Dan Gilroy
   year: 2014
-  review:
+  review: Jake Gyllenhaal is delightfully creepy in this movie. I really enjoyed plunging into the dark underworld of news media.
   thumbnail: "assets/img/covers/nightcrawler.jpg"
 - date: 2020-07-10
   title: Kimi No Na Wa
   rating:
   director:
   year: 2016
-  review:
+  review: One of the worst movies I've seen. I barely made it 20 minutes in. It was beyond boring.
   thumbnail: "assets/img/covers/kimi_no_na_wa.jpg"
-- date: 2020-07-04
-  title: Your Name
-  rating:
-  director:
-  year: 2016
-  review:
-  thumbnail: "assets/img/covers/your_name.jpg"
 - date: 2020-07-03
   title: Oldboy
-  rating:
-  director:
+  rating: 4
+  director: Park Chan-Wook
   year: 2003
-  review:
+  review: Overall, it's a pretty dark movie. There is a good mix of action and mystery that keeps you hooked the entire way. Choi Min-sik is phenomenal as Dae-Su. However, the movie is primarily plot driven which weakens it on subsequent re-watches.
   thumbnail: "assets/img/covers/oldboy.jpg"
 - date: 2020-06-26
   title: The Godfather Part II
