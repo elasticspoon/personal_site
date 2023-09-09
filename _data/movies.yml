@@ -1,3 +1,10 @@
+- date: 2023-09-10
+  title: The Master
+  rating:
+  review:
+  thumbnail: "/assets/img/covers/the_master.jpg"
+  year: 2012
+  director: Luis Buñuel
 - date: 2023-09-03
   title: The Exorcist
   rating: 1
@@ -94,6 +101,13 @@
   thumbnail: "/assets/img/covers/o_brother_where_art_thou.jpg"
   director: Joel and Ethan Coen
   review: Great music, fun characters and a lighthearted but gripping story.
+- date: 2023-06-02
+  year: 2022
+  title: Glass Onion
+  rating: 1.5
+  thumbnail: "/assets/img/covers/glass_onion.jpg"
+  director: Rian Johnson
+  review: A real letdown after the first movie. It felt like the movie was trying to be too relevant to current events. The satire in it just ended up much worse.
 - date: 2023-03-29
   title: Blow-Up
   rating: 0
@@ -273,6 +287,14 @@
   year: 1998
   review: Another fun movie from the Coen brothers with many enjoyable scenes and characters. Unfortunately, it did not have quite the same emotional impacts as many of thier other pictures.
   thumbnail: "assets/img/covers/the_big_lebowski.jpg"
+- date: 2022-07-18
+  title: Girl in the Picture
+  subtitle: Her identity was a mystery to everyone. Even her.
+  rating: .5
+  director: Skye Borgman
+  year: 2022
+  review: While the story was incredibly tragic, the documentary was a terrible. There was simply not an hours worth of content here. I watched this on 1.5 speed and it still felt slow.
+  thumbnail: "assets/img/covers/girl_in_the_picture.jpg"
 - date: 2022-07-11
   title: Life is a Miracle
   rating: 5
@@ -719,6 +741,13 @@
   year: 1984
   review: A different movie from its more action focus sequel. The Terminator is almost closer to a horror thriller. It is still an excellent movie, James Cameron does a phenomenal job instilling the terror that the Terminator brings. Unfortunately some of the practical effects in this one are lacking.
   thumbnail: "assets/img/covers/the_terminator.jpg"
+- date: 2020-12-28
+  title: "David Attenborough: A Life on Our Planet"
+  rating: 3
+  director: Alastair Fothergill, Jonathan Hughes, Keith Scholey
+  year: 2020
+  review: The movie was very pretty. I also found it to be motivational. It did a good job highlighting the destruction we are bringing up on our planet. Some of the CGI scenes stuck out pretty badly and took me out of the movie.
+  thumbnail: "assets/img/covers/a_life_on_our_planet.jpg"
 - date: 2020-11-06
   title: Pulp Fiction
   rating: 4
@@ -830,64 +859,85 @@
   thumbnail: "assets/img/covers/oldboy.jpg"
 - date: 2020-06-26
   title: The Godfather Part II
-  rating:
-  director:
+  subtitle: All the power on Earth can't change destiny.
+  rating: 4.5
+  director: Francis Ford Coppla
   year: 1974
-  review:
+  review: A very worthy successor to the first godfather movie. The second is in many ways very much it's equal and even exceeds it in others. This movie has some very dark moments. But just like the first it is a must watch.
   thumbnail: "assets/img/covers/the_godfather_part_ii.jpg"
 - date: 2020-06-19
   title: Run Lola Run
-  rating:
-  director:
+  rating: 3.5
+  director: Tom Tykwer
   year: 1998
-  review:
+  review: A tense high stakes movie. It does a great job showing a lot about a few people in 3 20 minute stories. Some parts are maybe a bit too abstract from my taste.
   thumbnail: "assets/img/covers/run_lola_run.jpg"
 - date: 2020-06-12
   title: The Godfather
-  rating:
-  director:
+  subtitle: An offer you can't refuse.
+  rating: 5
+  director: Francis Ford Coppla
   year: 1972
-  review:
+  review: Absolutely classic movie. A must watch. Marlon Brando and Al Pacino are phenomenal in this movie. Between the music the cinematography, the overall plot this movie really does not miss.
   thumbnail: "assets/img/covers/the_godfather.jpg"
 - date: 2020-06-05
-  title: One Flew Over
-  rating:
-  director:
+  title: One Flew Over the Cuckoo's Nest
+  subtitle: If he's crazy, what does that make you?
+  rating: 4.5
+  director: Milos Forman
   year: 1975
-  review:
+  review: Jack Nicholson really steals the show in this movie. He's both charming and crazy. Movie is certainly not the most accurate portrayal of a mental institution. But the realism of the institution doesn't change the realism of its oppression. Watching the characters deal with that is what makes the movie great.
   thumbnail: "assets/img/covers/one_flew_over.jpg"
 - date: 2020-05-29
   title: Hell or High Water
-  rating:
-  director:
+  subtitle: Justice isn't a crime.
+  rating: 3.5
+  director: David Mackenzie
   year: 2016
-  review:
+  review: This movie is an exciting neo-western. Overall, the acting performances are solid. But I think the best part to me is the camera work in the absolutely gorgeous Texas scenery (the scenery itself isn't actually gorgeous, there's nothing pretty about oil fields. I just love the way that it's shot).
   thumbnail: "assets/img/covers/hell_or_high_water.jpg"
+- date: 2020-05-07
+  title: The Irishman
+  subtitle: Time Changes Nothing
+  rating: 2
+  director: Martin Scorsese
+  year: 2019
+  review: I found this movie to be very much a mixed bag. There were some very good moments. Robert de Niro and Joe Pesci are both very enjoyable. But I also found the movie to be too long. And the de-aging CGI completely took me out of the movie and ruined several scenes.
+  thumbnail: "assets/img/covers/the_irishman.jpg"
+- date: 2020-04-21
+  title: Parasite
+  rating: 5
+  director: Bong Joon Ho
+  year: 2019
+  review: Absolutely incredible film. Pretty much every single actor knocked it out of the park. The camera work is amazing. The dialogues are fantastic. This is genuinely one of the best movies I've ever seen.
+  thumbnail: "assets/img/covers/parasite.jpg"
 - date: 2020-03-21
   title: Arrival
-  rating:
-  director:
+  subtitle: Why are they here?
+  rating: 1.5
+  director: Dennis Villeneuve
   year: 2016
-  review:
+  review: Generic sci-fi movie. It had no particularly interesting plot twists or creatures. Overall, I found it forgettable.
   thumbnail: "assets/img/covers/arrival.jpg"
 - date: 2020-03-15
   title: Jurassic Park
-  rating:
-  director:
+  subtitle: An Adventure 65 Million Years in the Making
+  rating: 4
+  director: Steven Spielberg
   year: 1993
-  review:
+  review: The acting performances in this movie are nothing special. But the visual and sound effects are absolutely top notch. Spielberg is incredibly dynamic and a storytelling. For a movie that is over 30 years old, it has aged incredibly well.
   thumbnail: "assets/img/covers/jurassic_park.jpg"
 - date: 2020-03-05
   title: Black Cat White Cat
-  rating:
+  rating: 4.5
   director: Emir Kusturica
   year: 1998
-  review:
+  review: A super light-hearted movie. A nice mix of interconnecting love stories, comedy and some very serious bits. The music is great. Overall, the movie is just fun.
   thumbnail: "assets/img/covers/black_cat_white_cat.jpg"
 - date: 2020-03-05
   title: Amarcord
-  rating:
+  rating: 1.5
   director: Federico Fellini
   year: 1973
-  review:
+  review: A very colorful and pretty movie. Unfortunately I can't say much beyond that. I did not find the characters in the movie, particularly appealing. It was very much not to my taste.
   thumbnail: "assets/img/covers/amarcord.jpg"
