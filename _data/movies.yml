@@ -1,17 +1,25 @@
-- date: 2023-09-10
-  title: The Master
+- date: 2023-09-18
+  title: The Insider
+  subtitle: Two Men Driven to Tell the Truth... Whatever the Cost.
   rating:
   review:
+  thumbnail: "/assets/img/covers/the_insider.jpg"
+  year: 1999
+  director: Michael Mann
+- date: 2023-09-10
+  title: The Master
+  rating: 4
+  review: "The Master is an incredibly character driven story of two men, a navy veteran and a leader of a cult. The movie is about their journey as they try to reconcile their longing to be more similar to the other in contrast to their natures. The movie is slow and beautifully shot. Joaquin Phoenix is incredible with how much he manages to convey using solely his posture and expressions."
   thumbnail: "/assets/img/covers/the_master.jpg"
   year: 2012
-  director: Luis Buñuel
+  director: Paul Thomas Anderson
 - date: 2023-09-03
   title: The Exorcist
   rating: 1
   review: While some scenes in the movie are certainly gruesome and disturbing, I find it hard to call The Exorcist a scary movie. The movie suffers from providing too much background information and focusing too much on the buildup of various characters. It creates more questions that it answers and the overall ending feels unsatisfying.
   thumbnail: "/assets/img/covers/the_exorcist.jpg"
   year: 1973
-  director: Luis Buñuel
+  director: William Friedkin
 - date: 2023-08-27
   title: The Discreet Charm of the Bourgeoisie
   rating: 3
