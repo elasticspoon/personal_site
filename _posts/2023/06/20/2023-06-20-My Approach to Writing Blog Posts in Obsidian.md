@@ -3,6 +3,7 @@ layout: post
 title: My Approach to Writing Blog Posts in Obsidian
 readtime: true
 tags: [sample, tag]
+published: false
 ---
 
 {:toc}

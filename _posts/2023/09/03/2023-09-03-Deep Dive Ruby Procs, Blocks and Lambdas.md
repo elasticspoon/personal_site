@@ -3,39 +3,48 @@ layout: post
 title: "Deep Dive: Ruby Procs, Blocks and Lambdas"
 readtime: true
 toc: true
-tags: [ruby, blocks, procs, lambdas]
+published: false
+tags:
+  - ruby
+  - blocks
+  - procs
+  - lambdas
+summary: This post delves into Ruby's Procs, Blocks, and Lambdas. It clarifies their differences and usage. Blocks encapsulate behavior, allowing dynamic code execution. Procs encapsulate blocks and can be stored, passed, and executed. Lambdas, a type of Proc, have stricter argument handling and return semantics. This post aims to demystify these Ruby concepts.
 ---
 
-# Deep Dive: Ruby Procs, Blocks and Lambdas
+# Deep Dive: Ruby Procs, Blocks, and Lambdas
 
-Lets start with the most basic statement of how procs, blocks and lambdas related to one another. The Venn diagram below provides a quick illustration. In essence the term or class `Proc` encompasses both blocks and lambdas, however, both lambdas and blocks are different from one another.
+I am sure that a Ruby developer is familiar with blocks of code. That is behavior being encapsulated in a `do end` or `{ }`. But have you run into `&` as a function parameter, calls to `yield` within a function, or confusing arrow functions like `-> () { … }`? These are all Procs, Blocks, or Lambdas. In this post, I hope to clarify the differences between them and provide you with the tools to use them in your future endeavors.
 
-{% include picture_tag.html src="procs_lambdas_blocks_comparison.png" alt="A Venn Diagram depicting the relationship between procs, blocks and lambda. Procs encompass both blocks and lamdas. Block and lambdas do not overlap eachother." %}
+Let's start with the most basic statement of how procs, blocks, and lambdas are related to one another. The Venn diagram below provides a quick illustration. In essence, the `Proc` class encompasses both blocks and lambdas; however, both lambdas and blocks are different from each other.
 
-Defining those concepts alone doesn't really do much. So lets explore them in a more code focused manner. I will start will blocks because I find them to be the easiest to explain.
+{% include picture_tag.html src="procs_lambdas_blocks_comparison.png" alt="A Venn Diagram depicting the relationship between procs, blocks, and lambdas. Procs encompass both blocks and lambdas. Blocks and lambdas do not overlap with each other." %}
+
+Defining these concepts alone doesn't really do much. So let's explore them in a more code-focused manner. I will start with blocks because I find them to be the easiest to explain.
 
 ## Blocks
 
-**A block is a way to pass behavior rather than data to a method.**
+**A block is a way to pass behavior** (as opposed to data).
 
-What exactly does that mean? Basically, instead of giving a method of a direct values `method(some_value)` you give the method a behavior `method { #some behavior }`. One might say you are passing a _block_
-of behavior.
+What exactly does that mean? Let's imagine a scenario. You are working on a tool that transforms some data you pass from strings to JSON. It is working fine and dandy, but you keep finding different transformations that you wish to perform. You keep having to tell the program which of the existing behaviors to run, for example, transforming from XML with `run_program(data, :from_xml)`. Wouldn't it be so much nicer if you could pass the transformation behavior in directly?
+
+That is exactly what blocks are for! Basically, instead of giving a method direct values `method(some_value)`, you give the method behavior like this: `method { #some behavior }`. One might say you are passing a _block_ of behavior.
 
 Blocks come in two forms:
 
 ```ruby
-some_method { puts 'behavior being passed to method' }
+some_method { puts 'behavior being passed to the method' }
 # or
 some_method do
-	puts 'behavior but in a do/end block'
+    puts 'behavior but in a do/end block'
 end
 ```
 
-I should at this point note that although the goal of blocks is to pass behavior that does not mean that they cannot pass data. `some_method { 100 }` is a perfectly valid block, however, usually behavior is passed with a block to execute the behavior a particular way, something that is not needed with data.
+I should note that although the goal of blocks is to pass behavior, that does not mean they cannot pass data. `some_method { 100 }` is a perfectly valid block. Usually, behavior is passed with a block to execute the behavior in a particular way, something that is not needed with data.
 
 ### Using Blocks to Execute Behavior
 
-A block is executed within a method with a call to `yield`, as in yield execution to the block.
+A block is executed within a method with a call to `yield`, as in yielding execution to the block.
 
 ```ruby
 def a_method
@@ -46,7 +55,7 @@ a_method { puts 'executed block' }
 #=> executed block
 ```
 
-`yield` will return the value of the block like any other method execution.
+`yield` will return the value of the block, just like any other method execution.
 
 ```ruby
 def another_method
@@ -54,11 +63,11 @@ def another_method
   puts value
 end
 
-another_method { 'hello' } # we also pass in data rather than behavior here
+another_method { 'hello' }
 # => hello
 ```
 
-`yield` can pass arguments to the block, you _yield_ the arguments. These in turn can be used by the block in typical `|param|` fashion.
+`yield` can pass arguments to the block; you _yield_ the arguments. These, in turn, can be used by the block in a typical `|param|` fashion.
 
 ```ruby
 def some_method
@@ -75,37 +84,39 @@ some_method { |a, b, c| puts [a, b, c].inspect }
 
 As you can see, not all the arguments in the block need to be used. Ones that don't exist will get set to `nil`.
 
-Having gotten a bit of a grasp of blocks, we can recall that blocks are Procs, or at least that is what the [[#Procs, blocks and lambdas|diagram]] told us.
+Having gotten a bit of a grasp of blocks, we can recall that blocks are Procs.
 
 ## Blocks and Procs
 
-Lets start our exploration of Procs by exploring exactly how blocks and Procs are related and then moving to define what Procs actually are.
+Let's start our exploration of Procs by exploring exactly how blocks and Procs are related and then moving on to defining what Procs actually are.
 
-I have already stated that **blocks are Procs** but lets prove it. We have seen how blocks can get passed in to methods and then called with `yield`, however, there is an alternative way of calling that same block with the method `:call`.
+I have already stated that **blocks are Procs**, but let's prove it. We have seen how blocks can be passed into methods and then called with `yield`. However, there is an alternative way of calling that same block with the method `:call`.
 
 ```ruby
 def some_method(&some_block)
   yield
 end
+
 some_method { puts 'executed_block' }
 # => 'executed_block'
 
 def some_method(&some_block)
   some_block.call
 end
+
 some_method { puts 'executed_block' }
 # => 'executed_block'
 ```
 
-Those two ways of calling the block are functionally identical except for one difference, the block has now been directly assigned to a variable and is accessible as a Proc. We can check that it is now a Proc by calling `some_block.class` which will return `Proc`. So what just happened?
+Those two ways of calling the block are functionally identical except for one difference: the block has now been directly assigned to a variable and is accessible as a Proc. We can check that it is now a Proc by calling `some_block.class`, which will return `Proc`. So what just happened?
 
-### Procs, Blocks and the Leading &
+### Procs, Blocks, and the Leading &
 
-When a method accepts the argument `&some_argument` as in `def method(&some_argument)` or just `def method(&)` for that matter, it means the method can receive a block and store that block in a variable. [[2022-09-19#*Block Parameter* - only a single block parameter can be defined and ***must*** be in the last position|I wrote in more detail about block parameters here.]]
+When a method accepts the argument `&some_argument`, as in `def method(&some_argument)` or just `def method(&)` for that matter, it means the method can receive a block and store that block in a variable.
 
-The basics of what happens here is simply `&` converts a block to a proc and vice-versa. Lets make sure that is what is happening.
+Similar to the conversion from a value to a pointer, `&` converts a block to a proc and vice-versa.
 
-First lets create a `Proc` and a function that accepts a `Proc`.
+Let's write some code to prove to ourselves we understand what is going on. First, let's create a `Proc` and a function that accepts a `Proc`.
 
 ```ruby
 def i_take_a_proc(some_proc)
@@ -115,15 +126,15 @@ end
 some_proc = Proc.new { puts 'proc executed' }
 
 i_take_a_proc(some_proc)
-#=> Proc
-#=> proc executed
+# => Proc
+# => proc executed
 ```
 
-We can see that this function does in fact take a Proc and execute it. What happens if we try and pass the function a block?
+We can see that this function takes a `Proc` and executes it. What happens if we try to pass the function a block?
 
 ```ruby
-i_take_a_proc { puts 'i am a block '}
-#=> ArgumentError: wrong number of arguments
+i_take_a_proc { puts 'I am a block '}
+# => ArgumentError: wrong number of arguments
 ```
 
 The block was not converted to something usable in the function, but we have already seen how that can be done.
@@ -135,57 +146,59 @@ def i_take_a_block(&some_block)
 end
 
 i_take_a_block { puts 'block executed' }
-#=> Proc
-#=> block executed
+# => Proc
+# => block executed
 ```
 
-We can also see that just like before I can't just pass in a Proc and make it work like a block.
+We can also see that just like before, I can't just pass in a Proc and make it work like a block.
 
 ```ruby
 i_take_a_block(some_proc)
-#=> ArgumentError: wrong number of arguments
+# => ArgumentError: wrong number of arguments
 ```
 
-But I can take that `Proc` use a leading `&` to convert it to a block and then pass that in.
+But I can take that `Proc`, use a leading `&` to convert it to a block, and then pass that in.
 
 ```ruby
 i_take_a_block(&some_proc)
-#=> Proc
-#=> proc executed
+# => Proc
+# => proc executed
 ```
 
-Cool. So at this point we have established that blocks and procs can be converted to one another with `&` but then how are block procs?
+Cool. So at this point, we have established that blocks and procs can be converted to one another with `&`. But then, how are block procs?
 
 ### Blocks Are Procs?
 
-Blocks are procs simply because blocks cannot exist on their own while procs can. If we type `variable = { 'a block' }` we get a `SyntaxError`. That statement makes no sense on its own, but sometimes we need to be able to package up that behavior and store it or pass it around. Procs enable us to pass behavior around.
+Blocks are procs simply because blocks cannot exist on their own, while procs can. If we type `variable = { 'a block' }`, we get a `SyntaxError`. That statement makes no sense on its own,
+
+but sometimes we need to be able to package up that behavior and store it or pass it around. Procs enable us to pass behavior around.
 
 **Blocks are unpacked Proc objects that cannot exist on their own.** They are essentially raw behavior.
 
-Which now brings us to our next topic, what exactly are Procs?
+Which now brings us to our next topic: what exactly are Procs?
 
 ## Proc Objects
 
-Lets immediately state that a `Proc` is a specific ruby class (unlike a block which does not have a class). The [official documentation for the class](https://ruby-doc.org/core-3.1.2/Proc.html) describes a `Proc` as:
+Let's immediately state that a `Proc` is a specific Ruby class (unlike a block, which does not have a class). The [official documentation for the class](https://ruby-doc.org/core-3.1.2/Proc.html) describes a `Proc` as:
 
 > A `Proc` object is an encapsulation of a block of code, which can be stored in a local variable, passed to a method or another [`Proc`](https://ruby-doc.org/core-3.1.2/Proc.html), and can be called.
 
 That can be broken down into four parts:
 
-1. encapsulation of a block of code
-2. can stored in a local variable
-3. can be passed to a method or another Proc
-4. can be called
+1. Encapsulation of a block of code.
+2. Can be stored in a local variable.
+3. Can be passed to a method or another [`Proc`](https://ruby-doc.org/core-3.1.2/Proc.html).
+4. Can be called.
 
-Lets quickly explore and demonstrate all those behaviors in a Proc. I won't be going over these too closely since I have already demonstrated many of these behaviors.
+Let's quickly explore and demonstrate all those behaviors in a Proc. I won't be going over these too closely since I have already demonstrated many of these behaviors.
 
 ### Procs Encapsulating Code
 
-We have already seen this in action but the basics of it is as follows. Imagine we have some behavior say a log statement that tells us we are going to try to save a file `puts 'saving file'`. This behavior can be captured in a Proc object `Proc.new { puts 'saving file' }`. That behavior is now encapsulated, meaning it is separated from the code around it.
+We have already seen this in action, but the basics of it are as follows. Imagine we have some behavior, say, a log statement that tells us we are going to try to save a file: `puts 'saving file'`. This behavior can be captured in a Proc object: `Proc.new { puts 'saving file' }`. That behavior is now encapsulated, meaning it is separated from the code around it.
 
 ### Procs Stored in Local Variables
 
-Having created the Proc object that encapsulates the `puts 'saving file'` behavior we can now store that in a local variable.
+Having created the Proc object that encapsulates the `puts 'saving file'` behavior, we can now store that in a local variable.
 
 ```ruby
 some_local_variable = Proc.new { puts 'saving file' }
@@ -193,7 +206,7 @@ some_local_variable = Proc.new { puts 'saving file' }
 
 ### Procs Can Be Passed Around
 
-Just like any other variable we can pass this variable to other methods, or if we wish, to other procs.
+Just like any other variable, we can pass this variable to other methods, or if we wish, to other procs.
 
 ```ruby
 def some_method(arg)
@@ -210,7 +223,7 @@ other_proc.call.inspect #=> #<Proc:...b70>
 
 ### Procs Can Be Called
 
-Procs are encapsulations of behavior in a object, so there must be some way to use that behavior after you have captured it, thus, `some_proc.call`.
+Procs are encapsulations of behavior in an object, so there must be some way to use that behavior after you have captured it, thus, `some_proc.call`.
 
 ```ruby
 basic_proc = Proc.new { puts 'executes proc'}
@@ -224,7 +237,7 @@ The call method simply executes whatever behavior was stored in the proc and pas
 
 <!-- prettier-ignore -->
 >**A note on closures**\\
-> Closures in ruby are simply a fancy way to describe the behavior of a proc or a block of code dragging its context along with it. What is meant by context? It means that the proc will bring not only behavior but also local variables.
+> Closures in Ruby are simply a fancy way to describe the behavior of a proc or a block of code dragging its context along with it. What is meant by context? It means that the proc will bring not only behavior but also local variables.
 > 
 > ```ruby
 > times_called = 0
@@ -250,7 +263,17 @@ That brings us to our final topic, what are lambdas and how do they relate to pr
 
 ## Lambdas
 
-Let start our exploration of lambdas by comparing them to what we already know, procs. Simply put, lambdas are procs with restrictions. Unlike blocks they can be actually be declared but lambdas fundamentally are procs.
+Let's start by defining what a Lambda is so that we have a basis for our exploration. In Ruby, a lambda is a type of anonymous function or closure. It's a way to define a block of code that can be stored in a variable and then executed later, just like a regular method or function.
+
+Here's a basic syntax for defining a lambda in Ruby:
+
+```ruby
+my_lambda = lambda { |arg1, arg2| code_to_execute }
+# You can also use the -> syntax for a more concise lambda definition
+my_lambda = ->(arg1, arg2) { code_to_execute }
+```
+
+Lambdas are fundamentally Procs.
 
 ```ruby
 a_lambda = lambda { puts 'executed lambda' }
@@ -260,13 +283,13 @@ a_lambda.inspect #=> #<Proc:0x0...(lambda)>
 a_lambda.class #=> Proc
 ```
 
-But what exactly makes them different from procs? Two main aspects: argument handling and return semantics.
+But there are differences in behavior. There are two main aspects: argument handling and return semantics.
 
 ### Argument Handling
 
 #### Argument Matching
 
-Unlike procs lambdas will throw an error unless they get exactly the amount of arguments they are expecting to get. [We have already seen this behavior in blocks but lets show it once more.](#Using Blocks to Execute Behavior)
+Unlike procs, lambdas will throw an error unless they get exactly the amount of arguments they are expecting to get. [We have already seen this behavior in blocks, but let's show it once more.](#Using Blocks to Execute Behavior)
 
 ```ruby
 def some_method(a_proc)
@@ -294,7 +317,7 @@ some_method lambda { |a, b, c| puts [a, b, c].inspect }
 
 #### Array Deconstruction
 
-A proc also has built in array deconstruction.
+A proc also has built-in array deconstruction.
 
 ```ruby
 def some_method(a_proc)
@@ -312,11 +335,13 @@ some_method lambda { |a| a.inspect } #=> [1, 2]
 some_method lambda { |a, b| puts a; puts b } #=> ArgumentError: given 1 expected 2
 ```
 
-A lambda is closer to a regular method with positional arguments, it must receive the expected amount of arguments. The other difference in the two is how calls to `return` are handled.
+A lambda is closer to a regular method with positional arguments; it must receive the expected amount of arguments. The other difference in the two is how calls to `return` are handled.
 
 ### Return Semantics
 
-The basic difference is in a lambda a call to `return` exits the lambda and returns the final value of the lambda to whatever context called the lambda.
+In a lambda, a call to `return
+
+` exits the lambda and returns the final value of the lambda to whatever context called the lambda.
 
 ```ruby
 def test_method
@@ -333,7 +358,7 @@ end
 test_method #=> exited
 ```
 
-In comparison a proc goes one step further and exits out of the proc **then** does the `return`.
+In comparison, a proc goes one step further and exits out of the proc **then** does the `return`.
 
 ```ruby
 def test_method
@@ -342,28 +367,20 @@ def test_method
   return 5
 end
 test_method #=> nil
-# we get nil because after exiting the return call made is simply return
+# we get nil because after exiting, the return call made is simply return
 # this can be changed to another value to get something else
 def test_method = proc { 3; return :another_val }.call
 test_method #=> :another_val
 ```
 
-`break` behaves in a similar way. in lambdas it will exit like `return` but without actually returning a value. In regular procs `break` will behave like
+## Procs, Lambdas, and Blocks in Summary
 
-Having compared procs and lambdas, we can at this point come up with a better definition of what exactly are they.
+In most cases, you are going to either be using Lambdas to mimic the behavior of anonymous functions and closures or using blocks since they are the most familiar way of passing behavior.
 
-### Lambdas: a Better Definition
+Let's once again look back to the diagram from the very start and summarize what all these Ruby terms are.
 
-Having established the differences in lambdas and procs we can finally arrive at a proper definition of lambdas.
+{% include picture_tag.html src="procs_lambdas_blocks_comparison.png" alt="A Venn Diagram depicting the relationship between procs, blocks, and lambdas. Procs encompass both blocks and lambdas. Blocks and lambdas do not overlap with each other." %}
 
-Lambdas are simply procs with different return behavior and restrictions on arguments. They can be called in two ways with the keyword `lambda { |arg| puts arg.inspect }` or with the syntactic sugar `-> (arg) { puts arg.inspect }`.
+**Procs** are encapsulations of behavior that can be saved to variables, passed to methods, and called when needed. **Blocks** are that same behavior but without the encapsulation; they can be called but they cannot be saved in a variable without transforming them. Finally, **lambdas** are procs but with a few restrictions on arguments that can be passed in and how `return` works.
 
-## Procs, Lambdas and Blocks in Summary
-
-Lets once again look back to the diagram from the very start, and summarize what all these ruby terms are.
-
-{% include picture_tag.html src="procs_lambdas_blocks_comparison.png" alt="A Venn Diagram depicting the relationship between procs, blocks and lambda. Procs encompass both blocks and lamdas. Block and lambdas do not overlap eachother." %}
-
-**Procs** are encapsulations of behavior that can be saved to variables, passed to methods and called when needed. **Blocks** are that same behavior but without the encapsulation, they can be called but they cannot be saved in a variable without transforming them. Finally, **lambdas** are procs but with a few restrictions on arguments that can be passed in a and how `return` works.
-
-If you got this far I hope I did a reasonable job of explaining these concepts.
+If you got this far, I hope I did a reasonable job of explaining these concepts.

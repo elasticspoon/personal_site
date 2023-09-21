@@ -4,69 +4,72 @@ layout: post
 subtitle: Exploring basic usages of systemd services
 readtime: true
 toc: true
-tags: [nix, systemd, tmux, tmux-resurrect, tmux-continuum]
+tags:
+  - nix
+  - systemd
+  - tmux
+  - tmux-resurrect
+  - tmux-continuum
+summary: In this post I fix  issues with the `tmux-continuum` plugin when running `tmux` without a status line. I explore creating a `systemd` services and create one for automatic session saving. I provide both Home Manager and Nix Module approaches.
+thumbnail-img: /assets/img/nix-thumbnail.png
+share-img: /assets/img/nix-thumbnail.png
 ---
 
-# Making a Service to Run [`tmux-continuum`](https://github.com/tmux-plugins/tmux-continuum) with No Status Line
+# Setting Up a Service to Run [`tmux-continuum`](https://github.com/tmux-plugins/tmux-continuum) without a Status Line
 
-[`tmux-continuum`](https://github.com/tmux-plugins/tmux-continuum) and its dependency [`tmux-resurrect`](https://github.com/tmux-plugins/tmux-resurrect/) are a pair of very useful session management plugins for `tmux`. I had been happily using them until some change I made to my configuration caused them to stop working.
+[`tmux-continuum`](https://github.com/tmux-plugins/tmux-continuum) and its companion plugin, [`tmux-resurrect`](https://github.com/tmux-plugins/tmux-resurrect/), are invaluable tools for managing sessions in `tmux`. However, I recently encountered an issue where these plugins stopped working after I made some changes to my configuration.
 
 {: .box-warning .ignore-blockquote }
 
 <!-- prettier-ignore -->
->**Nix and the subject of this post**\\
-> Bear in mind the majority of this post will look at how to fix the plugins from the perspective of someone that is using the Nix package manager to manage their software. I do still include more general solutions but they are not the primary focus.
+>**Note on Nix and the Content of This Post**\\
+> Please note that this post primarily addresses solutions using the Nix package manager to manage software. While I also provide more general solutions, they are not the main focus.
 
-To give a bit more background, `tmux-resurrect` is a plugin that enables the saving and subsequent loading of the totality of a session of your `tmux` server. `tmux-continuum` is a plugin for `tmux` that periodically auto-saves the server using `tmux-resurrect` and loads the latest save on server start. At some point in time, I loaded up my server and instead of getting the most recent state I had expected, I got a much older state.
+To provide some context, `tmux-resurrect` allows you to save and restore entire `tmux` sessions, while `tmux-continuum` automatically saves your sessions using `tmux-resurrect` and restores them on server startup. However, when I started my `tmux` server recently, I didn't get the expected recent state but instead an older one.
 
 {: .box-note .ignore-blockquote }
 
 <!-- prettier-ignore -->
->**Installing `tmux` plugins with with Nix**\\
->  Home Manager makes it super easy to install `tmux` and additional plugins.
-> 
-> ```nix
-> programs.tmux = {
->   enable = true; # enable the program
->   plugins = with pkgs.tmuxPlugins; [
->     # enable a plugin with a set if you want to pass config options
->     {
->       plugin = tmux-thumbs;
->       # extraConfig will just get added to your tmux.conf file
->       # so write all configurations the same way
->       extraConfig = ''
->       set -g @thumbs-key Space
->       '';
->     }
->     #enable a plugin by name if you aren't passing config options to it
->     fuzzback
->   ];
->   extraConfig = builtins.readFile ./config; # source additional configurations from a config file you provide
-> };
-> ```
+>**Installing `tmux` Plugins with Nix**\\
+> Home Manager simplifies the installation of `tmux` and additional plugins. Here's an example configuration snippet:
 
-So what exactly happened? Simply put I overlooked [this small part of the documentation](https://github.com/tmux-plugins/tmux-continuum#continuous-saving):
+```nix
+programs.tmux = {
+  enable = true; # Enable the program
+  plugins = with pkgs.tmuxPlugins; [
+    # Enable a plugin with a set if you want to pass config options
+    {
+      plugin = tmux-thumbs;
+      # ExtraConfig will just be added to your tmux.conf file
+      # So, write all configurations the same way
+      extraConfig = ''
+      set -g @thumbs-key Space
+      '';
+    }
+    # Enable a plugin by name if you aren't passing config options to it
+    fuzzback
+  ];
+  extraConfig = builtins.readFile ./config; # Source additional configurations from a provided config file
+};
+```
 
-> **Continuous saving**
-> This action starts automatically when the plugin is installed. **Note it requires the status line to be on** to run (since it uses a hook in status-right to run).
-
-I had just turned off my status line, so suddenly the plugin broke.
+So, what went wrong? The issue was that I had turned off my status line in `tmux`, and as a result, the `tmux-continuum` plugin stopped working.
 
 ## Problem: Running `tmux-continuum` with No Status Line
 
 {: .box-warning .ignore-blockquote }
 
 <!-- prettier-ignore -->
->**`tmux-continuum` vs `tmux-resurrect`**\\
-> So far I have mainly been discussing `tmux-continuum` since it has the functionality that I am trying to fix on my system. In reality it is just a wrapper around `tmux-resurrect` that adds some nice utility including a lock-file when saving and automatic server restoration. Thus, ideally all saving happens by calling `continuum_save.sh`.
-> 
-> Unfortunately this is not an ideal world. For whatever reason in my eventual solution when `continuum_save.sh` tried to call `save.sh` from resurrect the call simply would not work. I do not have enough bash troubleshooting knowledge to fix it, so I just settle for calling `tmux-resurrect`'s save script directly.
+>**`tmux-continuum` vs. `tmux-resurrect`**\\
+> While I've mainly discussed `tmux-continuum` because it has the functionality I wanted to fix, it's essentially a wrapper around `tmux-resurrect` with added utility, including a lock-file mechanism for saving and automatic server restoration. Ideally, all saving should happen by calling `continuum_save.sh`.
 
-Let first take a quick look at `tmux-resurrect` itself to understand the problem domain. Fundamentally, the plugin is just a `.tmux` file and a bunch of helper scripts that it can call. The `resurrect.tmux` file itself is actually just a bash script that you call within your `tmux` config.
+> Unfortunately, in my case, when `continuum_save.sh` tried to call `save.sh` from `tmux-resurrect`, it wouldn't work for some reason. I lacked the necessary troubleshooting knowledge to fix it, so I resorted to directly calling `tmux-resurrect`'s save script.
+
+Let's first take a quick look at `tmux-resurrect` itself to understand the problem domain. Essentially, this plugin consists of a `.tmux` file and several helper scripts that it can invoke. The `resurrect.tmux` file is, in fact, a Bash script that you include in your `tmux` configuration.
 
 ```shell
 $ > tree ../resurrect
-# full file path and some contents omittted
+# Full file path and some contents omitted
 ../resurrect
 ├── resurrect.tmux
 └── scripts
@@ -80,63 +83,57 @@ $ > tree ../resurrect
 {: .box-note .ignore-blockquote }
 
 <!-- prettier-ignore -->
->**Why does the status line actually matter?**\\
-> This my understanding of how it works I could be wrong. The only part of `tmux` that is regularly refreshing that one can hook into is the status line, which refreshes every 15 seconds. There are no other regularly executing hooks.
-> 
-> Thus, to make `tmux` execute the script on a regular interval the plugin injects the save script into the status line. Every 15 seconds the status line calls the save command. The save command saves the last time it executed into a global config variable. Every time it is called it checks if enough time passed since last execution. If it has it runs and updates the global config.
+>**Why Does the Status Line Matter?**\\
+> My understanding is that the only part of `tmux` that regularly refreshes and can be hooked into is the status line, which refreshes every 15 seconds. There are no other regularly executing hooks. Therefore, to make `tmux` execute the script at regular intervals, the plugin injects the save script into the status line. Every 15 seconds, the status line triggers the save command, which checks if enough time has passed since the last execution and then runs and updates a global config if necessary.
 
-Thus, with no status line showing the script will not be executed on my system, so I had to look at other options. Many of them came by the way of [the Github issue on the topic](https://github.com/tmux-plugins/tmux-continuum/issues/99). I considered the following:
+With no status line, the script won't execute on my system, so I had to explore other options. I considered various solutions from [a related GitHub issue](https://github.com/tmux-plugins/tmux-continuum/issues/99), including:
 
-- Integrate session saving into the bash prompt. This is reasonable. I already have a custom prompt, thus, I would just need to call `save.sh` from the prompt
-- Create aliases for the commands that terminate a `tmux` session to include a call to the save script first. For example: alias `poweroff` to call `save.sh` first
-- Make a `systemd` service that will run in the background and auto-save on a timer. I have never made a service before, so this one seemed the most daunting
+- Integrating session saving into the Bash prompt, but this wouldn't work well with Nix because the script path can vary.
+- Creating aliases for commands that terminate a `tmux` session to include a call to the save script.
+- Creating a `systemd` service to run in the background and auto-save on a timer, which seemed the most challenging.
 
 {: .box-note .ignore-blockquote }
 
 <!-- prettier-ignore -->
->**Adding auto-saving via bash prompt**\\
-> You can add the following to your `.bashrc`.
-> 
+>**Adding Auto-Saving via Bash Prompt**\\
+> You can add the following code to your `.bashrc`:
+>
 > ```sh
 > precmd() {
->   if [ -n "$TMUX" ]; then
->     eval "$(tmux show-environment -s)"
->     eval "$($HOME/path/to/continuum/scripts/continuum_save.sh)"
->   fi
+>  if [ -n "$TMUX" ]; then
+>    eval "$(tmux show-environment -s)"
+>    eval "$($HOME/path/to/continuum/scripts/continuum_save.sh)"
+>  fi
 > }
 > PROMPT_COMMAND=precmd
 > ```
-> 
-> This will call the save function every time your bash prompt updates (which should be often). The plugin will still provide the internal checks on if you wrote too recently so you aren't saving too often.
 
-Given that I am running Nix, this method will not work. If you use Nix to install `tmux-resurrect` instead of having some nice consistent path for `save.sh` you have something like `/nix/store/dmy3nqasx8dixz5hyllzhbdri8n4n1sa-tmuxplugin-resurrect-unstable-2022-01-25/share/tmux-plugins/resurrect/scripts/save.sh`.
+This code calls the save function every time your Bash prompt updates, ensuring the plugin's internal checks prevent excessive saving.
 
-Nix provides a convenient way to deal with that, we can call `${pkgs.tmuxPlugins.resurrect}` in a nix file to get that base file path for the script and work from there. However, therein lies the issue, the call must be made in a `.nix` file. Outsourcing that call to a bash file means that you need some other way to get that path.
-
-Thus, we must create a service.
+Given that I use Nix, the Bash prompt method was impractical. When using Nix to install `tmux-resurrect`, the script's path is not consistent, making it unsuitable for a Bash prompt solution. To address this, I decided to create a service.
 
 {: .box-warning .ignore-blockquote }
 
 <!-- prettier-ignore -->
->**Running `save.sh` directly**\\
-> An issue that occurs running `save.sh` directly is if it gets called when no `tmux` is running it will save an empty file. Thus, I had to write a very short bash script to get around this.
-> 
-> ```shell
-> # scripts/tmux-save.sh
-> #!/usr/bin/env bash
-> 
-> if [ "$(pgrep tmux)" ] && [ "$RES_SAVE_PATH" ]; then
->   $RES_SAVE_PATH quiet
-> fi 
-> ```
-> 
-> You will see in a bit, but the `RES_SAVE_PATH` will get passing in as an environment variable from the service.
+>**Running `save.sh` Directly**\\
+> Running `save.sh` directly poses an issue: if it's called when no `tmux` session is running, it saves an empty file. To overcome this, I wrote a short Bash script:
 
-## `systemd` Services
+```shell
+# scripts/tmux-save.sh
+#!/usr/bin/env bash
 
-Fundamentally, any service is just a `.service` file that lives in the directory that `systemd` expects to find services in. What does that mean? Let's say `systemd` expects to find my user services (I will explain these later) in `$HOME/.config/systemd/user/`.
+if [ "$(pgrep tmux)" ] && [ "$RES_SAVE_PATH" ]; then
+  $RES_SAVE_PATH quiet
+fi
+```
 
-That means I can create a file `test-service.service` with minimal requirements: an `ExecStart`, `ExecStop`, or `SuccessAction`.
+I used an environment variable, `RES_SAVE_PATH`, which the service will pass to the script.
+
+## Systemd Services
+
+In essence, any service consists of a `.service` file residing in the directory where `systemd` expects to find services. This directory can vary, but for user services, it's often `$HOME/.config/systemd/user/`.
+
+You can create a minimal service file with just `ExecStart`, `ExecStop`, or `SuccessAction`:
 
 ```ini
 # test-service.service
@@ -144,7 +141,7 @@ That means I can create a file `test-service.service` with minimal requirements:
 ExecStart=/usr/bin/env bash -c "echo hello world"
 ```
 
-We can then test the service by running `systemctl --user start test-service.service` and look at the status.
+You can test the service with `systemctl --user start test-service.service` and check its status.
 
 ```console
 $ > systemctl --user status test-service.service
@@ -158,13 +155,15 @@ Aug 17 18:56:30 desktop env[107387]: hello world
 
 ### Auto-Save Service
 
-So how should our auto-save service look?
+How should our auto-save service look?
 
 ```ini
 # tmux-autosave.service
 [Service]
 ExecStart=bash path/to/save.sh
-# indicates that the service will run once then go inactive
+# Indicates that the service will run
+
+ once then go inactive
 Type=oneshot
 
 [Unit]
@@ -172,34 +171,34 @@ Description=Run tmux save script every 15 minutes
 OnFailure=error@%n.service
 ```
 
-And this service is going to need something to actually keep track of time and call it when needed. A timer.
+This service needs something to keep track of time and trigger it when needed: a timer.
 
 ```ini
 # tmux-autosave.timer
 [Install]
-# loads timers after system boots. suggested target for most application timers
-# other options often used at default.target or graphical.target but those happen earlier at the login shell
+# Loads timers after system boots. Suggested target for most application timers.
+# Other options often used are default.target or graphical.target, but those load earlier during the login shell.
 WantedBy=timers.target
 
 [Timer]
-# First run of the timer will start after 5 mins
+# The timer will start after 5 minutes on the first run.
 OnBootSec=5min
-# Timer will run every 15 mins that the computer is active
+# The timer will run every 15 minutes when the computer is active.
 OnUnitActiveSec=15min
-# It will activate the tmux-autosave.service unit
+# It will activate the tmux-autosave.service unit.
 Unit=tmux-autosave.service
 
 [Unit]
 Description=Run tmux save script every 15 minutes
 ```
 
-Unfortunately, due to path issues there is no convenient way for us to call the save script with a `.service` file. We are going to have to define these files directly in our Nix configuration. Which brings us to the following choice. Do we want to define the service as a system or user service?
+Unfortunately, due to path issues, we can't conveniently call the save script with a `.service` file. We have to define these files directly in our Nix configuration. This leads to the choice of whether to define the service as a system or user service.
 
-### Creating a Service on Nix
+### Creating a Service in Nix
 
-Technically, there are two kinds of services: system and user services. A computer will only have one **system** service, this will run the entire time the system is active. On the other hand, a computer can have multiple **user** sessions. Thus, given auto-saving `tmux` is something I only care about as a user on my development environment, it makes sense to keep it a user service. On the other hand, a service for a sound driver or a network card makes much more sense to run system-wide since it is applicable to all users.
+There are two types of services: system and user services. A computer has only one **system** service, which runs as long as the system is active. In contrast, a computer can have multiple **user** sessions. Since auto-saving `tmux` sessions is relevant only to my development environment as a user, it makes sense to keep it as a user service. Services like sound drivers or network cards are better suited for system-wide operation, as they apply to all users.
 
-That said, having chosen to create a user service, we still must decide if you want the service as a nix module or with Home Manager. I find the Home Manager option nicer because the file will be stored in a subdirectory of `$HOME/.config` which is easier to access. That said, I will provide examples of both options.
+Having chosen to create a user service, we must decide whether to use a Nix module or Home Manager. Home Manager is preferable because it stores the file in a subdirectory of `$HOME/.config`, making it easier to access. Nevertheless, I'll provide examples for both options.
 
 #### Home Manager:
 
@@ -232,9 +231,9 @@ systemd.user.timers.tmux-autosave = {
 };
 ```
 
-There a couple of parts worth noting. First is a feature of the Nix language, when you have a string and you call a relative path or a package Nix will translate that to an absolute path. So when I call `${pkgs.bash}` it ends up being `/nix/store/p6dlr3skfhxpyphipg2bqnj52999banh-bash-5.2-p15/bin/sh` in the actual file.
+A couple of points to note: First, in the Nix language, when you specify a relative path or package in a string, Nix translates it into an absolute path. For instance, `${pkgs.bash}` becomes `/nix/store/p6dlr3skfhxpyphipg2bqnj52999banh-bash-5.2-p15/bin/sh` in the actual file.
 
-The second thing to note is that I added an environment variable. Again, this uses the Nix syntax to set the variable `RES_SAVE_PATH` to the path of the `tmux-resurrect` save script.
+Second, I added an environment variable, `RES_SAVE_PATH`, which uses Nix syntax to set the variable to the path of the `tmux-resurrect` save script.
 
 #### Nix Module:
 
@@ -267,21 +266,21 @@ path = with pkgs; [ tmux toybox ];
 };
 ```
 
-The configuration for the timer is basically identical with minor syntax changes. You can find all the configuration options for services [here](https://search.nixos.org/options?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=systemd.user.services.%3Cname%3E) and for timers [here](https://search.nixos.org/options?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=systemd.user.timers.%3Cname%3E). The one thing of note is the addition of `path`. [From the documentation](https://search.nixos.org/options?channel=unstable&show=systemd.user.services.%3Cname%3E.path&from=0&size=50&sort=relevance&type=packages&query=systemd.user.services.%3Cname%3E.path):
+The timer configuration is essentially identical, with minor syntax differences. You can find all the configuration options for services [here](https://search.nixos.org/options?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=systemd.user.services.%3Cname%3E) and for timers [here](https://search.nixos.org/options?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=systemd.user.timers.%3Cname%3E). One noteworthy addition is the `path` section. As per the [documentation](https://search.nixos.org/options?channel=unstable&show=systemd.user.services.%3Cname%3E.path&from=0&size=50&sort=relevance&type=packages&query=systemd.user.services.%3Cname%3E.path):
 
 > Packages added to the service’s `PATH` environment variable. Both the `bin` and `sbin` subdirectories of each package are added.
 
-If you try running the service without this call, you will quickly notice that the script cannot make a call to `tmux` or to `basename` without those packages being in its path. Thus, we need to add them. The Home Manager version does not have the same issue because it has a different run time environment (how it differs I really don't know).
+Without this, the script wouldn't have access to commands like `tmux` or `basename`. Adding these packages to the path is essential for proper execution. The Home Manager version doesn't encounter the same issue because it has a different runtime environment (though the specifics are beyond my knowledge).
 
 {: .box-note .ignore-blockquote }
 
 <!-- prettier-ignore -->
->**Service File contents**\\
-> If you are interested in what the contents of these service files actually look like there is a handy command `systemctl cat --user name_of_service.service` or `name_of_timer.timer`
+>**Viewing Service File Contents**\\
+> To inspect the contents of these service files, you can use the `systemctl cat --user name_of_service.service` or `name_of_timer.timer` command.
 
 ### Running the Services
 
-Having set up the services, we can now look in `${HOME}/.config/sytemd/user` and we will see our created files:
+With the services set up, you can find the created files in `${HOME}/.config/sytemd/user`:
 
 ```console
 $ > tree ~/.config/systemd/user/
@@ -292,11 +291,13 @@ $ > tree ~/.config/systemd/user/
 └── tmux-autosave.timer -> /nix/store/ds3qmyw4hkw72ac40g1w13vfj9ahwg44-home-manager-files/.config/systemd/user/tmux-autosave.timer
 ```
 
-You might be wondering about the `timers.target.wants` directory. That same symbolic link and directory would be created if we had had the initial timer file and ran `systemctl --user enable tmux-autosave.timer`. It is part of the installation process of the timers and the symbolic link is a way for the special `timers.target` unit to know what services it needs to start when it comes online.
+You might wonder about the `timers.target.wants` directory. This directory and the symbolic link within it are created if you enable the timer using `systemctl --user enable tmux-autosave.timer`. It's part of the timer installation process, allowing the `timers.target` unit to know which services to start.
 
-If instead of having `WantedBy=timers.target` we had `WantedBy=default.target` the installation would have created a directory `default.target.wants` that would have a symbolic link to the same timer.
+If you had
 
-We can also look at the files that Nix created for use with a simple `cat \path\to\service` command or to get more fancy `systemctl cat service_name`.
+used `WantedBy=default.target` instead of `WantedBy=timers.target`, the installation would have created a `default.target.wants` directory with a symbolic link to the timer.
+
+You can view the contents of the files Nix created using the `cat \path\to\service` command or, for more details, `systemctl cat service_name`.
 
 ```console
 $ > cat ~/.config/systemd/user/tmux-autosave.timer
@@ -322,12 +323,6 @@ Type=oneshot
 Description=Run tmux_resurrect save script every 15 minutes
 ```
 
-At this point, we have fully set up our services. That said, the timers will not automatically run. `timers.target` either loads on the system booting or you can start your specific timer with `systemctl --user start name-of-timer.timer`.
+At this point, you've fully set up your services. Services provide a versatile way to run scripts automatically, and you can use this capability for various tasks. For example, you can create services to periodically ping the databases of your hobby projects to prevent them from going inactive when on free plans.
 
-## Conclusion
-
-This activity has given me a ton of ideas about potential stuff that I can do with services. I am considering making some services to ping the databases of some of my hobby projects to ensure that they do not go inactive (since they are on free plans).
-
-The versatility of having bash scripts that run automatically is tremendous.
-
-Nix itself doesn't really bring anything too special to services. It does provide an option of being somewhat more declarative. If you have the script controlled (as in Nix writes the contents of the script to the script file) by Nix, you can be more declarative with your services. While you are still hard coding the location of a script into the service, Nix ensures that the script will always be in that location.
+While Nix itself doesn't bring anything special to services, it offers a more declarative approach. By letting Nix control the script's contents, you can be more declarative with your services. Even though you're still hard coding the script's location into the service, Nix ensures that the script will always be in that location.

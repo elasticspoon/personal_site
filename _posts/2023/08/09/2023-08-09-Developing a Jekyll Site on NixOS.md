@@ -2,8 +2,15 @@
 layout: post
 title: Developing a Jekyll site on NixOS
 readtime: true
-tags: [nix, ruby, jekyll, ruby-vips, sass-embedded, sass]
+tags:
+  - nix
+  - ruby
+  - jekyll
+  - ruby-vips
+  - sass-embedded
+  - sass
 toc: true
+summary: In this post I detail the process of setting up an environment to develop a Jekyll site on NixOS. I use nix-shell to ensure the environment is consistent and troubleshoot many issues with gems includes sass and ruby-vips.
 ---
 
 # Developing a Jekyll Site on NixOS

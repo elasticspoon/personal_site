@@ -9,7 +9,6 @@
       {% endif %}
 
       {% assign thumbnail=thumbnail | strip %}
-      {% assign pic_url = thumbnail | absolute_url %}
       {% if site.blog_domain != nil and jekyll.environment == "production" %}
       {% assign post_url = site.blog_domain | append: post.url %}
       {% else %}
@@ -19,7 +18,7 @@
       <div class="post-preview__header">
         <div class="post-preview__text">
           {% if site.feed_show_excerpt == false %} 
-          {% if thumbnail != "" %}
+          {% if post.thumbnail-img != "" %}
           <div class="post-image post-image-normal">
             <a href="{{ post_url }}" aria-label="Thumbnail">
               {% include picture_tag.html src=thumbnail alt="Post Thumbnail" %}
@@ -81,15 +80,15 @@
 
       </div>
         <div class="post-preview__image">
-          {% if thumbnail != "" %}
+          {% if post.thumbnail-img != nil %}
           <div class="post-image post-image-small">
             <a href="{{ post_url }}" aria-label="Thumbnail">
               {% include picture_tag.html src=thumbnail alt="Post Thumbnail"
               preset="thumbnail" %}
             </a>
           </div>
-          {% endif %} {% unless site.feed_show_excerpt == false %} {% if
-          thumbnail != "" %}
+          {% endif %} {% unless site.feed_show_excerpt == false %}
+          {% if post.thumbnail-img != nil %}
           <div class="post-image post-image-short">
             <a href="{{ post_url }}" aria-label="Thumbnail">
               {% include picture_tag.html src=thumbnail alt="Post Thumbnail"

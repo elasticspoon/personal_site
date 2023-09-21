@@ -51,7 +51,7 @@ stdenv.mkDerivation {
     export NIX_SHELL="true"
     alias prod_landing='JEKYLL_ENV="production" bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35733 --port 3003 '
     alias prod_blog='JEKYLL_ENV="production" bundle exec jekyll serve --trace --livereload --livereload-port 35732 --port 3002 '
-    alias dev_landing='bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 '
-    alias dev_blog='bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 '
+    alias dev_landing='bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 --unpublished'
+    alias dev_blog='bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --unpublished'
   '';
 }
