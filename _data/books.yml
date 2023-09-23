@@ -1,8 +1,78 @@
+- date: 2023-09-03
+  title: Influence
+  subtitle: The Psychology of Persuasion
+  rating:
+  review:
+  thumbnail: "/assets/img/covers/influence.jpg"
+  director: Robert Caildini
+  year: 2021
+- date: 2023-05-03
+  title: Code Complete
+  subtitle: A practical handbook of software construction.
+  rating: 4
+  review: "Despite the book being almost 20 years old, the majority of the concepts that McConnell suggests still very much hold true even now. The main theme of the book seems to be the elimination of mental complexity in the code that we write. McConnell shows how to achieve this in all areas of software construction. "
+  thumbnail: "/assets/img/covers/code_complete.jpg"
+  director: Steve McConnell
+  year: 2004
+- date: 2023-04-03
+  title: Thinking, Fast and Slow
+  rating: 3.5
+  review: "This book is the book to read if you are interested in the concept of prospect theory and the concepts of a system one and system two. The book is all about analyzing how people think about things subconsciously. Overall, I found a book to be very interesting and in many ways enlightening. "
+  thumbnail: "/assets/img/covers/thinking_fast_and_slow.jpg"
+  director: Daniel Kahneman
+  year: 2011
+- date: 2022-11-03
+  title: Algorithms to Live By
+  subtitle: The Computer Science of Human Decisions
+  rating: 4.5
+  review: "Amazing book. It does a great job of framing computer science concepts in ways that are very applicable to real life. It hooks you in from the very start with a discussion of the secretary problem. The problem goes: your interviewing people for a position, if you accept the person, you can interview no more. If you reject the person, you will never get a chance to hire them. How many people do you interview before making a selection? There is a concrete number at which you should make a decision. Read the book to find out what it is."
+  thumbnail: "/assets/img/covers/algorithms_to_live_by.jpg"
+  director: Brian Christian, Tom Griffiths
+  year: 2016
+- date: 2022-09-03
+  title: Practical Object Oriented Design in Ruby
+  subtitle: An Agile Primer
+  rating: 3
+  review: "This is a great book on object oriented practices. While the book itself is about Ruby and is in Ruby, the concepts go much further than that. While I don't write that much object oriented code, I definitely found this book to be enlightening. And Sandy Metz has a great grasp on object oriented concepts. "
+  thumbnail: "/assets/img/covers/poodr.jpg"
+  director: Sandi Metz
+  year: 2018
+- date: 2022-08-03
+  title: The Pragmatic Programmer
+  subtitle: Your Journey to Mastery
+  rating: 5
+  review: "Probably one of the best introductory the software development books I've read. It is incredibly easy to read. There are many examples. Frankly, at this point in my development career, I'm not sure I have gained enough experience to find any major flaws in it yet."
+  thumbnail: "/assets/img/covers/the_pragmatic_programmer.jpg"
+  director: David Thomas, Andy Hunt
+  year: 2015
+- date: 2023-01-03
+  title: Rebuilding Rails
+  subtitle: Understand Rails by Building your own Ruby MVC Web Framework
+  rating: 2
+  review: "The book wasn't bad. I enjoyed the exercises that each chapter had me doing. Despite going through the book, I somehow didn't feel like I learned that much. I'm not sure if it is my fault or the books, but some of the conceptual building blocks that it used were a bit murky to me. Which created shaky foundations for the rest of what the book was building. "
+  thumbnail: "/assets/img/covers/rebuilding_rails.webp"
+  director: Noah Gibbs
+  year: 2012
+- date: 2022-03-03
+  title: A Short History of Nearly Everything
+  rating: 4.5
+  review: "Probably the best popular science book I've read. It does incredible job of covering the history of science from the creation of the universe all the way to the evolution of people. There are so many neat tidbits in this book."
+  thumbnail: "/assets/img/covers/a_short_history_of_nearly_everything.jpg"
+  director: Bill Bryson
+  year: 2003
+- date: 2023-07-03
+  title: At Home
+  subtitle: A Short History of Private Life
+  rating: 3
+  review: "This book was full of fascinating histories of varying countries and objects. I think conceptually attempting to group it around a English house might have been a bit convoluted. Bryson also at times has a tendency to want to simply list out numbers. Overall, it is an entertaining read."
+  thumbnail: "/assets/img/covers/at_home.jpg"
+  director: Bill Bryson
+  year: 2013
 - date: 2023-02-03
   title: The Body Keeps the Score
   subtitle: Brain, Mind, and Body in the Healing of Trauma
   rating: 4.5
-  review:
+  review: "I found this book to be incredibly enlightening. Everything comes back to trauma. This book really made me rethink my own actions and the behavior of others. It does slow down a bit at the end."
   thumbnail: "/assets/img/covers/the_body_keeps_the_score.jpg"
   director: Bessel van der Kolk
   year: 2015
