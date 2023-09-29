@@ -3,7 +3,7 @@
 ---
 
 .about-page__headshot {
-  width: 40dvw;
+  width: min(40dvw, 500px);
   margin-inline: auto;
   display: block;
   border-radius: 9999px;
