@@ -11,8 +11,7 @@ tags:
   - node_modules
   - package-lock
 summary: In this post I cover the process of bundling and pinning all node modules needed for a project using Nix. This is an extension of my earlier post on how to develop a Jekyll site on NixOS.
-thumbnail-img: /assets/img/hello_world.jpeg
-share-img: /assets/img/nix-thumbnail.png
+thumbnail-img: "assets/img/thumbnails/nix-thumbnail.png"
 ---
 
 # Bundling Node Modules on Nix

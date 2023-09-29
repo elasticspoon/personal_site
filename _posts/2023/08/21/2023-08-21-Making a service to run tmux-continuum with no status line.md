@@ -11,8 +11,7 @@ tags:
   - tmux-resurrect
   - tmux-continuum
 summary: In this post I fix  issues with the `tmux-continuum` plugin when running `tmux` without a status line. I explore creating a `systemd` services and create one for automatic session saving. I provide both Home Manager and Nix Module approaches.
-thumbnail-img: /assets/img/nix-thumbnail.png
-share-img: /assets/img/nix-thumbnail.png
+thumbnail-img: "assets/img/thumbnails/nix-thumbnail.png"
 ---
 
 # Setting Up a Service to Run [`tmux-continuum`](https://github.com/tmux-plugins/tmux-continuum) without a Status Line
