@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exploring Trie Data Structures In-Depth Analysis
+title: "Exploration: Trie Data Structures"
 summary: This is a short post about Trie data structures. It is meant to give a brief overview of what they are, the show how to implement one first in psuedocode then in Go.
 readtime: true
 toc: true
