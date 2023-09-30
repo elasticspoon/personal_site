@@ -18,9 +18,11 @@
   "homepage": "https://github.com/elasticspoon/personal_site#readme",
   "dependencies": {
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
-    "postcss-preset-env": "^8.5.1",
-    "uncss": "^0.17.3"
+    "postcss-preset-env": "^8.5.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0"
   }
 }

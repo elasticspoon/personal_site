@@ -4,5 +4,9 @@ module.exports = {
     require("postcss-preset-env")({
       enableClientSidePolyfills: true,
     }),
+    require("@fullhuman/postcss-purgecss")({
+      content: ["_site/**/*.html", "_landing_page/**/*.html"],
+      safelist: ["data-theme"],
+    }),
   ],
 };
