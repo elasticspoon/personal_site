@@ -1,7 +1,23 @@
+- date: 2023-10-04
+  title: The Unicorn Project
+  subtitle: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data
+  rating: 2
+  review:
+  thumbnail: "/assets/img/covers/the_unicorn_project.jpg"
+  director: Gene Kim
+  year: 2019
+- date: 2023-10-01
+  title: The Phoenix Project
+  subtitle: A Novel about IT, DevOps, and Helping Your Business Win
+  rating: 4
+  review:
+  thumbnail: "/assets/img/covers/the_phoenix_project.jpg"
+  director: Gene Kim, Kevin Behr, George Spafford
+  year: 2013
 - date: 2023-09-03
   title: Influence
   subtitle: The Psychology of Persuasion
-  rating:
+  rating: 4
   review:
   thumbnail: "/assets/img/covers/influence.jpg"
   director: Robert Caildini
