@@ -9,6 +9,7 @@ tags:
   - filter
   - concepts
 summary: In this post I explore what a Bloom Filter is, how they are used in the real world and code one from scratch in Ruby.
+thumbnail-img: "assets/img/thumbnails/bloom-filters.jpg"
 ---
 
 # Exploring Concepts: Bloom Filters

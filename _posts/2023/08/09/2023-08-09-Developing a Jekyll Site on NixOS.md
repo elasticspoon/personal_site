@@ -11,6 +11,7 @@ tags:
   - sass
 toc: true
 summary: In this post I detail the process of setting up an environment to develop a Jekyll site on NixOS. I use nix-shell to ensure the environment is consistent and troubleshoot many issues with gems includes sass and ruby-vips.
+thumbnail-img: "assets/img/thumbnails/jekyll-on-nix.jpg"
 ---
 
 # Developing a Jekyll Site on NixOS
@@ -173,7 +174,7 @@ I don't fully understand what the issue is, but Nix clearly does not like the ge
 
 ### The Quick Fix
 
-[There is actually a pretty easy fix for this](https://technogothic.net/pages/JekyllOnNix/). We can simply downgrade Jekyll to version 4.2.2 which does not rely on `sass-embedded`.
+[There is actually a pretty easy fix for this](https://technogothic.net/pages/JekyllOnNix/). We can simply pin Jekyll to version 4.2.2 which does not rely on `sass-embedded`.
 
 ```diff
 - gem "jekyll"
@@ -260,6 +261,12 @@ Finally, we can use this mismatched SHA to complete the working code.
 
 #### It Works!
 
+{: .box-warning .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**I have since removed `uncss`**\\
+>I am keeping this part here for historical reasons but I had enough issues in production with `uncss` that I ended up removing it. I replaced it with `postcss-purgecss`.
+
 Just kidding. We have a new error.
 
 ```console
@@ -322,7 +329,7 @@ Nix already has a patched version of `ruby-vips` in its packages as `rubyPackage
 
 <!-- prettier-ignore -->
 >**Note on old packages**\\
-> Technically the gem is actually available. We can use https://pkgs.on-nix.com/ to find the particular [commit in which the gem is still available](https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18). Using that SHA and code from https://lazamar.co.uk/nix-versions/ we can use that old version of the gem. Unfortunately, the old version relies on other outdated gems so it simply is not feasible. But you can use old package versions if needed.
+> Technically the gem is actually available. We can use https://pkgs.on-nix.com/ to find the particular [commit in which the gem is still available](https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18). Using that SHA and code from https://lazamar.co.uk/nix-versions/ we can use that old version of the gem. Unfortunately, the old version relies on other outdated gems so it simply is not feasible. But you can use old package versions if needed. There might be other ways to do this as well, but I am still a Nix novice.
 
 Thus, the easiest fix is simply to fork the gem and update the `.gemspec` to use a modern version of them gem.
 
@@ -413,7 +420,7 @@ The `nodejs` package includes both the V8 node server and `npm` so we can just r
 
 <!-- prettier-ignore -->
 >**Packaging Node Modules**\\
-> If you are a real glutton for punishment you can package your node modules the same way that you packaged your gems. In my experience it is an even more cumbersome process that with Gems so I won't include that process in this post. But if you want to see how it is done I have made a very short post on how do it here.
+> If you are a real glutton for punishment you can package your node modules the same way that you packaged your gems. In my experience it is an even more cumbersome process that with Gems so I won't include that process in this post. But if you want to see how it is done I have made a very short post on how do it [here](/posts/2023/08/11/Bundling-Node-Modules-on-Nix.html).
 
 ## Final Code
 
@@ -461,15 +468,17 @@ Fire it up with `nix-shell` then your usual Jekyll commands `bundle exec jekyll 
 
 <!-- prettier-ignore -->
 >**Regarding other dependencies**\\
-> Having written this code and you aren't going to be be making further modifications to the gems, you could remove further dependencies off your system. You could remove Bundix, Bundler and Ruby off your system completely. That said if you want to make changes to the gems you are going to need to add Bundix as a `buildInput` which means changing to `buildInputs = [ env pkgs.nodejs-slim pkgs.bundix ];`.
+> Having written this code, if you aren't going to be be making further modifications to the Gemfile, you could remove further dependencies off your system. You could remove Bundix, Bundler and Ruby off your system completely. That said if you want to make changes to the gems you are going to need to add Bundix as a `buildInput` which means changing to `buildInputs = [ env pkgs.nodejs-slim pkgs.bundix ];`.
 > 
 > Even now I would not recommend trying to run all this as `--pure` because there are still dependencies that are missing from the derivation. It is too time consuming for me to try to find all of them so I am unwilling to try to make it work.
 
 ## Conclusions
 
-Honestly, this whole process was an absolute pain in the ass. It is pretty crazy to me that I have to jump through so many hoops to basically run `bundle install` and have everything work. That said when the process for installing ruby is as simple as adding `system.packages = [ ruby ];` to my configuration I guess it makes sense that there might be issues in other areas. Nix is **not** beginner friendly but the concept of being able to have full system configuration that is completely portable and repeatable is a huge drawing point for this OS.
+Honestly, this whole process was an absolute pain in the ass. It is pretty crazy to me that I have to jump through so many hoops to basically run `bundle install` and have everything work. That said, when the process for installing ruby is as simple as adding `system.packages = [ ruby ];` to my configuration I guess it makes sense that there might be issues in other areas. Nix is **not** beginner friendly but the concept of being able to have full system configuration that is completely portable and repeatable is a huge drawing point for this OS.
 
 I felt like I learned a **ton** about Nix the OS, the package manager and the Nix language both in making my shell work and in writing this blog post. Even still the functional paradigms of this language make a lot of it pretty hard for me to follow.
+
+### A Final Aside
 
 ```nix
 callPackage = path: overrides:

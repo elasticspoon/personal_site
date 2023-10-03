@@ -9,7 +9,7 @@ tags:
   - golang
   - trie
   - concepts
-thumbnail-img: "assets/img/thumbnails/triegopher.webp"
+thumbnail-img: "assets/img/thumbnails/triegopher.jpg"
 ---
 
 # Exploring Trie Data Structures: A Brief Exploration

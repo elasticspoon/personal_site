@@ -10,6 +10,7 @@ tags:
   - procs
   - lambdas
 summary: This post delves into Ruby's Procs, Blocks, and Lambdas. It clarifies their differences and usage. Blocks encapsulate behavior, allowing dynamic code execution. Procs encapsulate blocks and can be stored, passed, and executed. Lambdas, a type of Proc, have stricter argument handling and return semantics. This post aims to demystify these Ruby concepts.
+thumbnail-img: "assets/img/thumbnails/deep-dive-procs.jpg"
 ---
 
 # Deep Dive: Ruby Procs, Blocks, and Lambdas
