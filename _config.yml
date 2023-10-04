@@ -316,32 +316,6 @@ exclude:
   - _landing_page/
   - assets/img/
 
-# plugins:
-#   - jekyll-toc
-#   - jekyll-paginate-v2
-#   - jekyll-sitemap
-#   - jekyll_picture_tag
-#   - jekyll-minifier
-#   - jekyll-brotli
-#   - jekyll-gzip
-
-# Settings for css to be pruned by uncss
-uncss:
-  stylesheets:
-    - assets/css/all.min.css
-    - assets/css/main-site.css
-    - assets/css/beautifuljekyll.css
-    - assets/css/bootstrap-social.css
-    - assets/css/bootstrap.min.css
-    - assets/css/fonts.css
-    - assets/css/pygment_highlights.css
-    - assets/css/staticman.css
-    - assets/css/beautifuljekyll-minimal.css
-    - assets/css/beautifuljekyll.css
-    - assets/css/skin-switch.css
-  files:
-    - "**/*.html"
-
 permalink: /posts/:year/:month/:day/:title.html
 # Settings for pagination-v2
 pagination:
