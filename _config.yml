@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: My Website
+title: Yuri's Site
 
 # Your name to show in the footer
 author: Yuri Bocharov
@@ -27,7 +27,7 @@ nav-short: true
 # Blog navbar-links
 navbar-links:
   Contact: "mailto:mail@yuribocharov.dev"
-  Resume: "https://yuribocharov/dev/assets/resume.pdf"
+  Resume: "https://yuribocharov.dev/assets/resume.pdf"
   About:
     - About Yuri: "https://yuribocharov.dev/about"
     - Projects: "https://yuribocharov.dev/projects"
