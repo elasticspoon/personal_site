@@ -1,0 +1,16 @@
+---
+layout: page
+css:
+  - "/assets/css/landing-page.css"
+common-ext-js:
+  - "/assets/js/load-popovers.js"
+---
+
+{% include about-nav.html projects='true' text='Projects' %}
+
+<section class="landing-page__section">
+  <div class="landing-page__projects">
+    {% for project in site.data.projects %} {% include project.html %} {% endfor
+    %}
+  </div>
+</section>

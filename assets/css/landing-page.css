@@ -1,0 +1,344 @@
+---
+# Must have front-matter for jekyll to process file for postcss
+---
+
+:root {
+  --header: oklch(8.67% 0.027 147.18);
+  --header-fallback: black;
+  --header-col: oklch(82.3% 0.188 176.8);
+  --header-bg: none;
+  /* --header: linear-gradient( */
+  /*   to right, */
+  /*   oklch(27.6% 0.111 0), */
+  /*   oklch(28.5% 0.111 30), */
+  /*   oklch(47.4% 0.111 60), */
+  /*   oklch(54.4% 0.111 90), */
+  /*   oklch(46.9% 0.111 120), */
+  /*   oklch(40.9% 0.111 150), */
+  /*   oklch(61.9% 0.111 180), */
+  /*   oklch(64.9% 0.111 210), */
+  /*   oklch(49.5% 0.111 240), */
+  /*   oklch(17.5% 0.111 270), */
+  /*   oklch(21.5% 0.111 300), */
+  /*   oklch(24.5% 0.111 330), */
+  /*   oklch(27.6% 0.111 360) */
+  /* ); */
+  --header-font: linear-gradient(
+    to right,
+    oklch(70.5% 0.111 0),
+    oklch(70.5% 0.111 30),
+    oklch(70.5% 0.111 60),
+    oklch(70.5% 0.111 90),
+    oklch(70.5% 0.111 120),
+    oklch(70.5% 0.111 150),
+    oklch(70.5% 0.111 180),
+    oklch(70.5% 0.111 210),
+    oklch(70.5% 0.111 240),
+    oklch(70.5% 0.111 270),
+    oklch(70.5% 0.111 300),
+    oklch(70.5% 0.111 330),
+    oklch(70.5% 0.111 360)
+  );
+}
+
+[data-theme="dark"] {
+  --header-bg: var(--header);
+  --header: linear-gradient(
+    to right,
+    oklch(70.5% 0.111 0),
+    oklch(70.5% 0.111 30),
+    oklch(70.5% 0.111 60),
+    oklch(70.5% 0.111 90),
+    oklch(70.5% 0.111 120),
+    oklch(70.5% 0.111 150),
+    oklch(70.5% 0.111 180),
+    oklch(70.5% 0.111 210),
+    oklch(70.5% 0.111 240),
+    oklch(70.5% 0.111 270),
+    oklch(70.5% 0.111 300),
+    oklch(70.5% 0.111 330),
+    oklch(70.5% 0.111 360)
+  );
+  --header-font: oklch(8.67% 0.027 147.18);
+  /* --header: linear-gradient( */
+  /*   128deg, */
+  /*   rgba(173, 251, 218, 1) 0%, */
+  /*   rgba(53, 195, 255, 1) 20%, */
+  /*   rgba(253, 163, 153, 1) 20%, */
+  /*   rgba(188, 216, 128, 1) 40%, */
+  /*   rgba(118, 216, 128, 1) 40%, */
+  /*   rgba(235, 243, 139, 1) 60%, */
+  /*   rgba(173, 251, 218, 1) 60%, */
+  /*   rgba(213, 126, 255, 1) 80%, */
+  /*   rgba(255, 116, 116, 1) 80%, */
+  /*   rgba(111, 166, 255, 1) 100% */
+  /* ); */
+  --header-fallback: rgb(173, 251, 218);
+  --header-col: oklch(16% 0 106.41);
+}
+
+h1,
+.rainbow-header {
+  background-color: var(--header-fallback);
+  background-image: var(--header);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  inline-size: fit-content;
+  animation: rainbow 20s linear infinite;
+}
+
+@keyframes rainbow {
+  to {
+    background-position: 100vmin 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-main.container-md,
+  .landing-page__header.container-md {
+    max-width: 1600px;
+  }
+}
+
+.landing-page__header-container {
+  background-color: var(--header-col);
+}
+
+/* TODO: remove body somehow */
+body .landing-page__about {
+  padding-block-end: 1rem;
+  padding-inline: 0px;
+}
+
+.about__headshot {
+  border-radius: 9999px;
+  width: 300px;
+}
+
+.about__-intro {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.landing-page__title {
+  font-size: clamp(2rem, calc(1rem + 1.9dvw), 2.8rem);
+  padding-block: 1rem;
+  margin-block-end: 0px;
+  margin-block-start: clamp(10rem, calc(40dvh - 51px - 150px), 35dvh);
+}
+
+.landing-page__subtitle {
+  font-size: clamp(1.3rem, calc(0.5em + 1.4dvw), 1.7rem);
+  color: var(--header-fallback);
+  font-weight: 600;
+  margin-block-start: 0px;
+}
+
+.landing-page__section {
+  margin-block-end: 8rem;
+
+  &:first-child {
+    margin-block-start: 6rem;
+  }
+
+  &:last-child {
+    margin-block-end: none;
+  }
+}
+
+.landing-page__section-heading {
+  & h2 {
+    font-size: 6rem;
+    padding-block-end: 1rem;
+    font-family: "Open Sans";
+    font-weight: 900;
+    text-align: center;
+    width: fit-content;
+  }
+}
+
+.landing-page__project {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding-block-end: 3rem;
+  border-block-end: 1px solid var(--text-col);
+  margin-block: 3rem;
+
+  &:last-child {
+    border: none;
+    padding-block-end: 0;
+  }
+}
+
+.landing-page__project-title {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  margin-block: 0px;
+  font-size: 3rem;
+}
+
+.landing-page__project-info {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.landing-page__project-meta {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  margin-block: 0;
+  font-family: "Open Sans";
+  color: var(--text-col);
+  display: block;
+
+  & i {
+    position: unset;
+  }
+
+  & span {
+    height: unset;
+    line-height: unset;
+    position: unset;
+    vertical-align: unset;
+    width: unset;
+  }
+}
+
+.landing-page__project-skills {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  display: flex;
+  margin-inline-start: auto;
+  margin-block-start: 0.4rem;
+
+  & .popover-body {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.landing-page__project-skill {
+  position: relative;
+  padding: 0px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  align-self: end;
+  height: fit-content;
+
+  & svg {
+    width: 40px;
+    color: var(--text-col);
+
+    &:hover {
+      color: var(--page-col);
+    }
+  }
+
+  &:hover {
+    border: 1px solid var(--text-col);
+    background-color: var(--text-col);
+  }
+}
+
+.landing-page__project-thumbnail {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  border: 1px solid var(--text-col);
+  max-height: 600px;
+  overflow: hidden;
+  margin-block-end: 1rem;
+}
+
+.landing-page__project-desc {
+  margin-block-start: 0.5rem;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+.landing-page__project-links {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  margin-block-start: 1rem;
+  display: flex;
+  column-gap: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .landing-page__project {
+    display: block;
+    padding-block: 1rem;
+  }
+
+  /* .landing-page__project-skills { */
+  /*   flex-direction: row-reverse; */
+  /* } */
+  /**/
+  .landing-page__project-button {
+    display: block;
+    margin-block-start: 0.5rem;
+    margin-inline: auto;
+  }
+
+  .landing-page__project-links {
+    display: block;
+  }
+}
+
+.landing-page__blog-preview {
+  height: 60rem;
+  overflow-y: scroll;
+  border: 1px solid var(--text-col);
+  padding: 1rem 3rem;
+}
+
+.page-main p:first-child {
+  margin-block-start: -1rem;
+}
+
+.link-button {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-col);
+  background-color: var(--page-col);
+  inline-size: fit-content;
+  border: 1px solid var(--text-col);
+  padding: 1rem;
+}
+
+.link-button:hover {
+  color: var(--page-col);
+  border: 1px solid var(--hover-col);
+  background-color: var(--hover-col);
+  text-decoration: none;
+}
+
+.landing-page__see-more {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  & a {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 125px);
+    filter: drop-shadow(rgba(0, 136, 255, 0.5) 0px 0px 1.5rem);
+  }
+
+  img {
+    filter: blur(0.25rem);
+  }
+}
+
+.landing-page__inline-button {
+  margin-block-start: 1rem;
+  display: block;
+}

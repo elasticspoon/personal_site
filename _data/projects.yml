@@ -1,0 +1,52 @@
+- title: md-resume
+  repo: "elasticspoon/md-resume"
+  thumbnail: "assets/img/md-resume-thumbnail.png"
+  desc: "Write a resume in markdown, style it with CSS, distribute it as either HTML or PDF. Now with even faster feedback cycles, make changes and preview them immediately!</br></br><code>md-resume</code> is a resume generator written in Ruby styled with CSS. Instead of stopping at exclusively generation of a resume in HTML or PDF format, the project goes further in letting you perfect your resume. Running <code>resume.rb</code> in development mode will spin up a local server that will watch your changes to the resume styles and content. The server will live update an HTML preview of your resume letting you move quickly with changes and updates. The project uses <code>kramdown</code> to translate markdown to HTML, bringing with it additional inline markdown customization options."
+  skills:
+    - name: "ruby"
+      desc: "Coded in Ruby"
+    - name: "chromium"
+      desc: "Pdf generated with chromium"
+- title: Private Events
+  repo: "elasticspoon/private-events"
+  thumbnail: "assets/img/private-events-thumbnail.jpg"
+  site_link: "http://35.243.197.55/"
+  desc: "Private Events is a Ruby on Rails application focused on user interaction with events allowing event creation, management, sign-ups and invitations. Private Events utilizes HTML, CSS, TailwindCSS, and a combination of AlpineJS and JavaScript for the frontend. Ensured high code quality with RSpec unit tests and systems tests using Capybara. Containerized the production version using Docker and set up hosting using Amazon EC2 and an RDS PostgreSQL database."
+  skills:
+    - name: "tailwindcss"
+      desc: "Styled with TailwindCSS"
+    - name: "alpinejs"
+      desc: "Client side interactivty built with AlpineJS"
+    - name: "rails"
+      desc: "Sever side rendered with Ruby on Rails"
+    - name: "docker"
+      desc: "Served using a Docker image"
+    - name: "aws"
+      desc: "Hosted on AWS"
+- title: JIT
+  repo: "elasticspoon/building-jit"
+  thumbnail: "assets/img/jit-thumbnail.png"
+  desc: "JIT is a fully interoperable version of Git written fully in Ruby. I built the project as a means to better understand Ruby as a systems language. Almost all Jit commands require interactions with the system either writing files, stating files for comparison, hashing, compressing or unzipping files. Unlike Git itself, which is written in C, I did not have to deal with the complexities of memory management. However, creating a object oriented program the size of Git was challenging. Jit builds out the full host of Git objects: blobs, trees and commits, each hashed and zipped based on the Git format. Jit implements the full host of Git commands including <code>add</code>, <code>branch</code>, <code>checkout</code>, <code>commit</code>, <code>diff</code>, <code>merge</code>, <code>reset</code>, <code>status</code>, <code>rm</code>, <code>cherry_pick</code>."
+  skills:
+    - name: "ruby"
+      desc: "Code in Ruby"
+- title: Flight Booker
+  repo: "elasticspoon/flight-booker"
+  thumbnail: "assets/img/flight-booker-thumbnail.png"
+  site_link: "https://flight-booker-gogr.onrender.com/"
+  desc: "This project is a simple demo application intended to show off dynamic forms while utilizing minimal client side Javascipt and serving the content from a Rails back end. I utilized multiple new (to me at the time) tools that covered all areas of the tech stack. On the front-end I used PostCSS and the BEM approach to structuring my CSS classes. Closer to the middle of the stack I made use of TurboDrive and TurboFrames to minimize full page reloads between form submissions. I ended up hosting the Rails application itself on Render and configuring it to use a Supabase Postgres database."
+  skills:
+    - name: "rails"
+      desc: "Sever side rendered with Ruby on Rails"
+    - name: "render"
+      desc: "Application hosted on Render"
+    - name: "supabase"
+      desc: "Database hosted on supabase"
+    - name: "postcss"
+      desc: "Styled with PostCss"
+- title: Rebuilding Rails
+  repo: "elasticspoon/rulers_gem"
+  desc: "An exploration into Ruby on Rails through the development of a rack-based framework inspired by Rails 3. Implemented Rack as middleware for running controller actions as Rack apps and enabling request routing. Configures a SQLite database to support an object-relational model. Enabled file-based autoloading for views and controllers. Employed ERB to render Ruby code within views."
+  skills:
+    - name: "ruby"
+      desc: "Coded in Ruby"

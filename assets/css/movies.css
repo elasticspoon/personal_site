@@ -1,0 +1,86 @@
+---
+# Front matter for jekyll processing
+---
+
+.covers-list__year-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.covers-list__year-items {
+  margin-bottom: calc(1em + 2vw);
+  display: grid;
+  grid-gap: 1.5em;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fill, minmax(11.5em, 1fr));
+}
+
+.covers-list__item {
+  font-size: 0.875em;
+  grid-template-columns: 80px 1fr;
+  grid-gap: 1em;
+  display: block;
+
+  h3,
+  p {
+    margin: 0px;
+    margin-block-start: 0.4rem;
+  }
+
+  details,
+  summary {
+    position: relative;
+  }
+}
+
+.covers-list__cover img {
+  border: solid 1px var(--text-col);
+}
+
+.covers-list__info {
+  margin-block-start: 0.5rem;
+}
+
+.covers-list__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.covers-list__subtitle {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-weight: 500;
+}
+
+.covers-list__notes {
+  top: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--page-col);
+  padding: 1.5em 0.5em 0.5em;
+  /* border: 1px solid var(--border); */
+  margin: -0.5em -0.5em;
+}
+
+details[open] > summary {
+  z-index: 2;
+}
+
+@media screen and (max-width: 700px) {
+  .covers-list__year-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .covers-list__item {
+    display: grid;
+  }
+
+  .covers-list__header-container {
+    margin-block-start: 4rem;
+    margin-block-end: 1rem;
+  }
+}

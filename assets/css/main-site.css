@@ -1,0 +1,79 @@
+---
+# Must have front-matter for jekyll to process file for postcss
+---
+
+.about-nav__container {
+  margin-block-start: 6rem;
+  margin-block-end: 3rem;
+}
+
+.about-nav__heading {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 800;
+  display: inline;
+}
+
+.about-nav__links-container {
+  display: flex;
+  gap: 1rem;
+  margin-block-start: 1rem;
+}
+
+.about-nav__link {
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  &[aria-current] {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 0.25rem;
+  }
+}
+
+.ratings {
+  margin-block-start: -2rem;
+
+  & summary {
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: "Open Sans";
+  }
+}
+
+.rating-histogram__container {
+  &[open] {
+    height: 23rem;
+  }
+  margin-block-end: 2rem;
+}
+
+.rating-histogram__chart-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-block-start: 1rem;
+  text-align: center;
+}
+
+.rating-histogram {
+  display: grid;
+  width: 16rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  transform: rotate(-90deg) translate(1rem, 0);
+  margin-inline: auto;
+  padding: 1rem;
+  color: var(--page-col);
+  background-color: var(--text-col);
+
+  & .rating_value {
+    grid-column-start: 2;
+    grid-column-end: 17;
+  }
+  & .rating_rating {
+    transform: rotate(90deg);
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+}

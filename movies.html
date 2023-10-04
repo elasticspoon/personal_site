@@ -1,0 +1,61 @@
+---
+layout: page
+css:
+  - "/assets/css/landing-page.css"
+  - "/assets/css/movies.css"
+---
+
+{% include about-nav.html movies='true' text='Movies' %} {% include
+rating-details.html %}
+<details class="rating-histogram__container">
+  <summary>
+    Current Average Rating: {{ site.data.movies | rating_average }}/5
+  </summary>
+  <span class="rating-histogram__chart-title">Rating Chart</span>
+  <div class="rating-histogram">
+    {% assign ratings = site.data.movies | rating_chart %} {% for rating in
+    ratings %}
+    <span class="rating_rating">{{rating[0]}}</span>
+    <span class="rating_value">{{rating[1]}}</span>
+    {% endfor %}
+  </div>
+</details>
+
+<section class="covers-list__container">
+  {% assign items_by_year = site.data.movies | group_by_exp: "movie",
+  "movie.date | date: '%Y'" %} {% for year in items_by_year %}
+  <article class="covers-list__year-container">
+    <header class="covers-list__year-header">
+      <h2>{{ year.name }}</h2>
+      {{ year.size }} movies
+    </header>
+    <div class="covers-list__year-items">
+      {%- for movie in year.items -%}
+      <div class="covers-list__item">
+        <div class="covers-list__cover">
+          {% picture cover "{{ movie.thumbnail }}" --img width="180"
+          height="270" alt="Cover for the movie {{movie.title}}" %}
+        </div>
+        <div class="covers-list__info">
+          <h3 class="covers-list__title">{{ movie.title }} ({{movie.year}})</h3>
+          <p class="covers-list__subtitle">{{ movie.subtitle }}</p>
+          <p>{{ movie.director }}</p>
+
+          {% if movie.rating %} {% assign rating = movie.rating | parse_rating
+          %} {% if movie.review %}
+          <details>
+            <summary>{{ rating }}</summary>
+            <div class="covers-list__notes">
+              <p>{{ movie.review }}</p>
+            </div>
+          </details>
+          {% else %}
+          <p>{{ rating }}</p>
+          {% endif %} {% endif %}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+    {%- endfor -%}
+  </article>
+</section>

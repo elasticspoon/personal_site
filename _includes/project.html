@@ -1,0 +1,43 @@
+<article class="landing-page__project">
+  {% if project.thumbnail != nil %}
+  <div class="landing-page__project-thumbnail">
+    {% assign preview_thumbnail = project.thumbnail | relative_url %} {% picture
+    {{ preview_thumbnail }} --alt "Screen shot of the private events landing
+    page" %}
+  </div>
+  {% endif %}
+  <h3 class="landing-page__project-title">{{ project.title }}</h3>
+  <div class="landing-page__project-skills">
+    {% for skill in project.skills %}
+    <button
+      type="button"
+      class="landing-page__project-skill"
+      data-toggle="popover"
+      data-content="{{ skill.desc }}"
+      data-placement="bottom"
+      data-trigger="focus"
+      data-container=".landing-page__project-skills"
+      aria-label="{{ skill.desc }}"
+    >
+      {% assign skill_svg = skill.name | prepend: 'assets/svg/' | append:
+      '.svg'%} {% svg "{{ skill_svg }}" width=40 height=40 %}
+      <span class="skill_desc hideme" aria-hidden="true">{{ skill.desc }}</span>
+    </button>
+    {% endfor %}
+  </div>
+  {% assign repo = project.repo | prepend: "https://github.com/" %}
+  <span class="landing-page__project-desc">{{ project.desc }}</span>
+  <div class="landing-page__project-links">
+    <a class="link-button landing-page__project-button" href="{{ repo }}">
+      Read the Source Code
+    </a>
+    {% if project.site_link != nil %}
+    <a
+      class="link-button landing-page__project-button"
+      href="{{ project.site_link }}"
+    >
+      Visit the website
+    </a>
+    {% endif %}
+  </div>
+</article>
