@@ -22,13 +22,13 @@
   grid-gap: 1em;
   display: block;
 
-  h3,
+  & h3,
   p {
     margin: 0px;
     margin-block-start: 0.4rem;
   }
 
-  details,
+  & details,
   summary {
     position: relative;
   }
