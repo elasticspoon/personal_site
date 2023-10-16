@@ -10,7 +10,7 @@
 - title: Private Events
   repo: "elasticspoon/private-events"
   thumbnail: "assets/img/private-events-thumbnail.jpg"
-  site_link: "http://35.243.197.55/"
+  site_link: "http://34.148.59.37/"
   desc: "Private Events is a Ruby on Rails application focused on user interaction with events allowing event creation, management, sign-ups and invitations. Private Events utilizes HTML, CSS, TailwindCSS, and a combination of AlpineJS and JavaScript for the frontend. Ensured high code quality with RSpec unit tests and systems tests using Capybara. Containerized the production version using Docker and set up hosting using Amazon EC2 and an RDS PostgreSQL database."
   skills:
     - name: "tailwindcss"
