@@ -1,20 +1,21 @@
 ---
 common-js:
-  - "/assets/js/jquery-3.7.0.slim.min.js"
-  - "/assets/js/popper.min.js"
-  - "/assets/js/bootstrap.min.js"
-  - "/assets/js/beautifuljekyll.js"
-  - "/assets/js/skin-switch.js"
+- "/assets/js/jquery-3.7.0.slim.min.js"
+- "/assets/js/popper.min.js"
+- "/assets/js/bootstrap.min.js"
+- "/assets/js/beautifuljekyll.js"
+- "/assets/js/skin-switch.js"
 head-js:
-  - "/assets/js/skin-load.js"
+- "/assets/js/skin-load.js"
 ---
 
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
-    footer.html %} {% include footer-scripts.html %}
-  </body>
+<body>
+  {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
+  footer.html %} {% include footer-scripts.html %}
+</body>
+
 </html>

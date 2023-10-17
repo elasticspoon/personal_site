@@ -17,6 +17,7 @@
   display: flex;
   gap: 1rem;
   margin-block-start: 1rem;
+  overflow-x: scroll;
 }
 
 .about-nav__link {

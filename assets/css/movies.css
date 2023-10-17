@@ -11,7 +11,7 @@
 .covers-list__year-items {
   margin-bottom: calc(1em + 2vw);
   display: grid;
-  grid-gap: 1.5em;
+  margin: 1rem;
   flex-direction: row;
   grid-template-columns: repeat(auto-fill, minmax(11.5em, 1fr));
 }
@@ -73,14 +73,22 @@ details[open] > summary {
   .covers-list__year-items {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    row-gap: 1rem;
   }
 
   .covers-list__item {
     display: grid;
+
+  & .covers-list__info, .covers-list__title {
+    margin-block-start: 0;
+  }
+
   }
 
   .covers-list__header-container {
     margin-block-start: 4rem;
     margin-block-end: 1rem;
   }
+
 }
