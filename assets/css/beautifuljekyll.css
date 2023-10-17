@@ -135,10 +135,10 @@ article h1 {
 .secret {
   position: absolute;
   font-size: .5rem;
-}
 
-.secret:hover {
-  font-size: 1.5rem;
+  &:hover {
+    font-size: 1.5rem;
+  }
 }
 
 article p:first-child {
