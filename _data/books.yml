@@ -1,8 +1,46 @@
+- date: 2023-10-23
+  title: Conceptual Blockbusting
+  subtitle: A Guide to Better Ideas
+  rating: 2
+  review: "Some portions of the book are definitely interesting. I was a fan of some of the exercises. The amount of group exercises the book calls for makes it seem a bit classroom oriented. I didn't hate the book but I thought it fell a bit short on bringing new things to the table. I felt like there was basically only one chapter that actually directly dealt with techniques to defeat conceptual blocks."
+  thumbnail: "/assets/img/covers/conceptual_blockbusting.jpg"
+  director: James Adams
+  year: 2019
+- date: 2023-10-21
+  title: Misbehaving
+  subtitle: The Making of Behavioral Economics
+  rating: 2.5
+  review: "Overall, the book is fine and interesting. It is the story of Richard Thaler and his role in developing behavioral economics as a field of study. Unfortunately, the content has a lot of overlap with Thinking: Fast and Slow. Some of the other interesting stuff is passed over because it is in his other book Nudge. I did not glean much from this book, but some one that hasn't read Thinking: Fast and Slow would get a lot."
+  thumbnail: "/assets/img/covers/misbehaving.jpg"
+  director: Richard Thaler
+  year: 2015
+- date: 2023-10-20
+  title: The Javascript Language
+  subtitle: The Modern Javascript Tutorial
+  rating: 4
+  review: "Prior to reading this book I had used a ton of JavaScript for software development but I had never learned it per se. It was similar enough to ruby or python and I had seen a ton so I had no issues writing JavaScript. But I never really understood the internals of the language. This book does a phenomenal job explaining those internals. It seems to be very up-to-date. I am a big fan of the tasks associated with many of the chapters. I would highly recommend this as an introduction to Javascript."
+  thumbnail: "/assets/img/covers/the_javascript_language_1.jpg"
+  director: Thorsten Ball
+  year: 2023
+- date: 2023-10-15
+  title: Writing an Interpreter in Go
+  rating: 4.5
+  review: "The contents of the book should be pretty obvious from the title. That said, I really enjoyed it. It was super easy to follow. I had enough leeway throughout the book that I really felt that I understood the topic. I had a ton of fun reading this and following along."
+  thumbnail: "/assets/img/covers/writing_an_interpreter_in_go.jpg"
+  director: Thorsten Ball
+  year: 2016
+- date: 2023-10-14
+  title: The Design of Everyday Things
+  rating: 3
+  review: "The book was an interesting read with a decent amount of new information that I took away from it. However, given that it was a fairly technical non-fiction book, I really wish it had more sources for the information. I would have really enjoyed if there was more information about actual studies that got ran on design choices. That said, there's a surprisingly large amount in common between the process of design and software development."
+  thumbnail: "/assets/img/covers/the_design_of_everyday_things.jpg"
+  director: Don Norman
+  year: 2013
 - date: 2023-10-04
   title: The Unicorn Project
   subtitle: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data
-  rating: 2
-  review:
+  rating: 1
+  review: "Maybe it's because I read this book so soon after reading the first one, but I found the unicorn project very lacking compared to the Phoenix project. Because they share a timeline much of the plot is already known if you've read the first book. Well, the first book was a struggle of man versus technical debt, man versus poor practices. Practices this one had a lot of the same themes but also significantly more man versus man. I just didn't find those parts. Interesting. I also found the preachy bits much more common and bothersome in this book."
   thumbnail: "/assets/img/covers/the_unicorn_project.jpg"
   director: Gene Kim
   year: 2019
@@ -10,7 +48,7 @@
   title: The Phoenix Project
   subtitle: A Novel about IT, DevOps, and Helping Your Business Win
   rating: 4
-  review:
+  review: "This was a super enjoyable book. It did a great job, essentially turning a DevOps playbook into a engaging and cohesive story. It was very fun to think about the problems being encountered and contemplate my own solutions. Then read about the book solutions. Unfortunately the book does get almost preachy at times, which makes sense because it is supposed to convey best practices. Although it kind of misses the mark as both a fiction and non-fiction book, it is still very enjoyable."
   thumbnail: "/assets/img/covers/the_phoenix_project.jpg"
   director: Gene Kim, Kevin Behr, George Spafford
   year: 2013
@@ -18,7 +56,7 @@
   title: Influence
   subtitle: The Psychology of Persuasion
   rating: 4
-  review:
+  review: "Definitely one of the more interesting books I've read on how people's behavior is influenced. It is a great mix of individual case studies, scientific literature and general anecdotes. Chaldini does a phenomenal job making the topics understandable."
   thumbnail: "/assets/img/covers/influence.jpg"
   director: Robert Caildini
   year: 2021

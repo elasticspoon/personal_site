@@ -1,15 +1,23 @@
-- date: 2023-10-09
-  title: Broker
+
+- date: 2023-10-27
+  title: The Truman Show
   rating:
   review:
+  thumbnail: "/assets/img/covers/the_truman_show.jpg"
+  year: 1998
+  director: Peter Weir
+- date: 2023-10-09
+  title: Broker
+  rating: 4
+  review: "A super colorful and visually pleasing movie. It is the story of a very unlikely family coming together. The characters are dynamic and enjoyable. I felt like a few parts of the movie were a bit unclear to me, but it does not detract much."
   thumbnail: "/assets/img/covers/broker.jpg"
   year: 2022
   director: Hirozaku Koreeda
 - date: 2023-10-02
   title: The Insider
   subtitle: Two Men Driven to Tell the Truth... Whatever the Cost.
-  rating:
-  review:
+  rating: 3.5
+  review: "This was a pretty long movie but it managed to hold my attention pretty much the entire time. Both Al Pacino and Russell Crowe are great in it. It does a pretty good job showing the villainy of the tobacco industry. I kind of wish the tobacco companies featured a bit more directly, but at the same time I can understand that that might have been a directorial choice. I also wish there was a bit more epilogue to the movie. Since it is a good bit historical, I would have liked to know whether this whistle-blowing actually had an effect."
   thumbnail: "/assets/img/covers/the_insider.jpg"
   year: 1999
   director: Michael Mann
