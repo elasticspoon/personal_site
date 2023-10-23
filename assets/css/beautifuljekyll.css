@@ -54,6 +54,15 @@ h4 {
 h1, h2, h3, h4 {
   margin-top: 1.25rem;
 }
+
+@media (max-width: 767px) {
+  h1,h2,h3,h4,h5,h6 {
+      margin-block-end: .25rem;
+  }
+  p {
+    margin-block-start: .25rem;
+  }
+}
 a {
   color: var(--link-col);
   /* display: inline-block; */
@@ -786,7 +795,7 @@ nav.top-nav-short-permanent ~ header > .intro-header {
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
-  font-size: 1.6875rem;
+  font-size: 1.4rem;
   line-height: 1.1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -864,8 +873,7 @@ nav.top-nav-short-permanent ~ header > .intro-header {
 
 /* TOC */
 #toc {
-  padding-block: 1rem;
-  margin-block: 2rem;
+  padding-block-start: 1rem;
   & summary {
     font-size: 2rem;
     font-weight: 800;
@@ -1011,6 +1019,19 @@ pre {
   & a {
     color: #0038a4;
   }
+}
+
+@media (max-width: 768px) {
+
+.box-note,
+.box-warning,
+.box-error,
+.box-success {
+  padding: .5rem;
+  margin-inline: 0;
+  margin-block: .5rem;
+
+}
 }
 
 .box-note {

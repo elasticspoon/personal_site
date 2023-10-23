@@ -61,8 +61,11 @@
   z-index: 1;
   background-color: var(--page-col);
   padding: 1.5em 0.5em 0.5em;
-  /* border: 1px solid var(--border); */
-  margin: -0.5em -0.5em;
+  box-shadow: 1px 1px 5px var(--text-col);
+  margin: 0.125em -0.5em;
+  & p {
+    padding: .25rem;
+  }
 }
 
 details[open] > summary {
