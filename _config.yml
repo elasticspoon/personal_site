@@ -338,3 +338,21 @@ toc:
   min_level: 2
   max_level: 3
   list_id: toc-contents
+
+uncss:
+  stylesheets:
+    - assets/css/all.min.css
+    - assets/css/about.css
+    - assets/css/beautifuljekyll.css
+    - assets/css/beautifuljekyll.min.css
+    - assets/css/bootstrap.min.css
+    - assets/css/bootstrap-social.css
+    - assets/css/fonts.css
+    - assets/css/landing-page.css
+    - assets/css/main-site.css
+    - assets/css/movies.css
+    - assets/css/pygment_highlights.css
+    - assets/css/skin-switch.css
+    - assets/css/staticman.css
+  files:
+    - "**/*.html"
