@@ -9,6 +9,9 @@ module.exports = {
         "./**/*.html",
         "./**/*.js",
       ],
+      safelist: [
+        "ignore-blockquote"
+      ],
       // css: [
       //   "_site/assets/css/all.min.css",
       //   "_site/assets/css/bootstrap.min.css",
