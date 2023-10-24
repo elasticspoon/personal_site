@@ -40,13 +40,16 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: 1.5rem;
 }
 h1 {
-  font-size: 2.25rem;
+  font-size: clamp(2.3rem, 5vw, 3rem);
+  /* font-size: 2.25rem; */
 }
 h2 {
-  font-size: 1.875rem;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  /* font-size: 1.875rem; */
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 5vw, 1.5rem);
+  /* font-size: 1.5rem; */
 }
 h4 {
   font-size: 1.125rem;
@@ -57,7 +60,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 767px) {
   h1,h2,h3,h4,h5,h6 {
-      margin-block-end: .25rem;
+      margin-block-end: .75rem;
   }
   p {
     margin-block-start: .25rem;
@@ -570,7 +573,7 @@ footer .footer-custom-content {
 }
 
 .post-preview .post-title {
-  font-size: 1.875rem;
+  /* font-size: 1.875rem; */
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -620,7 +623,7 @@ footer .footer-custom-content {
   display: block;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .post-meta--has-thumbnail {
     display: flex;
     flex-direction: column;
@@ -698,11 +701,11 @@ footer .footer-custom-content {
   font-weight: 800;
 }
 
-@media (min-width: 768px) {
-  .post-preview .post-title {
-    font-size: 2.25rem;
-  }
-}
+/* @media (min-width: 768px) { */
+/*   .post-preview .post-title { */
+/*     font-size: 2.25rem; */
+/*   } */
+/* } */
 
 /* --- Tags --- */
 
@@ -881,6 +884,12 @@ nav.top-nav-short-permanent ~ header > .intro-header {
   }
 }
 
+@media (min-width: 768px) {
+  #toc {
+    margin-block-end: -1rem;
+  }
+}
+
 
 /* --- Tables --- */
 
@@ -1018,6 +1027,11 @@ pre {
 
   & a {
     color: #0038a4;
+  }
+
+  & strong {
+    font-family: 'Open Sans';
+    font-weight: 800;
   }
 }
 

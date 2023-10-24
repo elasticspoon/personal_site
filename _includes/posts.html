@@ -29,10 +29,6 @@
 
           <a href="{{ post_url }}">
             <h2 class="post-title">{{ post.title | strip_html |  }}</h2>
-
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>
-            {% endif %}
           </a>
 
           <p class="post-meta{% if thumbnail != '' %} post-meta--has-thumbnail{% endif %}">

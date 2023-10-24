@@ -160,9 +160,7 @@ How should our auto-save service look?
 # tmux-autosave.service
 [Service]
 ExecStart=bash path/to/save.sh
-# Indicates that the service will run
-
- once then go inactive
+# Indicates that the service will run once then go inactive
 Type=oneshot
 
 [Unit]

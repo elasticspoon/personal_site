@@ -152,7 +152,8 @@ body .landing-page__about {
 
 .landing-page__section-heading {
   & h2 {
-    font-size: 6rem;
+  font-size: clamp(2.8rem,10vw,4rem);
+    /* font-size: 6rem; */
     padding-block-end: 1rem;
     font-family: "Open Sans";
     font-weight: 900;
@@ -166,7 +167,7 @@ body .landing-page__about {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   padding-block-end: 3rem;
   border-block-end: 1px solid var(--text-col);
-  margin-block: 3rem;
+  margin-block-end: 3rem;
 
   &:last-child {
     border: none;
@@ -178,7 +179,7 @@ body .landing-page__about {
   grid-column-start: 1;
   grid-column-end: 8;
   margin-block: 0px;
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .landing-page__project-info {
@@ -294,8 +295,22 @@ body .landing-page__about {
 .landing-page__blog-preview {
   height: 60rem;
   overflow-y: scroll;
-  border: 1px solid var(--text-col);
+  box-shadow: 1px 1px 5px var(--text-col);
   padding: 1rem 3rem;
+}
+
+@media (max-width: 767px) {
+  .landing-page__blog-preview {
+    box-shadow: none;
+    height: 100%;
+    overflow-y: auto;
+    padding: 1.5rem .4rem;
+  }
+
+  .landing-page__section {
+    margin-block-end: 0;
+
+  }
 }
 
 .page-main p:first-child {
