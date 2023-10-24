@@ -352,7 +352,6 @@ uncss:
     - assets/css/main-site.css
     - assets/css/movies.css
     - assets/css/pygment_highlights.css
-    - assets/css/skin-switch.css
     - assets/css/staticman.css
   files:
     - "**/*.html"

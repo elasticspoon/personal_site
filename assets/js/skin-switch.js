@@ -18,5 +18,4 @@ button.addEventListener("click", () => {
   setCookie("bj-dark-mode", targetTheme, 999);
   document.body.setAttribute("data-theme", targetTheme);
   button.setAttribute("aria-checked", currentTheme === "dark");
-  BeautifulJekyllJS.initNavbar();
 });
