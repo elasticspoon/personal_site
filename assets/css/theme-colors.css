@@ -55,7 +55,7 @@
   /*Landing Page Styles*/
   --header: oklch(8.67% 0.027 147.18);
   --header-fallback: black;
-  --header-col: oklch(82.3% 0.188 176.8);
+  --header-col: oklch(82.35% 0.0662 312.46);
   --header-bg: none;
   --header-font: linear-gradient(
     to right,
