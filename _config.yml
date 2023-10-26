@@ -355,3 +355,9 @@ uncss:
     - assets/css/staticman.css
   files:
     - "**/*.html"
+  ignore: 
+    - ".show" 
+    - ".dropdown"
+    - ".dropdown-toggle"
+    - "dropdown"
+    - ".dropdown-menu.show"
