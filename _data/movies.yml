@@ -1,8 +1,31 @@
 
+- date: 2023-11-11
+  title: Anatomy of a Fall
+  rating: 4
+  review: "Very enjoyable and well-acted movie. While it is a mystery crime drama, I think the exploration of the lead actress and the family dynamics is the most interesting part of the movie. Sandra huller was phenomenal in this movie. I also really enjoyed the sound design and music."
+  thumbnail: "/assets/img/covers/anatomy_of_a_fall.jpg"
+  year: 2023
+  director: Justine Triet
+- date: 2023-11-10
+  title: Rosencrantz & Guildenstern Are Dead
+  rating: 3.5
+  review: "This movie is about two characters from Hamlet. Frankly, at this point I barely remember Hamlet. However, the acting of Gary Oldman, Tim Roth and Richard Dreyfus was enough for me to enjoy the movie. I am unsure if the movie form gains anything over it being a play but I am unlikely to see a play so I enjoyed the movie."
+  thumbnail: "/assets/img/covers/rosencrantz_and_guildenstern_are_dead.jpg"
+  year: 1990
+  director: Tom Stoppard
+- date: 2023-10-27
+  title: The Witch
+  subtitle: Evil Takes Many Forms.
+  rating: 1
+  review: "The movie had some very strong moments. But overall it was a huge disappointment. I found nothing scary about the movie and the only reason I finished it was because the reviews had me waiting for something more. I wonder if the dialogue was actually accurate to the time period. I also found the Christian themes of the movie to be lost on me."
+  thumbnail: "/assets/img/covers/the_witch.jpg"
+  year: 2015
+  director: Robert Eggers
 - date: 2023-10-27
   title: The Truman Show
-  rating:
-  review:
+  subtitle: On the Air, Unaware
+  rating: 2.5
+  review: "A fairly light-hearted but still enjoyable movie. The role of Truman was absolutely perfect for Jim Carrey given how wacky he is."
   thumbnail: "/assets/img/covers/the_truman_show.jpg"
   year: 1998
   director: Peter Weir
