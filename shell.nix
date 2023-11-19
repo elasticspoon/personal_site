@@ -25,29 +25,12 @@ with import <nixpkgs> { }; let
       };
     };
   };
-  nodeEnv = import ./node-env.nix {
-    inherit (pkgs) stdenv lib python2 runCommand writeTextFile writeShellScript;
-    inherit pkgs nodejs;
-    libtool =
-      if pkgs.stdenv.isDarwin
-      then pkgs.darwin.cctools
-      else null;
-  };
-  nodeDependencies =
-    (import ./node-packages.nix {
-      inherit (pkgs) fetchurl nix-gitignore stdenv lib fetchgit;
-      inherit nodeEnv;
-    }).nodeDependencies;
 in
 stdenv.mkDerivation {
   name = "personal_site";
   buildInputs = with pkgs; [ nodejs bundix ] ++ [ env ];
 
   shellHook = ''
-    if [ ! -L "./node_modules" ]; then
-      ln -s "${nodeDependencies}/lib/node_modules" ./node_modules
-    fi
-    export PATH="${nodeDependencies}/bin:$PATH"
     export NIX_SHELL="true"
     alias prod_landing='JEKYLL_ENV="production" bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35733 --port 3003 '
     alias prod_blog='JEKYLL_ENV="production" bundle exec jekyll serve --trace --livereload --livereload-port 35732 --port 3002 '
