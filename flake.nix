@@ -22,8 +22,6 @@
         })
         (final: prev: rec {
           nodejs = prev.nodejs-18_x;
-          pnpm = prev.nodePackages.pnpm;
-          yarn = (prev.yarn.override { inherit nodejs; });
         })
       ];
       pkgs = import nixpkgs { inherit overlays system; };
@@ -56,11 +54,9 @@
       };
     in
     {
-      devShells = rec {
-        default = run;
-
-        run = pkgs.mkShell {
-          buildInputs = with pkgs; [  node2nix pnpm yarn nodejs bundix ] ++ [ rubyEnv ];
+      devShells = {
+        default = pkgs.mkShell {
+          buildInputs = with pkgs; [  nodejs bundix ] ++ [ rubyEnv ];
 
           shellHook = ''
             PATH="./node_modules/uncss/bin:$PATH"
