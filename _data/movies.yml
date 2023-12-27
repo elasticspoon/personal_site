@@ -1,8 +1,38 @@
-
+- date: 2023-12-27
+  title: Breathless
+  rating: 1
+  review: "Jean-Luc Godard's first feature length film and the beginning of the French New Wave. The movie has some successful scenes, in my opinion, they are primarily the slower more personal ones. I probably don't have enough background to understand the new cinematographic techniques used in the movie. The characters and much of the dialogue aged very poorly."
+  thumbnail: "/assets/img/covers/breathless.jpg"
+  year: 1960
+  director: Jean-Luc Godard
+- date: 2023-12-20
+  title: "2001: A Space Odyssey"
+  subtitle: An Epic Drama of Adventure and Exploration
+  rating: 3.5
+  review: "A lot of the movie feels very cliche however, given its age, I'm willing to guess that 2001 was probably the originator of the cliches. The soundtrack and practical effects in the movie are terrific. The pacing is a bit odd at times. And the movie itself is confusing. I would struggle to recommend this movie, but at the same time I definitely would want to rewatch it."
+  thumbnail: "/assets/img/covers/2001_a_space_odyssey.jpg"
+  year: 1968
+  director: Stanely Kubrick
+- date: 2023-12-11
+  title: Spotlight
+  subtitle: Break the Story. Break the Silence.
+  rating: 2.5
+  review: "A movie about the Boston globe investigation into church molestations. Overall a very straightforward movie but it was filmed and acted well. I enjoyed the whole thing. Unfortunately, I think I was looking for a movie more about the church molestations and maybe how they were covered up. This movie was all about the investigation itself. I think that's somewhat took away from it for me."
+  thumbnail: "/assets/img/covers/spotlight.jpg"
+  year: 2015
+  director: Tom McCarthy
+- date: 2023-12-06
+  title: The Thing
+  subtitle: The Ultimate in Alien Terror
+  rating: 1.5
+  review: "It wasn't a terrible movie but it certainly wasn't a classic either. Some of the practical effects were solid and the movie did a good job building tension at times. Unfortunately, there were a ton of plot holes, poor effects and pacing issues that make it hard for me to recommend the movie."
+  thumbnail: "/assets/img/covers/the_thing.jpg"
+  year: 1982
+  director: John Carpenter
 - date: 2023-11-20
   title: I, Daniel Blake
-  rating: 
-  review:
+  rating: 3.5
+  review: "This movie is very real and pretty tough emotionally to get through. It's about an old man and a young single mother who are very poor and are trying to get by at the hands of the UK government. The movie doesn't pull any punches. It shows just how many regulations serve to grind down people who are just trying their best."
   thumbnail: "/assets/img/covers/i_daniel_blake.jpg"
   year: 2016
   director: Ken Loach
