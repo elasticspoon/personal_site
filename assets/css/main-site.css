@@ -59,9 +59,9 @@
 
 .rating-histogram {
   display: grid;
-  width: 16rem;
+  width: 20rem;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  transform: rotate(-90deg) translate(1rem, 0);
+  transform: rotate(-90deg) translate(-1rem, 0);
   margin-inline: auto;
   padding: 1rem;
   color: var(--page-col);

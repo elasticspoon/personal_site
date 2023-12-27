@@ -12,6 +12,7 @@
   margin-bottom: calc(1em + 2vw);
   display: grid;
   margin: 1rem;
+  row-gap: 1rem;
   flex-direction: row;
   grid-template-columns: repeat(auto-fill, minmax(11.5em, 1fr));
 }
@@ -65,7 +66,7 @@
   box-shadow: 1px 1px 5px var(--text-col);
   margin: 0.125em -0.5em;
   & p {
-    padding: .25rem;
+    padding: 0.25rem;
   }
 }
 
@@ -84,10 +85,10 @@ details[open] > summary {
   .covers-list__item {
     display: grid;
 
-  & .covers-list__info, .covers-list__title {
-    margin-block-start: 0;
-  }
-
+    & .covers-list__info,
+    .covers-list__title {
+      margin-block-start: 0;
+    }
   }
 
   .covers-list__info {
@@ -98,5 +99,4 @@ details[open] > summary {
     margin-block-start: 4rem;
     margin-block-end: 1rem;
   }
-
 }
