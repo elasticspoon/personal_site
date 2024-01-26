@@ -30,7 +30,8 @@ common-ext-js:
           {% for project in site.data.projects limit: 3 %} {% include
           project.html %} {% endfor %}
           <article class="landing-page__see-more">
-            {% picture "assets/img/preview_project.jpg" %}
+            {% picture "assets/img/preview_project.jpg" --img alt="A blurred out
+            screenshot of a generic project." %}
             <a class="link-button" href="{% link projects.html %}"
               >See more projects</a
             >
