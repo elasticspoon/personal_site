@@ -1,3 +1,54 @@
+- date: 2024-01-05
+  title: Armchair Economist
+  subtitle: "Economics & Everyday Life"
+  rating: 2
+  review: "This book is incredibly pro free market. I found it to be interesting, but a lot of the ideas to be very challenging to accept. It certainly made me interested in economic theory simply for the sake of being able to figure out if I can disprove what the author was saying. And also some of the authors opinions seemed a little bit silly."
+  thumbnail: "/assets/img/covers/armchair_economist.jpg"
+  director: Steven E. Landsburg
+  year: 2012
+- date: 2024-01-05
+  title: Nonviolent Communication
+  subtitle: "Life-Changing Tools for Healthy Relationships"
+  rating: 4
+  review: "I found the book version of this way better than the audiobook which I had listened to in the past. Conceptually Marshall's ideas are certainly worth striving for but man I find them pretty difficult. I can certainly see the effectiveness."
+  thumbnail: "/assets/img/covers/nonviolent_communication.jpg"
+  director: Marshall Rosenberg
+  year: 2015
+- date: 2024-01-05
+  title: Learning Typescript
+  subtitle: "Enhance Your Web Development Skills Using Type-Safe JavaScript"
+  rating: 3.5
+  review: "The book itself is fine. It does a solid job going over the type script type system. The real winner here is all the projects that Josh came up with. They do a phenomenal job solidifying your understanding of typescript concepts."
+  thumbnail: "/assets/img/covers/learning_typescript.jpg"
+  director: Josh Goldberg
+  year: 2022
+- date: 2024-01-05
+  title: Metamorphosis
+  rating: 4.5
+  review: " An absurdist story about a man turning into a bug. While simple conceptually it has so many layers to it. It is a very deep reflection on human nature. This book is all of 60 pages. So why not just read it?"
+  thumbnail: "/assets/img/covers/metamorphosis.jpg"
+  director: Franz Kafka
+  year: 1915
+- date: 2024-01-05
+  title: How To Be an Antiracist
+  rating: 0
+  review:
+    "Not that long ago I read 'Salt, Fat, Acid, Heat'. It is a cookbook where the author opens with a fairly extended section of personal anecdotes and some of the science behind cooking. The science isn't particularly well cited but I believe what is being said because the author builds up trust in themselves as an expert.
+    </br>'How to be an Antiracist' is in my opinion a terrible book not because of any ideas in it but because the author does not convey anything in a convincing way. The citations are scant and not particularly authoritative. I don't consider the New York times or a book by someone to be authoritative sources on sociopolitical ideas. As in, they can be secondary sources, they could support ideas, but I expect empirical studies to form the foundation of the arguments.
+    </br>There was a point in the book where the income disparity between immigrant blacks and African Americans is brought up. My initial stance was that the reason for the disparity was probably self-selection among the immigrants. However, the author argues that same idea so poorly that I became less convinced of myself.
+    </br>The author's life story is the thread that ties the book together. However, some of the anecdotes are absolutely meaningless. They should not have been in this book.
+    </br>Anyone that reads a book with this title is already self-selecting, already going to be a group of people open to those ideas. The fact that I can take nothing away from this book means that it is a complete failure."
+  thumbnail: "/assets/img/covers/antiracist.jpg"
+  director: Ibram X. Kendi
+  year: 2015
+- date: 2024-01-03
+  title: The Mythical Man-Month
+  subtitle: Essays on Software Engineering
+  rating: 2
+  review: "It certainly an interesting book for my historical perspective. Surprisingly many of the core ideas still apply, the difficulties imposed by communication, the absence of a silver bullet and others. A lot of the book also covers technical details relevant to the time it was written: the 1970s. Those parts are lost on me. Overall, I think you could get the same ideas in a more modern book with significantly more relevant examples."
+  thumbnail: "/assets/img/covers/mythical_man-month.jpg"
+  director: Fredrick Brooks Jr
+  year: 1995
 - date: 2023-12-28
   title: Behave
   subtitle: The Biology of Humans at Our Best and Worst

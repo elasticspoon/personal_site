@@ -1,3 +1,25 @@
+- date: 2024-01-20
+  title: The Banshees of Inisherin
+  subtitle: Everything Was Fine Yesterday.
+  rating: 4.5
+  review: "An absolutely gorgeous movie. Lots of wide shots of nature. Every single character is enjoyable and well acted. It's a great mix of comedy and thought-provoking reflection. I really disliked In Bruges but Colin Farrell and Brendan Gleeson were so much better here."
+  thumbnail: "/assets/img/covers/the_banshees_of_inisherin.jpg"
+  year: 2022
+  director: Martin McDonagh
+- date: 2024-01-14
+  title: The Elephant Man
+  rating: 0
+  review: "This is probably the first time I've been disappointed in Anthony Hopkins. The entire film felt super predictable, very slow and generally a letdown. Lots of wide mouth staring at the camera. It felt like the entire reason behind making it black and white was just to make the costumes work better."
+  thumbnail: "/assets/img/covers/the_elephant_man.jpg"
+  year: 1980
+  director: David Lynch
+- date: 2024-01-07
+  title: Black Swan
+  rating: 0
+  review: "This movie managed to tick every box in terms of body horror that I dislike: needles, nails stuff, skin peeling. Maybe there was something good about it but I just had to look away from the screen too much. I also did not think Natalie Portman fit the role of young innocent ballerina at all. I found Mila Kunis distracting: I could only see Mila Kunis not the ballerina she was meant to be playing."
+  thumbnail: "/assets/img/covers/black_swan.jpg"
+  year: 2010
+  director: Darren Aronofsky
 - date: 2023-12-27
   title: Breathless
   rating: 1
