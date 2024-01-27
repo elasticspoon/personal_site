@@ -1,5 +1,6 @@
-- title: md-resume
-  repo: "elasticspoon/md-resume"
+- title: md_resume
+  repo: "elasticspoon/md_resume"
+  site_link: "https://rubygems.org/gems/md_resume"
   thumbnail: "assets/img/md-resume-thumbnail.png"
   desc: "Write a resume in markdown, style it with CSS, distribute it as either HTML or PDF. Now with even faster feedback cycles, make changes and preview them immediately!</br></br><code>md-resume</code> is a resume generator written in Ruby styled with CSS. Instead of stopping at exclusively generation of a resume in HTML or PDF format, the project goes further in letting you perfect your resume. Running <code>resume.rb</code> in development mode will spin up a local server that will watch your changes to the resume styles and content. The server will live update an HTML preview of your resume letting you move quickly with changes and updates. The project uses <code>kramdown</code> to translate markdown to HTML, bringing with it additional inline markdown customization options."
   skills:
