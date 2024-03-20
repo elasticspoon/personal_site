@@ -1,3 +1,55 @@
+- date: 2024-03-18
+  title: Decision to Leave
+  rating: 3
+  review: "I found the plot to be pretty interesting. Both conceptually and visually a lot of the shots were super enjoyable. I enjoyed the way that the imagination of the lead character was portrayed. I was also heavily distracted by some of the outdoor sets, they felt very fake. The acting by felt pretty weak. Can't say I was a big fan of a Korean actress playing a Chinese immigrant to Korea, it felt like her mannerisms were very Korean."
+  thumbnail: "/assets/img/covers/decision_to_leave.jpg"
+  year: 2022
+  director: Park Chan-wook
+- date: 2024-03-11
+  title: Grave of the Fireflies
+  subtitle: Everything Was Fine Yesterday.
+  rating: .5
+  review: "The remaster of this movie was gorgeous. That said I don't have the historical knowledge to understand the underlying themes of the movie. I also did not really feel much realism in either of the child characters or in the relationship between them. The movie felt like a purposeful tearjerker."
+  thumbnail: "/assets/img/covers/grave_of_the_fireflies.jpg"
+  year: 1988
+  director: Isao Takahata
+- date: 2024-03-04
+  title: Dark Waters
+  rating: 2.5
+  review: "I feel like every character that Mark Ruffalo plays ends up feeling very similar. This was a solid story. That's all it really had going for it. Bill Camp really stole the show as Wilbur Tenant."
+  thumbnail: "/assets/img/covers/dark_waters.jpg"
+  year: 2019
+  director: Todd Haynes
+- date: 2024-02-25
+  title: A Tale of Two Sisters
+  rating: 3
+  review: "I enjoyed this movie a lot visually. The house was very pretty. There were lots of varying visual designs. The plot reveal was also pretty well done. That said, the acting overall was forgetable."
+  thumbnail: "/assets/img/covers/a_tale_of_two_sisters.jpg"
+  year: 2003
+  director: Jee-woon Kim
+- date: 2024-02-18
+  title: The Babadook
+  subtitle: Don't let it in.
+  rating: .5
+  review: 'Only reason I finished this was there was only 25 minutes left when I was going stop watching. The "plot twist" was actually solid but the buildup felt poorly acted and just annoying. I also cannot express how bad of an idea the popup picture book with text to read is in a film medium.'
+  thumbnail: "/assets/img/covers/the_babadook.jpg"
+  year: 2014
+  director: Jennifer Kent
+- date: 2024-02-11
+  title: The Square
+  rating: 3.5
+  review: "There are some scenes in this movie that are 5/5. Great acting and visuals. However, the whole thing feels disjointed. I feel like it would have been better to somehow split the parts up and really focus on them individually instead of trying to make it work as a whole."
+  thumbnail: "/assets/img/covers/the_square.jpg"
+  year: 2017
+  director: Ruben Östlund
+- date: 2024-02-25
+  title: Boogie Nights
+  subitle: Everyone has one special thing
+  rating: 1
+  review: "Found family movie about porn stars in California. Only reason the score is not lower is that I could not tell if the acting was intentionally bad to mimic porno acting. But the acting was horrid."
+  thumbnail: "/assets/img/covers/boogie_nights.jpg"
+  year: 1997
+  director: Paul Thomas Anderson
 - date: 2024-01-20
   title: The Banshees of Inisherin
   subtitle: Everything Was Fine Yesterday.
