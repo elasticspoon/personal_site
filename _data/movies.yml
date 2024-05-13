@@ -1,3 +1,39 @@
+- date: 2024-05-01
+  title: Dallas Buyers Club
+  subtitle: Dare to Live
+  rating: 3
+  review: "An interesting plot that was well portrayed by Matthew Mcconaughey and Jared Leto. It was a decent character portrait but there wasn't much to the movie besides the plot."
+  thumbnail: "/assets/img/covers/dallas_buyers_club.jpg"
+  year: 2013
+  director: Jean-Marc Vallée
+- date: 2024-04-23
+  title: Eat Drink Man Woman
+  rating: 4.5
+  review: "The opening of this movie is a 5 minute scene with no dialogue of the father making an absolutely luxurious dinner for this 3 children that want nothing to do with attending this dinner. It really sets the tone for the movie. It is funny. Has great characters and some of the best shot of cooking in any movie I have seen. I wish it had a bit less Disney of an ending."
+  thumbnail: "/assets/img/covers/eat_drink_man_woman.jpg"
+  year: 1994
+  director: Ang Lee
+- date: 2024-04-18
+  title: Somewhere
+  rating: 3.5
+  review: "I loved the tone of the movie. It just created this sense of apathy and depression in the main character despite having basically everything he wants. It certainly doesn't make me see pity for the rich but it did make me feel pity for Johnny Macro."
+  thumbnail: "/assets/img/covers/somewhere.jpg"
+  year: 2010
+  director: Sophia Coppla
+- date: 2024-04-02
+  title: Ugetsu
+  rating: .5
+  review: "Only thing I found redeeming about this one is that it was pretty short. It was kind of interesting as it felt more like a theater play than a movie but the themes were super basic and you could see the ending from a mile away."
+  thumbnail: "/assets/img/covers/ugetsu.jpg"
+  year: 1953
+  director: Kenji Mizoguchi
+- date: 2024-03-25
+  title: Pelle the Conqueror
+  rating: 4.5
+  review: "Amazing movie but a very hard watch. The child actor is the movie is phenomenal, frankly, all the actors are great. All the characters are incredibly flawed and human and watching them navigate being indentured servant on a farm in a foreign country is just heartbreaking at times."
+  thumbnail: "/assets/img/covers/pelle_the_conqueror.jpg"
+  year: 1987
+  director: Bille August
 - date: 2024-03-18
   title: Decision to Leave
   rating: 3
