@@ -1,3 +1,17 @@
+- date: 2024-05-20
+  title: Badlands
+  rating: .5
+  review: "The narration in the movie was truly horrendous. Honestly, you would think that a story about a 15 year old girl eloping with a 25 year old and going on a murder spree would be interesting. I only finished this movie because it was short. It did remind me of Hell or High Water which is a much better movie."
+  thumbnail: "/assets/img/covers/badlands.jpg"
+  year: 1973
+  director: Terrence Malik
+- date: 2024-05-01
+  title: Barton Fink
+  rating: 3
+  review: "Compared to a lot of other Coen brothers movies, this one did not do much for me. I enjoyed some of the recurring themes in it, the heat, the sweating. I enjoyed how a lot of it was shot but over all I did not find it that interesting."
+  thumbnail: "/assets/img/covers/barton_fink.jpg"
+  year: 1991
+  director: Joel and Ethan Coen
 - date: 2024-05-01
   title: Dallas Buyers Club
   subtitle: Dare to Live
