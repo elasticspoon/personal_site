@@ -2,9 +2,7 @@
 layout: post
 title: RSpec --bisect And Flaky Tests
 summary: A story about RSpec test flakiness stemming from order dependent issues and using RSpec `--bisect` to diagnose the issue.
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
+thumbnail-img: "assets/img/thumbnails/rspec-bisect.jpg"
 readtime: true
 toc: true
 tags:
