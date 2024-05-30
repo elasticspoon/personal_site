@@ -56,7 +56,7 @@
     {
       devShells = {
         default = pkgs.mkShell {
-          buildInputs = with pkgs; [  nodejs bundix ] ++ [ rubyEnv ];
+          buildInputs = with pkgs; [vips nodejs bundix ] ++ [ rubyEnv ];
 
           shellHook = ''
             PATH="./node_modules/uncss/bin:$PATH"
