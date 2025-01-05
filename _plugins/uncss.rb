@@ -1,40 +1,38 @@
 # frozen_string_literal: true
 
-require "sass-embedded"
-require "tempfile"
-require "json"
+require 'sass-embedded'
+require 'tempfile'
+require 'json'
 
 Jekyll::Hooks.register(:site, :post_write) do |site|
-  next if ENV["JEKYLL_ENV"] != "production"
+  next if ENV['JEKYLL_ENV'] != 'production'
 
-  print "UnCSS".rjust(18), ": "
-  config = site.config["uncss"] || {}
+  print 'UnCSS'.rjust(18), ': '
+  config = site.config['uncss'] || {}
 
-  unless config.key?("stylesheets")
-    raise "Missing option 'uncss.stylesheets'!"
-  end
+  raise "Missing option 'uncss.stylesheets'!" unless config.key?('stylesheets')
 
   # Prefix files with site path
-  files = config.fetch("files", ["**/*.html"]).collect do |file|
+  files = config.fetch('files', ['**/*.html']).collect do |file|
     File.join(site.dest, file)
   end
 
   # Produce UnCSS instance
   uncss = Jekyll::UnCSS.new(files,
-    htmlroot: site.dest,
-    ignore: config["ignore"],
-    media: config["media"],
-    timeout: config["timeout"],
-    banner: config["banner"])
+                            htmlroot: site.dest,
+                            ignore: config['ignore'],
+                            media: config['media'],
+                            timeout: config['timeout'],
+                            banner: config['banner'])
 
   # Process each given stylesheet
-  config["stylesheets"].each do |stylesheet|
-    uncss.process(stylesheet, config["compress"]) do |output|
+  config['stylesheets'].each do |stylesheet|
+    uncss.process(stylesheet, config['compress']) do |output|
       File.write(File.join(site.dest, stylesheet), output)
     end
   end
 
-  print "Complete, processed ", config["stylesheets"].length, " css file(s)"
+  print 'Complete, processed ', config['stylesheets'].length, ' css file(s)'
   puts
 end
 
@@ -63,7 +61,8 @@ module Jekyll
     def uncss(compress)
       path = @temp_file.path
       files = @files.join("' '")
-      result = `uncss --uncssrc '#{path}' '#{files}' 2>&1`
+      uncss_path = './node_modules/.bin/uncss'
+      result = `#{uncss_path} --uncssrc '#{path}' '#{files}' 2>&1`
       result = strip_banner(result)
       result = Sass.compile(result, style: :compressed) if compress
       result.strip!
@@ -74,19 +73,19 @@ module Jekyll
 
     def strip_banner(result)
       return result unless @options[:banner] == false
-      return result unless result.start_with?("/*** uncss> filename: ")
+      return result unless result.start_with?('/*** uncss> filename: ')
 
-      result.partition("***/").last
+      result.partition('***/').last
     end
 
     def make_config(css)
       options = @options.clone
 
       # uncss treats absolute stylesheet paths as relative to htmlroot
-      options[:stylesheets] = [(css.start_with?("/") ? css : ("/" + css))]
+      options[:stylesheets] = [(css.start_with?('/') ? css : ('/' + css))]
 
       cleanup_config
-      @temp_file = Tempfile.new("uncssrc")
+      @temp_file = Tempfile.new('uncssrc')
       @temp_file.write(options.to_json)
       @temp_file.flush
     end
