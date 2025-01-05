@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    bigdecimal (3.1.9)
     brotli (0.2.3)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
@@ -14,7 +15,9 @@ GEM
     execjs (2.8.1)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
-    google-protobuf (3.24.0)
+    google-protobuf (4.29.2)
+      bigdecimal
+      rake (>= 13)
     htmlcompressor (0.4.0)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
@@ -102,9 +105,9 @@ GEM
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     safe_yaml (1.0.5)
-    sass-embedded (1.64.2)
-      google-protobuf (~> 3.23)
-      rake (>= 13.0.0)
+    sass-embedded (1.83.1)
+      google-protobuf (~> 4.29)
+      rake (>= 13)
     svg_optimizer (0.2.6)
       nokogiri
     terminal-table (3.0.2)
