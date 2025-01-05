@@ -1,43 +1,106 @@
+- date: 2024-11-10
+  title: One Hundred Years of Solitude
+  rating: 5
+  review: Just wow. This is such a weird, fantastical and atmospheric book. It manages
+    to build a complete world and atmosphere is so few words. One of the best books
+    I have read.
+  thumbnail: assets/img/covers/100_years_of_solitude.jpg
+  year: 1967
+  director: Gabriel Garcia Marquez
+- date: 2024-10-20
+  title: The Lean Startup
+  subtitle: How Today's Entrepreneurs Use Continuous Innovation to Create Radically
+    Successful Businesses
+  rating: 3
+  review: Basically, Agile but at a company level. It talks about experiments and
+    fast iteration. There are a decent number of compelling ideas here.
+  thumbnail: assets/img/covers/the_lean_startup.jpg
+  year: 2011
+  director: Eric Ries
+- date: 2024-11-30
+  title: DevOps Handbook
+  subtitle: How to Create World-Class Agility, Reliability, & Security in Technology
+    Organizations
+  rating: 4
+  review: Overall, a very comprehensive book. I wish the example went into more details
+    about implementation. I have a ton of ideas from it but a lot of them lacked enough
+    detail for me to actually implement them.
+  thumbnail: assets/img/covers/devops_handbook.jpg
+  year: 2021
+  director: Gene Kim, Jez Humble, Nicole Forsgren, John Willis
+- date: 2024-08-30
+  title: Sustainable Web Development with Ruby on Rails
+  subtitle: Practical Tips for Building Web Applications that Last
+  rating: 4.5
+  review: I thought this book was a great read. It introduced a lot of patterns that
+    make sense to me. It was opinionated that I felt like I could disagree with it
+    but try the suggestions to see how they would work out.
+  thumbnail: assets/img/covers/sustainable_web_development_with_ruby_on_rails.jpg
+  year: 2020
+  director: David Bryant Copeland
 - date: 2024-01-05
   title: Armchair Economist
-  subtitle: "Economics & Everyday Life"
+  subtitle: Economics & Everyday Life
   rating: 2
-  review: "This book is incredibly pro free market. I found it to be interesting, but a lot of the ideas to be very challenging to accept. It certainly made me interested in economic theory simply for the sake of being able to figure out if I can disprove what the author was saying. And also some of the authors opinions seemed a little bit silly."
+  review: This book is incredibly pro free market. I found it to be interesting, but
+    a lot of the ideas to be very challenging to accept. It certainly made me interested
+    in economic theory simply for the sake of being able to figure out if I can disprove
+    what the author was saying. And also some of the authors opinions seemed a little
+    bit silly.
   thumbnail: "/assets/img/covers/armchair_economist.jpg"
   director: Steven E. Landsburg
   year: 2012
 - date: 2024-01-05
   title: Nonviolent Communication
-  subtitle: "Life-Changing Tools for Healthy Relationships"
+  subtitle: Life-Changing Tools for Healthy Relationships
   rating: 4
-  review: "I found the book version of this way better than the audiobook which I had listened to in the past. Conceptually Marshall's ideas are certainly worth striving for but man I find them pretty difficult. I can certainly see the effectiveness."
+  review: I found the book version of this way better than the audiobook which I had
+    listened to in the past. Conceptually Marshall's ideas are certainly worth striving
+    for but man I find them pretty difficult. I can certainly see the effectiveness.
   thumbnail: "/assets/img/covers/nonviolent_communication.jpg"
   director: Marshall Rosenberg
   year: 2015
 - date: 2024-01-05
   title: Learning Typescript
-  subtitle: "Enhance Your Web Development Skills Using Type-Safe JavaScript"
+  subtitle: Enhance Your Web Development Skills Using Type-Safe JavaScript
   rating: 3.5
-  review: "The book itself is fine. It does a solid job going over the type script type system. The real winner here is all the projects that Josh came up with. They do a phenomenal job solidifying your understanding of typescript concepts."
+  review: The book itself is fine. It does a solid job going over the type script
+    type system. The real winner here is all the projects that Josh came up with.
+    They do a phenomenal job solidifying your understanding of typescript concepts.
   thumbnail: "/assets/img/covers/learning_typescript.jpg"
   director: Josh Goldberg
   year: 2022
 - date: 2024-01-05
   title: Metamorphosis
   rating: 4.5
-  review: " An absurdist story about a man turning into a bug. While simple conceptually it has so many layers to it. It is a very deep reflection on human nature. This book is all of 60 pages. So why not just read it?"
+  review: " An absurdist story about a man turning into a bug. While simple conceptually
+    it has so many layers to it. It is a very deep reflection on human nature. This
+    book is all of 60 pages. So why not just read it?"
   thumbnail: "/assets/img/covers/metamorphosis.jpg"
   director: Franz Kafka
   year: 1915
 - date: 2024-01-05
   title: How To Be an Antiracist
   rating: 0
-  review:
-    "Not that long ago I read 'Salt, Fat, Acid, Heat'. It is a cookbook where the author opens with a fairly extended section of personal anecdotes and some of the science behind cooking. The science isn't particularly well cited but I believe what is being said because the author builds up trust in themselves as an expert.
-    </br>'How to be an Antiracist' is in my opinion a terrible book not because of any ideas in it but because the author does not convey anything in a convincing way. The citations are scant and not particularly authoritative. I don't consider the New York times or a book by someone to be authoritative sources on sociopolitical ideas. As in, they can be secondary sources, they could support ideas, but I expect empirical studies to form the foundation of the arguments.
-    </br>There was a point in the book where the income disparity between immigrant blacks and African Americans is brought up. My initial stance was that the reason for the disparity was probably self-selection among the immigrants. However, the author argues that same idea so poorly that I became less convinced of myself.
-    </br>The author's life story is the thread that ties the book together. However, some of the anecdotes are absolutely meaningless. They should not have been in this book.
-    </br>Anyone that reads a book with this title is already self-selecting, already going to be a group of people open to those ideas. The fact that I can take nothing away from this book means that it is a complete failure."
+  review: Not that long ago I read 'Salt, Fat, Acid, Heat'. It is a cookbook where
+    the author opens with a fairly extended section of personal anecdotes and some
+    of the science behind cooking. The science isn't particularly well cited but I
+    believe what is being said because the author builds up trust in themselves as
+    an expert. </br>'How to be an Antiracist' is in my opinion a terrible book not
+    because of any ideas in it but because the author does not convey anything in
+    a convincing way. The citations are scant and not particularly authoritative.
+    I don't consider the New York times or a book by someone to be authoritative sources
+    on sociopolitical ideas. As in, they can be secondary sources, they could support
+    ideas, but I expect empirical studies to form the foundation of the arguments.
+    </br>There was a point in the book where the income disparity between immigrant
+    blacks and African Americans is brought up. My initial stance was that the reason
+    for the disparity was probably self-selection among the immigrants. However, the
+    author argues that same idea so poorly that I became less convinced of myself.
+    </br>The author's life story is the thread that ties the book together. However,
+    some of the anecdotes are absolutely meaningless. They should not have been in
+    this book. </br>Anyone that reads a book with this title is already self-selecting,
+    already going to be a group of people open to those ideas. The fact that I can
+    take nothing away from this book means that it is a complete failure.
   thumbnail: "/assets/img/covers/antiracist.jpg"
   director: Ibram X. Kendi
   year: 2015
@@ -45,7 +108,12 @@
   title: The Mythical Man-Month
   subtitle: Essays on Software Engineering
   rating: 2
-  review: "It certainly an interesting book for my historical perspective. Surprisingly many of the core ideas still apply, the difficulties imposed by communication, the absence of a silver bullet and others. A lot of the book also covers technical details relevant to the time it was written: the 1970s. Those parts are lost on me. Overall, I think you could get the same ideas in a more modern book with significantly more relevant examples."
+  review: 'It certainly an interesting book for my historical perspective. Surprisingly
+    many of the core ideas still apply, the difficulties imposed by communication,
+    the absence of a silver bullet and others. A lot of the book also covers technical
+    details relevant to the time it was written: the 1970s. Those parts are lost on
+    me. Overall, I think you could get the same ideas in a more modern book with significantly
+    more relevant examples.'
   thumbnail: "/assets/img/covers/mythical_man-month.jpg"
   director: Fredrick Brooks Jr
   year: 1995
@@ -53,7 +121,12 @@
   title: Behave
   subtitle: The Biology of Humans at Our Best and Worst
   rating: 4
-  review: "A very detailed and far-reaching book by Robert Sapolsky. He starts with a single action and discusses what caused it. Starting at neuron impulses moving backwards to hormones and even further to evolution. It's slow, technical but it covers so much. I probably understood 40% of the book on my first reading and I felt like I gained a ton. I found some parts specifically the societal ones to be a bit less interesting. But the book ends on a very powerful note."
+  review: A very detailed and far-reaching book by Robert Sapolsky. He starts with
+    a single action and discusses what caused it. Starting at neuron impulses moving
+    backwards to hormones and even further to evolution. It's slow, technical but
+    it covers so much. I probably understood 40% of the book on my first reading and
+    I felt like I gained a ton. I found some parts specifically the societal ones
+    to be a bit less interesting. But the book ends on a very powerful note.
   thumbnail: "/assets/img/covers/behave.jpg"
   director: Robert Sapolsky
   year: 2017
@@ -61,7 +134,11 @@
   title: Conceptual Blockbusting
   subtitle: A Guide to Better Ideas
   rating: 2
-  review: "Some portions of the book are definitely interesting. I was a fan of some of the exercises. The amount of group exercises the book calls for makes it seem a bit classroom oriented. I didn't hate the book but I thought it fell a bit short on bringing new things to the table. I felt like there was basically only one chapter that actually directly dealt with techniques to defeat conceptual blocks."
+  review: Some portions of the book are definitely interesting. I was a fan of some
+    of the exercises. The amount of group exercises the book calls for makes it seem
+    a bit classroom oriented. I didn't hate the book but I thought it fell a bit short
+    on bringing new things to the table. I felt like there was basically only one
+    chapter that actually directly dealt with techniques to defeat conceptual blocks.
   thumbnail: "/assets/img/covers/conceptual_blockbusting.jpg"
   director: James Adams
   year: 2019
@@ -69,7 +146,12 @@
   title: Misbehaving
   subtitle: The Making of Behavioral Economics
   rating: 2.5
-  review: "Overall, the book is fine and interesting. It is the story of Richard Thaler and his role in developing behavioral economics as a field of study. Unfortunately, the content has a lot of overlap with Thinking: Fast and Slow. Some of the other interesting stuff is passed over because it is in his other book Nudge. I did not glean much from this book, but some one that hasn't read Thinking: Fast and Slow would get a lot."
+  review: 'Overall, the book is fine and interesting. It is the story of Richard Thaler
+    and his role in developing behavioral economics as a field of study. Unfortunately,
+    the content has a lot of overlap with Thinking: Fast and Slow. Some of the other
+    interesting stuff is passed over because it is in his other book Nudge. I did
+    not glean much from this book, but some one that hasn''t read Thinking: Fast and
+    Slow would get a lot.'
   thumbnail: "/assets/img/covers/misbehaving.jpg"
   director: Richard Thaler
   year: 2015
@@ -77,29 +159,50 @@
   title: The Javascript Language
   subtitle: The Modern Javascript Tutorial
   rating: 4
-  review: "Prior to reading this book I had used a ton of JavaScript for software development but I had never learned it per se. It was similar enough to ruby or python and I had seen a ton so I had no issues writing JavaScript. But I never really understood the internals of the language. This book does a phenomenal job explaining those internals. It seems to be very up-to-date. I am a big fan of the tasks associated with many of the chapters. I would highly recommend this as an introduction to Javascript."
+  review: Prior to reading this book I had used a ton of JavaScript for software development
+    but I had never learned it per se. It was similar enough to ruby or python and
+    I had seen a ton so I had no issues writing JavaScript. But I never really understood
+    the internals of the language. This book does a phenomenal job explaining those
+    internals. It seems to be very up-to-date. I am a big fan of the tasks associated
+    with many of the chapters. I would highly recommend this as an introduction to
+    Javascript.
   thumbnail: "/assets/img/covers/the_javascript_language_1.jpg"
   director: Thorsten Ball
   year: 2023
 - date: 2023-10-15
   title: Writing an Interpreter in Go
   rating: 4.5
-  review: "The contents of the book should be pretty obvious from the title. That said, I really enjoyed it. It was super easy to follow. I had enough leeway throughout the book that I really felt that I understood the topic. I had a ton of fun reading this and following along."
+  review: The contents of the book should be pretty obvious from the title. That said,
+    I really enjoyed it. It was super easy to follow. I had enough leeway throughout
+    the book that I really felt that I understood the topic. I had a ton of fun reading
+    this and following along.
   thumbnail: "/assets/img/covers/writing_an_interpreter_in_go.jpg"
   director: Thorsten Ball
   year: 2016
 - date: 2023-10-14
   title: The Design of Everyday Things
   rating: 3
-  review: "The book was an interesting read with a decent amount of new information that I took away from it. However, given that it was a fairly technical non-fiction book, I really wish it had more sources for the information. I would have really enjoyed if there was more information about actual studies that got ran on design choices. That said, there's a surprisingly large amount in common between the process of design and software development."
+  review: The book was an interesting read with a decent amount of new information
+    that I took away from it. However, given that it was a fairly technical non-fiction
+    book, I really wish it had more sources for the information. I would have really
+    enjoyed if there was more information about actual studies that got ran on design
+    choices. That said, there's a surprisingly large amount in common between the
+    process of design and software development.
   thumbnail: "/assets/img/covers/the_design_of_everyday_things.jpg"
   director: Don Norman
   year: 2013
 - date: 2023-10-04
   title: The Unicorn Project
-  subtitle: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data
+  subtitle: A Novel about Developers, Digital Disruption, and Thriving in the Age
+    of Data
   rating: 1
-  review: "Maybe it's because I read this book so soon after reading the first one, but I found the unicorn project very lacking compared to the Phoenix project. Because they share a timeline much of the plot is already known if you've read the first book. Well, the first book was a struggle of man versus technical debt, man versus poor practices. Practices this one had a lot of the same themes but also significantly more man versus man. I just didn't find those parts. Interesting. I also found the preachy bits much more common and bothersome in this book."
+  review: Maybe it's because I read this book so soon after reading the first one,
+    but I found the unicorn project very lacking compared to the Phoenix project.
+    Because they share a timeline much of the plot is already known if you've read
+    the first book. Well, the first book was a struggle of man versus technical debt,
+    man versus poor practices. Practices this one had a lot of the same themes but
+    also significantly more man versus man. I just didn't find those parts. Interesting.
+    I also found the preachy bits much more common and bothersome in this book.
   thumbnail: "/assets/img/covers/the_unicorn_project.jpg"
   director: Gene Kim
   year: 2019
@@ -107,7 +210,13 @@
   title: The Phoenix Project
   subtitle: A Novel about IT, DevOps, and Helping Your Business Win
   rating: 4
-  review: "This was a super enjoyable book. It did a great job, essentially turning a DevOps playbook into a engaging and cohesive story. It was very fun to think about the problems being encountered and contemplate my own solutions. Then read about the book solutions. Unfortunately the book does get almost preachy at times, which makes sense because it is supposed to convey best practices. Although it kind of misses the mark as both a fiction and non-fiction book, it is still very enjoyable."
+  review: This was a super enjoyable book. It did a great job, essentially turning
+    a DevOps playbook into a engaging and cohesive story. It was very fun to think
+    about the problems being encountered and contemplate my own solutions. Then read
+    about the book solutions. Unfortunately the book does get almost preachy at times,
+    which makes sense because it is supposed to convey best practices. Although it
+    kind of misses the mark as both a fiction and non-fiction book, it is still very
+    enjoyable.
   thumbnail: "/assets/img/covers/the_phoenix_project.jpg"
   director: Gene Kim, Kevin Behr, George Spafford
   year: 2013
@@ -115,7 +224,9 @@
   title: Influence
   subtitle: The Psychology of Persuasion
   rating: 4
-  review: "Definitely one of the more interesting books I've read on how people's behavior is influenced. It is a great mix of individual case studies, scientific literature and general anecdotes. Chaldini does a phenomenal job making the topics understandable."
+  review: Definitely one of the more interesting books I've read on how people's behavior
+    is influenced. It is a great mix of individual case studies, scientific literature
+    and general anecdotes. Chaldini does a phenomenal job making the topics understandable.
   thumbnail: "/assets/img/covers/influence.jpg"
   director: Robert Caildini
   year: 2021
@@ -123,14 +234,20 @@
   title: Code Complete
   subtitle: A practical handbook of software construction.
   rating: 4
-  review: "Despite the book being almost 20 years old, the majority of the concepts that McConnell suggests still very much hold true even now. The main theme of the book seems to be the elimination of mental complexity in the code that we write. McConnell shows how to achieve this in all areas of software construction. "
+  review: 'Despite the book being almost 20 years old, the majority of the concepts
+    that McConnell suggests still very much hold true even now. The main theme of
+    the book seems to be the elimination of mental complexity in the code that we
+    write. McConnell shows how to achieve this in all areas of software construction. '
   thumbnail: "/assets/img/covers/code_complete.jpg"
   director: Steve McConnell
   year: 2004
 - date: 2023-04-03
   title: Thinking, Fast and Slow
   rating: 3.5
-  review: "This book is the book to read if you are interested in the concept of prospect theory and the concepts of a system one and system two. The book is all about analyzing how people think about things subconsciously. Overall, I found a book to be very interesting and in many ways enlightening. "
+  review: 'This book is the book to read if you are interested in the concept of prospect
+    theory and the concepts of a system one and system two. The book is all about
+    analyzing how people think about things subconsciously. Overall, I found a book
+    to be very interesting and in many ways enlightening. '
   thumbnail: "/assets/img/covers/thinking_fast_and_slow.jpg"
   director: Daniel Kahneman
   year: 2011
@@ -138,7 +255,13 @@
   title: Algorithms to Live By
   subtitle: The Computer Science of Human Decisions
   rating: 4.5
-  review: "Amazing book. It does a great job of framing computer science concepts in ways that are very applicable to real life. It hooks you in from the very start with a discussion of the secretary problem. The problem goes: your interviewing people for a position, if you accept the person, you can interview no more. If you reject the person, you will never get a chance to hire them. How many people do you interview before making a selection? There is a concrete number at which you should make a decision. Read the book to find out what it is."
+  review: 'Amazing book. It does a great job of framing computer science concepts
+    in ways that are very applicable to real life. It hooks you in from the very start
+    with a discussion of the secretary problem. The problem goes: your interviewing
+    people for a position, if you accept the person, you can interview no more. If
+    you reject the person, you will never get a chance to hire them. How many people
+    do you interview before making a selection? There is a concrete number at which
+    you should make a decision. Read the book to find out what it is.'
   thumbnail: "/assets/img/covers/algorithms_to_live_by.jpg"
   director: Brian Christian, Tom Griffiths
   year: 2016
@@ -146,7 +269,10 @@
   title: Practical Object Oriented Design in Ruby
   subtitle: An Agile Primer
   rating: 3
-  review: "This is a great book on object oriented practices. While the book itself is about Ruby and is in Ruby, the concepts go much further than that. While I don't write that much object oriented code, I definitely found this book to be enlightening. And Sandy Metz has a great grasp on object oriented concepts. "
+  review: 'This is a great book on object oriented practices. While the book itself
+    is about Ruby and is in Ruby, the concepts go much further than that. While I
+    don''t write that much object oriented code, I definitely found this book to be
+    enlightening. And Sandy Metz has a great grasp on object oriented concepts. '
   thumbnail: "/assets/img/covers/poodr.jpg"
   director: Sandi Metz
   year: 2018
@@ -154,7 +280,10 @@
   title: The Pragmatic Programmer
   subtitle: Your Journey to Mastery
   rating: 5
-  review: "Probably one of the best introductory the software development books I've read. It is incredibly easy to read. There are many examples. Frankly, at this point in my development career, I'm not sure I have gained enough experience to find any major flaws in it yet."
+  review: Probably one of the best introductory the software development books I've
+    read. It is incredibly easy to read. There are many examples. Frankly, at this
+    point in my development career, I'm not sure I have gained enough experience to
+    find any major flaws in it yet.
   thumbnail: "/assets/img/covers/the_pragmatic_programmer.jpg"
   director: David Thomas, Andy Hunt
   year: 2015
@@ -162,14 +291,20 @@
   title: Rebuilding Rails
   subtitle: Understand Rails by Building your own Ruby MVC Web Framework
   rating: 2
-  review: "The book wasn't bad. I enjoyed the exercises that each chapter had me doing. Despite going through the book, I somehow didn't feel like I learned that much. I'm not sure if it is my fault or the books, but some of the conceptual building blocks that it used were a bit murky to me. Which created shaky foundations for the rest of what the book was building. "
+  review: 'The book wasn''t bad. I enjoyed the exercises that each chapter had me
+    doing. Despite going through the book, I somehow didn''t feel like I learned that
+    much. I''m not sure if it is my fault or the books, but some of the conceptual
+    building blocks that it used were a bit murky to me. Which created shaky foundations
+    for the rest of what the book was building. '
   thumbnail: "/assets/img/covers/rebuilding_rails.webp"
   director: Noah Gibbs
   year: 2012
 - date: 2022-03-03
   title: A Short History of Nearly Everything
   rating: 4.5
-  review: "Probably the best popular science book I've read. It does incredible job of covering the history of science from the creation of the universe all the way to the evolution of people. There are so many neat tidbits in this book."
+  review: Probably the best popular science book I've read. It does incredible job
+    of covering the history of science from the creation of the universe all the way
+    to the evolution of people. There are so many neat tidbits in this book.
   thumbnail: "/assets/img/covers/a_short_history_of_nearly_everything.jpg"
   director: Bill Bryson
   year: 2003
@@ -177,7 +312,10 @@
   title: At Home
   subtitle: A Short History of Private Life
   rating: 3
-  review: "This book was full of fascinating histories of varying countries and objects. I think conceptually attempting to group it around a English house might have been a bit convoluted. Bryson also at times has a tendency to want to simply list out numbers. Overall, it is an entertaining read."
+  review: This book was full of fascinating histories of varying countries and objects.
+    I think conceptually attempting to group it around a English house might have
+    been a bit convoluted. Bryson also at times has a tendency to want to simply list
+    out numbers. Overall, it is an entertaining read.
   thumbnail: "/assets/img/covers/at_home.jpg"
   director: Bill Bryson
   year: 2013
@@ -185,7 +323,9 @@
   title: The Body Keeps the Score
   subtitle: Brain, Mind, and Body in the Healing of Trauma
   rating: 4.5
-  review: "I found this book to be incredibly enlightening. Everything comes back to trauma. This book really made me rethink my own actions and the behavior of others. It does slow down a bit at the end."
+  review: I found this book to be incredibly enlightening. Everything comes back to
+    trauma. This book really made me rethink my own actions and the behavior of others.
+    It does slow down a bit at the end.
   thumbnail: "/assets/img/covers/the_body_keeps_the_score.jpg"
   director: Bessel van der Kolk
   year: 2015
