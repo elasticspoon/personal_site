@@ -1,3 +1,9 @@
+[tools]
+ruby = "3.3.6"
+node = "20"
+
+##### TASKS #####
+#
 [tasks.landing]
 description = "Runs a server with the landing page in dev mode"
 run = """
