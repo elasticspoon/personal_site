@@ -1,0 +1,25 @@
+[tasks.landing]
+description = "Runs a server with the landing page in dev mode"
+run = """
+if [ '{{flag(name='prod')}}' = 'true' ]; then
+  export JEKYLL_ENV="production"
+fi
+bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 --unpublished
+"""
+
+[tasks.blog]
+description = "Runs a server with the blog page in dev mode"
+run = """
+if [ '{{flag(name='prod')}}' = 'true' ]; then
+  export JEKYLL_ENV="production"
+fi
+bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --unpublished
+"""
+
+[tasks.install]
+description = "Set up dependencies, gems and packages"
+run = 'bin/setup.sh'
+
+[tasks.update]
+description = "Update gems and packages"
+run = 'bin/update.sh'
