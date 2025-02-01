@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2024-09-09-Suuuuuuper Weird JSON Bug
+title: Suuuuuuper Weird JSON Bug
 summary: I describe my debugging process when dealing with a strange JSON bug during a Rails 7.1 to 7.2 upgrade.
 thumbnail-img: "assets/img/thumbnails/json-rails-bug.jpg"
 readtime: true
@@ -61,7 +61,7 @@ def datatable
 end
 ```
 
-The crux of the matter here is that `VolunteerDatatable` is an object that implements `as_json` which returns a hash representation of itself. When the call `render json: datatable` is made it [renders the provided object as JSON, and sets the content type as application/json. If the object is not a string, it will be converted to JSON by calling to_json](https://apidock.com/rails/ActionController/Rendering/render).
+The crux of the matter here is that `VolunteerDatatable` is an object that implements `as_json` which returns a hash representation of itself. When the call `render json: datatable` is made `VolunteerDatatable` [return itself as a JSON object, and sets the content type as `application/json`. If the object is not a string, it will be converted to JSON by calling to_json](https://apidock.com/rails/ActionController/Rendering/render).
 
 `ActiveSupport` then provides a `to_json` that calls `as_json` on a object, to return a hash, then calls `to_s` on that hash to get back a string (or something along those lines).
 
@@ -81,7 +81,7 @@ TraceLocation.trace(format: :log) do
 end
 ```
 
-Trace location essentially returns a [call stack looking output](https://github.com/yhirano55/trace_location/blob/master/examples/active_record_establish_connection/result.log)that shows what calls were made and where they returned. I ran the above trace on both versions of my code and I got these results.
+Trace location essentially returns a [call stack looking output](https://github.com/yhirano55/trace_location/blob/master/examples/active_record_establish_connection/result.log) that shows what calls were made and where they returned. I ran the above trace on both versions of my code and I got these results.
 
 On Rails 7.1:
 
@@ -148,7 +148,7 @@ And if we look at the definitions of the `to_json` method on the data table obje
 ```rb
 # Rails 7.1
 datatable.method(:to_json)
- => #<Method: ReimbursementDatatable(ActiveSupport::ToJsonWithActiveSupportEncoder)#to_json(options=...) /home/bandito/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.1.3.4/lib/active_support/core_ext/object/json.rb:36>
+ => #<Method: ReimbursementDatatable(ActiveSupport::ToJsonWithActiveSupportEncoder)#to_json(options=...)>
 
 # Rails 7.2
  datatable.method(:to_json)
