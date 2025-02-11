@@ -1,16 +1,44 @@
+---
+layout: post
+title: "Github Actions CI"
+summary: An introduction to how we run CI at my company for 25 Rails apps on Github Actions using Docker Compose.
+cover-img: /assets/img/thumbnails/delayed_job.jpg
+thumbnail-img: /assets/img/thumbnails/delayed_job.jpg
+share-img: /assets/img/thumbnails/delayed_job.jpg
+readtime: true
+toc: true
+tags:
+  - rails
+  - ruby
+  - continuous-integration
+  - github-actions
+---
+
 # Deploying and providing CI for 25 Rails Apps
 
-> [!NOTE] On the code you see
+{: .box-warning .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**On the code you see**\\
 > The code you see here may or may not work. It is largely taken from memory because I am not allowed to share my companies code.
 
 ## Brief Background
 
 I work on something similar to a "platform" team for 130 Ruby on Rails developers. We run and provide CI (via self-hosted Github Actions) for the applications that other developers build.
 
-> [!NOTE]- A bit more background
+{: .box-note .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**A bit more background**\\
 > To go a bit more in depth all the compute is handled by several Kubernetes clusters and the actual code lives in multiple repositories all under the same organization. Thus, a lot of the challenges we face are around providing flexibility for our developers without implementation details leaking out to them.
 
-Our apps all follow a fairly similar pattern: they have a `Dockerfile`, get built as an image and get served via Kubernetes. However, despite serving everything a containers our developers don't actually develop in containers. So to avoid the issue where production is the first place that our apps the containerized use we run all our tests in containers.
+Our apps all follow a fairly similar pattern:
+
+- they have a `Dockerfile`
+- get built as an image
+- get served via Kubernetes.
+
+However, despite serving everything as containers our developers don't actually develop in containers. So to avoid the issue where production is the first place that our apps see containerized use we run all our tests in containers.
 
 ## How Do We Run CI?
 
@@ -30,7 +58,7 @@ Basically all our apps have a structure like so:
 
 The `Dockerfile` is nothing worth mentioning, it just sets up our application with whatever dependencies it needs (gems, node modules, etc).
 
-The scripts in `bin` as just basic bash scripts that represent the testing process or the linting process. For example:
+The scripts in `bin` as just basic bash scripts that represent the testing process, linting process or whatever. For example:
 
 ```bash
 # bin/ci-lint
@@ -39,7 +67,7 @@ bundle exec brakeman
 bundle exec rubocop
 ```
 
-The idea is that these are the same scripts that a developer could run locally on there machine to lint and run in CI.
+The idea is that these are the same scripts that a developer could run locally on their machine as in CI.
 
 The `docker-compose` looks something like this:
 
@@ -65,11 +93,14 @@ services:
       retries: 5
 ```
 
-The idea here is also pretty simple. Running `docker compose up` locally builds the image, starts postgres, then runs the `command` in a container. And this translates really nicely to CI because the developers are able create whatever arbitrary script they want and it will run in CI the same way it does locally. For example if a particular app wants to use Cypress they can add that to the existing script of just create a new script for it.
+Running `docker compose up` locally builds the image, starts Postgres, then runs the `command` in a container.
+
+This translates nicely to CI because the developers are able create arbitrary scripts and those scripts will run in CI the same way as locally. For example if a particular app wants to use Cypress they can add that to the existing script or create a new script for it.
 
 ## Getting It All Set Up in Github Actions
 
 So how does this all look as an actions workflow?
+{% raw  %}
 
 ```yaml
 jobs:
@@ -108,7 +139,12 @@ jobs:
         uses: our_org/actions/ruby-rspec-report@v4
 ```
 
-Largely it looks something like that: we pull down the repo, set up docker, run the test in docker compose and then print a report.
+Largely it looks something like:
+
+1. we pull down the repo
+2. set up docker
+3. run the test in docker compose
+4. print a report.
 
 ```yaml
 - name: Test
@@ -121,17 +157,19 @@ Largely it looks something like that: we pull down the repo, set up docker, run 
       run --rm "rails-test" "$DOCKER_RUN_CMD"
 ```
 
+{% endraw %}
+
 The `DOCKER_RUN_CMD` here is simply to all passing in commands to run other `bin` scripts (ex: `bin/ci-lint` and `bin/ci-rspec`). I omitted showing the potential inputs that this action might receive.
 
 ## Benefits and Drawbacks
 
-Benefits:
+### Benefits
 
 The biggest benefit of this approach (and the one that makes it pretty much mandatory) is that our applications see containerized usage before landing in some higher environment (staging, qa, etc). The majority of our developers simply don't develop in docker, this, given that the final product is served in a container, testing in docker is the next best thing.
 
-Since our testing happens by starting docker compose and running a bash script with test commands the entire process is very platform agnostic. We don't have to worry about how do you set up ruby on GitHub Actions vs Jenkins vs Circle I, then repeat for node, etc. We set up docker and that's it.
+Since our testing happens by starting docker compose and running a bash script with test commands the entire process is very platform agnostic. We don't have to worry about how do you set up ruby on GitHub Actions vs Jenkins vs CircleCI, then repeat for node, etc. We set up docker and that's it.
 
-Drawbacks:
+### Drawbacks
 
 The main drawback (and I mean pure drawback not tradeoff) is performance overhead. This comes in two forms: container overhead and time to build the container.
 
@@ -139,13 +177,13 @@ In terms of the container overhead, running software directly in the runner will
 
 The real problem we have encountered is the slow speed in building the images. The P90 of the setup step is 15 minutes on our biggest app (when all the layers miss the cache). Fixing this is still a work in progress.
 
-Shifted Complexity:
+### Shifted Complexity
 
-We have moved the complexity around within the actioss jobs. Without docker there might be complexity in ensuring all required packages are present to test the app. With docker you get that for free but instead you have to worry about setting up and building the image. This made sense for us.
+We have moved the complexity around within the actions jobs. Without docker there might be complexity in ensuring all required packages are present to test the app. With docker you get that for free but instead you have to worry about setting up and building the image. This made sense for us.
 
 ## Conclusion
 
-I left a lot of the detail out of my summary but we have about 25 web apps under us of varying sizes that we support this way. Beyond the initial setup the files in each app repository stay fairly static and developer largely get to ignore them. CI usually just works.
+I left a lot of the detail out of my summary but we have about 25 web apps under us of varying sizes that we support this way. Beyond the initial setup the files in each app repository stay fairly static and developers largely get to ignore them. CI usually just works.
 
 That was a super brief overview of our CI and in a future post I will go a bit more in depth on how we provide a few cool features namely:
 
