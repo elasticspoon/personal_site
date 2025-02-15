@@ -22,7 +22,7 @@ fi
 bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --unpublished
 """
 
-[tasks.install]
+[tasks.setup]
 description = "Set up dependencies, gems and packages"
 run = 'bin/setup.sh'
 
