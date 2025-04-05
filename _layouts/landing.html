@@ -1,16 +1,14 @@
 ---
 layout: base
 common-ext-css:
-  - "/assets/css/landing-page.css"
+- "/assets/css/landing-page.css"
 common-ext-js:
-  - "/assets/js/load-popovers.js"
+- "/assets/js/load-popovers.js"
 ---
 
 <div class="landing-page__header-container">
   <div class="landing-page__header container-md">
-    <section
-      class="landing-page__about col-xl-8 offset-xl-2 col-lg-10 offset-lg-1"
-    >
+    <section class="landing-page__about col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
       <h1 class="landing-page__title">Hi, my name is Yuri.</h1>
       <h2 class="landing-page__subtitle">
         I am a Full-Stack developer based in Silver Spring, MD. Currently I am
@@ -24,6 +22,15 @@ common-ext-js:
     <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
       <section class="landing-page__section">
         <div class="landing-page__section-heading">
+          <h2 class="rainbow-header">Articles</h2>
+        </div>
+        <div class="landing-page__blog-preview" tabindex="-1">
+          {% include posts.html %}
+        </div>
+        <a class="link-button landing-page__inline-button" href="https://blog.yuribocharov.dev">See more articles</a>
+      </section>
+      <section class="landing-page__section">
+        <div class="landing-page__section-heading">
           <h2 class="rainbow-header">Projects</h2>
         </div>
         <div class="landing-page__projects">
@@ -32,24 +39,9 @@ common-ext-js:
           <article class="landing-page__see-more">
             {% picture "assets/img/preview_project.jpg" --img alt="A blurred out
             screenshot of a generic project." %}
-            <a class="link-button" href="{% link projects.html %}"
-              >See more projects</a
-            >
+            <a class="link-button" href="{% link projects.html %}">See more projects</a>
           </article>
         </div>
-      </section>
-      <section class="landing-page__section">
-        <div class="landing-page__section-heading">
-          <h2 class="rainbow-header">Articles</h2>
-        </div>
-        <div class="landing-page__blog-preview" tabindex="-1">
-          {% include posts.html %}
-        </div>
-        <a
-          class="link-button landing-page__inline-button"
-          href="https://blog.yuribocharov.dev"
-          >See more articles</a
-        >
       </section>
     </div>
   </div>

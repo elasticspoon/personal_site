@@ -5,7 +5,7 @@ node = "20"
 ##### TASKS #####
 #
 [tasks.landing]
-description = "Runs a server with the landing page in dev mode"
+description = "Runs a server with the landing page in dev mode (--prod for prod mode)"
 run = """
 if [ '{{flag(name='prod')}}' = 'true' ]; then
   export JEKYLL_ENV="production"
@@ -14,7 +14,7 @@ bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --li
 """
 
 [tasks.blog]
-description = "Runs a server with the blog page in dev mode"
+description = "Runs a server with the blog page in dev mode. (--prod for prod mode)"
 run = """
 if [ '{{flag(name='prod')}}' = 'true' ]; then
   export JEKYLL_ENV="production"
