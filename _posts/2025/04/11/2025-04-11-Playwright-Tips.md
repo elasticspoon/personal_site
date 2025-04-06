@@ -1,3 +1,20 @@
+---
+layout: post
+title: "Playwright"
+summary: An introduction to how we run CI at my company for 25 Rails apps on Github Actions using Docker Compose.
+cover-img: /assets/img/thumbnails/ci-overview.jpg
+thumbnail-img: /assets/img/thumbnails/ci-overview.jpg
+share-img: /assets/img/thumbnails/ci-overview.jpg
+readtime: true
+toc: true
+unpublished: true
+tags:
+  - rails
+  - ruby
+  - continuous-integration
+  - github-actions
+---
+
 I recently made a post talking about Playwright and the benefits my company
 saw from the migration. That post was mainly higher level and it avoided
 direct discussion of a lot of the issues I ran into.
