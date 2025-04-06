@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a CI Platform on Github Actions"
+title: "Playwright"
 summary: An introduction to how we run CI at my company for 25 Rails apps on Github Actions using Docker Compose.
 cover-img: /assets/img/thumbnails/ci-overview.jpg
 thumbnail-img: /assets/img/thumbnails/ci-overview.jpg

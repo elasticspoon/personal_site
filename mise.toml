@@ -9,8 +9,10 @@ description = "Runs a server with the landing page in dev mode (--prod for prod 
 run = """
 if [ '{{flag(name='prod')}}' = 'true' ]; then
   export JEKYLL_ENV="production"
+  bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 --incremental
+else
+  bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 --unpublished --incremental --future
 fi
-bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 --unpublished --incremental
 """
 
 [tasks.blog]
@@ -18,8 +20,10 @@ description = "Runs a server with the blog page in dev mode. (--prod for prod mo
 run = """
 if [ '{{flag(name='prod')}}' = 'true' ]; then
   export JEKYLL_ENV="production"
+  bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --incremental
+else
+  bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --unpublished --incremental --future
 fi
-bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --unpublished --incremental
 """
 
 [tasks.setup]
