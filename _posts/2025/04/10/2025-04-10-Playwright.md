@@ -24,7 +24,7 @@ have issues with non-determinism. I recently worked on porting several Rails
 codebases from Selenium to Playwright backed tests and saw massive increases
 in consistency of tests.
 
-Add picture here.
+<img width="1158" alt="image" src="https://github.com/user-attachments/assets/88a2593a-3f81-4afe-a981-1bcad207e7ce" />
 
 Currently, the best resource I have found is [this post by Justin Searls](https://justin.searls.co/posts/running-rails-system-tests-with-playwright-instead-of-selenium/).
 However, that post mainly covers the happy path of the migration. In this
