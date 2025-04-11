@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "Playwright"
-summary: An introduction to how we run CI at my company for 25 Rails apps on Github Actions using Docker Compose.
-cover-img: /assets/img/thumbnails/ci-overview.jpg
-thumbnail-img: /assets/img/thumbnails/ci-overview.jpg
-share-img: /assets/img/thumbnails/ci-overview.jpg
+title: "Playwright Tips and Tricks"
+summary: A list of learnings from migrating several legacy apps from Selenium backed Capybara to Playwright
+cover-img: /assets/img/thumbnails/playwright.png
+thumbnail-img: /assets/img/thumbnails/playwright.png
+share-img: /assets/img/thumbnails/playwright.png
 readtime: true
 toc: true
 unpublished: true
 tags:
   - rails
   - ruby
-  - continuous-integration
-  - github-actions
+  - testing
+  - system specs
+  - playwright
+  - capybara
 ---
 
 I recently made a post talking about Playwright and the benefits my company
@@ -104,7 +106,8 @@ end
 ```
 
 This overrides the `fill_in` with some regex checks to transform date inputs
-beforehand.
+beforehand. We used [RSpec Stamp](https://test-prof.evilmartians.io/recipes/rspec_stamp) to take care
+of setting the tags.
 
 ## `accept_confirm`, `dismiss_confirm`, `accept_alert`, `dismiss_alert` will not work unless passed blocks
 
@@ -118,6 +121,8 @@ accept_confirm do
   click 'Some Link'
 end
 ```
+
+We added some Rubocop linting rules to enforce this but the failures are quite descriptive so is likely overkill.
 
 ## Playwright treats XPATH `//` differently
 
@@ -150,10 +155,8 @@ end
 
 ## Playwright does not find text that is present in disabled fields
 
-In selenium specs have_text will match text that is present in
-fields that are disabled.
-So Selenium will match the text but if a user has a screen reader
-that text would not get shown to them. Playwright does not do this.
+In Selenium specs `have_text` will match text that is present in
+fields that are disabled. Playwright does not do this.
 
 ```rb
 # bad
@@ -216,7 +219,9 @@ Sometimes you want a one-liner to get the playwright native page outside a block
 
 ```rb
 def native_page
-  page.driver.instance_variable_get(:@browser).instance_variable_get(:@playwright_page)
+  page.driver
+    .instance_variable_get(:@browser)
+    .instance_variable_get(:@playwright_page)
 end
 ```
 
@@ -224,6 +229,8 @@ NOTE: the client uses a block to ensure the page remains alive, when using outsi
 block context you give up that guarantee.
 
 ## Javascripting
+
+The syntax to run Javascript also differs.
 
 ```rb
 Capybara.current_session.driver.with_playwright_page do |page|
@@ -233,33 +240,40 @@ end
 find_by_id("some-element").native.evaluate("(element) => element.innerText") # => some text
 ```
 
-See [element handles](https://playwright-ruby-client.vercel.app/docs/api/js_handle#evaluate) and [page handles](https://playwright-ruby-client.vercel.app/docs/api/page#evaluate)
+See [element handles](https://playwright-ruby-client.vercel.app/docs/api/js_handle#evaluate) and [page handles](https://playwright-ruby-client.vercel.app/docs/api/page#evaluate).
 
 ## Unexpectedly Slow Tests
 
-We ran into issues with some specs that did:
+When attempting to check checkboxes when the input element was
+absolutely positioned off of the screen Playwright would bounce around on
+the page for upwards of 5 seconds to find the element, this caused our test suite
+to go from 10 mins to 50+ min.
 
 ```rb
 check('some_id', allow_label_click: { x: 123, y: 456 })
 ```
 
-When attempting to check checkboxes when the input element was
-absolutely positioned off of the screen. For some reason this
-incantation worked better:
+For some reason this incantation worked better:
 
 ```rb
 find(:label for: 'some_id').click(x: 123, y: 456)
 ```
 
-The test suite went from 58 mins back down to 12.
+The test suite went from 50+ mins back down to 12.
 
 ## Reproducing Errors
+
+{: .box-warning .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**Chrome Only**
 
 Playwright will often consistently fail on a particular spec in CI but not locally.
 This is often a latency issue, HTML / Javascript loads slow in CI while the test
 proceeds at the same rate leading to race conditions.
 
-I put together a useful script to reproduce many of those errors locally:
+I put together a useful script to reproduce many of those errors locally by using
+DevTools to throttle the Chrome connection.
 
 ```rb
 # spec/support/init/playwright.rb
@@ -322,7 +336,7 @@ end
 
 Like the locators above Playwright provides web first Capybara style assertions for use.
 
-See [the docs for a full list](https://playwright-ruby-client.vercel.app/docs/api/locator_assertions). These are very consistent but they collide
+See [the docs for a full list](https://playwright-ruby-client.vercel.app/docs/api/locator_assertions). These are very consistent and solve a lot of flakiness but they collide
 with existing Capybara expectations so you cannot use both in the same test.
 
 Fear not for this too I have a sloppily thrown together helper:
@@ -376,3 +390,27 @@ expect(playwright_locator("#some_id")).to be_enabled("some text", playwright: tr
 
 Note: there is probably a better way to do this I am simply overriding the method declarations
 [where they are made](https://github.com/YusukeIwaki/playwright-ruby-client/blob/56edaff43e3a1099d78d507a6fef2388ab66545b/lib/playwright/test.rb#L73).
+
+## Open Issues
+
+There are still some issues I have not managed to figure (email me if you have a solution, I would love to hear it).
+
+### Issues with Turbo Steams
+
+These seem to give the Capybara driver issues. For example if I am searching for test on the page with `expect(page).to have_text('Card Title')` and
+that card is added to the page via a Turbo Stream if will sometimes not find it. The failure is flaky enough that a reproduction has eluded me.
+
+### Type Errors
+
+We get errors like this
+
+```console
+Playwright::Error:
+  TypeError: Cannot read properties of null (reading 'namespaceURI')
+    at eval (eval at evaluate (:234:40), <anonymous>:17:12)
+    at UtilityScript.evaluate (<anonymous>:241:19)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  Call log:
+```
+
+What do they mean? I have no clue, I have not been able to hunt them down but using Playwright native locators and tests seems to alleviate the issue.
