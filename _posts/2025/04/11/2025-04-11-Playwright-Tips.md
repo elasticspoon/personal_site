@@ -17,8 +17,8 @@ tags:
   - capybara
 ---
 
-I recently made a post talking about Playwright and the benefits my company
-saw from the migration. That post was mainly higher level and it avoided
+I recently made [a post](https://blog.yuribocharov.dev/posts/2025/04/10/Playwright) talking about migrating from Selenium to Playwright backed tests
+and the benefits my company saw from the migration. That post was mainly higher level and it avoided
 direct discussion of a lot of the issues I ran into.
 
 This post is meant to be a loose list of the various issues I ran into and

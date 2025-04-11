@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Playwright"
-summary: My thoughts on Capybara
+title: "Deflaking System Specs by migrating from Selenium to Playwright"
+summary: An overview of a migration from Selenium back Capybara specs to Playwright.
 cover-img: /assets/img/thumbnails/playwright-crappy.png
 thumbnail-img: /assets/img/thumbnails/playwright-crappy.png
 share-img: /assets/img/thumbnails/playwright-crappy.png
@@ -287,11 +287,13 @@ still exists "Is this worth it for me?"
 
 It depends. I hate giving that answer but there is not other way about it.
 
-Playwright has done wonders for the stability of our test suite. I helped move several applications over
-some of the migrations took hours, some took weeks. Some migrations cut the time of the test suite in
-half others had no impact.
+Playwright has done wonders for the stability of our test suite. I helped move several applications over.
+Some of the migrations took hours, some took weeks. Some migrations cut the time of the test suite in
+half. Others had no impact.
 
-I think if you have flaky system specs then Playwright is worth a shot but I would not switch to it
-just for the fun of it. That said I would love to start a new project that does not use the Capybara
+If you have flaky system specs then Playwright is worth a shot but I would not switch to Playwright
+just for the fun of it.
+
+That said I would love to start a new project that does not use the Capybara
 DSL for Playwright and instead use it directly. That is what some larger companies like Github do (although
 they do this in TypeScript not Ruby.)
