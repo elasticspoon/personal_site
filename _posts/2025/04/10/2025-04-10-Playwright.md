@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Playwright Tips and Tricks"
-summary: A list of learnings from migrating several legacy apps from Selenium backed Capybara to Playwright
+title: "Playwright"
+summary: My thoughts on Capybara
 cover-img: /assets/img/thumbnails/playwright-crappy.png
 thumbnail-img: /assets/img/thumbnails/playwright-crappy.png
 share-img: /assets/img/thumbnails/playwright-crappy.png
@@ -17,7 +17,7 @@ tags:
   - capybara
 ---
 
-# Playwright - Needs a better title
+# Deflaking System Specs by migrating from Selenium to Playwright
 
 The post is mainly targeted towards Ruby developers that write system specs and
 have issues with non-determinism. I recently worked on porting several Rails
@@ -36,15 +36,43 @@ Turbo or Stimulus in more depth.
 > [!NOTE] Skip if
 > You already have it set up or you need more depth, [this post by Justin Searls](https://justin.searls.co/posts/running-rails-system-tests-with-playwright-instead-of-selenium/) does a better job.
 
-Add `gem "capybara-playwright-driver"` to your Gemfile
+Add Playwright to your Gemfile
+
+```rb
+gem "capybara-playwright-driver"
+```
 
 Add playwright installation to you `bin` scripts.
 
 ```rb
+# bin/setup
+require 'playwright'
 
+playwright_version = Playwright::COMPATIBLE_PLAYWRIGHT_VERSION.strip
+
+# other stuff...
+
+system! "yarn add -D playwright@#{playwright_version}"
+system! "yarn run playwright install"
 ```
 
 Set up the playwright driver
+
+```rb
+Capybara.register_driver(:playwright) do |app|
+  Capybara::Playwright::Driver.new(
+    app,
+    headless: true,
+  )
+end
+
+RSpec.configure do |config|
+  config.before(:each, type: :system) do
+    driven_by :playwright
+  end
+
+end
+```
 
 Add the dependencies to your CI (we run everything in Docker thus it was a one liner):
 
@@ -60,42 +88,98 @@ yarn run playwright install --with-deps chromium-headless
 Playwright tests are faster, thus, some expectations that would
 would pass due to system specs running slowly no longer pass.
 
+Lets look at an example. You have a page with cards on it that represent appointments.
+
+![A page for scheduling appointments it has a single card with an appointment in it and a button to create new ones](./system_spec_1.png)
+
+Pressing new pops open a modal that allows you to schedule a new appointment.
+
+![A page for scheduling appointments it has two cards, one above the other. The card with the time of 10AM is listed before the time 12PM.](./system_spec_1.png)
+
+You want to test that the card appear in the right order: first appointment of the day to last. (Lets suspend disbelief about
+whether or not this requires a system spec.) So you write the following test:
+
 ```rb
 header = find('.card__title', match: :first)
-expect(header.text).to eq('Some Title')
+expect(header.text).to eq('Blood Draw')
+
+click_on "New"
+fill_in_appointment(appointment) # imagine the helper exists
+click_on "Submit"
+
+header = find('.card__title', match: :first)
+expect(header.text).to eq('Annual Physical Draw')
 ```
 
-If the header is found before the title is updated to
-"Some Title" the test will fail. Instead, we want to combine the
-locator `find('.card__title)` with the assertion `text eq "Some Title"`.
+So whats the issue? You are checking the title of the first card each time, looks fine right?
 
-This can be done with `have_` selectors in Capybara:
+This code can have essentially race conditions. When you run a system specs you are in essence
+running 3 different processes: the server serving your app under test, the code doing the testing
+and the Javascript on the page.
+
+The Javascript on the page is what can cause you the most trouble.
+
+Lets first look at the happy path of the code execution:
+
+```rb
+# page loads
+header = find('.card__title', match: :first)
+expect(header.text).to eq('Blood Draw') # this is found
+
+click_on "New"
+fill_in_appointment(appointment)
+click_on "Submit"
+
+# page loads
+
+header = find('.card__title', match: :first) # element found (10 AM Card)
+expect(header.text).to eq('Annual Physical Draw') # passes
+```
+
+But consider the situation where the cards are added via Javascript, be that React or maybe
+a TurboStream. This order might look different.
+
+```rb
+# page loads
+header = find('.card__title', match: :first)
+expect(header.text).to eq('Blood Draw') # this is found
+
+click_on "New"
+fill_in_appointment(appointment)
+click_on "Submit"
+
+# page is still loading
+
+header = find('.card__title', match: :first) # element found (12 PM Card)
+expect(header.text).to eq('Annual Physical Draw') # fails
+
+# page is done loading
+```
+
+This time the Javascript on the page took longer while the test _raced_ ahead,
+it found the header **before** the second card got added. This is how find
+works, if there is a matching element it will immediately find it. This
+element had the wrong text so the test failed.
+
+What can we do? We want to combine the locator `find('.card__title)`
+with the assertion `text eq "Some Title"`. This can be done with `have_`
+selectors in Capybara:
 
 ```rb
 expect(page).to have_css('.card__title', text: 'Some Title')
 ```
 
 This expectation will continuously check the page for an element matching
-the css and text until it hits a timeout. This means that it won't fail
+the CSS and text until it hits a timeout. This means that it won't fail
 the first time it doesn't find the element unlike the earlier example.
 
-```rb
-expect(page.find_link('Some Button')['data-disabled']).to eq 'true'
-```
-
-If the link is found before the Javascript adds `data-disabled` the
-test will fail.
-
-```rb
-expect(page).to have_css("a[data-disabled='true']", text: 'Some Button')
-```
-
-Now comes the fun part.
+Now that you have gotten a quick refresh on system specs lets look at the
+playwright specific issues you may run into.
 
 ## Fixing Your Tests
 
 > [!NOTE] This section is not very thorough
-> This section mainly contains the surface level differences for more advanced differences see this post.
+> This section mainly contains the surface level differences for more advanced differences see [this post](https://blog.yuribocharov.dev/posts/2025/04/11/Playwright_tips).
 
 ### Date Inputs
 
@@ -182,6 +266,18 @@ There are some syntax differences if you want to interact more directly with ele
 +switch_to_window(window)
 ```
 
-That covers
+That covers the majority of the surface level differences you may run into. But the question
+still exists "Is this worth it for me?"
 
 ## Is It Worth It?
+
+It depends. I hate giving that answer but there is not other way about it.
+
+Playwright has done wonders for the stability of our test suite. I helped move several applications over
+some of the migrations took hours, some took weeks. Some migrations cut the time of the test suite in
+half others had no impact.
+
+I think if you have flaky system specs then Playwright is worth a shot but I would not switch to it
+just for the fun of it. That said I would love to start a new project that does not use the Capybara
+DSL for Playwright and instead use it directly. That is what some larger companies like Github do (although
+they do this in TypeScript not Ruby.)
