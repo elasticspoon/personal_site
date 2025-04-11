@@ -24,7 +24,7 @@ have issues with non-determinism. I recently worked on porting several Rails
 codebases from Selenium to Playwright backed tests and saw massive increases
 in consistency of tests.
 
-<img width="1158" alt="image" src="https://github.com/user-attachments/assets/88a2593a-3f81-4afe-a981-1bcad207e7ce" />
+{% include picture_tag.html src="playwright_results.jpg" alt="An image showing a graph with a flake rate hovering around 40% then seeing a sharp drop to sub 10%" %}
 
 Currently, the best resource I have found is [this post by Justin Searls](https://justin.searls.co/posts/running-rails-system-tests-with-playwright-instead-of-selenium/).
 However, that post mainly covers the happy path of the migration. In this
@@ -33,7 +33,10 @@ Turbo or Stimulus in more depth.
 
 ## How to install it?
 
-> [!NOTE] Skip if
+{: .box-note .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**Skip if**\\
 > You already have it set up or you need more depth, [this post by Justin Searls](https://justin.searls.co/posts/running-rails-system-tests-with-playwright-instead-of-selenium/) does a better job.
 
 Add Playwright to your Gemfile
@@ -42,7 +45,8 @@ Add Playwright to your Gemfile
 gem "capybara-playwright-driver"
 ```
 
-Add playwright installation to you `bin` scripts.
+Add playwright installation to you `bin` scripts. This will keep the Playwright installation
+via yarn in sync with the version the gem requires.
 
 ```rb
 # bin/setup
@@ -82,7 +86,10 @@ yarn run playwright install --with-deps chromium-headless
 
 ## An Aside on Faster Tests
 
-> [!NOTE] Skip if
+{: .box-note .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**Skip if**\\
 > You don't write system specs, don't write flaky ones or don't need a refresher.
 
 Playwright tests are faster, thus, some expectations that would
@@ -90,14 +97,16 @@ would pass due to system specs running slowly no longer pass.
 
 Lets look at an example. You have a page with cards on it that represent appointments.
 
-![A page for scheduling appointments it has a single card with an appointment in it and a button to create new ones](./system_spec_1.png)
+{% include picture_tag.html src="./system_spec_1.png" alt="A page for scheduling appointments it has a single card with an appointment in it and a button to create new ones" %}
 
 Pressing new pops open a modal that allows you to schedule a new appointment.
 
-![A page for scheduling appointments it has two cards, one above the other. The card with the time of 10AM is listed before the time 12PM.](./system_spec_1.png)
+{% include picture_tag.html src="./system_spec_2.png" alt="A page for scheduling appointments it has two cards, one above the other. The card with the time of 10AM is listed before the time 12PM." %}
 
-You want to test that the card appear in the right order: first appointment of the day to last. (Lets suspend disbelief about
-whether or not this requires a system spec.) So you write the following test:
+You want to test that the cards appear in the right order: first appointment of the day to last. (Lets suspend disbelief about
+whether or not this requires a system spec.)
+
+So you write the following test:
 
 ```rb
 header = find('.card__title', match: :first)
@@ -113,11 +122,13 @@ expect(header.text).to eq('Annual Physical Draw')
 
 So whats the issue? You are checking the title of the first card each time, looks fine right?
 
-This code can have essentially race conditions. When you run a system specs you are in essence
+This code can have race conditions. When you run a system specs you are in essence
 running 3 different processes: the server serving your app under test, the code doing the testing
 and the Javascript on the page.
 
-The Javascript on the page is what can cause you the most trouble.
+The Javascript on the page is what can cause you the most trouble. If the expectations that the
+test is making get ahead of where the Javascript is at you get failures. They are flaky because
+sometimes the Javascript will keep pace and sometime it won't.
 
 Lets first look at the happy path of the code execution:
 
@@ -178,7 +189,10 @@ playwright specific issues you may run into.
 
 ## Fixing Your Tests
 
-> [!NOTE] This section is not very thorough
+{: .box-note .ignore-blockquote }
+
+<!-- prettier-ignore -->
+>**This section is not very thorough**\\
 > This section mainly contains the surface level differences for more advanced differences see [this post](https://blog.yuribocharov.dev/posts/2025/04/11/Playwright_tips).
 
 ### Date Inputs
@@ -193,7 +207,7 @@ All inputs **must** be in ISO-8601 format (`YYYY-MM-DD`)
 +fill_in("Time", with: "20:00")
 ```
 
-### It does not find text that is present in disabled fields
+### Playwright will not find text in disabled fields
 
 In selenium specs `have_text` will match text that is present in
 fields that are disabled, Playwright will not.
