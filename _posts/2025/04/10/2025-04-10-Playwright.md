@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "Playwright"
-summary: An introduction to how we run CI at my company for 25 Rails apps on Github Actions using Docker Compose.
-cover-img: /assets/img/thumbnails/ci-overview.jpg
-thumbnail-img: /assets/img/thumbnails/ci-overview.jpg
-share-img: /assets/img/thumbnails/ci-overview.jpg
+title: "Playwright Tips and Tricks"
+summary: A list of learnings from migrating several legacy apps from Selenium backed Capybara to Playwright
+cover-img: /assets/img/thumbnails/playwright-crappy.png
+thumbnail-img: /assets/img/thumbnails/playwright-crappy.png
+share-img: /assets/img/thumbnails/playwright-crappy.png
 readtime: true
 toc: true
 unpublished: true
 tags:
   - rails
   - ruby
-  - continuous-integration
-  - github-actions
+  - testing
+  - system specs
+  - playwright
+  - capybara
 ---
 
 # Playwright - Needs a better title
