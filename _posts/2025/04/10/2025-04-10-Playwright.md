@@ -24,6 +24,11 @@ have issues with non-determinism. I recently worked on porting several Rails
 codebases from Selenium to Playwright backed tests and saw massive increases
 in consistency of tests.
 
+Below is a graph show the flake rate (percentage of CI runs that got reran without code changes and passed)
+for one of our larger test suites over the last year.
+February was the month were we made the swap and you can see the massive improvement in
+stability.
+
 {% include picture_tag.html src="playwright_results.jpg" alt="An image showing a graph with a flake rate hovering around 40% then seeing a sharp drop to sub 10%" %}
 
 Currently, the best resource I have found is [this post by Justin Searls](https://justin.searls.co/posts/running-rails-system-tests-with-playwright-instead-of-selenium/).
