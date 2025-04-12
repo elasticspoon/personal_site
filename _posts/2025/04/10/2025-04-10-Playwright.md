@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deflaking System Specs by migrating from Selenium to Playwright"
+title: "Deflaking System Specs by Migrating from Selenium to Playwright"
 summary: An overview of a migration from Selenium back Capybara specs to Playwright.
 cover-img: /assets/img/thumbnails/playwright-crappy.png
 thumbnail-img: /assets/img/thumbnails/playwright-crappy.png
@@ -17,35 +17,38 @@ tags:
   - capybara
 ---
 
-# Deflaking System Specs by migrating from Selenium to Playwright
+# Deflaking System Specs by Migrating from Selenium to Playwright
 
 The post is mainly targeted towards Ruby developers that write system specs and
 have issues with non-determinism. I recently worked on porting several Rails
 codebases from Selenium to Playwright backed tests and saw massive increases
 in consistency of tests.
 
+Below is a graph show the flake rate (percentage of CI runs that got reran without code changes and passed)
+for one of our larger test suites over the last year.
+February was the month were we made the swap and you can see the massive improvement in
+stability.
+
 {% include picture_tag.html src="playwright_results.jpg" alt="An image showing a graph with a flake rate hovering around 40% then seeing a sharp drop to sub 10%" %}
+
+Want something similar? Read on! Any maybe you will be convinced that migrating it worth a shot.
+
+## How to install it?
 
 Currently, the best resource I have found is [this post by Justin Searls](https://justin.searls.co/posts/running-rails-system-tests-with-playwright-instead-of-selenium/).
 However, that post mainly covers the happy path of the migration. In this
 post I cover some of the issues you may run into with apps using React,
 Turbo or Stimulus in more depth.
 
-## How to install it?
-
-{: .box-note .ignore-blockquote }
-
-<!-- prettier-ignore -->
->**Skip if**\\
-> You already have it set up or you need more depth, [this post by Justin Searls](https://justin.searls.co/posts/running-rails-system-tests-with-playwright-instead-of-selenium/) does a better job.
-
-Add Playwright to your Gemfile
+### Add Playwright to your Gemfile
 
 ```rb
 gem "capybara-playwright-driver"
 ```
 
-Add playwright installation to you `bin` scripts. This will keep the Playwright installation
+### Add playwright installation to your `bin` scripts
+
+This will keep the Playwright installation
 via yarn in sync with the version the gem requires.
 
 ```rb
@@ -60,7 +63,11 @@ system! "yarn add -D playwright@#{playwright_version}"
 system! "yarn run playwright install"
 ```
 
-Set up the playwright driver
+Maybe you do this differently, but what matters is that the `capybara-playwright-driver`
+provides a variable `Playwright::COMPATIBLE_PLAYWRIGHT_VERSION` to inform you of the
+appropriate version of Playwright to install.
+
+### Set up the playwright driver
 
 ```rb
 Capybara.register_driver(:playwright) do |app|
@@ -78,11 +85,16 @@ RSpec.configure do |config|
 end
 ```
 
-Add the dependencies to your CI (we run everything in Docker thus it was a one liner):
+### Add the dependencies to your CI
+
+We run everything in Docker thus it was a one liner.
 
 ```sh
 yarn run playwright install --with-deps chromium-headless
 ```
+
+Congrats! You now have Playwright set up. Before we discuss the various
+breaking changes a quick aside.
 
 ## An Aside on Faster Tests
 
@@ -294,6 +306,5 @@ half. Others had no impact.
 If you have flaky system specs then Playwright is worth a shot but I would not switch to Playwright
 just for the fun of it.
 
-That said I would love to start a new project that does not use the Capybara
-DSL for Playwright and instead use it directly. That is what some larger companies like Github do (although
-they do this in TypeScript not Ruby.)
+Every decision has trade-offs, in our case we were wasting hours of developer time on reruns.
+Making the transition was a no-brainer.
