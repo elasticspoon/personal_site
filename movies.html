@@ -22,8 +22,9 @@ rating-details.html %}
 </details>
 
 <section class="covers-list__container">
-  {% assign items_by_year = site.data.movies | group_by_exp: "movie",
-  "movie.date | date: '%Y'" %} {% for year in items_by_year %}
+  {% assign sorted_movies = site.data.movies | sort: "date" | reverse %}
+  {% assign items_by_year = sorted_movies | group_by_exp: "movie", "movie.date | date: '%Y'" | sort: "name" | reverse %} 
+  {% for year in items_by_year %}
   <article class="covers-list__year-container">
     <header class="covers-list__year-header">
       <h2>{{ year.name }}</h2>
