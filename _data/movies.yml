@@ -1,7 +1,126 @@
+- date: 2025-06-30
+  title: Andrei Rublev
+  rating: 4.5
+  review:
+    Another Tarkovsky classic. The opening and closing novelas are some of the best film out there.
+    The movie follws the life of 15th century Russian iconographer St. Andrei Rublev. It follows the
+    ups and downs of his belief in people and in God. The movie is timeless.
+  thumbnail: assets/img/covers/andrei_rublev.jpg
+  year: 1966
+  director: Andrei Tarkovsky
+- date: 2025-01-01
+  title: Rashomon
+  rating: .5
+  review: I don't really understand the hype about this movie. The whole thing
+    felt vey theatrical which seems to be common among Japanese movies of the time.
+    Maybe it was a bit too hard for me to follow? The perspective with the medium was
+    a bit hard to take seriously.
+  thumbnail: assets/img/covers/rashomon.jpg
+  year: 1950
+  director: Akira Kurosawa
+- date: 2025-01-18
+  title: Vertigo
+  rating: 2.5
+  review:
+    Really didn't feel this one. The story just seemed a bit cheesy and over the top. I felt
+    really bad for the female character that kept pining for the male lead. The male lead himself
+    was uninprising. Felt like the movie did not age well.
+  thumbnail: assets/img/covers/vertigo.jpg
+  year: 1958
+  director: Alfred Hitchcock
+- date: 2025-02-24
+  title: Barry Lydon
+  subtitle: At long last Redmond Barry became a gentleman -- and that was his tragedy.
+  rating: 4.5
+  review:
+    Absolutely stunning movie visually. Every frame is masterfully shot. A nice mix of humor,
+    character development, irony. Anything you could want this movie has.
+  thumbnail: assets/img/covers/barry_lydon.jpg
+  year: 1975
+  director: Stanely Kubrick
+- date: 2025-03-24
+  title: Some Like It Hot
+  rating: 3.5
+  review:
+    Fun movie. It aged way better than I would have expected for a movie from the 50s
+    with lots of jokes about gender roles.
+  thumbnail: assets/img/covers/some_like_it_hot.jpg
+  year: 1959
+  director: Billy Wilder
+- date: 2025-03-12
+  title: Nope
+  rating: 1
+  review:
+    Gotta say Daniel Kaluuya was just terrible in this. All he did was stare dumbly at the
+    camera. The scenes with Kiki Palmer and Brandon Perea were a bit redeeming but the overall
+    movie was a total miss.
+  thumbnail: assets/img/covers/nope.jpg
+  year: 1975
+  director: Jordan Peele
+- date: 2025-02-15
+  title: No Bears
+  rating: 3
+  review:
+    Panahi plays himself in the movie and I think his acting is a bit weak. Also the scenes that
+    are remotely shot are confusing to me. I could not tell if the poor acting was on purpose or not.
+    That said the scenes in the village feel incredilby real and well acted. I greatly enjoyed the
+    culture shock of this movie.
+  thumbnail: assets/img/covers/no_bears.jpg
+  year: 2022
+  director: Jafar Panahi
+- date: 2025-01-01
+  title: The Seventh Seal
+  rating: 4.5
+  review:
+    Incredible movie. I watched it with subtitles but the acting and the language felt so dynamic.
+    Max von Sydow who I already saw in Pelle the Conqueror was amazing. The scene of the sinners
+    passing through the village was unforgetable. Just so many good parts to this movie.
+  thumbnail: assets/img/covers/the_seventh_seal.jpg
+  year: 1957
+  director: Ingmar Bergman
+- date: 2025-06-15
+  title: Lawrence Of Arabia
+  rating: 4
+  review:
+    This movie is almost 4 hours long with atleast 1.5 hours of still shots of people riding on
+    horses or camels. And I love every minute of it. The movie is so well shot. It's up there with
+    Barry Lydon in terms of most visually stunning movies. I'm not sure how accurate the movie is histroically
+    but it feels pretty fair to both the Brits and Arabs (is that the politcally correct term?).
+  thumbnail: assets/img/covers/lawrence_of_arabia.jpg
+  year: 1962
+  director: David Lean
+- date: 2025-05-01
+  title: The Man from Earth
+  rating: 0
+  review: Hot garbage. This could maybe be a good podcast but the movie is just to straightforward.
+  thumbnail: assets/img/covers/the_man_from_earth.jpg
+  year: 2007
+  director: Richard Schenkman
+- date: 2025-04-08
+  title: Misery
+  subtitle: Paul Sheldon used to write for a living. Now, he's writing to stay alive.
+  rating: 4
+  review:
+    Kathy Bates please such a mean bitch in this. I love it. A perfect combination of fanatical
+    and crazy. The suspense and body horror in this movie are top notch. It does such a good job
+    staying grounded in the realistic.
+  thumbnail: assets/img/covers/misery.jpg
+  year: 1990
+  director: Rob Reiner
+- date: 2025-01-12
+  title: "'71"
+  rating: 3
+  review:
+    Well shot. The plot is compelling. Barry Keoghan is great in this. Tells the story of the Belfast
+    riots of 1971.
+  thumbnail: assets/img/covers/'71.jpg
+  year: 2014
+  director: Yann Demange
 - date: 2024-05-27
   title: Ordinary People
   rating: 3
-  review: It didn't seem to bad but my girlfriend vetoed it. The depiction of depression
+  review:
+    It didn't seem to bad but my girlfriend vetoed it. The depiction of depression
     and mental illness seemed too unrealistic to her.
   thumbnail: assets/img/covers/ordinary_people.jpg
   year: 1980
@@ -9,7 +128,8 @@
 - date: 2024-06-05
   title: Paths of Glory
   rating: 4
-  review: Not the happiest movie but did an excellent job developing deep characters.
+  review:
+    Not the happiest movie but did an excellent job developing deep characters.
     I liked the ending as well.
   thumbnail: assets/img/covers/paths_of_glory.jpg
   year: 1957
@@ -17,7 +137,8 @@
 - date: 2024-06-14
   title: Casablanca
   rating: 1
-  review: It was just a snooze fest. The ending was fun but the love triangle was
+  review:
+    It was just a snooze fest. The ending was fun but the love triangle was
     predictable and frankly neither of the male leads was that handsome.
   thumbnail: assets/img/covers/casablanca.jpg
   year: 1942
@@ -25,16 +146,18 @@
 - date: 2024-06-24
   title: Do the Right Thing
   rating: 4.5
-  review: 'Spoiler: no one did the right thing. This was a great movie with a lot
+  review:
+    "Spoiler: no one did the right thing. This was a great movie with a lot
     of very complex characters. The movie had a ton of scenes that felt almost like
-    short sketches but united them all together masterfully. It was fun.'
+    short sketches but united them all together masterfully. It was fun."
   thumbnail: assets/img/covers/do_the_right_thing.jpg
   year: 1989
   director: Spike Lee
 - date: 2024-06-31
   title: Raising Arizona
   rating: 0.5
-  review: This is the most disappointing Coen brother's movie I have watched. It was
+  review:
+    This is the most disappointing Coen brother's movie I have watched. It was
     an awful combination of slapstick comedy, poor acting and boring dialogue.
   thumbnail: assets/img/covers/raising_arizona.jpg
   year: 1987
@@ -42,7 +165,8 @@
 - date: 2024-07-10
   title: Last Night in Soho
   rating: 0
-  review: Did not finish. The movie started as this godawful cringy drama and romance
+  review:
+    Did not finish. The movie started as this godawful cringy drama and romance
     story. I could not get past 30 minutes.
   thumbnail: assets/img/covers/last_night_in_soho.jpg
   year: 2021
@@ -51,7 +175,8 @@
   title: Don't Look Now
   subitle: Pass the warning.
   rating: 0
-  review: The scenes of Venice in the movie were very pretty. I enjoyed the way a
+  review:
+    The scenes of Venice in the movie were very pretty. I enjoyed the way a
     lot of the shots were composed. But the dialogue, acting and general plot completely
     turned me off from this movie. I just couldn't finish it.
   thumbnail: assets/img/covers/dont_look_now.jpg
@@ -60,7 +185,8 @@
 - date: 2024-12-10
   title: Rosemary's Baby
   rating: 3.5
-  review: Bit of a hard watch that felt predictable but that's largely because the
+  review:
+    Bit of a hard watch that felt predictable but that's largely because the
     movie inspired so many other movies.
   thumbnail: assets/img/covers/rosemarys_baby.jpg
   year: 1968
@@ -77,7 +203,8 @@
   title: Yol
   subitle: The Story of Three Families' Search for Freedom
   rating: 4
-  review: The movie does a great job showing the cultural norms of Turkey. Though
+  review:
+    The movie does a great job showing the cultural norms of Turkey. Though
     due to my ignorance I am unsure how accurate the portrayal is. The actors were
     great.
   thumbnail: assets/img/covers/yol.jpg
@@ -86,7 +213,8 @@
 - date: 2024-10-20
   title: There Will Be Blood
   rating: 4.5
-  review: 5/5 Movie up until the end. I felt like it lost its away a bit. Gorgeous
+  review:
+    5/5 Movie up until the end. I felt like it lost its away a bit. Gorgeous
     cinematography. Daniel Day-Lewis was absolutely phenomenal.
   thumbnail: assets/img/covers/there_will_be_blood.jpg
   year: 2007
@@ -94,7 +222,8 @@
 - date: 2024-10-01
   title: Paris, Texas
   rating: 3
-  review: It was pretty and very slow. I really did not care for the story or the
+  review:
+    It was pretty and very slow. I really did not care for the story or the
     characters themselves.
   thumbnail: assets/img/covers/paris_texas.jpg
   year: 1984
@@ -102,7 +231,8 @@
 - date: 2024-09-25
   title: PlayTime
   rating: 4.5
-  review: Just a fun movie. The sets were amazing. Very little dialogue but it really
+  review:
+    Just a fun movie. The sets were amazing. Very little dialogue but it really
     wasn't needed.
   thumbnail: assets/img/covers/playtime.jpg
   year: 1967
@@ -110,7 +240,8 @@
 - date: 2024-09-10
   title: History of Violence
   rating: 0
-  review: It just felt old and cheap. The fight scene was terrible and that's about
+  review:
+    It just felt old and cheap. The fight scene was terrible and that's about
     as far as I got.
   subitle: Tom Stall had a perfect life until he bacame a hero.
   thumbnail: assets/img/covers/history_of_violence.jpg
@@ -120,7 +251,8 @@
   title: Richard Jewell
   subitle: The world will know his name and the truth.
   rating: 3
-  review: It depicted the story well. Largely a plot driven movie that's worth watching
+  review:
+    It depicted the story well. Largely a plot driven movie that's worth watching
     once.
   thumbnail: assets/img/covers/richard_jewell.jpg
   year: 2019
@@ -128,7 +260,8 @@
 - date: 2024-11-18
   title: The Cranes are Flying
   rating: 3
-  review: A lot of the scenes in the movie really did not age well. But the main character's
+  review:
+    A lot of the scenes in the movie really did not age well. But the main character's
     family were just such a lovely group of people. I was just gushing over how caring
     and understanding they were.
   thumbnail: assets/img/covers/the_cranes_are_flying.jpg
@@ -137,7 +270,8 @@
 - date: 2024-12-21
   title: The Room Next Door
   rating: 3
-  review: Tilda Swinton was quite good in this movie. The beginning was quite boring
+  review:
+    Tilda Swinton was quite good in this movie. The beginning was quite boring
     with way too much dialogue. Frankly, the best parts of the movie were the long
     still or panning shots with no dialogue.
   thumbnail: assets/img/covers/the_room_next_door.jpg
@@ -146,7 +280,8 @@
 - date: 2024-05-20
   title: Badlands
   rating: 0.5
-  review: The narration in the movie was truly horrendous. Honestly, you would think
+  review:
+    The narration in the movie was truly horrendous. Honestly, you would think
     that a story about a 15 year old girl eloping with a 25 year old and going on
     a murder spree would be interesting. I only finished this movie because it was
     short. It did remind me of Hell or High Water which is a much better movie.
@@ -156,7 +291,8 @@
 - date: 2024-05-01
   title: Barton Fink
   rating: 3
-  review: Compared to a lot of other Coen brothers movies, this one did not do much
+  review:
+    Compared to a lot of other Coen brothers movies, this one did not do much
     for me. I enjoyed some of the recurring themes in it, the heat, the sweating.
     I enjoyed how a lot of it was shot but over all I did not find it that interesting.
   thumbnail: "/assets/img/covers/barton_fink.jpg"
@@ -166,7 +302,8 @@
   title: Dallas Buyers Club
   subtitle: Dare to Live
   rating: 3
-  review: An interesting plot that was well portrayed by Matthew Mcconaughey and Jared
+  review:
+    An interesting plot that was well portrayed by Matthew Mcconaughey and Jared
     Leto. It was a decent character portrait but there wasn't much to the movie besides
     the plot.
   thumbnail: "/assets/img/covers/dallas_buyers_club.jpg"
@@ -175,7 +312,8 @@
 - date: 2024-04-23
   title: Eat Drink Man Woman
   rating: 4.5
-  review: The opening of this movie is a 5 minute scene with no dialogue of the father
+  review:
+    The opening of this movie is a 5 minute scene with no dialogue of the father
     making an absolutely luxurious dinner for this 3 children that want nothing to
     do with attending this dinner. It really sets the tone for the movie. It is funny.
     Has great characters and some of the best shot of cooking in any movie I have
@@ -186,7 +324,8 @@
 - date: 2024-04-18
   title: Somewhere
   rating: 3.5
-  review: I loved the tone of the movie. It just created this sense of apathy and
+  review:
+    I loved the tone of the movie. It just created this sense of apathy and
     depression in the main character despite having basically everything he wants.
     It certainly doesn't make me see pity for the rich but it did make me feel pity
     for Johnny Macro.
@@ -196,7 +335,8 @@
 - date: 2024-04-02
   title: Ugetsu
   rating: 0.5
-  review: Only thing I found redeeming about this one is that it was pretty short.
+  review:
+    Only thing I found redeeming about this one is that it was pretty short.
     It was kind of interesting as it felt more like a theater play than a movie but
     the themes were super basic and you could see the ending from a mile away.
   thumbnail: "/assets/img/covers/ugetsu.jpg"
@@ -205,7 +345,8 @@
 - date: 2024-03-25
   title: Pelle the Conqueror
   rating: 4.5
-  review: Amazing movie but a very hard watch. The child actor is the movie is phenomenal,
+  review:
+    Amazing movie but a very hard watch. The child actor is the movie is phenomenal,
     frankly, all the actors are great. All the characters are incredibly flawed and
     human and watching them navigate being indentured servant on a farm in a foreign
     country is just heartbreaking at times.
@@ -215,7 +356,8 @@
 - date: 2024-03-18
   title: Decision to Leave
   rating: 3
-  review: I found the plot to be pretty interesting. Both conceptually and visually
+  review:
+    I found the plot to be pretty interesting. Both conceptually and visually
     a lot of the shots were super enjoyable. I enjoyed the way that the imagination
     of the lead character was portrayed. I was also heavily distracted by some of
     the outdoor sets, they felt very fake. The acting by felt pretty weak. Can't say
@@ -228,7 +370,8 @@
   title: Grave of the Fireflies
   subtitle: Everything Was Fine Yesterday.
   rating: 0.5
-  review: The remaster of this movie was gorgeous. That said I don't have the historical
+  review:
+    The remaster of this movie was gorgeous. That said I don't have the historical
     knowledge to understand the underlying themes of the movie. I also did not really
     feel much realism in either of the child characters or in the relationship between
     them. The movie felt like a purposeful tearjerker.
@@ -238,7 +381,8 @@
 - date: 2024-03-04
   title: Dark Waters
   rating: 2.5
-  review: I feel like every character that Mark Ruffalo plays ends up feeling very
+  review:
+    I feel like every character that Mark Ruffalo plays ends up feeling very
     similar. This was a solid story. That's all it really had going for it. Bill Camp
     really stole the show as Wilbur Tenant.
   thumbnail: "/assets/img/covers/dark_waters.jpg"
@@ -247,7 +391,8 @@
 - date: 2024-02-25
   title: A Tale of Two Sisters
   rating: 3
-  review: I enjoyed this movie a lot visually. The house was very pretty. There were
+  review:
+    I enjoyed this movie a lot visually. The house was very pretty. There were
     lots of varying visual designs. The plot reveal was also pretty well done. That
     said, the acting overall was forgetable.
   thumbnail: "/assets/img/covers/a_tale_of_two_sisters.jpg"
@@ -257,7 +402,8 @@
   title: The Babadook
   subtitle: Don't let it in.
   rating: 0.5
-  review: Only reason I finished this was there was only 25 minutes left when I was
+  review:
+    Only reason I finished this was there was only 25 minutes left when I was
     going stop watching. The "plot twist" was actually solid but the buildup felt
     poorly acted and just annoying. I also cannot express how bad of an idea the popup
     picture book with text to read is in a film medium.
@@ -267,7 +413,8 @@
 - date: 2024-02-11
   title: The Square
   rating: 3.5
-  review: There are some scenes in this movie that are 5/5. Great acting and visuals.
+  review:
+    There are some scenes in this movie that are 5/5. Great acting and visuals.
     However, the whole thing feels disjointed. I feel like it would have been better
     to somehow split the parts up and really focus on them individually instead of
     trying to make it work as a whole.
@@ -278,7 +425,8 @@
   title: Boogie Nights
   subitle: Everyone has one special thing
   rating: 1
-  review: Found family movie about porn stars in California. Only reason the score
+  review:
+    Found family movie about porn stars in California. Only reason the score
     is not lower is that I could not tell if the acting was intentionally bad to mimic
     porno acting. But the acting was horrid.
   thumbnail: "/assets/img/covers/boogie_nights.jpg"
@@ -288,7 +436,8 @@
   title: The Banshees of Inisherin
   subtitle: Everything Was Fine Yesterday.
   rating: 4.5
-  review: An absolutely gorgeous movie. Lots of wide shots of nature. Every single
+  review:
+    An absolutely gorgeous movie. Lots of wide shots of nature. Every single
     character is enjoyable and well acted. It's a great mix of comedy and thought-provoking
     reflection. I really disliked In Bruges but Colin Farrell and Brendan Gleeson
     were so much better here.
@@ -298,7 +447,8 @@
 - date: 2024-01-14
   title: The Elephant Man
   rating: 0
-  review: This is probably the first time I've been disappointed in Anthony Hopkins.
+  review:
+    This is probably the first time I've been disappointed in Anthony Hopkins.
     The entire film felt super predictable, very slow and generally a letdown. Lots
     of wide mouth staring at the camera. It felt like the entire reason behind making
     it black and white was just to make the costumes work better.
@@ -308,18 +458,20 @@
 - date: 2024-01-07
   title: Black Swan
   rating: 0
-  review: 'This movie managed to tick every box in terms of body horror that I dislike:
+  review:
+    "This movie managed to tick every box in terms of body horror that I dislike:
     needles, nails stuff, skin peeling. Maybe there was something good about it but
     I just had to look away from the screen too much. I also did not think Natalie
     Portman fit the role of young innocent ballerina at all. I found Mila Kunis distracting:
-    I could only see Mila Kunis not the ballerina she was meant to be playing.'
+    I could only see Mila Kunis not the ballerina she was meant to be playing."
   thumbnail: "/assets/img/covers/black_swan.jpg"
   year: 2010
   director: Darren Aronofsky
 - date: 2023-12-27
   title: Breathless
   rating: 1
-  review: Jean-Luc Godard's first feature length film and the beginning of the French
+  review:
+    Jean-Luc Godard's first feature length film and the beginning of the French
     New Wave. The movie has some successful scenes, in my opinion, they are primarily
     the slower more personal ones. I probably don't have enough background to understand
     the new cinematographic techniques used in the movie. The characters and much
@@ -328,10 +480,11 @@
   year: 1960
   director: Jean-Luc Godard
 - date: 2023-12-20
-  title: '2001: A Space Odyssey'
+  title: "2001: A Space Odyssey"
   subtitle: An Epic Drama of Adventure and Exploration
   rating: 3.5
-  review: A lot of the movie feels very cliche however, given its age, I'm willing
+  review:
+    A lot of the movie feels very cliche however, given its age, I'm willing
     to guess that 2001 was probably the originator of the cliches. The soundtrack
     and practical effects in the movie are terrific. The pacing is a bit odd at times.
     And the movie itself is confusing. I would struggle to recommend this movie, but
@@ -343,7 +496,8 @@
   title: Spotlight
   subtitle: Break the Story. Break the Silence.
   rating: 2.5
-  review: A movie about the Boston globe investigation into church molestations. Overall
+  review:
+    A movie about the Boston globe investigation into church molestations. Overall
     a very straightforward movie but it was filmed and acted well. I enjoyed the whole
     thing. Unfortunately, I think I was looking for a movie more about the church
     molestations and maybe how they were covered up. This movie was all about the
@@ -355,7 +509,8 @@
   title: The Thing
   subtitle: The Ultimate in Alien Terror
   rating: 1.5
-  review: It wasn't a terrible movie but it certainly wasn't a classic either. Some
+  review:
+    It wasn't a terrible movie but it certainly wasn't a classic either. Some
     of the practical effects were solid and the movie did a good job building tension
     at times. Unfortunately, there were a ton of plot holes, poor effects and pacing
     issues that make it hard for me to recommend the movie.
@@ -365,7 +520,8 @@
 - date: 2023-11-20
   title: I, Daniel Blake
   rating: 3.5
-  review: This movie is very real and pretty tough emotionally to get through. It's
+  review:
+    This movie is very real and pretty tough emotionally to get through. It's
     about an old man and a young single mother who are very poor and are trying to
     get by at the hands of the UK government. The movie doesn't pull any punches.
     It shows just how many regulations serve to grind down people who are just trying
@@ -376,7 +532,8 @@
 - date: 2023-11-11
   title: Anatomy of a Fall
   rating: 4
-  review: Very enjoyable and well-acted movie. While it is a mystery crime drama,
+  review:
+    Very enjoyable and well-acted movie. While it is a mystery crime drama,
     I think the exploration of the lead actress and the family dynamics is the most
     interesting part of the movie. Sandra huller was phenomenal in this movie. I also
     really enjoyed the sound design and music.
@@ -386,7 +543,8 @@
 - date: 2023-11-10
   title: Rosencrantz & Guildenstern Are Dead
   rating: 3.5
-  review: This movie is about two characters from Hamlet. Frankly, at this point I
+  review:
+    This movie is about two characters from Hamlet. Frankly, at this point I
     barely remember Hamlet. However, the acting of Gary Oldman, Tim Roth and Richard
     Dreyfus was enough for me to enjoy the movie. I am unsure if the movie form gains
     anything over it being a play but I am unlikely to see a play so I enjoyed the
@@ -398,7 +556,8 @@
   title: The Witch
   subtitle: Evil Takes Many Forms.
   rating: 1
-  review: The movie had some very strong moments. But overall it was a huge disappointment.
+  review:
+    The movie had some very strong moments. But overall it was a huge disappointment.
     I found nothing scary about the movie and the only reason I finished it was because
     the reviews had me waiting for something more. I wonder if the dialogue was actually
     accurate to the time period. I also found the Christian themes of the movie to
@@ -410,7 +569,8 @@
   title: The Truman Show
   subtitle: On the Air, Unaware
   rating: 2.5
-  review: A fairly light-hearted but still enjoyable movie. The role of Truman was
+  review:
+    A fairly light-hearted but still enjoyable movie. The role of Truman was
     absolutely perfect for Jim Carrey given how wacky he is.
   thumbnail: "/assets/img/covers/the_truman_show.jpg"
   year: 1998
@@ -418,7 +578,8 @@
 - date: 2023-10-09
   title: Broker
   rating: 4
-  review: A super colorful and visually pleasing movie. It is the story of a very
+  review:
+    A super colorful and visually pleasing movie. It is the story of a very
     unlikely family coming together. The characters are dynamic and enjoyable. I felt
     like a few parts of the movie were a bit unclear to me, but it does not detract
     much.
@@ -429,7 +590,8 @@
   title: The Insider
   subtitle: Two Men Driven to Tell the Truth... Whatever the Cost.
   rating: 3.5
-  review: This was a pretty long movie but it managed to hold my attention pretty
+  review:
+    This was a pretty long movie but it managed to hold my attention pretty
     much the entire time. Both Al Pacino and Russell Crowe are great in it. It does
     a pretty good job showing the villainy of the tobacco industry. I kind of wish
     the tobacco companies featured a bit more directly, but at the same time I can
@@ -442,7 +604,8 @@
 - date: 2023-09-10
   title: The Master
   rating: 4
-  review: The Master is an incredibly character driven story of two men, a navy veteran
+  review:
+    The Master is an incredibly character driven story of two men, a navy veteran
     and a leader of a cult. The movie is about their journey as they try to reconcile
     their longing to be more similar to the other in contrast to their natures. The
     movie is slow and beautifully shot. Joaquin Phoenix is incredible with how much
@@ -453,7 +616,8 @@
 - date: 2023-09-03
   title: The Exorcist
   rating: 1
-  review: While some scenes in the movie are certainly gruesome and disturbing, I
+  review:
+    While some scenes in the movie are certainly gruesome and disturbing, I
     find it hard to call The Exorcist a scary movie. The movie suffers from providing
     too much background information and focusing too much on the buildup of various
     characters. It creates more questions that it answers and the overall ending feels
@@ -464,7 +628,8 @@
 - date: 2023-08-27
   title: The Discreet Charm of the Bourgeoisie
   rating: 3
-  review: A group of rich friends attempt to have a dinner party while ignoring the
+  review:
+    A group of rich friends attempt to have a dinner party while ignoring the
     increasingly bizarre mishaps occuring around them. Bizarre is probably the best
     way to describe this movie. It was funny and captivating but very hard to follow.
     The movies confusing structure makes it very hard to understand on first watch
@@ -474,7 +639,8 @@
   director: Luis Buñuel
 - date: 2023-08-23
   title: Bad Luck Banging or Loony Porn
-  review: Warning this movie is very explicit, it literally starts with a home sex
+  review:
+    Warning this movie is very explicit, it literally starts with a home sex
     video. The consequences of the video leaking are the general plot of the movie.
     However, the movie is very much more of a biopic about Romania. It is abstract,
     nerve-wracking at times but very enjoyable. It is a good movie but I find it hard
@@ -487,7 +653,8 @@
   title: The Stanford Prison Experiment
   subtitle: They were given 2 weeks. It lasted 6 days.
   rating: 0
-  review: Conceptually the film seemed up my alley. A dark look at human nature. Somehow
+  review:
+    Conceptually the film seemed up my alley. A dark look at human nature. Somehow
     the movie just failed to hold my attention. I felt for the characters but the
     emotions of thier situation did not feel conveyed to me. Felt like too much teeling
     and too little showing.
@@ -497,7 +664,8 @@
 - date: 2023-08-10
   title: The Umbrellas of Cherbourg
   rating: 1
-  review: Incredibly pretty film. I enjoyed the tragic romanance. The singing was
+  review:
+    Incredibly pretty film. I enjoyed the tragic romanance. The singing was
     very poor. Almost no tonal variation, was the weakest part of a movie that is
     a musical.
   thumbnail: "/assets/img/covers/the_umbrellas_of_cherbourg.jpg"
@@ -507,7 +675,8 @@
   title: The French Connection
   subtitle: Doyle is bad news - but a good cop.
   rating: 3.5
-  review: Very dynamic action packed movie. Very little dialogue that makes it hard
+  review:
+    Very dynamic action packed movie. Very little dialogue that makes it hard
     to follow at times but feels rewarding to understand.
   thumbnail: "/assets/img/covers/the_french_connection.jpg"
   year: 1971
@@ -515,7 +684,8 @@
 - date: 2023-07-25
   title: When Father Was Away on Business
   rating: 2
-  review: First of all this movie is no way a comedy. It is a very matter of fact
+  review:
+    First of all this movie is no way a comedy. It is a very matter of fact
     take on a pretty bleak story in post WWII Yugoslavia. Unfortunately the quality
     of the movie recording was so poor I could hardly see some scenes. I also lacked
     but historical context to understand events in the movie. I would give this one
@@ -525,10 +695,12 @@
   year: 1985
 - date: 2023-07-19
   title: In the Name of the Father
-  subtitle: Falsely accused. Wrongly imprisoned. He fought for justice to clear his
+  subtitle:
+    Falsely accused. Wrongly imprisoned. He fought for justice to clear his
     father's name.
   rating: 3.5
-  review: Phenomenal acting from both leads. Intersting story based on real events.
+  review:
+    Phenomenal acting from both leads. Intersting story based on real events.
     Some of the creative liberties feel unnessecary and cheapen the movie after learning
     about them.
   thumbnail: "/assets/img/covers/in_the_name_of_the_father.jpg"
@@ -537,7 +709,8 @@
 - date: 2023-07-12
   title: The French Dispatch
   rating: 2.5
-  review: Very creative and pretty presentation of essentially a magazine in movie
+  review:
+    Very creative and pretty presentation of essentially a magazine in movie
     form. The movie had some gorgeous shots but it felt experimental to me with uneven
     quality.
   thumbnail: "/assets/img/covers/the_french_dispatch.jpg"
@@ -547,7 +720,8 @@
   title: Zodiac
   subtitle: There is more than one way to lose your life to a killer.
   rating: 4
-  review: Enjoyable plot-driven movie about the Zodiac killer. Well acted. **Incredibly**
+  review:
+    Enjoyable plot-driven movie about the Zodiac killer. Well acted. **Incredibly**
     well shot, the way the director manages to create tension in the scenes without
     the need for dialogue is amazing. Jake Gyllenhaal is awesome as always.
   thumbnail: "/assets/img/covers/zodiac.jpg"
@@ -556,7 +730,8 @@
 - date: 2023-06-28
   title: All Quiet on the Western Front
   rating: 3
-  review: Interesting character perspective on WWI. The volume of combat action lessened
+  review:
+    Interesting character perspective on WWI. The volume of combat action lessened
     the impact of what should have been a character driven movie. Having read other
     Remarque books the plot arc felt very predicatable.
   thumbnail: "/assets/img/covers/all_quiet_on_the_western_front.jpg"
@@ -568,7 +743,8 @@
   thumbnail: "/assets/img/covers/peppermint_candy.jpg"
   director: Lee Chang-dong
   year: 1999
-  review: A retrospective on modern Korean history showing the many ways the country
+  review:
+    A retrospective on modern Korean history showing the many ways the country
     failed their youth surrounding the Gwangju massacare of the 1980s.
 - date: 2023-06-02
   year: 2000
@@ -584,14 +760,16 @@
   rating: 1.5
   thumbnail: "/assets/img/covers/glass_onion.jpg"
   director: Rian Johnson
-  review: A real letdown after the first movie. It felt like the movie was trying
+  review:
+    A real letdown after the first movie. It felt like the movie was trying
     to be too relevant to current events. The satire in it just ended up much worse.
 - date: 2023-03-29
   title: Blow-Up
   rating: 0
   director: Michelangelo Antonioni
   year: 1966
-  review: The movie was slow, the characters were not compelling and frankly the main
+  review:
+    The movie was slow, the characters were not compelling and frankly the main
     character made me pretty uncomfortable.
   thumbnail: assets/img/covers/blow-up.jpg
 - date: 2023-03-15
@@ -600,7 +778,8 @@
   rating: 3.5
   director: Masaki Kobayashi
   year: 1962
-  review: Enjoyable story, great camera work. A very accesible introduction to Japanese
+  review:
+    Enjoyable story, great camera work. A very accesible introduction to Japanese
     cinema.
   thumbnail: assets/img/covers/harakiri.jpg
 - date: 2023-03-01
@@ -608,7 +787,8 @@
   rating: 2.5
   director: Park Chan-Wook
   year: 2000
-  review: Outside the 4 soldiers that depict a possible North/South friendship the
+  review:
+    Outside the 4 soldiers that depict a possible North/South friendship the
     acting is terrible and ruins the movie.
   thumbnail: assets/img/covers/joint_security_area.jpg
 - date: 2023-02-01
@@ -617,7 +797,8 @@
   rating: 4.5
   director: David Cronenburg
   year: 1986
-  review: Incredible practical effects that gross me out even now. Great mix of science
+  review:
+    Incredible practical effects that gross me out even now. Great mix of science
     fiction and body horror.
   thumbnail: assets/img/covers/the_fly.jpg
 - date: 2023-01-18
@@ -630,12 +811,14 @@
   thumbnail: assets/img/covers/the_dark_crystal.jpg
 - date: 2022-12-12
   title: The NeverEnding Story
-  subtitle: A boy who needs a friend finds a world that needs a hero in a land beyond
+  subtitle:
+    A boy who needs a friend finds a world that needs a hero in a land beyond
     imagination!
   rating: 1
   director: Wolfgang Petersen
   year: 1984
-  review: A few interesting character designs and practical effects aside the movie
+  review:
+    A few interesting character designs and practical effects aside the movie
     has no redeeming features.
   thumbnail: assets/img/covers/the_neverending_story.jpg
 - date: 2022-11-30
@@ -652,7 +835,8 @@
   rating: 4
   director: Andrew Niccol
   year: 1997
-  review: Sience fiction movie that aged very well. A heartwarming tale of a human
+  review:
+    Sience fiction movie that aged very well. A heartwarming tale of a human
     prevailing over all odds with a good twist at the end.
   thumbnail: assets/img/covers/gattaca.jpg
 - date: 2022-11-16
@@ -669,7 +853,8 @@
   rating: 0.5
   director: Greg Cohan
   year: 2018
-  review: An attempt at a low budget culty 'The Room' esque movie but misses the mark.
+  review:
+    An attempt at a low budget culty 'The Room' esque movie but misses the mark.
     The attempts at satire are too blatant but it is short enough to finish.
   thumbnail: assets/img/covers/the_velocipastor.jpg
 - date: 2022-11-02
@@ -701,7 +886,8 @@
   rating: 4.5
   director: Peter Jackson
   year: 2018
-  review: The movie is exclusively colorized WWI footage with voice overs from WWI
+  review:
+    The movie is exclusively colorized WWI footage with voice overs from WWI
     veternas being interviewed. It is a super different and unique perspective on
     the war that everyone should watch.
   thumbnail: assets/img/covers/they_shall_not_grow_old.jpg
@@ -710,7 +896,8 @@
   rating: 1.5
   director: Kenny Ortega
   year: 1993
-  review: Conceptually a lot of the jokes aged well but most needed to be cut shorter.
+  review:
+    Conceptually a lot of the jokes aged well but most needed to be cut shorter.
     Overall, the movie could have been 20% shorter.
   thumbnail: assets/img/covers/hocus_pocus.jpg
 - date: 2022-09-21
@@ -726,7 +913,8 @@
   rating: 0
   director: John Hillcoat
   year: 2009
-  review: I could not bring myself to care about any of the characters or believe
+  review:
+    I could not bring myself to care about any of the characters or believe
     in the setting. The flashbacks were terrible as well.
   thumbnail: assets/img/covers/the_road.jpg
 - date: 2022-09-07
@@ -735,7 +923,8 @@
   rating: 4
   director: Penny Marshall
   year: 1990
-  review: Movie based on a true story with greats performances from Robert DeNiro
+  review:
+    Movie based on a true story with greats performances from Robert DeNiro
     and Robin Williams. Nevertheless, somehow it is just not that memorable of a movie.
   thumbnail: assets/img/covers/awakenings.jpg
 - date: 2022-08-31
@@ -744,7 +933,8 @@
   rating: 1.5
   director: Shaka King
   year: 2021
-  review: Movie based on the story of the Illinois chapter of the Black Panther Party,
+  review:
+    Movie based on the story of the Illinois chapter of the Black Panther Party,
     while the plot is fairly gripping the acting is very weak at times. LaKieth Stanfield
     was frankly terrible.
   thumbnail: assets/img/covers/judas_and_the_black_messiah.jpg
@@ -754,7 +944,8 @@
   rating: 3.5
   director: Rian Johnson
   year: 2019
-  review: Very fun movie. Good mix of mystery and comedy. Plays into some modern stereotypes
+  review:
+    Very fun movie. Good mix of mystery and comedy. Plays into some modern stereotypes
     without being cringy.
   thumbnail: assets/img/covers/knives_out.jpg
 - date: 2022-08-14
@@ -763,7 +954,8 @@
   rating: 2
   director: Jim Henson
   year: 1986
-  review: Fun movie with plenty of enjoyable characters, unfortunately many scenes
+  review:
+    Fun movie with plenty of enjoyable characters, unfortunately many scenes
     simply drag out too long.
   thumbnail: assets/img/covers/labyrinth.jpg
 - date: 2022-08-10
@@ -772,7 +964,8 @@
   rating: 1.5
   director: Sam Mendes
   year: 2019
-  review: Forgetable acting and characters. There were several gorgeous and epic scenes
+  review:
+    Forgetable acting and characters. There were several gorgeous and epic scenes
     but the majority of the movie is a very generic war film.
   thumbnail: assets/img/covers/1917.jpg
 - date: 2022-07-25
@@ -781,7 +974,8 @@
   rating: 4
   director: Joel and Ethan Coen
   year: 1998
-  review: Another fun movie from the Coen brothers with many enjoyable scenes and
+  review:
+    Another fun movie from the Coen brothers with many enjoyable scenes and
     characters. Unfortunately, it did not have quite the same emotional impacts as
     many of thier other pictures.
   thumbnail: assets/img/covers/the_big_lebowski.jpg
@@ -791,7 +985,8 @@
   rating: 0.5
   director: Skye Borgman
   year: 2022
-  review: While the story was incredibly tragic, the documentary was a terrible. There
+  review:
+    While the story was incredibly tragic, the documentary was a terrible. There
     was simply not an hours worth of content here. I watched this on 1.5 speed and
     it still felt slow.
   thumbnail: assets/img/covers/girl_in_the_picture.jpg
@@ -800,7 +995,8 @@
   rating: 5
   director: Emir Kusturica
   year: 2004
-  review: Amazing sound track. The movie is a touching love story in the midst of
+  review:
+    Amazing sound track. The movie is a touching love story in the midst of
     war told in a mix of comedy, absurdity and tragedy that only Kusturica could manage.
   thumbnail: assets/img/covers/life_is_a_miracle.jpg
 - date: 2022-07-04
@@ -808,7 +1004,8 @@
   rating: 3.5
   director: Hayao Miyazaki
   year: 1997
-  review: Another great Ghilbi movie. The movie depicts many consequences of human
+  review:
+    Another great Ghilbi movie. The movie depicts many consequences of human
     greed and has very enjoyable characters.
   thumbnail: assets/img/covers/princess_mononoke.jpg
 - date: 2022-06-04
@@ -816,7 +1013,8 @@
   rating: 2.5
   director: Julia Ducournau
   year: 2021
-  review: Really not sure what to make of this one. It is very much an arthouse film
+  review:
+    Really not sure what to make of this one. It is very much an arthouse film
     and some of the elements are hard to watch. Neverthelss, the acting and the developement
     in the relation being the main character and her adoptive father make it worth
     a look.
@@ -833,19 +1031,22 @@
   rating: 3.5
   director: Daniel Kwan, Daniel Scheinert
   year: 2022
-  review: A story of a disjointed family reconnecting. Like the name suggests the
+  review:
+    A story of a disjointed family reconnecting. Like the name suggests the
     movie simply try to show everything and in doing so the miriad of stories each
     lose thier individual impacts. Was not a fan of the humor either.
   thumbnail: assets/img/covers/everything_everywhere_all_at_once.jpg
 - date: 2022-05-12
   title: The Conversation
-  subtitle: Harry Caul is an invader of privacy. The best in the business. He can
+  subtitle:
+    Harry Caul is an invader of privacy. The best in the business. He can
     record any conversation between two people anywhere. So far, three people are
     dead because of him.
   rating: 0
   director: Francis Ford Coppla
   year: 1974
-  review: Not sure if it was too slow, while Hackman played a great Harry Caul nothing
+  review:
+    Not sure if it was too slow, while Hackman played a great Harry Caul nothing
     else was particulary gripping about the movie.
   thumbnail: assets/img/covers/the_conversation.jpg
 - date: 2022-05-05
@@ -853,7 +1054,8 @@
   rating: 5
   director: Asghar Farhadi
   year: 2021
-  review: Absolutely incredible story about the weakness of people, their greed and
+  review:
+    Absolutely incredible story about the weakness of people, their greed and
     simlutaneous desire to do good. It is a film about very ordinary people in a dificult
     situation and how they try to escape it. Superb acting. Beautiful camera work.
   thumbnail: assets/img/covers/a_hero.jpg
@@ -870,7 +1072,8 @@
   rating: 5
   director: Joel and Ethan Coen
   year: 2013
-  review: A week in the life of a folk singer trying to make a living. Very ordinary
+  review:
+    A week in the life of a folk singer trying to make a living. Very ordinary
     but somehow draws you in. Exceptionally rich camera work, music and dialoges.
   thumbnail: assets/img/covers/inside_llewyn_davis.jpg
 - date: 2022-04-18
@@ -879,7 +1082,8 @@
   rating: 1.5
   director: Joe Johnston
   year: 1995
-  review: Robin Williams was fun, some of the jokes were decent. Overdone story and
+  review:
+    Robin Williams was fun, some of the jokes were decent. Overdone story and
     generaly just not very good.
   thumbnail: assets/img/covers/jumanji.jpg
 - date: 2022-04-11
@@ -887,7 +1091,8 @@
   rating: 4.5
   director: Bong Joon Ho
   year: 2003
-  review: A story of small town police detectives attempting to catch a serial killer.
+  review:
+    A story of small town police detectives attempting to catch a serial killer.
     Great acting. Many gorgeous shots and a great combination of a gripping story
     and small comedic elements.
   thumbnail: assets/img/covers/memories_of_murder.jpg
@@ -897,7 +1102,8 @@
   rating: 3.5
   director: Luc Besson
   year: 1997
-  review: Very fun science fiction movie. Some of the costumes feel a bit dated at
+  review:
+    Very fun science fiction movie. Some of the costumes feel a bit dated at
     this point and Bruce Willis is a bit uninspiring.
   thumbnail: assets/img/covers/the_fifth_element.jpg
 - date: 2022-04-04
@@ -905,7 +1111,8 @@
   rating: 1.5
   director: Frank Darabont
   year: 1999
-  review: Very long preachy movie. Conceptually I did not like any of the characters,
+  review:
+    Very long preachy movie. Conceptually I did not like any of the characters,
     they felt generic and overdone.
   thumbnail: assets/img/covers/the_green_mile.jpg
 - date: 2022-02-17
@@ -914,7 +1121,8 @@
   rating: 2
   director: Micheal Sarnoski
   year: 2021
-  review: John Wick but with a pig. I disliked all the characters in it and trying
+  review:
+    John Wick but with a pig. I disliked all the characters in it and trying
     to set up some sort of mysterious grizzled past for Cage was just cringe.
   thumbnail: assets/img/covers/pig.jpg
 - date: 2022-02-10
@@ -937,7 +1145,8 @@
   rating: 3.5
   director: Guy Ritchie
   year: 2000
-  review: Great comedy. Very fast pacing, a huge cast of enjoyable characters, great
+  review:
+    Great comedy. Very fast pacing, a huge cast of enjoyable characters, great
     dialogue.
   thumbnail: assets/img/covers/snatch.jpg
 - date: 2022-01-06
@@ -945,7 +1154,8 @@
   rating: 1
   director: Nadine Labaki
   year: 2018
-  review: The film opens with a child suing his parents for 'giving him life'. Despite
+  review:
+    The film opens with a child suing his parents for 'giving him life'. Despite
     the tragedy of it, I somehow did not feel much towards any of the characters.
   thumbnail: assets/img/covers/capernaum.jpg
 - date: 2022-12-22
@@ -953,7 +1163,8 @@
   rating: 4
   director: Roman Polanski
   year: 1974
-  review: Great acting by Jack Nicholson. Primarily a plot driven movie based very
+  review:
+    Great acting by Jack Nicholson. Primarily a plot driven movie based very
     losely on a well known story (can't say much as it will give away the story).
   thumbnail: assets/img/covers/chinatown.jpg
 - date: 2021-12-16
@@ -962,7 +1173,8 @@
   rating: 1
   director: Alejandro G. Iñárritu
   year: 2015
-  review: Honestly one of the worst I have seen from Leo. Tom Hardy stole the show
+  review:
+    Honestly one of the worst I have seen from Leo. Tom Hardy stole the show
     and even the the movie was lacking. The dream/memory sequences were awful.
   thumbnail: assets/img/covers/the_revenant.jpg
 - date: 2021-11-04
@@ -983,7 +1195,8 @@
   thumbnail: assets/img/covers/dune.jpg
 - date: 2021-10-20
   title: A Clockwork Orange
-  subtitle: Being the adventures of a young man whose principal interests are rape,
+  subtitle:
+    Being the adventures of a young man whose principal interests are rape,
     ultra-violence and Beethoven.
   rating: 4
   director: Stanely Kubrick.
@@ -996,7 +1209,8 @@
   rating: 1
   director: Justin Benson
   year: 2017
-  review: In theory a movie about cosmic horror. Conceptually interesting but hard
+  review:
+    In theory a movie about cosmic horror. Conceptually interesting but hard
     to do on film. The movie misses the mark.
   thumbnail: assets/img/covers/the_endless.jpg
 - date: 2021-09-22
@@ -1004,7 +1218,8 @@
   rating: 0
   director: Park Chan-wook
   year: 2016
-  review: From the director of Oldboy. Boring movie. Conceptually a bit similar to
+  review:
+    From the director of Oldboy. Boring movie. Conceptually a bit similar to
     Parasite but not I never made it to the payoff if there was one.
   thumbnail: assets/img/covers/the_handmaiden.jpg
 - date: 2021-09-15
@@ -1012,7 +1227,8 @@
   rating: 4
   director: Andrey Konchalovskiy
   year: 2020
-  review: Fairly dark movie about the Novocherkassak massacare seen from the eyes
+  review:
+    Fairly dark movie about the Novocherkassak massacare seen from the eyes
     of a staunch communist party member. Very strong acting and a powerful historical
     drama.
   thumbnail: assets/img/covers/dorogie_tovarishchi.jpg
@@ -1022,7 +1238,8 @@
   rating: 4.5
   director: Ben Affleck
   year: 2012
-  review: Tremendous thriller. The movie is not particulary action packed but is incredibly
+  review:
+    Tremendous thriller. The movie is not particulary action packed but is incredibly
     tense. Based on a true story of surrounding the US hostage crisis in Iran in 1979.
   thumbnail: assets/img/covers/argo.jpg
 - date: 2021-09-02
@@ -1031,7 +1248,8 @@
   rating: 1.5
   director: David Fincher
   year: 2010
-  review: A very good retelling of the story of Facebook it that interests you. Not
+  review:
+    A very good retelling of the story of Facebook it that interests you. Not
     much to it beyond solid acting and a compelling plot, I would not rewatch this.
   thumbnail: assets/img/covers/the_social_network.jpg
 - date: 2021-08-26
@@ -1039,7 +1257,8 @@
   rating: 3
   director: Chloé Zhao
   year: 2020
-  review: Francis McDormand was solid as usual, though not my favorite actress. The
+  review:
+    Francis McDormand was solid as usual, though not my favorite actress. The
     movies shows a very different perspective on how it is possible to live. And some
     people live that way by choice.
   thumbnail: assets/img/covers/nomadland.jpg
@@ -1049,7 +1268,8 @@
   rating: 4.5
   director: Christopher Nolan
   year: 2000
-  review: Probably my favorite Christopher Nolan movie. It is confusing and mysterious
+  review:
+    Probably my favorite Christopher Nolan movie. It is confusing and mysterious
     but it grabs your attention the whole time. Very enjoyable movie with a great
     ending.
   thumbnail: assets/img/covers/memento.jpg
@@ -1059,7 +1279,8 @@
   rating: 3
   director: Clint Eastwood
   year: 2008
-  review: Angelina Jolie herself was great in the movie. The story is tragic, good
+  review:
+    Angelina Jolie herself was great in the movie. The story is tragic, good
     sets, solid filming. Overall, solid movie.
   thumbnail: assets/img/covers/changeling.jpg
 - date: 2021-08-07
@@ -1067,7 +1288,8 @@
   rating: 1.5
   director: Guillermo del Toro
   year: 2006
-  review: The movie was a dark twist on some sort of a fairy tale story. It had some
+  review:
+    The movie was a dark twist on some sort of a fairy tale story. It had some
     phenomenal costumes and great acting. Somehow, none of that happened together.
     I felt like I enjoyed the two worlds in the movie but never thier intersections.
   thumbnail: assets/img/covers/pans_labyrinth.jpg
@@ -1077,7 +1299,8 @@
   rating: 4
   director: Andrey Zvyagintsev
   year: 2011
-  review: Incredibly dark movie with some phenomenal camera work. The movie leaves
+  review:
+    Incredibly dark movie with some phenomenal camera work. The movie leaves
     you with a feeling of deep hopelessness and powerlessness.
   thumbnail: assets/img/covers/elena.jpg
 - date: 2021-07-23
@@ -1086,7 +1309,8 @@
   rating: 0.5
   director: Martin McDonagh
   year: 2008
-  review: I did not find that characters compelling and I certainly did not find anything
+  review:
+    I did not find that characters compelling and I certainly did not find anything
     about the movie funny. A big miss.
   thumbnail: assets/img/covers/in_bruges.jpg
 - date: 2021-07-10
@@ -1095,7 +1319,8 @@
   rating: 4.5
   director: James Wan
   year: 2016
-  review: I had no idea what I was getting into with this movie and for half of it
+  review:
+    I had no idea what I was getting into with this movie and for half of it
     I could not tell it if was a parody or supposed to be scary. I found this movie
     hilarous. Nothing about it was scary to me but the seriousness of the actors made
     it peak comedy.
@@ -1105,7 +1330,8 @@
   rating: 4
   director: Bong Joon-Ho
   year: 2009
-  review: Hye-ja Kim is phenomenal as the mother. The movie is suspenseful, well shot
+  review:
+    Hye-ja Kim is phenomenal as the mother. The movie is suspenseful, well shot
     and well acted. Some of the scenes are downright wierd.
   thumbnail: assets/img/covers/mother.jpg
 - date: 2021-06-18
@@ -1113,7 +1339,8 @@
   rating: 1
   director: Matthew Vaughn
   year: 2007
-  review: Generic coming of age story with some magic elements. I have no clue what
+  review:
+    Generic coming of age story with some magic elements. I have no clue what
     Robert De Niro is doing in this movie.
   thumbnail: assets/img/covers/stardust.jpg
 - date: 2021-06-12
@@ -1122,7 +1349,8 @@
   rating: 4.5
   director: Joel and Ethan Coen
   year: 2007
-  review: Javier Bardem is terrifying in this movie. Not a single bad acting performance.
+  review:
+    Javier Bardem is terrifying in this movie. Not a single bad acting performance.
     The movie is gritty and violent. It keeps you on the edge of your seat the whole
     time.
   thumbnail: assets/img/covers/no_country_for_old_men.jpg
@@ -1131,7 +1359,8 @@
   rating: 0
   director: Luc Besson
   year: 1994
-  review: I found nothing redeeming about this movie. I felt uncomfortable about the
+  review:
+    I found nothing redeeming about this movie. I felt uncomfortable about the
     potential love? between the two characters due to the age gap. I found the idea
     of training montage to be too cringe to watch.
   thumbnail: assets/img/covers/leon_the_professional.jpg
@@ -1140,7 +1369,8 @@
   rating: 2.5
   director: Hayao Miyazaki
   year: 2004
-  review: Very cute movie with charming characters and a very enjoyable romantic plot.
+  review:
+    Very cute movie with charming characters and a very enjoyable romantic plot.
     Unfortunately, it seemed to similar to Spirited Away and that movie was just better.
   thumbnail: assets/img/covers/howls_moving_castle.jpg
 - date: 2021-05-28
@@ -1148,7 +1378,8 @@
   director: Andrei Tarkovsky
   rating: 3.5
   year: 1962
-  review: Great war movie. The child actor was great. The movie provides a very dark
+  review:
+    Great war movie. The child actor was great. The movie provides a very dark
     take on war and loss.
   thumbnail: assets/img/covers/ivanovo_detstvo.jpg
 - date: 2021-05-21
@@ -1157,7 +1388,8 @@
   rating: 4.5
   director: Craig Gillespie
   year: 2007
-  review: I did not realize how good of an actor Ryan Gosling was until I saw this
+  review:
+    I did not realize how good of an actor Ryan Gosling was until I saw this
     movie. In this movie he plays Lars, a guy with some severe social issues that
     ends up falling in love with a sex doll. Somehow despite how crazy the premise
     sounds there is nothing cringy at all. It's a very positive a charming movie.
@@ -1167,7 +1399,8 @@
   rating: 0
   director: Fritz Lang
   year: 1931
-  review: When police cannot catch a child murdering criminal, other criminals come
+  review:
+    When police cannot catch a child murdering criminal, other criminals come
     together to catch them. Despite the seemingly interesting the movie is unbearably
     slow and boring.
   thumbnail: assets/img/covers/m.jpg
@@ -1176,7 +1409,8 @@
   rating: 5
   director: Hayao Miyazaki
   year: 2001
-  review: Delightfully charming movie. Keeps you on the edge of your seat just begging
+  review:
+    Delightfully charming movie. Keeps you on the edge of your seat just begging
     to see more of the world and characters that Miyazaki created. I cannot get over
     just how much I enjoy the designs and the movie itself in gorgeous.
   thumbnail: assets/img/covers/spirited_away.jpg
@@ -1186,7 +1420,8 @@
   rating: 2.5
   director: Jean-Pierre Jeunet
   year: 2001
-  review: A pleasant, charming, romantic comedy about a lonely girl with an overly
+  review:
+    A pleasant, charming, romantic comedy about a lonely girl with an overly
     active imagination attempting to help people in mischievous ways. I find the movie
     to be forgettable.
   thumbnail: assets/img/covers/amelie.jpg
@@ -1195,7 +1430,8 @@
   rating: 1
   director: Gus Van Sant
   year: 1997
-  review: Really excellent acting by Robin Williams in this movie. Matt Damon is much
+  review:
+    Really excellent acting by Robin Williams in this movie. Matt Damon is much
     weaker by contrast. Somehow the character of the hidden genius janitor is not
     particularly compelling. Some of the 90's cliches also aged poorly.
   thumbnail: assets/img/covers/good_will_hunting.jpg
@@ -1204,7 +1440,8 @@
   rating: 4
   director: Rob Reiner
   year: 1987
-  review: This movie is extraordinarily funny. It aged very well and some jokes seem
+  review:
+    This movie is extraordinarily funny. It aged very well and some jokes seem
     to have gotten even better and more relevant. It's very light-hearted, never takes
     itself too seriously and is definitely worth a watch.
   thumbnail: assets/img/covers/the_princess_bride.jpg
@@ -1213,7 +1450,8 @@
   rating: 1.5
   director: Giuseppe Tornatore
   year: 1988
-  review: I don't typically care for movies with child actors. This is one of those
+  review:
+    I don't typically care for movies with child actors. This is one of those
     movies. I did not really feel the childlike happiness the director was attempting
     to convey for this movie theater or movies in general.
   thumbnail: assets/img/covers/cinema_paradiso.jpg
@@ -1222,12 +1460,13 @@
   rating: 4
   director: Roman Polanski
   year: 2002
-  review: The movie centers around a very compelling story of a Jewish Pianist during
+  review:
+    The movie centers around a very compelling story of a Jewish Pianist during
     WWII. Adrien Brody is superb in this movie. One of the strongest Holocaust protrayals
     I have seen.
   thumbnail: assets/img/covers/the_pianist.jpg
 - date: 2021-03-20
-  title: 'Robin Hood: Men In Tights'
+  title: "Robin Hood: Men In Tights"
   subtitle: The Legend Had It Coming.
   rating: 0
   director: Mel Brooks
@@ -1239,7 +1478,8 @@
   rating: 3.5
   director: Alfred Hitchcock
   year: 1954
-  review: This movie is classic hitchcock. It is tense dramatic, well shot. Yet somehow
+  review:
+    This movie is classic hitchcock. It is tense dramatic, well shot. Yet somehow
     I always find myself forgetting how it ends. But that's not a problem because
     I'm always willing to rewatch it.
   thumbnail: assets/img/covers/rear_window.jpg
@@ -1249,7 +1489,8 @@
   rating: 4
   director: Peter Weir
   year: 1989
-  review: An amazing coming of age movie. Phenomenal acting job all around. Robin
+  review:
+    An amazing coming of age movie. Phenomenal acting job all around. Robin
     Williams is terrific in this movie. The movie covers many themes from family,
     friendship, creativity and it covers them all well.
   thumbnail: assets/img/covers/dead_poets_society.jpg
@@ -1259,12 +1500,14 @@
   rating: 2.5
   director: Drew Goddard
   year: 2011
-  review: Fun little horror comedy with a bit of a twist to it. The premise is enjoyable
+  review:
+    Fun little horror comedy with a bit of a twist to it. The premise is enjoyable
     enough to watch once. Probably not good enough for a second though.
   thumbnail: assets/img/covers/the_cabin_in_the_woods.jpg
 - date: 2021-02-12
   title: Requiem For A Dream
-  review: The movie follows the journeys of four different people all getting addicted
+  review:
+    The movie follows the journeys of four different people all getting addicted
     to heroin each having varying amounts of agency in that situation. The movie is
     very dark and presents a very depressing reality. That said, some of the stories
     are better than others.
@@ -1277,7 +1520,8 @@
   rating: 1.5
   director: Jason Odser
   year: 2013
-  review: A documentary about the Philadelphia MOVE movement and subsequent bombing
+  review:
+    A documentary about the Philadelphia MOVE movement and subsequent bombing
     by police. The documentary is definitely informative about an event that is rarely
     mentioned and little known. It is a bit slow at times.
   thumbnail: assets/img/covers/let_the_fire_burn.jpg
@@ -1287,7 +1531,8 @@
   rating: 2
   director: Bryan Singer
   year: 1995
-  review: A decent movie on the first watch. Probably not worth another after you've
+  review:
+    A decent movie on the first watch. Probably not worth another after you've
     seen the "twist". Most of the characters are pretty forgettable, besides maybe
     Kevin Spacey.
   thumbnail: assets/img/covers/the_usual_suspects.jpg
@@ -1296,16 +1541,18 @@
   rating: 2.5
   director: Pete Docter and Kemp Powers
   year: 2020
-  review: Very cute, pleasant and upbeat movie. I enjoyed how jazzy it was. I think
+  review:
+    Very cute, pleasant and upbeat movie. I enjoyed how jazzy it was. I think
     it would have been better off with an unhappy ending.
   thumbnail: assets/img/covers/soul.jpg
 - date: 2021-01-15
-  title: 'Terminator 2: Judgement Day'
+  title: "Terminator 2: Judgement Day"
   subtitle: It's Nothing Personal
   rating: 4.5
   director: James Cameron
   year: 1991
-  review: Absolutely classic action movie. I can't think of another movie that has
+  review:
+    Absolutely classic action movie. I can't think of another movie that has
     aged as gracefully as this one, besides maybe Jurassic Park. The special effects
     are immense. The plot is very solid and Linda Hamilton plays a great Sarah Connor.
   thumbnail: assets/img/covers/terminator_2_judgement_day.jpg
@@ -1314,7 +1561,8 @@
   rating: 1.5
   director: Sang-ho Yeon
   year: 2016
-  review: Overall pretty solid, for a zombie movie. Most of all, I enjoyed the inter
+  review:
+    Overall pretty solid, for a zombie movie. Most of all, I enjoyed the inter
     character dynamics in the movie. Some of the acting was very solid. The zombie
     parts I was not a big fan of.
   thumbnail: assets/img/covers/train_to_busan.jpg
@@ -1323,17 +1571,19 @@
   rating: 3.5
   director: James Cameron
   year: 1984
-  review: A different movie from its more action focus sequel. The Terminator is almost
+  review:
+    A different movie from its more action focus sequel. The Terminator is almost
     closer to a horror thriller. It is still an excellent movie, James Cameron does
     a phenomenal job instilling the terror that the Terminator brings. Unfortunately
     some of the practical effects in this one are lacking.
   thumbnail: assets/img/covers/the_terminator.jpg
 - date: 2020-12-28
-  title: 'David Attenborough: A Life on Our Planet'
+  title: "David Attenborough: A Life on Our Planet"
   rating: 3
   director: Alastair Fothergill, Jonathan Hughes, Keith Scholey
   year: 2020
-  review: The movie was very pretty. I also found it to be motivational. It did a
+  review:
+    The movie was very pretty. I also found it to be motivational. It did a
     good job highlighting the destruction we are bringing up on our planet. Some of
     the CGI scenes stuck out pretty badly and took me out of the movie.
   thumbnail: assets/img/covers/a_life_on_our_planet.jpg
@@ -1342,7 +1592,8 @@
   rating: 4
   director: Quentin Tarantino
   year: 1994
-  review: Probably my favorite Tarantino movie. It lacks the over-the-top violence
+  review:
+    Probably my favorite Tarantino movie. It lacks the over-the-top violence
     that many of his others have. All the plot lines are enjoyable. Dissecting how
     they intersect with each other makes the movie even better.
   thumbnail: assets/img/covers/pulp_fiction.jpg
@@ -1351,7 +1602,8 @@
   rating: 4.5
   director: Elem Klimov
   year: 1985
-  review: An absolutely harrowing movie about the Nazi occupation of Belarus. It follows
+  review:
+    An absolutely harrowing movie about the Nazi occupation of Belarus. It follows
     the story of a young boy who joins the partisans and proceeds to witness Nazis
     exterminating his country folk. The movie is very hard to watch but it is important
     to see it.
@@ -1361,7 +1613,8 @@
   rating: 0.5
   director: Spike Jonze
   year: 2013
-  review: The movie centers around a man in a futuristic society that starts falling
+  review:
+    The movie centers around a man in a futuristic society that starts falling
     in love with an artificial intelligence. I personally had a strong distaste for
     the concept. I thought Lars and the real girl was much better. This is very much
     my personal opinion because others I know greatly enjoy the movie.
@@ -1372,7 +1625,8 @@
   rating: 1.5
   director: Steven Spielberg
   year: 1993
-  review: The plot of the movie is good. The rest of it feels uninspired. None of
+  review:
+    The plot of the movie is good. The rest of it feels uninspired. None of
     the acting performances stood out to me. There are better Holocaust movies out
     there.
   thumbnail: assets/img/covers/schindlers_list.jpg
@@ -1381,7 +1635,8 @@
   rating: 3.5
   director: Tony Kaye
   year: 1998
-  review: The movie has a very simple straightforward plot following a neo-Nazi returning
+  review:
+    The movie has a very simple straightforward plot following a neo-Nazi returning
     from prison and his younger brother who is assigned to succumb to the same ideals.
     The acting performances from the entire cast really elevate this movie. They do
     a great job turning this seemingly black and white topic into something much more
@@ -1393,7 +1648,8 @@
   rating: 1
   director: Martin Scorsese
   year: 1990
-  review: A classic  gangster movie about the Italian mob in America. I found it to
+  review:
+    A classic  gangster movie about the Italian mob in America. I found it to
     be too long and kind of forgettable.
   thumbnail: assets/img/covers/goodfellas.jpg
 - date: 2020-09-19
@@ -1401,7 +1657,8 @@
   rating: 5
   director: Jonathan Demme
   year: 1991
-  review: Both Anthony Hopkins and Jodie Foster are absolutely phenomenal in this
+  review:
+    Both Anthony Hopkins and Jodie Foster are absolutely phenomenal in this
     movie. The way the director builds tension and develops character through camera
     movement is reason alone to watch the movie. Silence of the lambs is slow and
     suspenseful but you can never draw your eyes away from it.
@@ -1412,7 +1669,8 @@
   rating: 3
   director: Frank Darabont
   year: 1994
-  review: A classic of American cinema. This is a movie with very strong fundamentals.
+  review:
+    A classic of American cinema. This is a movie with very strong fundamentals.
     And Tim Robbins as Andy Dupree steals the show. He does a phenomenal job conveying
     the mental and emotional transformation that Andy goes through during his 19 years
     of prison. I do not care for the amount of voiceover narration in this movie.
@@ -1422,7 +1680,8 @@
   rating: 1.5
   director: Martin Scorsese
   year: 1976
-  review: There are plenty of movies where the director intends for you not to like
+  review:
+    There are plenty of movies where the director intends for you not to like
     the main character. The movie is about their journey or their development or just
     their surroundings. Objectively the actions of Robert de Niro and his acting should
     be compelling to watch. But this entire movie fell very flat for me.
@@ -1432,7 +1691,8 @@
   rating: 1
   director: David Fincher
   year: 1999
-  review: Rewatching this film, I feel like I have outgrown it. The plot might be
+  review:
+    Rewatching this film, I feel like I have outgrown it. The plot might be
     interesting on a first watch, but none of it felt particularly compelling. My
     favorite character was probably Marla Singer played by Helena Carter.
   thumbnail: assets/img/covers/fight_club.jpg
@@ -1441,7 +1701,8 @@
   rating: 1.5
   director: Michel Godfry
   year: 2004
-  review: It was a decent love story. I don't know if the very abstract scenes throughout
+  review:
+    It was a decent love story. I don't know if the very abstract scenes throughout
     the movie added much. I was also a disctracted by some of the big name actors
     in the movie. Jim Carrey in a serious role was odd.
   thumbnail: assets/img/covers/eternal_sunshine.jpg
@@ -1450,7 +1711,8 @@
   rating: 4
   director: Denis Villeneuve
   year: 2017
-  review: Just an awesome cinematic experience. The movie is an amazing take on a
+  review:
+    Just an awesome cinematic experience. The movie is an amazing take on a
     cyberpunk dystopian future. The action is good but not excessive. As much as I
     dislike him, even Harrison Ford managed to not ruin the movie for me.
   thumbnail: assets/img/covers/blade_runner_2049.jpg
@@ -1460,7 +1722,8 @@
   rating: 4
   director: Dan Gilroy
   year: 2014
-  review: Jake Gyllenhaal is delightfully creepy in this movie. I really enjoyed plunging
+  review:
+    Jake Gyllenhaal is delightfully creepy in this movie. I really enjoyed plunging
     into the dark underworld of news media.
   thumbnail: assets/img/covers/nightcrawler.jpg
 - date: 2020-07-10
@@ -1468,7 +1731,8 @@
   rating:
   director:
   year: 2016
-  review: One of the worst movies I've seen. I barely made it 20 minutes in. It was
+  review:
+    One of the worst movies I've seen. I barely made it 20 minutes in. It was
     beyond boring.
   thumbnail: assets/img/covers/kimi_no_na_wa.jpg
 - date: 2020-07-03
@@ -1476,7 +1740,8 @@
   rating: 4
   director: Park Chan-Wook
   year: 2003
-  review: Overall, it's a pretty dark movie. There is a good mix of action and mystery
+  review:
+    Overall, it's a pretty dark movie. There is a good mix of action and mystery
     that keeps you hooked the entire way. Choi Min-sik is phenomenal as Dae-Su. However,
     the movie is primarily plot driven which weakens it on subsequent re-watches.
   thumbnail: assets/img/covers/oldboy.jpg
@@ -1486,7 +1751,8 @@
   rating: 4.5
   director: Francis Ford Coppla
   year: 1974
-  review: A very worthy successor to the first godfather movie. The second is in many
+  review:
+    A very worthy successor to the first godfather movie. The second is in many
     ways very much it's equal and even exceeds it in others. This movie has some very
     dark moments. But just like the first it is a must watch.
   thumbnail: assets/img/covers/the_godfather_part_ii.jpg
@@ -1495,7 +1761,8 @@
   rating: 3.5
   director: Tom Tykwer
   year: 1998
-  review: A tense high stakes movie. It does a great job showing a lot about a few
+  review:
+    A tense high stakes movie. It does a great job showing a lot about a few
     people in 3 20 minute stories. Some parts are maybe a bit too abstract from my
     taste.
   thumbnail: assets/img/covers/run_lola_run.jpg
@@ -1505,7 +1772,8 @@
   rating: 5
   director: Francis Ford Coppla
   year: 1972
-  review: Absolutely classic movie. A must watch. Marlon Brando and Al Pacino are
+  review:
+    Absolutely classic movie. A must watch. Marlon Brando and Al Pacino are
     phenomenal in this movie. Between the music the cinematography, the overall plot
     this movie really does not miss.
   thumbnail: assets/img/covers/the_godfather.jpg
@@ -1515,7 +1783,8 @@
   rating: 4.5
   director: Milos Forman
   year: 1975
-  review: Jack Nicholson really steals the show in this movie. He's both charming
+  review:
+    Jack Nicholson really steals the show in this movie. He's both charming
     and crazy. Movie is certainly not the most accurate portrayal of a mental institution.
     But the realism of the institution doesn't change the realism of its oppression.
     Watching the characters deal with that is what makes the movie great.
@@ -1526,7 +1795,8 @@
   rating: 3.5
   director: David Mackenzie
   year: 2016
-  review: This movie is an exciting neo-western. Overall, the acting performances
+  review:
+    This movie is an exciting neo-western. Overall, the acting performances
     are solid. But I think the best part to me is the camera work in the absolutely
     gorgeous Texas scenery (the scenery itself isn't actually gorgeous, there's nothing
     pretty about oil fields. I just love the way that it's shot).
@@ -1537,7 +1807,8 @@
   rating: 2
   director: Martin Scorsese
   year: 2019
-  review: I found this movie to be very much a mixed bag. There were some very good
+  review:
+    I found this movie to be very much a mixed bag. There were some very good
     moments. Robert de Niro and Joe Pesci are both very enjoyable. But I also found
     the movie to be too long. And the de-aging CGI completely took me out of the movie
     and ruined several scenes.
@@ -1547,7 +1818,8 @@
   rating: 5
   director: Bong Joon Ho
   year: 2019
-  review: Absolutely incredible film. Pretty much every single actor knocked it out
+  review:
+    Absolutely incredible film. Pretty much every single actor knocked it out
     of the park. The camera work is amazing. The dialogues are fantastic. This is
     genuinely one of the best movies I've ever seen.
   thumbnail: assets/img/covers/parasite.jpg
@@ -1557,7 +1829,8 @@
   rating: 1.5
   director: Dennis Villeneuve
   year: 2016
-  review: Generic sci-fi movie. It had no particularly interesting plot twists or
+  review:
+    Generic sci-fi movie. It had no particularly interesting plot twists or
     creatures. Overall, I found it forgettable.
   thumbnail: assets/img/covers/arrival.jpg
 - date: 2020-03-15
@@ -1566,7 +1839,8 @@
   rating: 4
   director: Steven Spielberg
   year: 1993
-  review: The acting performances in this movie are nothing special. But the visual
+  review:
+    The acting performances in this movie are nothing special. But the visual
     and sound effects are absolutely top notch. Spielberg is incredibly dynamic and
     a storytelling. For a movie that is over 30 years old, it has aged incredibly
     well.
@@ -1576,7 +1850,8 @@
   rating: 4.5
   director: Emir Kusturica
   year: 1998
-  review: A super light-hearted movie. A nice mix of interconnecting love stories,
+  review:
+    A super light-hearted movie. A nice mix of interconnecting love stories,
     comedy and some very serious bits. The music is great. Overall, the movie is just
     fun.
   thumbnail: assets/img/covers/black_cat_white_cat.jpg
@@ -1585,7 +1860,8 @@
   rating: 1.5
   director: Federico Fellini
   year: 1973
-  review: A very colorful and pretty movie. Unfortunately I can't say much beyond
+  review:
+    A very colorful and pretty movie. Unfortunately I can't say much beyond
     that. I did not find the characters in the movie, particularly appealing. It was
     very much not to my taste.
   thumbnail: assets/img/covers/amarcord.jpg
