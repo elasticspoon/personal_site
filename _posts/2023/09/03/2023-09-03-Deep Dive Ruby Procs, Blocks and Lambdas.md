@@ -47,40 +47,27 @@ I should note that although the goal of blocks is to pass behavior, that does no
 
 A block is executed within a method with a call to `yield`, as in yielding execution to the block.
 
-```ruby
-def a_method
-  yield
-end
-
-a_method { puts 'executed block' }
-#=> executed block
-```
-
 `yield` will return the value of the block, just like any other method execution.
 
-```ruby
+```ruby interactive=true,editor=disabled
 def another_method
   value = yield
   puts value
 end
 
 another_method { 'hello' }
-# => hello
 ```
 
 `yield` can pass arguments to the block; you _yield_ the arguments. These, in turn, can be used by the block in a typical `|param|` fashion.
 
-```ruby
+```ruby interactive=true,editor=basic
 def some_method
   yield 'value one', 'value_two'
 end
 
 some_method { |a, b| puts [a, b].inspect }
-#=> ["value one", "value_two"]
 some_method { |a| puts [a].inspect }
-#=> ["value one"]
 some_method { |a, b, c| puts [a, b, c].inspect }
-#=> ["value one", "value_two", nil]
 ```
 
 As you can see, not all the arguments in the block need to be used. Ones that don't exist will get set to `nil`.
@@ -93,7 +80,7 @@ Let's start our exploration of Procs by exploring exactly how blocks and Procs a
 
 I have already stated that **blocks are Procs**, but let's prove it. We have seen how blocks can be passed into methods and then called with `yield`. However, there is an alternative way of calling that same block with the method `:call`.
 
-```ruby
+```ruby interactive=true,editor=basic
 def some_method(&some_block)
   yield
 end
@@ -119,7 +106,7 @@ Similar to the conversion from a value to a pointer, `&` converts a block to a p
 
 Let's write some code to prove to ourselves we understand what is going on. First, let's create a `Proc` and a function that accepts a `Proc`.
 
-```ruby
+```ruby interactive=true,editor=basic
 def i_take_a_proc(some_proc)
   puts some_proc.class
   some_proc.call
@@ -140,7 +127,7 @@ i_take_a_proc { puts 'I am a block '}
 
 The block was not converted to something usable in the function, but we have already seen how that can be done.
 
-```ruby
+```ruby interactive=true,editor=basic
 def i_take_a_block(&some_block)
   puts some_block.class
   some_block.call
@@ -209,7 +196,7 @@ some_local_variable = Proc.new { puts 'saving file' }
 
 Just like any other variable, we can pass this variable to other methods, or if we wish, to other procs.
 
-```ruby
+```ruby interactive=true,editor=basic
 def some_method(arg)
   puts arg.inspect
 end
@@ -226,7 +213,7 @@ other_proc.call.inspect #=> #<Proc:...b70>
 
 Procs are encapsulations of behavior in an object, so there must be some way to use that behavior after you have captured it, thus, `some_proc.call`.
 
-```ruby
+```ruby interactive=true,editor=basic
 basic_proc = Proc.new { puts 'executes proc'}
 basic_proc.call
 #=> executes proc
@@ -239,8 +226,9 @@ The call method simply executes whatever behavior was stored in the proc and pas
 <!-- prettier-ignore -->
 >**A note on closures**\\
 > Closures in Ruby are simply a fancy way to describe the behavior of a proc or a block of code dragging its context along with it. What is meant by context? It means that the proc will bring not only behavior but also local variables.
-> 
-> ```ruby
+>
+
+````ruby interactive=true,editor=basic
 > times_called = 0
 > proc = Proc.new { puts times_called; times_called += 1 }
 > proc.call #=> 0
@@ -248,16 +236,16 @@ The call method simply executes whatever behavior was stored in the proc and pas
 > proc.call #=> 2
 > #...
 > ```
-> 
+>
 > This behavior brings with it some pitfalls.
-> 
-> ```ruby
-> # say I declare a massive array 
+>
+```ruby interactive=true,editor=basic
+> # say I declare a massive array
 > arr = Array.new(100000)
 > # I do stuff with the array but then I return a proc
 > return Proc.new { puts 'hello' }
 > ```
-> 
+>
 > The context of the array will be pulled into the block, meaning that massive array object will remain in memory for much longer than it needs to. There is no prefect answer besides simply paying attention and `arr = nil` deallocating the array.
 
 That brings us to our final topic, what are lambdas and how do they relate to procs?
@@ -268,15 +256,15 @@ Let's start by defining what a Lambda is so that we have a basis for our explora
 
 Here's a basic syntax for defining a lambda in Ruby:
 
-```ruby
+```ruby interactive=true,editor=basic
 my_lambda = lambda { |arg1, arg2| code_to_execute }
 # You can also use the -> syntax for a more concise lambda definition
 my_lambda = ->(arg1, arg2) { code_to_execute }
-```
+````
 
 Lambdas are fundamentally Procs.
 
-```ruby
+```ruby interactive=true,editor=basic
 a_lambda = lambda { puts 'executed lambda' }
 a_lambda.call
 #=> executed lambda
@@ -292,7 +280,7 @@ But there are differences in behavior. There are two main aspects: argument hand
 
 Unlike procs, lambdas will throw an error unless they get exactly the amount of arguments they are expecting to get. [We have already seen this behavior in blocks, but let's show it once more.](#Using Blocks to Execute Behavior)
 
-```ruby
+```ruby interactive=true,editor=basic
 def some_method(a_proc)
   a_proc.call 'value one', 'value_two'
 end
@@ -307,7 +295,11 @@ some_method Proc.new { |a, b, c| puts [a, b, c].inspect }
 
 However, a lambda will not accept those same arguments.
 
-```ruby
+```ruby interactive=true,editor=basic
+def some_method(a_proc)
+  a_proc.call 'value one', 'value_two'
+end
+
 some_method lambda { |a, b| puts [a, b].inspect }
 #=> ["value one", "value_two"]
 some_method lambda { |a| puts [a].inspect }
@@ -320,7 +312,7 @@ some_method lambda { |a, b, c| puts [a, b, c].inspect }
 
 A proc also has built-in array deconstruction.
 
-```ruby
+```ruby interactive=true,editor=basic
 def some_method(a_proc)
   a_proc.call [1, 2]
 end
@@ -331,7 +323,11 @@ some_method Proc.new { |a, b| puts a; puts b } #=> 1, 2
 
 A lambda cannot do the same.
 
-```ruby
+```ruby interactive=true,editor=basic
+def some_method(a_proc)
+  a_proc.call [1, 2]
+end
+
 some_method lambda { |a| a.inspect } #=> [1, 2]
 some_method lambda { |a, b| puts a; puts b } #=> ArgumentError: given 1 expected 2
 ```
@@ -340,11 +336,9 @@ A lambda is closer to a regular method with positional arguments; it must receiv
 
 ### Return Semantics
 
-In a lambda, a call to `return
+In a lambda, a call to `return` exits the lambda and returns the final value of the lambda to whatever context called the lambda.
 
-` exits the lambda and returns the final value of the lambda to whatever context called the lambda.
-
-```ruby
+```ruby interactive=true,editor=basic
 def test_method
   lambda { return :exited }.call
   puts 'reached past lambda'
@@ -361,7 +355,7 @@ test_method #=> exited
 
 In comparison, a proc goes one step further and exits out of the proc **then** does the `return`.
 
-```ruby
+```ruby interactive=true,editor=basic
 def test_method
   proc { 3; return; 4}.call
   # because the return first exists the proc 5 is never reached
