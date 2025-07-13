@@ -58,12 +58,14 @@ layout: base
       {% endif %}
 
       <article role="main" class="blog-post">
+        {% if page.toc %}
         <section id="toc">
           <details>
             <summary>Table of Contents</summary>
             {% toc %}
           </details>
         </section>
+        {% endif %}
         {{ content }}
       </article>
 
