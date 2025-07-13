@@ -3,7 +3,7 @@ ruby = "3.3.6"
 node = "20"
 
 ##### TASKS #####
-#
+
 [tasks.landing]
 description = "Runs a server with the landing page in dev mode (--prod for prod mode)"
 run = """
@@ -37,3 +37,13 @@ run = 'bin/update.sh'
 [tasks.til]
 description = "Create a new TIL blog post with today's date"
 run = 'bin/til.sh'
+
+[tasks.build]
+description = "Build jekyll site (--landing for landing page.)"
+run = """
+if [ '{{flag(name='landing')}}' = 'true' ]; then
+  bundle exec jekyll build --config "_config.yml,_config_landing.yml"
+else
+  bundle exec jekyll build
+fi
+"""
