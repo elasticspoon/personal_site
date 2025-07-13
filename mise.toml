@@ -33,3 +33,7 @@ run = 'bin/setup.sh'
 [tasks.update]
 description = "Update gems and packages"
 run = 'bin/update.sh'
+
+[tasks.til]
+description = "Create a new TIL blog post with today's date"
+run = 'bin/til.sh'

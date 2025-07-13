@@ -4,4 +4,6 @@ layout: page
 
 {{ content }}
 
-{% include posts.html %}
+{% assign raw_posts = paginator.posts | default: site.posts %}
+{% assign posts = raw_posts | where_exp: "item", "item.til != true" %}
+{% include posts.html posts=posts %}

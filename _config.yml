@@ -28,6 +28,7 @@ nav-short: true
 navbar-links:
   Contact: "mailto:mail@yuribocharov.dev"
   Resume: "https://yuribocharov.dev/assets/resume.pdf"
+  TIL: "https://yuribocharov.dev/TIL"
   About:
     - About Yuri: "https://yuribocharov.dev/about"
     - Projects: "https://yuribocharov.dev/projects"

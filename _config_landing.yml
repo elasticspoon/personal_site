@@ -11,6 +11,7 @@ blog_domain: "https://blog.yuribocharov.dev"
 #landing page links
 navbar-links:
   Blog: "https://blog.yuribocharov.dev"
+  TIL: "https://blog.yuribocharov.dev/TIL"
   Resume: "/assets/resume.pdf"
   About:
     - About Yuri: "/about"

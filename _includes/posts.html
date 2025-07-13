@@ -1,7 +1,6 @@
-{% assign posts = paginator.posts | default: site.posts %}
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
 <ul class="posts-list list-unstyled" role="list">
-  {% for post in posts %}
+  {% for post in include.posts %}
   <li class="post-preview {% if post.published == false %}post-unpublished{% endif %}">
     <article>
       {% if post.thumbnail-img %}
@@ -28,7 +27,7 @@
           {% endif %}
 
           <a href="{{ post_url }}">
-            <h2 class="post-title">{{ post.title | strip_html |  }}</h2>
+            <h2 class="post-title">{{ post.title | strip_html }}</h2>
           </a>
 
           <p class="post-meta{% if thumbnail != '' %} post-meta--has-thumbnail{% endif %}">

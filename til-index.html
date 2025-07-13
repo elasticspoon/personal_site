@@ -1,0 +1,17 @@
+---
+layout: page
+title: Today I Learned
+permalink: /til/
+pagination:
+  enabled: true
+  collection: posts
+  tag: TIL
+  per_page: 10
+  sort_field: date
+  sort_reverse: true
+  permalink: '/til/page/:num/'
+---
+
+{% assign raw_posts = paginator.posts | default: site.posts %}
+{% assign posts = raw_posts | where_exp: "item", "item.til == true" %}
+{% include posts.html posts=posts %}
