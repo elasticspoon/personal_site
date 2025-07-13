@@ -25,7 +25,9 @@ common-ext-js:
           <h2 class="rainbow-header">Articles</h2>
         </div>
         <div class="landing-page__blog-preview" tabindex="-1">
-          {% include posts.html %}
+          {% assign raw_posts = paginator.posts | default: site.posts %}
+          {% assign posts = raw_posts | where_exp: "item", "item.til != true" %}
+          {% include posts.html posts=posts %}
         </div>
         <a class="link-button landing-page__inline-button" href="https://blog.yuribocharov.dev">See more articles</a>
       </section>
