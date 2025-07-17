@@ -45,6 +45,7 @@ run = 'bin/til.sh'
 [tasks.build]
 description = "Build jekyll site (--landing for landing page.)"
 run = """
+npm run build
 if [ '{{flag(name='landing')}}' = 'true' ]; then
   bundle exec jekyll build --config "_config.yml,_config_landing.yml"
 else
