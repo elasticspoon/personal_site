@@ -328,6 +328,7 @@ pagination:
   sort_reverse: true
   title: ":title"
 jekyll-minifier:
+  compress_javascript: false
   uglifier_args:
     harmony: true
 picture:
