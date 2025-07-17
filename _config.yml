@@ -221,20 +221,6 @@ navbar-extra:
 #  theme: github-light # Utterances theme
 #  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
 
-# To use Staticman comments, uncomment the following section. You may leave the reCaptcha
-# section commented if you aren't using reCaptcha for spam protection.
-# Using Staticman requires advanced knowledge, please consult
-# https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further
-# instructions. For any support with staticman please direct questions to staticman and
-# not to BeautifulJekyll.
-#staticman:
-#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
-#  endpoint   : # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
-#  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well)
-#    siteKey  : # You need to apply for a site key on Google
-#    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
-
 # To use giscus comments:
 # (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository,
 # (2) Install the giscus app in your repository (details at https://giscus.app),
@@ -328,6 +314,7 @@ pagination:
   sort_reverse: true
   title: ":title"
 jekyll-minifier:
+  compress_javascript: false
   uglifier_args:
     harmony: true
 picture:
@@ -339,26 +326,26 @@ toc:
   min_level: 2
   max_level: 3
   list_id: toc-contents
-
-uncss:
-  stylesheets:
-    - assets/css/all.min.css
-    - assets/css/about.css
-    - assets/css/beautifuljekyll.css
-    - assets/css/beautifuljekyll.min.css
-    - assets/css/bootstrap.min.css
-    - assets/css/bootstrap-social.css
-    - assets/css/fonts.css
-    - assets/css/landing-page.css
-    - assets/css/main-site.css
-    - assets/css/movies.css
-    - assets/css/pygment_highlights.css
-    - assets/css/staticman.css
-  files:
-    - "**/*.html"
-  ignore: 
-    - ".show" 
-    - ".dropdown"
-    - ".dropdown-toggle"
-    - "dropdown"
-    - ".dropdown-menu.show"
+# uncss:
+#   ignoreJsErrors: true
+#   stylesheets:
+#     - assets/css/all.min.css
+#     - assets/css/about.css
+#     - assets/css/beautifuljekyll.css
+#     - assets/css/beautifuljekyll.min.css
+#     - assets/css/bootstrap.min.css
+#     - assets/css/bootstrap-social.css
+#     - assets/css/fonts.css
+#     - assets/css/landing-page.css
+#     - assets/css/main-site.css
+#     - assets/css/movies.css
+#     - assets/css/pygment_highlights.css
+#   files:
+#     - "**/*.html"
+#   ignore:
+#     - 'script[src*="bundle.js"]'
+#     - ".show"
+#     - ".dropdown"
+#     - ".dropdown-toggle"
+#     - "dropdown"
+#     - ".dropdown-menu.show"

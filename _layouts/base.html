@@ -3,10 +3,9 @@ common-js:
   - "/assets/js/jquery-3.7.0.slim.min.js"
   - "/assets/js/popper.min.js"
   - "/assets/js/bootstrap.min.js"
-  - "/assets/js/beautifuljekyll.js"
-  - "/assets/js/skin-switch.js"
+  - "/assets/js/build/bundle.js"
 head-js:
-  - "/assets/js/skin-load.js"
+  - "/assets/js/src/skin-load.js"
 ---
 
 <!doctype html>
@@ -14,7 +13,10 @@ head-js:
   {% include head.html %}
 
   <body data-theme="dark">
-    {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
-    footer.html %} {% include footer-scripts.html %}
+    {% include gtm_body.html %}
+    {% include nav.html %}
+    {{ content }}
+    {% include footer.html %}
+    {% include footer-scripts.html %}
   </body>
 </html>

@@ -16,3 +16,8 @@ node_modules
 vendor
 .direnv
 .jekyll-metadata
+.aider*
+
+
+!.keep
+assets/js/build/*
