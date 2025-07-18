@@ -21,3 +21,4 @@ vendor
 
 !.keep
 assets/js/build/*
+.envrc

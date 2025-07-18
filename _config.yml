@@ -163,6 +163,7 @@ site-css:
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/beautifuljekyll.css"
   - "/assets/css/main-site.css"
+  - "/assets/css/tokyo-night-dark.min.css"
 
 # If you have comimon JavaScript files that should be included in every page, list them here
 # site-js:
