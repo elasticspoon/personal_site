@@ -45,15 +45,19 @@ Jekyll::Hooks.register [:posts, :pages], :post_render do |doc|
     code_block['id'] = uuid
     code_block['class'] << "language-#{code_block.attribute('data-lang')}"
 
-    codapi_element = html.create_element('codapi-snippet')
-
     # Set the required attributes
+    codapi_element = html.create_element('codapi-snippet')
     codapi_element['engine'] = 'wasi'
     codapi_element['sandbox'] = code_block.attribute('data-lang')
     codapi_element['editor'] = code_block.attribute('data-editor')
     codapi_element['selector'] = "##{uuid}"
 
-    code_block.after(codapi_element)
+    playgroud_div = html.create_element('div')
+    playgroud_div['class'] = 'playground'
+    playgroud_div << code_block.clone
+    playgroud_div << codapi_element
+
+    code_block.replace(playgroud_div)
   end
 
   doc.output = html.to_html

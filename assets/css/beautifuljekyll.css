@@ -956,12 +956,11 @@ pre code {
   padding: 0;
   background-color: transparent !important;
   border-radius: 0;
-  color: #e4e6eb;
-
+  color: var(--text-col);
 }
 
 pre {
-  color: #e4e6eb;
+  color: var(--text-col);
   font-size: 0.875rem;
   line-height: 1.5em;
   border-radius: 0.25rem;
