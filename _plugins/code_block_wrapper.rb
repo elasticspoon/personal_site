@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
+require 'securerandom'
 
 # Pre-process markdown to convert code blocks like
 # ```language key=value,key=value to karamdown_tags like
@@ -39,12 +40,18 @@ Jekyll::Hooks.register [:posts, :pages], :post_render do |doc|
   html = Nokogiri::HTML(doc.output)
 
   html.css('[data-interactive="true"]').each do |code_block|
+    # Generate unique ID for the code block
+    uuid = "code-#{SecureRandom.uuid}"
+    code_block['id'] = uuid
+    code_block['class'] << "language-#{code_block.attribute('data-lang')}"
+
     codapi_element = html.create_element('codapi-snippet')
 
     # Set the required attributes
     codapi_element['engine'] = 'wasi'
     codapi_element['sandbox'] = code_block.attribute('data-lang')
     codapi_element['editor'] = code_block.attribute('data-editor')
+    codapi_element['selector'] = "##{uuid}"
 
     code_block.after(codapi_element)
   end
