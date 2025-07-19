@@ -30,6 +30,7 @@ thumbnail-img: /assets/img/thumbnails/til.jpg
 share-img: /assets/img/thumbnails/til.jpg
 readtime: false
 toc: false
+til: true
 tags:
   - TIL
 ---
