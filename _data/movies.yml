@@ -1,3 +1,12 @@
+- date: 2025-07-26
+  title: A Beautiful Day In the Neighborhood
+  subtitle: We Could All Use A Little Kindness
+  rating: 3
+  review:
+
+  thumbnail: assets/img/covers/a_beautiful_day_in_the_neighborhood.jpg
+  year: 2019
+  director: Marielle Heller
 - date: 2025-06-30
   title: Andrei Rublev
   rating: 4.5
