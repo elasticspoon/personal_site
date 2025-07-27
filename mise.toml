@@ -7,12 +7,11 @@ node = "20"
 [tasks.landing]
 description = "Runs a server with the landing page in dev mode (--prod for prod mode)"
 run = """
+npm run build
 if [ '{{flag(name='prod')}}' = 'true' ]; then
   export JEKYLL_ENV="production"
-  npm run build
   bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 --incremental
 else
-  npm run build
   bundle exec jekyll serve --config "_config.yml,_config_landing.yml" --trace --livereload --livereload-port 35731 --port 3001 --unpublished --incremental --future
 fi
 """
@@ -20,12 +19,11 @@ fi
 [tasks.blog]
 description = "Runs a server with the blog page in dev mode. (--prod for prod mode)"
 run = """
+npm run build
 if [ '{{flag(name='prod')}}' = 'true' ]; then
   export JEKYLL_ENV="production"
-  npm run build
   bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --incremental
 else
-  npm run build
   bundle exec jekyll serve --trace --livereload --livereload-port 35730 --port 3000 --unpublished --incremental --future
 fi
 """

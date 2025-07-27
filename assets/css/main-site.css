@@ -1,6 +1,6 @@
----
-# Must have front-matter for jekyll to process file for postcss
----
+--- 
+# Must have front-matter for jekyll to process file for postcss 
+--- 
 
 .about-nav__container {
   margin-block-start: 6rem;
@@ -172,4 +172,42 @@ codapi-output td {
   font-family: 'mono';
   border: solid 1px;
   padding: .5rem;
+}
+
+.playground {
+  position: relative;
+}
+
+.playground__version-selector {
+  position: absolute;
+  z-index: 10;
+  top: .25rem;
+  right: .25rem;
+  border: 1px solid var(--link-col);
+  color: var(--link-col);
+  background: transparent;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: 'mono';
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.playground__version-selector:focus {
+  outline: 2px solid var(--link-col);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

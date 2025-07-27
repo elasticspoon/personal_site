@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/elasticspoon/personal_site#readme",
   "dependencies": {
-    "@elasticspoon/codapi": "^0.0.4",
+    "@elasticspoon/codapi": "^0.0.6",
     "autoprefixer": "^10.4.20",
     "codejar": "^4.2.0",
     "cssnano": "^7.0.6",
