@@ -33,23 +33,29 @@ end
 # after code blocks that have data attributes set.
 # requires `data-interactive="true"` to append the custom element
 # data-lang="value": sets the language to use
-# data-editor="value": sets the editor to use (basic or disabled)
+# data-version="value": sets the version on the lang to use. ex: ruby 3.3
+#   right now only ruby is supported
+# data-editor="value": sets the editor to use (basic or external)
 Jekyll::Hooks.register [:posts, :pages], :post_render do |doc|
   next unless doc.output_ext == '.html'
 
   html = Nokogiri::HTML(doc.output)
 
   html.css('[data-interactive="true"]').each do |code_block|
-    # Generate unique ID for the code block
-    uuid = "code-#{SecureRandom.uuid}"
+    uuid = "code-#{SecureRandom.uuid}" # unique id cause a page can have many editors
+    lang = code_block.attribute('data-lang')
+    lang_version = code_block.attribute('data-version')
+    sandbox = lang_version ? "#{lang}:#{lang_version}" : lang
+    editor = code_block.attribute('data-editor')
+
     code_block['id'] = uuid
-    code_block['class'] << "language-#{code_block.attribute('data-lang')}"
+    code_block['class'] << "language-#{lang}"
 
     # Set the required attributes
     codapi_element = html.create_element('codapi-snippet')
     codapi_element['engine'] = 'wasi'
-    codapi_element['sandbox'] = code_block.attribute('data-lang')
-    codapi_element['editor'] = code_block.attribute('data-editor')
+    codapi_element['sandbox'] = sandbox
+    codapi_element['editor'] = editor
     codapi_element['selector'] = "##{uuid}"
 
     playgroud_div = html.create_element('div')

@@ -1,4 +1,8 @@
---- # Must have front-matter for jekyll to process file for postcss --- .about-nav__container {
+--- 
+# Must have front-matter for jekyll to process file for postcss 
+--- 
+
+.about-nav__container {
   margin-block-start: 6rem;
   margin-block-end: 3rem;
 }

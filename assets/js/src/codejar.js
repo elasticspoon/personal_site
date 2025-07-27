@@ -44,10 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         select.appendChild(option);
       });
 
-      // Set initial version
-      if (snippet.version) {
-        select.value = snippet.version;
-      }
+
+      const version = snippet.sandbox.split(':')[1] || 'head';
+      select.value = version;
 
       // Handle version changes
       select.addEventListener('change', () => {
